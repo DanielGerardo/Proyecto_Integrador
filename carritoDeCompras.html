@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- Bootstrap https://getbootstrap.com/ -->
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+  crossorigin="anonymous"
+/>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/carritoDeCompras.css" />
+
+  
+    <!-- CSS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- JS -->
+    <script src="assets/JS/plantillas.js" defer></script>
+    <!-- ICONS -->
+    <script
+      src="https://kit.fontawesome.com/3e46984049.js"
+      crossorigin="anonymous"
+      defer ></script>
+
+    <title>PopCollector</title>
+  </head>
+  <body>
+    <!--  Div cuerpo-->
+    <div class="cuerpoDeLaPagina">
+      <!-- Titulo de la sección -->
+      <h1>Carrito (<span id="numDeArticulos">0</span>)</h1>
+
+      <!-- Contenedor de la lista de compra -->
+      <div id="divCarrito">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <td colspan="4"><button type="button" class= "btn btn-outline-danger fa-solid fa-trash-can">Vaciar carrito</button>
+                    <button type="button" class= "btn btn-outline-danger"> <i class="fa-solid fa-trash-can"></i> Vaciar carrito</button>HOLA fuente
+                </td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="/assets/imagenes/discoejemplocarrito.jpg"
+                    alt="Articulo 1253"
+                  />
+                </td>
+                <td>Nombre del producto</td>
+                <td><button>-</button><span>1</span><button>+</button></td>
+                <td>$ <span>1250</span></td>
+              </tr>
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
+      </div>
+      <!-- Fin contenedor lista de compra -->
+    </div>
+    <!-- fin div del cuerpo -->
+  </body>
+</html>
