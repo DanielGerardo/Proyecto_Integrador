@@ -1,0 +1,42 @@
+@use 'variables';
+
+.btnEnviar{  
+    @include botones(12.5rem);   
+}
+.btnEnviar:hover{
+ background-color: #0078AA;
+
+}
+
+
+  .añadirAlCarrito{
+    color: rgb(0, 0, 0);
+    /* color: white; */
+    width: 12.5rem;
+    background-color: #F0DD3A;
+    border-radius: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+  }
+  
+  .añadirAlCarrito:hover {
+    background-color: #0078AA;
+    color: white;
+    font-family:'Montserrat',sans-serif;
+  }
+  
+  .card-title{
+    color: black;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+  }
+  
+  .card-description{
+    color: black;
+    font-family:'Montserrat',sans-serif;
+  }
+  
+  .card-price{
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+  }

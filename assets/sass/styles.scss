@@ -1,8 +1,10 @@
 @use 'variables';
-.btnEnviar{  
+@import "productos";
+
+.añadirAlCarrito{  
     @include botones(12.5rem);   
 }
-.btnEnviar:hover{
+.añadirAlCarrito:hover{
  background-color: #0078AA;
 
 }
