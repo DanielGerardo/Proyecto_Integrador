@@ -5,6 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Fonts -->
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./assets/css/p&r.css" />
+
     <!-- Bootstrap https://getbootstrap.com/ -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
@@ -13,26 +33,337 @@
       crossorigin="anonymous"
     />
 
-    <!-- Medidas CSS -->
-    <link rel="stylesheet" href="assets/CSS/medidas.css" />
     <!-- CSS -->
-
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
       integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
       crossorigin="anonymous"
       defer
     ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
       integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
       crossorigin="anonymous"
       defer
     ></script>
+
+    <!-- Iconos -->
+    <script
+      src="https://kit.fontawesome.com/9b2ab09150.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- JS -->
     <script src="assets/JS/plantillas.js" defer></script>
-
     <title>Preguntas y Respuestas POPcollector</title>
   </head>
-  <body></body>
+
+  <body class="cuerpo">
+  <!-- BARRA DE NAVEGACIÓN PROTOTIPO -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">POPcollector</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Categorías</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Redes Sociales</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br><h1 class="título">Preguntas frecuentes</h1><br>
+
+  <!--Tarjetas acordeon-->
+    <div class="container">
+  <!--Contenedor de las tarjetas de p&r-->
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+  <!--Tarjeta Localización-->
+        <div class="accordion-item">
+          <div class="row justify-content-center">
+            <div class="card" style="width: 90rem">
+              <div class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  <h3 class="clasificación">Localización</h3>
+                </button>
+              </div>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <h4 class="pregunta">
+                    ¿POPcollector tiene algún un local de coleccionables? </h4>
+                  <h5 class="respuesta">
+                    No. Por el momento POPcollector solo cuenta con almacen y venta en línea </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+  <!--Tarjeta Pagos y envíos-->
+        <div class="accordion-item">
+          <div class="row justify-content-center">
+            <div class="card" style="width: 90rem">
+              <div class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  <h3 class="clasificación">Pagos y envíos</h3>
+                </button>
+              </div>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <h4 class="pregunta">
+                    ¿Cuáles son los métodos de pago? </h4>
+                  <h5 class="respuesta">
+                    Podrás realizar tu pago con los siguientes métodos: </h5>
+                  <ul class="listas">
+                    <li>Tarjetas de débito</li>
+                    <li>Tarjetas virtuales</li>
+                    <li>Transferencias</li>
+                    <li>Transferencias</li>
+                    <li>Depositos en efectivo</li>
+                  </ul>
+                  <h5 class="respuesta">
+                    Cargos adicionales pueden aplicar de acuerdo al método de pago seleccionado de acuerdo a las políticas de cada tercero </h5>
+                    <hr>
+                    <h4 class="pregunta">
+                      ¿Cómo funcionan los envíos? </h4>
+                    <h5 class="respuesta">
+                      Instantes después de completar tu compra, recibirás un correo electrónico con la información y detalle de tu pedido incluyendo fechas de entrega. </h5>
+                    <hr>
+                    <h4 class="pregunta">
+                      ¿Qué costos tienen los envíos? </h4>
+                    <h5 class="respuesta">
+                      El costo de envío puede variar de acuerdo al producto que selecciones, ya que se toma en cuenta el tamaño y peso de tu pedido. </h5>
+                    <hr> 
+                    <h4 class="pregunta">
+                      ¿Cómo puedo revisar el estatus de mi pedido? </h4>
+                    <h5 class="respuesta">
+                      Puedes hacerlo ingresando a tu cuenta desde tu perfil de usuario: </h5>
+                    <ol class="listas">
+                        <li>Clic en Historial de Pedidos.</li>
+                        <li>Localiza el número de pedido que quieres revisar.</li>
+                        <li>Si el producto ha sido enviado, con el número de guía podrás revisar su estado en el sitio web de la paquetería.</li>
+                        <li>Si la información de entrega no coincide con la que recibiste en el correo de confirmación, ponte en contacto con nosotros y con gusto te ayudaremos.</li>
+                    </ol>
+                    <hr>
+                    <h4 class="pregunta">
+                      ¿Hay envíos internacionales? </h4>
+                    <h5 class="respuesta">
+                      El costo de envío puede variar de acuerdo al producto que selecciones, ya que se toma en cuenta el tamaño y peso de tu pedido. </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+  <!--Tarjeta Cambios y devoluciones-->
+        <div class="accordion-item">
+          <div class="row justify-content-center">
+            <div class="card" style="width: 90rem">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                <h3 class="clasificación">Cambios y devoluciones</h3>
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <h4 class="pregunta">
+                    ¿Cómo hago una devolución? </h4>
+                  <h5 class="respuesta">
+                    Te sugerimos revisar las Políticas de Cambio y Devolución. </h5>
+                  <hr>
+                  <h4 class="pregunta">
+                    ¿Cuál es el plazo para poder realizar un cambio?</h4>
+                  <h5 class="respuesta">
+                    Si requieres una devolución, tienes 7 días para ponerte en contacto con nuestro equipo e iniciar el proceso de devolución. </h5>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+  <!-- Tarjeta Protección de datos -->
+        <div class="accordion-item">
+          <div class="row justify-content-center">
+            <div class="card" style="width: 90rem">
+              <div class="accordion-header" id="flush-headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                <h3 class="clasificación">Protección de datos</h3>
+                </button>
+              </div>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <h4 class="pregunta">
+                    ¿Está segura mi información? </h4>
+                  <h5 class="respuesta">
+                    Te aseguramos la absoluta confidencialidad y privacidad de los datos personales recogidos y por ello adoptamos medidas esenciales de seguridad para evitar la alteración, pérdida, tratamiento o acceso no autorizado y garantizar así su integridad y seguridad. </h5>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+  <!-- Tarjeta Generales -->
+        <div class="accordion-item">
+          <div class="row justify-content-center">
+            <div class="card" style="width: 90rem">
+              <div class="accordion-header" id="flush-headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                >
+                <h3 class="clasificación">Generales</h3>
+                </button>
+              </div>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <h4 class="pregunta">
+                    ¿Hay manera de que me informen cuando existan descuentos y promociones? </h4>
+                  <h5 class="respuesta">
+                    Por supuesto, si creas una cuenta, nosotros nos encargaremos de que estés enterado de todos los descuentos y promociones. <br><br>
+                    Tambien exite la opción de que te registres en nuestro Newsletter. </h5>
+                  <hr>
+                  <h4 class="pregunta">
+                    ¿Venden piezas por mayoreo?</h4>
+                  <h5 class="respuesta">
+                    Al ser una E-commerce especializada en productos de colección, los artículos en disposición son únicos y/o escasos; por lo mismo no contamos con piezas por mayoreo. </h5>
+                  <hr>
+                  <h4 class="pregunta">
+                    ¿Puedo vender mis productos en el sitio?</h4>
+                  <h5 class="respuesta">
+                    Si estás interesado en vender tus productos en el sitio, envíanos un correo a <a href="mailto:POP@collector.com?Subject=Quiero%20Vender%20">POPcollector correo</a> (“Quiero Vender” como asunto) y nos pondremos en contacto contigo. </h5>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!-- FOOTER PROTOTIPO -->
+    <!-- <footer class="bg-light">
+      <div class="footer">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+            <ul class="sobre">
+              <span>Sobre nosotros</span>
+              <li><p>¿Qué es POPcollector?</p></li>
+              <li><p>Certificado de autenticidad</p></li>
+              <li><p>Acerca de nosotros</p></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <ul class="soporte">
+              <span>Soporte al cliente</span>
+              <li><a href="#">Preguntas frecuentes</a></li>
+              <li><a href="#">Ayuda</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <ul class="contacto">
+              <span>Contacto</span>
+              <li>
+                <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-github fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-tumblr fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+  </body>
 </html>

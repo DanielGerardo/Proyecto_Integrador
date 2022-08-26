@@ -1,0 +1,15 @@
+/* Fonts */
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+.cuerpo         {background-color: #f6f6f6;}
+
+.título         {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; text-decoration:underline; font-weight:600; font-size: 40px;}
+.clasificación  {font-family:'Poppins', sans-serif; color:#0078AA; font-weight:400; font-size: 30px;}
+.pregunta       {font-family:'Montserrat',sans-serif; color:#0078AA; font-weight:400; font-size: 24px;}
+.respuesta      {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
+
+.listas         {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px; font-style:italic}

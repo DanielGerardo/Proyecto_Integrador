@@ -7,14 +7,6 @@ $fontMont: 'Montserrat', sans-serif;
 $fontPop: 'Poppins', sans-serif;
 
 
-@mixin botones($ancho) {
-    color: white;
-    width: $ancho;
-    background-color: $colorBotones;
-    border-radius: 2.5rem;
-    font-family: $fontMontserrat;
-}
-
 
 
 
