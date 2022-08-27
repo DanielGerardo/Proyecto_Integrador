@@ -1,7 +1,9 @@
-@use 'variables';
+@use "mixinProductos";
+
 
 .btnEnviar{  
-    @include botones(12.5rem);   
+    @include mixinProductos.botones(12.5rem);   
+    
 }
 .btnEnviar:hover{
  background-color: #0078AA;
