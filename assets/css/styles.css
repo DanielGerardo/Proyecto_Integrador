@@ -1,10 +1,139 @@
-.btnEnviar {
-  color: white;
-  width: 12.5rem;
-  background-color: #F0DD3A;
-  border-radius: 2.5rem;
+body{
+  background-color: #F6F6F6;
 }
 
-.btnEnviar:hover {
+.topnav {
+  overflow: hidden;
   background-color: #0078AA;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #F0DD3A;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #F0DD3A;
+  color: white;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #0078AA;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #73C8F3;
+}
+
+.nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav a.active {
+  background-color: #F0DD3A;
+  color: white;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.sobreNostros{
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.contenedor {
+  padding: 0 16px;
+}
+
+.contenedor::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.titulo {
+  color: grey;
+}
+
+.correo{
+  text-align: center;
+}
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #F2DF3A;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #0078AA;
+  color: white;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+  
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
