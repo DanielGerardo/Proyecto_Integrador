@@ -1,0 +1,10 @@
+.título     {font-family:'Poppins', sans-serif; color:#0078AA; font-weight:400; font-size: 30px;}
+.info       {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
+
+#contenedor{
+    width:100%;
+    height:100%;
+    background:#ffffff;
+    top:0;
+    left:0;
+}
