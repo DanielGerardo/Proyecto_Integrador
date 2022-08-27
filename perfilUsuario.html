@@ -5,59 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fonts -->
-  <!-- Links para fuente Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Links para fuente Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- Estilos CSS -->
-<link rel="stylesheet" href="./assets/css/styles.css" />
 
-<!-- Bootstrap https://getbootstrap.com/ -->
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-  crossorigin="anonymous"
-/>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./assets/css/p&r.css" />
 
-<!-- CSS -->
-<script
-  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-  integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-  crossorigin="anonymous"
-  defer>
-</script>
+    <!-- Bootstrap https://getbootstrap.com/ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
 
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-  integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-  crossorigin="anonymous"
-  defer>
-</script>
+    <!-- CSS -->
+    <script
+     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+     crossorigin="anonymous"
+      defer>
+    </script>
 
-<!-- Iconos -->
-<script src="https://kit.fontawesome.com/9b2ab09150.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+     integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+     crossorigin="anonymous"
+      defer>
+    </script>
 
-<!-- JS -->
-<script src="assets/JS/plantillas.js" defer></script>
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/9b2ab09150.js" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="assets/JS/plantillas.js" defer></script>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 <title>Perfil de Usuario POPcollector</title>
 </head>
 
-<body>
+<body class = "cuerpo">
   <div class="perfil"> 
       
   <!-- BARRA DE NAVEGACIÓN PROTOTIPO -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">POPcollector</a>
+      <div class="container-fluid" id="navcolor">
+        <a class="navbar-brand" href="#">POPcollector</a> 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -77,9 +86,39 @@
         </div> 
       </nav>
 
+   <div class="container">  
+      <div class="row">
+        <div class="panel panel-default shadow-sm h-1000">
+          <div class="panel-heading" id="panelcolor">  <h4 class="clasificación">Perfil de usuario</h4></div>
+          <div class="panel-body">
+            <div class="col-md-4 col-xs-8 col-sm-6 col-lg-4">
+              <img alt="User Pic" src="./assets/img/usuario.jpg" id="profile-image1" class="img-circle img-responsive">
+            </div> <!--div imagen de usuario-->
+                            <div class="col-md-8 col-xs-8 col-sm-6 col-lg-8" >
+                                <div class="container" >
+                                  <h2 class="clasificación">Finn el humano</h2>                             
+                                 
+                                </div>
+                                 <hr>
+                                 <h5 class="respuesta">
+                                  <ul>
+                                  <li><p><span class="glyphicon glyphicon-user one" style="width:50px;"></span>finn.coleccionista</p></li>
+                                  <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>finn@humano.com</p></li>
+                                </ul>
+                              </h5>
+                                
+                                <hr>
+                                <div class="col-sm-8 col-xs-8 tital " >
+                                  <h4 class="respuesta">Coleccionista experto de articulos de guerra medieval</h4>
+                                </div>
+                                
+                            </div>
+                      </div>
+                  </div>
+                  </div>
 
     <!-- FOOTER PROTOTIPO -->
-      <footer class="bg-light">
+      <!-- <footer class="bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
@@ -111,7 +150,7 @@
                 </div>
             </div> 
         </div>
-    </footer>
+    </footer> -->
 
   </body>
 </html>

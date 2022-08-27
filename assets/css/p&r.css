@@ -13,3 +13,14 @@
 .respuesta      {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
 
 .listas         {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px; font-style:italic}
+
+#panelcolor     {background: #63ABCF;}
+
+#navcolor       {background: #0078AA;}
+
+.pedidos {
+    color: white;
+    width: 12.5rem;
+    background-color: #F0DD3A;
+    border-radius: 2.5rem;
+  }
