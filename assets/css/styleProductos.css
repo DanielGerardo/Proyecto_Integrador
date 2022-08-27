@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.btnEnviar {
+  color: white;
+  width: 12.5rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+}
+
+.btnEnviar:hover {
+  background-color: #0078AA;
+}
+
+
+.añadirAlCarrito{
+  color: rgb(0, 0, 0);
+  /* color: white; */
+  width: 12.5rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.añadirAlCarrito:hover {
+  background-color: #0078AA;
+  color: white;
+  font-family:'Montserrat',sans-serif;
+}
+
+.card-title{
+  color: black;
+  font-family: 'Poppins',sans-serif;
+  font-weight:500;
+}
+
+.card-description{
+  color: black;
+  font-family:'Montserrat',sans-serif;
+}
+
+.card-price{
+  color: gray;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2{
+  color: #0078AA;
+  font-family: 'Poppins',sans-serif;
+  font-weight:700;
+  text-align: center;
+}
+
+*{
+  box-sizing: border-box;
+} 
+#sidebar{
+  color: black;
+  width: 20%;
+  padding: 8px;
+  margin: 0;
+  float: left;
+  
+}
+
+
+/* Quitarle puntitos a la lista y separacion de 5px*/
+ul{
+  list-style: none;
+  padding: 5px;
+}
+
+li a{
+  color: darkgray;
+  text-decoration: none;/* elimina el subrayado natual de <a>*/
+}
+li a:hover{
+  color: #0078AA;
+  text-decoration: none;/* elimina el subrayado natual de <a>*/
+}
+
+#left-arrow{
+  color: #000000d7;
+}
+#rigth-arrow{
+  color: rgb(0, 0, 0);
+}
+/*alinea las cards al tamaño*/
+#container{
+  width: 250px;
+  display: inline-block;
+  height: 300px;
+}
+/*define el tamaño de imagen de la card*/
+.card-img-top{
+  width: 250px;
+  height: 210px;
+}
+.card-body p{
+  margin: 2px;
+}
+.card-body{
+  padding: 0;
+  padding-left: 2px;
+}
+.filter{
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*EJEMPLO*/
+#btn:checked ~ .menu-btn i.fa-filter{
+  opacity: 0;
+  transform: rotate(180deg);
+}
