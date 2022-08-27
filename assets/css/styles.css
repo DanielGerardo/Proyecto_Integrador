@@ -1,8 +1,9 @@
 .btnEnviar {
-  color: white;
+  color: red;
   width: 12.5rem;
   background-color: #F0DD3A;
   border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btnEnviar:hover {
