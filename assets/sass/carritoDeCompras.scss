@@ -1,16 +1,31 @@
-$monserrat: Arial
-$poppins:'Poppins', sans-serif;)
+@use "variablesCarritodeCompras";
 
-   
-$rojo: #bc2d2d;
-
-
-.btnBasura{
-    background-color: #bc2d2d;
-    ;
-
+// *Botones
+// Estilos boton basura
+.btnTrash {
+  @include variablesCarritodeCompras.btnBasura(0.7rem);
+}
+.btnTrashIcon {
+  @include variablesCarritodeCompras.btnBasura(0.6rem);
+}
+// Btn seguir viendo y comprar
+.btnAtras {
+  @include variablesCarritodeCompras.btnAtras(0.7rem, 1.8rem);
+}
+.btnAdelante {
+  @include variablesCarritodeCompras.btnAdelante(0.7rem, 1.8rem);
 }
 
-td{
-    font-family:$poppins;
+// *______________________________________
+
+//? Posiciones de alineacion de texto
+.posicionCenter {
+  @include variablesCarritodeCompras.posicion(center);
 }
+.posicionLeft {
+  @include variablesCarritodeCompras.posicion(left);
+}
+.posicionRight {
+  @include variablesCarritodeCompras.posicion(right);
+}
+// *_______________________________________________________________

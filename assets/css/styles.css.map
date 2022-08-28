@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"version":3,"sources":["../sass/styles.scss","../sass/_variables.scss","styles.css"],"names":[],"mappings":"AAEA;ECMI,UAAA;EACA,cDN2B;ECO3B,yBARW;EASX,qBAAA;EACA,qCARa;ACEjB;;AFDA;EACC,yBAAA;AEID","file":"styles.css"}
+=======
 {"version":3,"sources":["../sass/_variables.scss","styles.css"],"names":[],"mappings":"AAcA;EAPI,YAAA;EACA,cAOqB;EANrB,yBAPW;EAQX,qBAAA;ACLJ;;ADYA;EACK,yBAAA;ACTL","file":"styles.css"}
+>>>>>>> 15afd8f25b4c55bd7834a241c06fdef1d07a2e1d
