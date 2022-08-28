@@ -2,6 +2,13 @@ $colorNavPrimario: #0078AA;
 $colorNavSecundario: #73C8F3;
 $colorBotones: #F0DD3A;
 $colorfondo: #F6F6F6;
+<<<<<<< HEAD
+$fontMontserrat: 'Montserrat', sans-serif;
+$fontPoppins: 'Poppins', sans-serif;
+
+@mixin botones($ancho) {
+    color: red;
+=======
 
 $fontMontserrat: 'Montserrat', sans-serif;
 $fontPoppins: 'Poppins', sans-serif;
@@ -9,6 +16,7 @@ $fontPoppins: 'Poppins', sans-serif;
 
 @mixin botones($ancho) {
     color: white;
+>>>>>>> 15afd8f25b4c55bd7834a241c06fdef1d07a2e1d
     width: $ancho;
     background-color: $colorBotones;
     border-radius: 2.5rem;
@@ -18,3 +26,7 @@ $fontPoppins: 'Poppins', sans-serif;
 
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 15afd8f25b4c55bd7834a241c06fdef1d07a2e1d

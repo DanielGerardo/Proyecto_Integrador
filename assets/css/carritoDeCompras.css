@@ -1,4 +1,100 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
-.btnBasura {
-  background-color: #bc2d2d;
+body {
+  background-color: #f6f6f6;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+input[type=number] {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  background-color: rgba(252, 253, 255, 0);
+}
+
+.precioTotal {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.cardItem {
+  border: #0078aa;
+  background-color: #fcfdff;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
+  width: auto;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.cardItem img {
+  width: 3rem;
+}
+
+.btnTrash {
+  font-size: 0.7rem;
+  color: #d03232;
+  padding: 0.2rem;
+  font-family: "Poppins", sans-serif;
+}
+.btnTrash:hover {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #d03232;
+}
+
+.btnTrashIcon {
+  font-size: 0.6rem;
+  color: #d03232;
+  padding: 0.2rem;
+  font-family: "Poppins", sans-serif;
+}
+.btnTrashIcon:hover {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #d03232;
+}
+
+.btnAtras {
+  font-size: 0.7rem;
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
+  background: rgba(0, 120, 170, 0.7);
+  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
+  color: #fcfdff;
+  border-radius: 40px;
+}
+.btnAtras:hover {
+  color: white;
+  background-color: #0078aa;
+}
+
+.btnAdelante {
+  text-align: center;
+  font-size: 0.7rem;
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
+  background: #f0dd3a;
+  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
+  border-radius: 40px;
+}
+.btnAdelante:hover {
+  border-color: #fcfdff;
+  background-color: #dccb35;
+}
+
+.posicionCenter {
+  text-align: center;
+}
+
+.posicionLeft {
+  text-align: left;
+}
+
+.posicionRight {
+  text-align: right;
 }/*# sourceMappingURL=carritoDeCompras.css.map */
