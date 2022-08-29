@@ -89,7 +89,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
               <hr class="d-lg-none text-white-50" />
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="margin-right: 5px" href="#"
+              <a class="nav-link" style="margin-right: 5px" href="carrito.html"
                 ><i class="fa-solid fa-cart-shopping"></i
                 ><span
                   class="contCarrito"
@@ -110,14 +110,14 @@ footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
 <div class="row rowFooter">
   <div class="col">
     <h4>Sobre PopCollector</h4>
-    <a href="#">¿Qué es PopCollector?</a>
-    <a href="#">Certificado de autenticidad</a>
-    <a href="#">Acerca de nosotros</a>
+    <a href="sobrepop.html">¿Qué es PopCollector?</a>
+    <a href="certificados.html">Certificado de autenticidad</a>
+    <a href="sobrenosotros.html">Acerca de nosotros</a>
   </div>
   <div class="col">
     <h4>Soporte al cliente</h4>
-    <a href="">Preguntas Frecuentes</a>
-    <a href="">Ayuda</a>
+    <a href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+    <a href="contacto.html">Ayuda</a>
   </div>
   <div class="col">
     <h4>Contacto</h4>
@@ -160,10 +160,10 @@ footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
       <a id="youtube" href=""><i class="fa-brands fa-youtube"></i></a>
     </div>
     <div class="col" style="text-align: center">
-      <a href="#">Términos y condiciones / Aviso de privacidad</a>
+      <a href="avisodeprivacidad.html">Términos y condiciones / Aviso de privacidad</a>
     </div>
     <div class="col" style="text-align: end">
-      <a href="#">E-Commerce desarrollada por...</a>
+      <a href="creadapor.html">E-Commerce desarrollada por...</a>
     </div>
   </div>
 </div>
@@ -178,34 +178,43 @@ let navUsername = document.querySelector('.navUsername');
 let navInicioSesion = document.querySelector('.navInicioSesion');
 let contCarrito = document.querySelector('.contCarrito');
 function inicioSesion(user){
-    let dropstart = '';
-    if(user == null || user == ""){
-      //Visualiza solo el icono de inicio de sesion y Crear cuenta
-     navInicioSesion.outerHTML = "<li class='nav-item dropdown navInicioSesion dropstart'><a class='nav-link' href='#' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i></a><ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'><li><a class='dropdown-item' href='#'><i class='fa-regular fa-user'></i> Inicio Sesión</a></li><li><a class='dropdown-item' href='#'><i class='fa-solid fa-clock-rotate-left'></i> Crear Cuenta</a></li>";
-    }else {
-        if(user.length <=11){
-            dropstart='dropstart';
-        }
-        //Agrega el username al icono junto con mi cuenta, mis pedidos y cierre de sesion
-        navInicioSesion.outerHTML = `<li class='nav-item dropdown navInicioSesion ${dropstart}'><a class='nav-link' href='#' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i> ${user}</a><ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'><li><a class="dropdown-item" href="#"><i class="fa-regular fa-user"></i> Mi Cuenta</a>
-      </li><li><a class="dropdown-item" href="#"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</a></li><li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</a></li>`
+  let dropstart = '';
+  if(user == null || user == ""){
+    //Visualiza solo el icono de inicio de sesion y Crear cuenta
+    navInicioSesion.outerHTML = "<li class='nav-item dropdown navInicioSesion dropstart'><a class='nav-link' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i></a><ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'><li><a class='dropdown-item' href='iniciosesion.html'><i class='fa-regular fa-user'></i> Inicio Sesión</a></li><li><a class='dropdown-item' href='crearcuenta.html'><i class='fa-solid fa-clock-rotate-left'></i> Crear Cuenta</a></li>";
+  }else {
+    if(user.length <=11){
+      dropstart='dropstart';
     }
+    //Agrega el username al icono junto con mi cuenta, mis pedidos y cierre de sesion
+    navInicioSesion.outerHTML = `<li class='nav-item dropdown navInicioSesion ${dropstart}'><a class='nav-link' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i> ${user}</a><ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'><li><a class="dropdown-item" href="micuenta.html"><i class="fa-regular fa-user"></i> Mi Cuenta</a>
+    </li><li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</a></li><li><a class="dropdown-item" id='cerrarSesion' href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</a></li>`
+    let cerrarSesion =document.getElementById('cerrarSesion');
+    cerrarSesion.addEventListener("click",()=>{    
+      // localUser.username = localUser.username+"";
+      // localStorage.setItem('perfil',JSON.stringify(localUser));
+      // revisarUser(localUser);
+    });
+  }
 }  
 // Este es el objeto de User
 let objUser = {
  username:"Daniel",
  carrito: 2
 }
-//Se agrega a la memoria local 
-    localStorage.setItem("perfil",JSON.stringify(objUser));
+
 //Agarra los datos del localstorage
     let localUser = JSON.parse(localStorage.getItem('perfil'));
 
-   function revisarUser(){
-  if(localUser.username!=null){
+// //Se agrega a la memoria local 
+    localStorage.setItem("perfil",JSON.stringify(objUser));
+    
+        
+   function revisarUser(User){
+  if(User.username!=null){
     //Agrega al icono del carrito la cantidad de pedidos
     contCarrito.innerText = localUser.carrito;  
-    inicioSesion(localUser.username);
+    inicioSesion(User.username);
 
   }else{
 
@@ -215,7 +224,7 @@ let objUser = {
   }
 }; 
 
-revisarUser();
+revisarUser(localUser);
 let estadoTxtBuscar = false;
 
 btnBuscar.addEventListener("click",(e)=>{
@@ -231,6 +240,9 @@ btnBuscar.addEventListener("click",(e)=>{
        txtBuscar.style.display  = "none";
    }
  });
+
+ 
+
 
 
 //Function para agregar el logo a la barra de navegacion con parametros de donde esta ubicada la imagen a cambiar, el tamaño de la imagen y visualizar los links de las paginas
@@ -263,4 +275,5 @@ let scrollTop = document.documentElement.scrollTop;
 }
 
 window.addEventListener('scroll',mostrarLinks);
+
 
