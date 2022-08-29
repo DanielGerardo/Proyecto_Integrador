@@ -105,6 +105,7 @@ h2{
 /*Posicion del icono de filtro */
 .menu-filtro .menu-btn i.fa-filter{
   position: absolute;
+  transition: all 0.3s ease;
 }
 
 /*La opcacidad del icono x inicia en 0 para que mientras este 
@@ -253,6 +254,9 @@ padding-top: 0px;
   transition: all 0.3s ease;
 } 
 
+.footerPlantilla{
+  margin-top: 50px;
+}
 
 /* .content{
   position: absolute;

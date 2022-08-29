@@ -1,7 +1,4 @@
 // Aqui van a ir el JS de todas las platillas ejemplo: Footer y La barra de navegacion 
-<<<<<<< HEAD
-=======
-
 let navPrimario = document.querySelector('.navPrimario');
 let navSecundario = document.querySelector('.navSecundario');
 let footerPlantilla = document.querySelector('.footerPlantilla');
@@ -266,4 +263,4 @@ let scrollTop = document.documentElement.scrollTop;
 
 window.addEventListener('scroll',mostrarLinks);
 
->>>>>>> Gerardo
+
