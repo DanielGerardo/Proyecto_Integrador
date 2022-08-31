@@ -1,0 +1,167 @@
+
+@use 'navStyles';
+$fontMontserrat: 'Montserrat', sans-serif;
+$fontPoppins: 'Poppins', sans-serif;
+$Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
+.caruselImgInner{
+    max-height: 400px;
+    min-height: 400px;
+    img{
+        position: relative;
+        overflow: hidden;
+        max-height: 400px;
+        min-height: 400px;
+    }
+    // .caruselImg1{
+    //     z-index: 0;
+    //     top: 0;
+    // }
+}
+h2{
+    font-family: $fontPoppins;
+    font-weight: 700;
+    color: #0078AA;
+    text-align: center;
+    
+}
+p{
+    font-family: $fontMontserrat;
+    font-weight: 400; 
+}
+.carouselCategorias{
+   .carouselBtnCategorias{
+    margin-bottom: 0px;
+    button{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #0078AA;
+    }
+     }
+    .carouselInnerCategorias {
+        padding: 3em;
+        .cardWrapperCategorias {
+            display: flex;
+            justify-content: center;
+            .cardCategoria {            
+                margin: 0 1em;            
+                border: none;
+                border-radius: 10px;
+                min-height: 300px;
+                max-height: 300px;
+                max-width: 400px;
+                min-width: 400px;
+                img {
+                    border-radius: 10px;
+                    height: 100%;
+                    &:hover{             
+                          box-shadow: $Shadow;                          
+                  }
+                }
+                .btnCategorias{
+                    position: absolute;                                 
+                    top: 40%;
+                    left: 20%;
+                    right: 20%;
+                    text-decoration: none;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #0078AA;
+                    font-family: $fontPoppins;
+                    font-weight: 700;
+                    border: none;
+                    cursor: pointer;
+                    height: 30px;
+                    background: rgba(255, 255, 255, 0.7);
+                    border-radius: 20px;
+                    &:hover{
+                        background: rgb(255, 255, 255);
+                    }                  
+                  }
+                }
+                
+            }
+      }
+      
+      .carousel-control-prev,
+      .carousel-control-next {
+        background-color: #e1e1e1;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+}
+
+.carouselUltimo{ 
+    .carouselBtnUltimo{ 
+     margin-bottom: 0px;
+     button{
+         width: 20px;
+         height: 20px;
+         border-radius: 50%;
+         background-color: #0078AA;
+     }
+      }
+      
+     .carouselInnerUltimo{
+         padding: 3em;
+         .cardWrapperUltimo{
+             display: flex;
+             justify-content: center;
+             .cardUltimo{            
+                 margin: 0 3em;            
+                 border: none;
+                 border-radius: 10px;
+                 max-width: 300px;
+                 min-width: 300px;
+                 box-shadow: $Shadow;
+                 p{
+                    margin-top: 0.625rem;
+                 }
+                 img {
+                    max-width: 100%;
+                    min-height: 222px;
+                    max-height: 222px;
+                }
+                 .btnUltimo{ 
+                    text-decoration: none;
+                    @include navStyles.botones(150px,2.1875rem,#F0DD3A,#00acee,black,white);                
+                   }
+                 }
+                 
+             }
+       }
+       
+       .carousel-control-prev,
+       .carousel-control-next {
+         background-color: #e1e1e1;
+         width: 5vh;
+         height: 5vh;
+         border-radius: 50%;
+         top: 50%;
+         transform: translateY(-50%);
+       }
+ }
+
+ .diferenciadores{
+    background-color: #D9D9D9;
+    .col{
+        margin-top: 20px;
+    }
+ }
+
+  @media (min-width: 768px) {
+    .cardCategoria {
+        img {
+      height: 11em;
+       }
+  }
+    .cardUltimo {
+    img {
+  height: 11em;
+   }
+}
+}
