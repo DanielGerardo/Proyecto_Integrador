@@ -1,8 +1,0 @@
-@use 'variables';
-.btnEnviar{  
-    @include botones(12.5rem);   
-}
-.btnEnviar:hover{
- background-color: #0078AA;
-
-}
