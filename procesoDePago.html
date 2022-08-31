@@ -82,7 +82,7 @@
       <!-- Tab content Envio -->
       <div id="envio" class="tabcontent pt-1 p-3 formulario">
         <!--#Formulario de Envio-->
-         <form  class="form_contact was-validated" id="formEnvio" novalidate>
+         <form  class="form_contact was-validated" id="formEnvio" validate>
           <div class="form-group">
             <!-- Nombre -->
             <label class="control-label">Nombre completo</label>
@@ -226,198 +226,88 @@
                 <div class="invalid-feedback">Campo no válido</div>
             </div>
           </div>
-          
-            
-        </form>
-
-
+          </form>
         <!-- Botones   -->
-        <div class="row">
-        <div class="col form-group">
+        <div class="row pt-4">
+          <div class="col form-group">
           <!-- Div boton seguir viendo -->
           <button class="btnRegresar" onclick="btnVolveralCarrito()">
             <span>
               <i class="fa-solid fa-arrow-left"></i> Volver al carrito
             </span>
           </button>
-        </div>
-
-        <div class="col form-group posicionRight">
+          </div>
+          <div class="col form-group posicionRight">
           <!-- Submit Button -->
           <button
           onclick="abrirPestana('tituloPestana1','formadepago')"
             class="btnRegresar"
           >
-            <span> Comprar </span>
+            <span> Continuar </span>
           </button>
+          </div>
         </div>
-      </div>
         <!--#-->
       </div>
       <!--  -->
-      <!-- # div FORMA DE PAGO -->
-      <div id="formadepago" class="tabcontent">
-        
-        <!-- Nombre de la tarjera -->
-              <div class="card p-3">    
-<div class="inputbox mt-3"> 
-  <input type="text" name="name" class="form-control" required="required"> 
-  <span>Nombre</span> </div>
-      
-      
-                  <div class="row">
-      
-                      <div class="col-md-6">
-      
-                          <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <i class="fa fa-credit-card"></i> <span>Card Number</span> 
-      
-      
-                          </div>
-                          
-      
-                      </div>
-      
-                      <div class="col-md-6">
-      
-                           <div class="d-flex flex-row">
-      
-      
-                               <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Expiry</span> </div>
-      
-                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>CVV</span> </div>
-                               
-      
-                           </div>
-                          
-      
-                      </div>
-                      
-      
-                  </div>
-      
-      
-      
-                  <div class="mt-4 mb-4">
-      
-                      <h6 class="text-uppercase">Billing Address</h6>
-      
-      
-                      <div class="row mt-3">
-      
-                          <div class="col-md-6">
-      
-                              <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Street Address</span> </div>
-                              
-      
-                          </div>
-      
-      
-                           <div class="col-md-6">
-      
-                              <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>City</span> </div>
-                              
-      
-                          </div>
-      
-      
-                          
-      
-                      </div>
-      
-      
-                      <div class="row mt-2">
-      
-                          <div class="col-md-6">
-      
-                              <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>State/Province</span> </div>
-                              
-      
-                          </div>
-      
-      
-                           <div class="col-md-6">
-      
-                              <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Zip code</span> </div>
-                              
-      
-                          </div>
-      
-      
-                          
-      
-                      </div>
-      
-                  </div>
-      
+      <!-- Tab content Forma de pago -->
+      <div id="formadepago" class="tabcontent pt-1 p-3 formulario" >   
+        <!-- # div FORMA DE PAGO -->
+        <form class="form_contact was-validated" id="formEnvio" validate >
+        <!-- Nombre de la tarjeta -->           
+              <div class="inputbox form-group"> 
+                <input type="text"  class="form-control" required="required"> 
+                  <span>Nombre</span> 
+                <div class="valid-feedback">Listo.</div>
+                <div class="invalid-feedback">Campo no válido</div>
+              </div>  
+                <!-- Numero de la tarjeta -->
+              <div class="inputbox form-group"> 
+                  <input type="text" class="form-control" onkeypress="return isNumberKey(event)" maxlength="16"      minlength="16" required> <i class="fa fa-credit-card"></i> 
+                  <span>Numero de tarjeta</span> 
+                  <div class="valid-feedback">Listo.</div>
+                  <div class="invalid-feedback">Campo no válido</div>
               </div>
-      
-      
-              <div class="mt-4 mb-4 d-flex justify-content-between">
-      
-      
-                          <span>Previous step</span>
-      
-      
-                          <button class="btn btn-success px-3">Pay $840</button>
-      
-      
-                          
-      
-                      </div>
-      
-          </div>
-      
-          <div class="col-md-4">
-      
-              <div class="card card-blue p-3 text-white mb-3">
-      
-                 <span>You have to pay</span>
-                  <div class="d-flex flex-row align-items-end mb-3">
-                      <h1 class="mb-0 yellow">$549</h1> <span>.99</span>
+              <!-- Vencimiento -->
+               <div class="inputbox form-group"> 
+                  <input type="text" name="name" class="form-control" required> 
+                  <span>Vencimiento</span> 
+                <div class="valid-feedback">Listo.</div>
+                <div class="invalid-feedback">Campo no válido</div>
+                </div>
+               <!-- CVV -->
+               <div class="inputbox form-group"> 
+                  <input type="text" name="name" class="form-control" onkeypress="return isNumberKey             (event)" maxlength="3" minlength="3" required> 
+                  <span>CVV</span> 
+                  <div class="valid-feedback">Listo.</div>
+                  <div class="invalid-feedback">Campo no válido</div>
+                </div>
+        <!-- Botones -->
+                <div class="row p-45">
+       <!-- Boton regresar -->
+                  <div class="col form-group">
+                    <!-- Div boton seguir viendo -->
+                    <button
+                      class="btnRegresar"
+                      onclick="abrirPestana('tituloPestana2','envio')">
+                      <span>
+                        <i class="fa-solid fa-arrow-left"></i> Volver a envio
+                      </span>
+                    </button>
                   </div>
-      
-                  <span>Enjoy all the features and perk after you complete the payment</span>
-                  <a href="#" class="yellow decoration">Know all the features</a>
-      
-                  <div class="hightlight">
-      
-                      <span>100% Guaranteed support and update for the next 5 years.</span>
-                      
-      
+         <!-- boton comprar -->
+                  <div class="col form-group posicionRight">
+                    <button class="btnRegresar">
+                      <span> Pagar </span>
+                    </button>
                   </div>
-                  
-              </div>
-              
-          </div>
-          
-      </div>
-        
-      
-      </div>
-
-          <div class="col form-group">
-            <!-- Div boton seguir viendo -->
-            <button
-              class="btnRegresar"
-              onclick="abrirPestana('tituloPestana2','envio')"
-            >
-              <span>
-                <i class="fa-solid fa-arrow-left"></i> Volver al carrito
-              </span>
-            </button>
-          </div>
-
-          <div class="col form-group posicionRight">
-            <!-- Submit Button -->
-            <button class="btnRegresar">
-              <span> Comprar </span>
-            </button>
-          </div>
-        </div>
+                </div>
+                <!--  -->
+        </form> 
+        <!--#  -->
       </div>
     </div>
     <!-- ! -->
-
     <footer class="footerPlantilla"></footer>
 
     <!--*funciones -->

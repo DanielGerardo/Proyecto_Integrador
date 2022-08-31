@@ -265,13 +265,8 @@ input[type=number] {
 .form-group {
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
-  padding-top: 25px;
-}
-.form-group label {
-  padding-bottom: 5px;
 }
 
-/* Style the tab */
 .tab {
   overflow: hidden;
 }
