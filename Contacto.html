@@ -25,6 +25,7 @@
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="./assets/css/stylesMaryana.css" />
     <link rel="stylesheet" href="./assets/css/contacto.css" />
+    <link rel="stylesheet" href="./assets/css/stylesNav.css" />
 
 
     <!-- Bootstrap https://getbootstrap.com/ -->
@@ -62,96 +63,96 @@
   </head>
 
   <body class="cuerpo">
-    <div class="container-sm ronded shadow" id="contenedor">
+  <!-- Barra de navegación -Se llama desde los styles- -->
+      <nav class="navPrimario"></nav>
+      <nav class="navSecundario"></nav> <br>
+
+        <!-- Contenedor con sombra -->
+        <div class="container-sm shadow">
+
         <!--Título centrado-->
-        <br>
-        <div class="título d-flex justify-content-center my-3">
-            <h2>Contacto</h2>
-        </div>
-            <!--Formulario-->
-            <form>
-                <div class="info col-lg-7">
-                    <label for="Nombre" class="form-label">
-                        Nombre
-                    </label>
-                    <input type="password" class="form-control" id="Nombre">
-                </div>
+            <br>
+            <div class="título justify-content-center">
+                <h2>Contacto</h2>
+            </div>
 
-                <div class="info col-lg-7">
-                    <label for="Apellidos" class="form-label">
-                        Apellidos
-                    </label>
-                    <input type="password" class="form-control" id="Apellidos">
-                </div>
+        <!--Formulario de contacto-->
+              <form> 
+        <!-- Div de Nombre(s) -->
+                <div class="info col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+                  <label for="Nombre" class="form-label">Nombre(s)</label>
+                    <input type="text" class="form-control" id="Nombre"> <!--Input tipo texto y clase de formulario-->
+                </div><br>
 
-                <div class="info col-lg-7">
-                    <label for="exampleInputEmail1" class="form-label">
-                        Correo electrónico
-                    </label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
-                </div>
+        <!-- Div de Apellidos -->
+                <div class="info col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+                  <label for="Apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="Apellidos"> <!--Input tipo texto y clase de formulario-->
+                </div><br>
+
+        <!-- Div de Correo electrónico -->
+              <div class="info col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+                <label for="email" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"> <!--Input tipo email, clase de formulario y  pattern restrinctivo de caracteres-->
+              </div><br>
+                          
+        <!-- Div de Correo electrónico -->
+              <div class="info col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+                <label for="tel" class="form-label">Télefono (opcional)</label>
+                  <input type="tel" class="form-control" id="phone"   pattern="[0-9]{10}"> <!--Input tipo tel, clase de formulario y  pattern restrinctivo de caracteres-->
+              </div><br>
+
+        <!--Div de checkform-->
+          <div class="info form-check">
+          <!--Check Pedido-->
+            <label class="form-check-label" id="check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault"> 
+                <span>Pedido</span>
+            </label>
+          <!--Check Producto-->
+            <label class="form-check-label" id="check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault">
+                <span>Producto</span>
+            </label>
+          <!--Check General-->
+            <label class="form-check-label" id="check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault">
+                <span>General</span>
+            </label>
+         <!--Check Sugerencia-->
+            <label class="form-check-label" id="check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault">
+                <span>Sugerencias</span>
+            </label>
+          </div> <br>   <!--Div de checkform-->
+
+      <!-- Div de Mensaje -->
+          <div class="info col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+            <label for="Mensaje" class="form-label">Mensaje</label>
+              <input type="text" class="form-control" id="Mensaje"> <!--Input tipo texto y clase de formulario-->
+          </div><br>
+
+      <!-- Div del contenedor del botón enviar y nota de contacto -->
+          <div class="container">
+            <div class="row">
+
+        <!-- Botón enviar -->
+          <button class="btn col-3 mb-5" id="enviar" type="submit">Enviar</button>
                   
-                <div class="info col-lg-7">
-                    <label for="Apellidos" class="form-label">
-                    (Lada) Télefono
-                    </label>
-                    <input type="password" class="form-control" id="Apellidos">
-                </div>
+        <!-- Div de nota de contacto-->
+          <div class="info col-6 col-lg-4 mb-5">
+            <a>Nos pondremos en contacto contigo en un plazo máximo de 48 hrs</a>
+          </div>
 
-                <div class="info form-chec col-md-1" id="checkPedido">
-                    <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Pedido
-                    </label>
-                  </div>
+        </div>
+      </div>  <!-- Div del contenedor del botón enviar y nota de contacto -->
+        
+    </form>   <!--Forulario de contacto-->
+  </div>      <!--Contenedor con sombra del formulario--> 
+<br>
 
-                  <div class="info form-check col-md-2">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Producto
-                    </label>
-                  </div>
-
-                  <div class="info form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      General
-                    </label>
-                  </div>
-
-                  <div class="info form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Sugerencias
-                    </label>
-                  </div> <br>
-
-                <div class="info col-lg-7">
-                    <label for="Apellidos" class="form-label">
-                    Mensaje
-                    </label>
-                    <input type="password" class="form-control" id="Apellidos">
-                </div>
-                 
-                <div class="info container w-100 my-5">
-                    <div class="row">
-                        <div class="col-4 mb-5">
-                            <button class="btn btn-primary" type="crearCuenta">
-                                Enviar
-                            </button>
-                        </div>
-
-                        <div class="info col-6 col-lg-4 mb-5">
-                            <a>Nos pondremos en contacto contigo en un plazo máximo de 48 hrs</a>
-                        </div>
-                    </div>
-                </div>
-                </div>
-              </form>
-
-    </div>
-
-
+  <!-- Footer -Se llama desde Styles- -->
+    <footer class="footerPlantilla"></footer> 
     
   </body>
 </html>
