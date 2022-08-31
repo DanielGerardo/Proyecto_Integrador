@@ -1,6 +1,4 @@
 // Aqui van a ir el JS de todas las platillas ejemplo: Footer y La barra de navegacion 
-<<<<<<< HEAD
-=======
 
 let navPrimario = document.querySelector('.navPrimario');
 let navSecundario = document.querySelector('.navSecundario');
@@ -91,7 +89,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
               <hr class="d-lg-none text-white-50" />
             </li>
             <li class="nav-item">
-              <a class="nav-link" style="margin-right: 5px" href="#"
+              <a class="nav-link" style="margin-right: 5px" href="carritoDeCompras.html"
                 ><i class="fa-solid fa-cart-shopping"></i
                 ><span
                   class="contCarrito"
@@ -266,4 +264,4 @@ let scrollTop = document.documentElement.scrollTop;
 
 window.addEventListener('scroll',mostrarLinks);
 
->>>>>>> Gerardo
+
