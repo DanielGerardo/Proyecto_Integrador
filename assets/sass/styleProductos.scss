@@ -1,0 +1,10 @@
+@use 'mixinProductos';
+@use "productos";
+
+.añadirAlCarrito{  
+    @include mixinProductos.botones(12.5rem);   
+}
+.añadirAlCarrito:hover{
+ background-color: #0078AA;
+
+}
