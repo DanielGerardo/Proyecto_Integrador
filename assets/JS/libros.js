@@ -1,4 +1,4 @@
-const resultadoBusqueda = document.querySelector(".resultadoBusqueda");
+const resultadoBusqueda = document.querySelector(".resultadoBusqueda"); //obtenemos el div del HTML
 function addItem(item){
     const itemHTML = 
     `<div class="col">
@@ -22,7 +22,7 @@ function addItem(item){
                </div>
                <p class="card-price">$${item.precio}</p>
              </div>`;
-    const itemsContainer = document.querySelector(".bookContainer");
+    const itemsContainer = document.querySelector(".contenedorProductos");
     itemsContainer.innerHTML += itemHTML;
 }
 
@@ -40,10 +40,7 @@ function addLibro(){
         for (let i = 0; i< productos.length; i++) {
             if(productos[i].name.match(libro)||productos[i].categoria.match(libro) && libro !== null){
                 addItem(productos[i]);
-                contador= contador + 1;
-                // resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda">"${libro}"</h2>
-                // <h4>${contador} Resultados</h4>`;
-               
+                contador= contador + 1;              
             }
         }
         if(contador===0){
@@ -51,8 +48,8 @@ function addLibro(){
           `<div class="mt-5">
             <img
               src="/assets/img/productos/cara-triste.jpg"
-              alt=""
-              width="120px"
+              alt="Carita triste por no encontrar productos disponibles"
+              width="180px"
             />
             <h3>
               Por el momento no tenemos Libros. Prueba Buscando

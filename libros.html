@@ -38,6 +38,7 @@
     <!-- JS -->
     <script src="assets/JS/plantillas.js" defer></script>
     <script src="assets/JS/libros.js" defer></script>
+    <script src="assets/JS/filtroProducto.js" defer></script>
     <!--Iconos-->
     <script
       src="https://kit.fontawesome.com/5de74547fa.js"
@@ -63,16 +64,16 @@
         <div class="title">Filtrar por..</div>
         <ul class="list-items">
           <h6 class="">Por Categoria</h6>
-          <li><button class="btn-filtro"><i class="fa-solid fa-certificate"></i>Certicado</button></li>
-          <li><button class="btn-filtro"><i class="fa-solid fa-compact-disc"></i>Exclusivo</button></li>
+          <li><button class="btn-filtro" id="btnCertificate"><i class="fa-solid fa-certificate"></i>Certicado</button></li>
+          <li><button class="btn-filtro"id="btnExclusive"><i class="fa-solid fa-compact-disc"></i>Exclusivo</button></li>
           
           <h6>Precio</h6>
-          <li><button class="btn-filtro"><i class="fa-solid fa-left-long"></i>Menor precio</button></li>
-          <li><button class="btn-filtro"><i class="fa-solid fa-right-long"></i>Mayor precio</button></li>
+          <li><button class="btn-filtro" id="btnLowCost"><i class="fa-solid fa-left-long"></i>Menor precio</button></li>
+          <li><button class="btn-filtro" id="btnCost"><i class="fa-solid fa-right-long"></i>Mayor precio</button></li>
             
           <h6 class="">Best Sellers</h6>
-          <li><button class="btn-filtro"><i class="fa-solid fa-eye"></i>Mostrar</button></li>
-          <li><button class="btn-filtro"><i class="fa-solid fa-eye-slash"></i>Ocultar</button></li>
+          <li><button class="btn-filtro"id="btnShow"<i class="fa-solid fa-eye"></i>Mostrar</button></li>
+          <li><button class="btn-filtro" id="btnHide><i class="fa-solid fa-eye-slash"></i>Ocultar</button></li>
 
           <!-- Icons -->
           <div class="redes">
@@ -87,7 +88,7 @@
     <div class="container">
       <div class="resultadoBusqueda"></div>
       </div>
-      <div class="row row-cols-1 row-cols-md-3 g-5 bookContainer">
+      <div class="row row-cols-1 row-cols-md-3 g-5 contenedorProductos">
         <!--Se dividen 3 tarjetas con el mismo ancho en varias filas, si view fuera g se dividen en 4 sm=1 md=3 g=4-->       
       </div><!--row-->
     </div><!--container-->
