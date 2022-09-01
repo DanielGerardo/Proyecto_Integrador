@@ -15,10 +15,11 @@
     <script src="/Formularios/assets/js/script.js" defer></script>
     <!--Iconos-->
     <script src="https://kit.fontawesome.com/ed54527f6b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <link rel="stylesheet" href="/Formularios/assets/css/iniciarSesion.css"/>
     <title>Crea tu cuenta</title>
 </head>
 <body>
+    <!--NavBar-->
   <nav class="navPrimario"></nav>
   <nav class="navSecundario"></nav>
 
@@ -27,34 +28,43 @@
        
         <!--Título centrado-->
         <div class="d-flex justify-content-center my-3">
-            <h2>
-                Iniciar sesión
-            </h2>
+            <h2>Iniciar sesión</h2>
         </div>
 
             <!--Formulario-->
-            <form>
+            <form action="" class="row" id="iniciarSesion">
 
-                <div class="my-5">
-                    <label for="exampleInputEmail1" class="form-label">
+            <!--Contraseña-->
+                <div class="iniciarSesion__grupo_input my-5">
+                    <label for="email" class="form-label">
                         Correo electrónico
                     </label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
+                    <div class="iniciarSesion__grupo_input">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Correo@correo.com">
+                    </div> 
+                    <p class="iniciarSesion__input_error">MENSAJE ERROR</p>
                 </div>
                   
-                <div class=>
-                    <label for="exampleInputPassword1" class="form-label">
+            <!--Password-->
+                <div class="iniciarSesion__grupo mb-4" id="grupo__password">
+                    <label for="password" class="form-label">
                         Contraseña
                     </label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <div class="iniciarSesion__grupo_input">
+                    <input type="password" class="form-control" id="password">
+                    <i class="iniciarSesion__validacion_estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="iniciarSesion__grupo_input">Contraseña incorrecta</p>
                 </div>
 
+                <!--Mensaje de contraseña olvidada-->
                 <div class="container w-100 form-text">
                     <a href="#" class="link">
                         ¿Olvidaste tu contraseña?
                     </a>
                 </div>
                    
+                <!--Botones-->
                 <div class="container w-100 my-5">
                     <div class="row">
                         <div class="col-4 mb-5">
@@ -62,6 +72,7 @@
                                 Ingresar
                             </button>
                         </div>
+
                         <div class="col-6 mb-5 text-end">
                             <a href="#" class="link">¿Nuevo usuario? Registrate</a>
                           <!--  <button type="button" class="btn btn-link">
@@ -71,11 +82,9 @@
                     </div>
                 </div>
 
-
-                </div>
-              </form>
-
-    </div>
+            </form>
+        </div>
+    <!--Footer-->
     <footer class="footerPlantilla"></footer>
 </body>
 </html>

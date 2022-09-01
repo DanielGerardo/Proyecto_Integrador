@@ -13,12 +13,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!--JS-->
     <script src="/Formularios/assets/js/script.js" defer></script>
+    <script src="/Formularios/assets/js/registroUsuarioValidaciones.js" defer></script>
     <!--Iconos-->
     <script src="https://kit.fontawesome.com/ed54527f6b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <link rel="stylesheet" href="/Formularios/assets/css/styles.css">
     <title>Crea tu cuenta</title>
 </head>
 <body>
+    <!--NavBar-->
   <nav class="navPrimario"></nav>
   <nav class="navSecundario"></nav>
 
@@ -33,51 +35,82 @@
         </div>
 
             <!--Formulario-->
-        <form class="row">
-            <div class="mb-4">
+        <form action="" class="row" id="registroUsuario">
+
+            <!--Nombre(s)-->
+            <div class="registroUsuario__grupo registroUsuario__grupo mb-4" id="grupo__nombres">
                 <label for="nombres" class="form-label">
                     Nombre(s)
                 </label>
-                <input type="text" class="form-control" id="nombresinput">
+                <div class="registroUsuario__grupo_input">
+                    <input type="text" class="form-control" name="nombres" id="nombresinput" placeholder="Yosari Bernal">
+                    <i class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"></i>
+                </div>
+                <p class="registroUsuario__input_error">NOOOOOOOOOOOOOOOOOOOOOOO</p>
             </div>
 
-            <div class="mb-4">
+            <!--Apellidos-->            
+            <div class="registroUsuario__grupo mb-4" id="grupo__apellidos">
                 <label for="apellidos" class="form-label">
                     Apellidos
                 </label>
-                <input type="text" class="form-control" id="apellidosinput">
+                <div class="registroUsuario__grupo_input">
+                    <input type="text" class="form-control" name="apellidos" id="apellidosinput" placeholder="Bernal Rodriguez">
+                    <i class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"></i>
+                </div> 
+                <p class="registroUsuario__input_error">MENSAJE ERROR</p>
+            </div>
 
-                <div class="pt-4 mb-4">
+            <!--Email-->
+                <div class="registroUsuario__grupo mb-4" id="grupo__email">
                     <label for="email" class="form-label">
                         Correo electrónico
                     </label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})">
+                    <div class="registroUsuario__grupo_input">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Correo@correo.com">
+                        <i class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"></i>
+                    </div> 
+                    <p class="registroUsuario__input_error">El correo solo puede contener letras, número, puntos, guiones y guión bajo.</p>
                 </div>
                 
-                <div class="mb-4">
+            <!--Password-->
+                <div class="registroUsuario__grupo mb-4" id="grupo__password">
                     <label for="password" class="form-label">
                         Contraseña
                     </label>
-                    <input type="password" class="form-control" id="password">
+                    <div class="registroUsuario__grupo_input">
+                        <input type="password" class="form-control" name="password" id="password">
+                        <i class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"></i>
+                    </div> 
+                    <p class="registroUsuario__input_error">La contraseña tiene que ser de 4 a 12 dígitos</p>
                 </div>
 
-                <div class="mb-4">
-                    <label for="password" class="form-label">
+            <!--Password 2-->
+            <div class="registroUsuario__grupo mb-4" id="grupo__password2">
+                <label for="password" class="form-label">
                         Confirmar contraseña
                     </label>
-                    <input type="password" class="form-control" id="password">
-                </div>
-
-                <!--Botón a la orilla-->
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn btn-primary" type="crearCuenta">
-                        Crear cuenta
-                    </button>
-                  </div>
+                    <div class="registroUsuario__grupo_input">
+                    <input type="password" class="form-control" name="password2" id="password2">
+                    <i class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"></i>
+                </div> 
+                <p class="registroUsuario__input_error">Las contraseñas no coinciden</p>
             </div>
-        </form>
 
-</div>
+            <!--Mensaje-->
+            <div class="registroUsuario__mensaje mb-4" id="registroUsuario__mensaje">
+                <p><i class="fa-solid fa-circle-exclamation"></i><b>Error:</b> Rellena los campos correctamente</p>
+            </div>
+
+            <!--Botón a la orilla-->
+                <div class="registroUsuario__grupo registroUsuario__grupo-btn my-4 ">
+                    <button class="registroUsuario__btn btn" type="submit">Crear cuenta</button>
+                    <p class="registroUsuario__mensaje_exito" id="registroUsuario__mensaje_exito">¡Tu cuenta se ha creado exitosamente!</p>
+                </div>   
+
+        </form>
+    </div>
+<!--Footer-->
 <footer class="footerPlantilla"></footer>
 </body>
 </html>
