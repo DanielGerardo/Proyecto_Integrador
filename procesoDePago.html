@@ -80,31 +80,30 @@
       </div>
 
       <!-- Tab content Envio -->
-      <div id="envio" class="tabcontent pt-1 p-3 formulario">
+      <div id="envio" class="tabcontent pt-5 p-3 formulario">
         <!--#Formulario de Envio-->
-         <form  class="form_contact was-validated" id="formEnvio" validate>
+        <form class="form_contact was-validated" id="formEnvio" validate>
           <div class="form-group">
             <!-- Nombre -->
             <label class="control-label">Nombre completo</label>
             <input
-            class="form-control"
+              class="form-control"
               type="text"
               id="envioNombre"
               minlength="4"
               maxlength="20"
-              onkeypress="return isNumericKey(event)" 
+              onkeypress="return isNumericKey(event)"
               required
             />
             <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
+            <div class="invalid-feedback">Campo no válido</div>
           </div>
-          
 
           <div class="form-group">
             <!-- Calle -->
             <label for="" class="control-label">Calle y número</label>
             <input
-            class="form-control"
+              class="form-control"
               type="text"
               class="form-control"
               id="envioCalle"
@@ -112,14 +111,14 @@
               required
             />
             <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
+            <div class="invalid-feedback">Campo no válido</div>
           </div>
 
           <div class="form-group">
             <!-- Colonia -->
             <label for="" class="control-label">Colonia</label>
             <input
-            class="form-control"
+              class="form-control"
               type="text"
               class="form-control"
               id="envioColonia"
@@ -127,23 +126,23 @@
               required
             />
             <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
+            <div class="invalid-feedback">Campo no válido</div>
           </div>
 
           <div class="form-group">
             <!-- Municipio-->
             <label for="" class="control-label">Municipio</label>
             <input
-            class="form-control"
+              class="form-control"
               type="text"
               class="form-control"
               id="envioMunicipio"
-              onkeypress="return isNumericKey(event)" 
+              onkeypress="return isNumericKey(event)"
               minlength="7"
               required
             />
             <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
+            <div class="invalid-feedback">Campo no válido</div>
           </div>
           <div class="row">
             <div class="col-md-6 form-group">
@@ -190,7 +189,7 @@
                 <option value="Zacatecas">Zacatecas</option>
               </select>
               <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
+              <div class="invalid-feedback">Campo no válido</div>
             </div>
 
             <div class="col-md-3 form-group">
@@ -206,7 +205,7 @@
                 required
               />
               <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
+              <div class="invalid-feedback">Campo no válido</div>
             </div>
           </div>
           <div class="row">
@@ -223,88 +222,139 @@
                 required
               />
               <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
+              <div class="invalid-feedback">Campo no válido</div>
             </div>
           </div>
-          </form>
+        </form>
         <!-- Botones   -->
         <div class="row pt-4">
           <div class="col form-group">
-          <!-- Div boton seguir viendo -->
-          <button class="btnRegresar" onclick="btnVolveralCarrito()">
-            <span>
-              <i class="fa-solid fa-arrow-left"></i> Volver al carrito
-            </span>
-          </button>
+            <!-- Div boton seguir viendo -->
+            <button class="btnRegresar" onclick="btnVolveralCarrito()">
+              <span>
+                <i class="fa-solid fa-arrow-left"></i> Volver al carrito
+              </span>
+            </button>
           </div>
           <div class="col form-group posicionRight">
-          <!-- Submit Button -->
-          <button
-          onclick="abrirPestana('tituloPestana1','formadepago')"
-            class="btnRegresar"
-          >
-            <span> Continuar </span>
-          </button>
+            <!-- Submit Button -->
+            <button
+              onclick="abrirPestana('tituloPestana1','formadepago')"
+              class="btnRegresar"
+            >
+              <span> Continuar </span>
+            </button>
           </div>
         </div>
         <!--#-->
       </div>
       <!--  -->
       <!-- Tab content Forma de pago -->
-      <div id="formadepago" class="tabcontent pt-1 p-3 formulario" >   
+      <div id="formadepago" class="tabcontent pt-5 p-3 formulario">
         <!-- # div FORMA DE PAGO -->
-        <form class="form_contact was-validated" id="formEnvio" validate >
-        <!-- Nombre de la tarjeta -->           
-              <div class="inputbox form-group"> 
-                <input type="text"  class="form-control" required="required"> 
-                  <span>Nombre</span> 
-                <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
-              </div>  
-                <!-- Numero de la tarjeta -->
-              <div class="inputbox form-group"> 
-                  <input type="text" class="form-control" onkeypress="return isNumberKey(event)" maxlength="16"      minlength="16" required> <i class="fa fa-credit-card"></i> 
-                  <span>Numero de tarjeta</span> 
-                  <div class="valid-feedback">Listo.</div>
-                  <div class="invalid-feedback">Campo no válido</div>
+        <form action=""class="form_contact was-validated" >
+          <!-- Nombre tarjeta -->
+          <div class="form-group">
+            <label for="nombreTarjeta" class="control-label"
+              >Nombre del titular de la tarjeta</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nombreTarjeta"
+              minlength="5"
+              required
+            />
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+          <!-- numero tarjeta -->
+          <div class="form-group">
+            <label for="numeroTarjet" class="control-label"
+              >Numero de tarjeta</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="numeroTarjeta"
+              minlength="16"
+              maxlength="16"
+              required
+            />
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+          <!-- Vencimiento  y CVV-->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3">
+                <label class="control-label">Vencimiento</label>
+                <!-- mes -->
+                <select class="form-control" id="mesVencimiento" required>
+                  <option value="01">Enero</option>
+                  <option value="02">Febrero</option>
+                  <option value="03">Marzo</option>
+                  <option value="04">Abril</option>
+                  <option value="05">Mayo</option>
+                  <option value="06">Junio</option>
+                  <option value="07">Julio</option>
+                  <option value="08">Agosto</option>
+                  <option value="09">Septiembre</option>
+                  <option value="10">Octubre</option>
+                  <option value="11">Noviembre</option>
+                  <option value="12">Diciembre</option>
+                </select>
               </div>
-              <!-- Vencimiento -->
-               <div class="inputbox form-group"> 
-                  <input type="text" name="name" class="form-control" required> 
-                  <span>Vencimiento</span> 
-                <div class="valid-feedback">Listo.</div>
-                <div class="invalid-feedback">Campo no válido</div>
-                </div>
-               <!-- CVV -->
-               <div class="inputbox form-group"> 
-                  <input type="text" name="name" class="form-control" onkeypress="return isNumberKey             (event)" maxlength="3" minlength="3" required> 
-                  <span>CVV</span> 
-                  <div class="valid-feedback">Listo.</div>
-                  <div class="invalid-feedback">Campo no válido</div>
-                </div>
-        <!-- Botones -->
-                <div class="row p-45">
-       <!-- Boton regresar -->
-                  <div class="col form-group">
-                    <!-- Div boton seguir viendo -->
-                    <button
-                      class="btnRegresar"
-                      onclick="abrirPestana('tituloPestana2','envio')">
-                      <span>
-                        <i class="fa-solid fa-arrow-left"></i> Volver a envio
-                      </span>
-                    </button>
-                  </div>
-         <!-- boton comprar -->
-                  <div class="col form-group posicionRight">
-                    <button class="btnRegresar">
-                      <span> Pagar </span>
-                    </button>
-                  </div>
-                </div>
-                <!--  -->
-        </form> 
-        <!--#  -->
+              <!-- año -->
+              <div class="col-md-3">
+                <label for=""></label>
+                <select class="form-control" required>
+                  <option value="1">2022</option>
+                  <option value="2">2023</option>
+                  <option value="3">2024</option>
+                  <option value="4">2025</option>
+                  <option value="5">2026</option>
+                  <option value="6">2027</option>
+                </select>
+                <!-- CVV -->
+              </div>
+              <!-- CVV -->
+              <div class="col-md-3">
+                <label for="" class="control-label">CVV</label>
+                <input
+                  type="text"
+                  name=""
+                  id="cvv"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Tipo tarjetas -->
+          <div class="form-group" id="tipoTarjetas">
+            <img src="assets/images/visa.jpg" id="visa" />
+            <img src="assets/images/mastercard.jpg" id="mastercard" />
+            <img src="assets/images/amex.jpg" id="amex" />
+          </div>
+          <!--  -->
+          <!-- Botones   -->
+
+          
+          <div class="form-group posicionCenter">
+            <!-- Submit Button -->
+            <button
+              onclick="abrirPestana('tituloPestana1','formadepago')"
+              class="btnRegresar"
+            >
+              <span> Pagar </span>
+            </button>
+          </div>
+          <div >
+            <button  class="btn btnTrashIcon" onclick="abrirPestana('tituloPestana2','envio')"> Volver</button>
+          </div>
+
+        </form>
       </div>
     </div>
     <!-- ! -->

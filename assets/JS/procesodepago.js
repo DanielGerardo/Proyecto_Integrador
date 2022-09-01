@@ -10,7 +10,7 @@ function btnRegresar() {
 }
 // Boton Volver al carrito
 function btnVolveralCarrito() {
-  window.location.href = "carritoDeCompras.html";
+  window.location.href = "carrito.html";
 }
 
 

@@ -159,3 +159,63 @@
   <script src="/assets/JS/googleAPI.js"></script>
 </body>
 </html>
+
+<form class="form_contact was-validated" id="formEnvio" validate >
+  <!-- Nombre de la tarjeta -->           
+        <div class="inputbox form-group"> 
+          <input type="text"  class="form-control" required="required"> 
+            <span>Nombre</span> 
+          <div class="valid-feedback">Listo.</div>
+          <div class="invalid-feedback">Campo no válido</div>
+        </div>  
+          <!-- Numero de la tarjeta -->
+        <div class="inputbox form-group"> 
+            <input type="text" class="form-control" onkeypress="return isNumberKey(event)" maxlength="16"      minlength="16" required> <i class="fa fa-credit-card"></i> 
+            <span>Numero de tarjeta</span> 
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+        </div>
+        <div class="row">
+        <!-- Vencimiento -->
+        <div class="col-md-3">
+         <div class="inputbox form-group"> 
+            <input type="text" name="name" class="form-control" required> 
+            <span>Vencimiento</span> 
+          <div class="valid-feedback">Listo.</div>
+          <div class="invalid-feedback">Campo no válido</div>
+          </div>
+        </div>
+         <!-- CVV -->
+         <div class="col-md-3">
+         <div class="inputbox form-group"> 
+            <input type="text" name="name" class="form-control" onkeypress="return isNumberKey             (event)" maxlength="3" minlength="3" pattern="00/00" required> 
+            <span>CVV</span> 
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+        </div>
+        </div>
+  <!-- Botones -->
+          <div class="row p-45">
+ <!-- Boton regresar -->
+            <div class="col form-group">
+              <!-- Div boton seguir viendo -->
+              <button
+                class="btnRegresar"
+                onclick="abrirPestana('tituloPestana2','envio')">
+                <span>
+                  <i class="fa-solid fa-arrow-left"></i> Volver a envio
+                </span>
+              </button>
+            </div>
+   <!-- boton comprar -->
+            <div class="col form-group posicionRight">
+              <button class="btnRegresar">
+                <span> Pagar </span>
+              </button>
+            </div>
+          </div>
+          <!--  -->
+  </form> 
+  <!--#  -->
+</div>
