@@ -1,0 +1,38 @@
+@use 'menufiltroBuscar';
+@use 'navStyles';
+
+$fontPoppins: 'Poppins', sans-serif;
+ .tituloDeBusqueda{
+    color: #0078AA;
+    font-family: $fontPoppins;
+    font-weight: 700;
+ }
+  .productoBuscado{
+    .col{
+        display: flex;
+        justify-content: center;
+        .cardUltimo{            
+            margin: 0 3em;            
+            border: none;
+            border-radius: 10px;
+            max-width: 300px;
+            min-width: 300px;
+            &:hover{
+                box-shadow: 0 4px 4px rgba(0, 0, 0,0.3);
+                transition: .6s;
+            }
+            p{
+               margin-top: 0.625rem;
+            }
+            img {
+               max-width: 100%;
+               min-height: 222px;
+               max-height: 222px;
+           }
+            .btnUltimo{ 
+               text-decoration: none;
+               @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);                
+              }
+            }
+    }      
+    }

@@ -6,7 +6,7 @@ let footerPlantilla = document.querySelector('.footerPlantilla');
 
 navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrimario">
       <div class="container-fluid p-0">
-        <a href="#">
+        <a href="/popCollector.html">
           <img
             class="navbar-brand imgLogo"
             src="assets/img/Logo/logo-1.1.png"
@@ -177,6 +177,9 @@ let txtBuscar = document.querySelector(".txtBuscar");
 let navUsername = document.querySelector('.navUsername');
 let navInicioSesion = document.querySelector('.navInicioSesion');
 let contCarrito = document.querySelector('.contCarrito');
+
+
+
 function inicioSesion(user){
   let dropstart = '';
   if(user == null || user == ""){
@@ -227,13 +230,17 @@ let objUser = {
 revisarUser(localUser);
 let estadoTxtBuscar = false;
 
+//Metodo de onClick
 btnBuscar.addEventListener("click",(e)=>{
    e.preventDefault();
    estadoTxtBuscar = !estadoTxtBuscar;
    if(estadoTxtBuscar){
        txtBuscar.style.display  = "block";
+       txtBuscar.focus();
+       estadoTxtBuscar = !estadoTxtBuscar;
     if(txtBuscar.value != ""){       
-        estadoTxtBuscar = false;
+      localStorage.setItem("BuscarProducto",txtBuscar.value);
+      window.open("/buscarProducto.html", "_self"); 
       }else{
     }
 }else{
@@ -254,6 +261,7 @@ function transicionImg(imgen,ancho,display){
         linksCategoriasScroll.style.display = "none";
     }
     imgLogo.style.width = `${ancho}px`;
+   
 }
 
 
@@ -271,7 +279,7 @@ let scrollTop = document.documentElement.scrollTop;
     transicionImg("logo-3.1.png",50,1);
     }else{
     transicionImg("logo-1.1.png",150,0);
-    }  
+    }
 }
 
 window.addEventListener('scroll',mostrarLinks);
