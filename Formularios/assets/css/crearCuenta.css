@@ -22,11 +22,11 @@ body{
 	cursor: pointer;
 }
 
-.iniciarSesion__grupo_input{
+.registroUsuario__grupo_input{
   position: relative;
 }
 
-.iniciarSesion__input{
+.registroUsuario__input{
   width: 100;
   background-color: #f6f6f6;
   border: 3px solid transparent;
@@ -36,23 +36,23 @@ body{
   transition: .3s ease all;
 }
 
-.iniciarSesion__input:focus {
+.registroUsuario__input:focus {
   border: 3px solid #0078AA;
   outline: none;
   box-shadow: 3px 8px 30px rgba(163,163,163, 0.4);
 }
 
-.iniciarSesion__input_error {
+.registroUsuario__input_error {
   font-size: 12px;
 	margin-bottom: 0;
   display: none; 
 }
 
-.iniciarSesion__input_error_activo {
+.registroUsuario__input_error_activo {
 	display: block;
 }
 
-.iniciarSesion__validacion_estado {
+.registroUsuario__validacion_estado {
 	position: absolute;
 	right: 10px;
 	bottom: 15px;
@@ -61,36 +61,47 @@ body{
 	opacity: 0;
 }
 
+.registroUsuario__mensaje {
+	grid-column: span 2;
+}
+.registroUsuario__mensaje{
+  height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0px 15px;
+	border-radius: 3px;
+	display: none;
+}
 
-.iniciarSesion__mensaje p {
+.registroUsuario__mensaje p {
   margin: 0;
 }
 
-.iniciarSesion__mensaje_exito {
+.registroUsuario__mensaje_exito {
 	font-size: 13px;
 	color: #0078AA;
 	display: none;
 }
 
-.iniciarSesion__mensaje_exito_activo {
+.registroUsuario__mensaje_exito_activo {
 	display: block;
 }
 /*---------Estilos para validación---------*/
-.iniciarSesion__grupo_correcto .iniciarSesion__validacion_estado {
+.registroUsuario__grupo_correcto .registroUsuario__validacion_estado {
 	color: #0078AA;
 	opacity: 1;
 }
 
-.iniciarSesion__grupo_incorrecto .form-label {
+.registroUsuario__grupo_incorrecto .form-label {
 	color: #BB2929;
 }
 
-.iniciarSesion__grupo_incorrecto .iniciarSesion__validacion_estado {
+.registroUsuario__grupo_incorrecto .registroUsuario__validacion_estado {
 	color: #BB2929;
   opacity: 1;
 }
 
-.iniciarSesion__grupo_incorrecto .form-control {
+.registroUsuario__grupo_incorrecto .form-control {
 	border: 3px solid #bb2929;
 }
 
@@ -98,14 +109,14 @@ body{
 
   
 /*--------Otros------*/
-.iniciarSesion__btn {
+.registroUsuario__btn {
   color: white;
   width: 12.5rem;
   background-color: #F0DD3A;
   border-radius: 2.5rem;
 }
-
-.iniciarSesion__btn :hover {
+/*
+.registroUsuario__btn :hover {
   background-color: #0078AA;
 }/*# sourceMappingURL=styles.css.map */
 
