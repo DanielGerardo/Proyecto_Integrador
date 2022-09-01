@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--* Links *-->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap https://getbootstrap.com/ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ! -->
+    <!-- styles CSS -->
+    <link rel="stylesheet" href="assets/css/carritoDeCompras.css" />
+    <link rel="stylesheet" href="assets/css/procesoDePago.css" />
+    <!--* JS *-->
+    <!-- CSS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Plantilla JS -->
+    <script src="assets/JS/plantillas.js" defer></script>
+    <!-- Fonts  JS-->
+    <script
+      src="https://kit.fontawesome.com/5de74547fa.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <title>PopCollector/ProcesodePago</title>
+  </head>
+
+  <body>
+    <nav class="navPrimario"></nav>
+    <nav class="navSecundario"></nav>
+
+    <!--! Div cuerpo -->
+    <div class="container p-3 my-3">
+      <!-- Tab links -->
+      <div class="tab">
+        <button
+          id="tituloPestana2"
+          class="tablinks"
+          onclick="abrirPestana('tituloPestana2','envio')"
+        >
+          <span>Datos de envio</span>
+        </button>
+        <button
+          id="tituloPestana1"
+          class="tablinks"
+          onclick="abrirPestana('tituloPestana1','formadepago')"
+        >
+          <span> Forma de pago </span>
+        </button>
+      </div>
+
+      <!-- Tab content Envio -->
+      <div id="envio" class="tabcontent pt-5 p-3 formulario">
+        <!--#Formulario de Envio-->
+        <form class="form_contact was-validated" id="formEnvio" validate>
+          <div class="form-group">
+            <!-- Nombre -->
+            <label class="control-label">Nombre completo</label>
+            <input
+              class="form-control"
+              type="text"
+              id="envioNombre"
+              minlength="4"
+              maxlength="20"
+              onkeypress="return isNumericKey(event)"
+              required
+            />
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+
+          <div class="form-group">
+            <!-- Calle -->
+            <label for="" class="control-label">Calle y número</label>
+            <input
+              class="form-control"
+              type="text"
+              class="form-control"
+              id="envioCalle"
+              minlength="10"
+              required
+            />
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+
+          <div class="form-group">
+            <!-- Colonia -->
+            <label for="" class="control-label">Colonia</label>
+            <input
+              class="form-control"
+              type="text"
+              class="form-control"
+              id="envioColonia"
+              minlength="10"
+              required
+            />
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+
+          <div class="form-group">
+            <!-- Municipio-->
+            <label for="" class="control-label">Municipio</label>
+            <input
+              class="form-control"
+              type="text"
+              class="form-control"
+              id="envioMunicipio"
+              onkeypress="return isNumericKey(event)"
+              minlength="7"
+              required
+            />
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <!-- Btn Estado -->
+              <label for="" class="control-label">Estado</label>
+              <select
+                class="form-control"
+                id="envioEstado"
+                name="estado"
+                required
+              >
+                <option></option>
+                <option value="Aguascalientes">Aguascalientes</option>
+                <option value="Baja California">Baja California</option>
+                <option value="Baja California Sur">Baja California Sur</option>
+                <option value="Campeche">Campeche</option>
+                <option value="Chiapas">Chiapas</option>
+                <option value="Chihuahua">Chihuahua</option>
+                <option value="CDMX">Ciudad de México</option>
+                <option value="Coahuila">Coahuila</option>
+                <option value="Colima">Colima</option>
+                <option value="Durango">Durango</option>
+                <option value="Estado de México">Estado de México</option>
+                <option value="Guanajuato">Guanajuato</option>
+                <option value="Guerrero">Guerrero</option>
+                <option value="Hidalgo">Hidalgo</option>
+                <option value="Jalisco">Jalisco</option>
+                <option value="Michoacán">Michoacán</option>
+                <option value="Morelos">Morelos</option>
+                <option value="Nayarit">Nayarit</option>
+                <option value="Nuevo León">Nuevo León</option>
+                <option value="Oaxaca">Oaxaca</option>
+                <option value="Puebla">Puebla</option>
+                <option value="Querétaro">Querétaro</option>
+                <option value="Quintana Roo">Quintana Roo</option>
+                <option value="San Luis Potosí">San Luis Potosí</option>
+                <option value="Sinaloa">Sinaloa</option>
+                <option value="Sonora">Sonora</option>
+                <option value="Tabasco">Tabasco</option>
+                <option value="Tamaulipas">Tamaulipas</option>
+                <option value="Tlaxcala">Tlaxcala</option>
+                <option value="Veracruz">Veracruz</option>
+                <option value="Yucatán">Yucatán</option>
+                <option value="Zacatecas">Zacatecas</option>
+              </select>
+              <div class="valid-feedback">Listo.</div>
+              <div class="invalid-feedback">Campo no válido</div>
+            </div>
+
+            <div class="col-md-3 form-group">
+              <!-- Codigo postal-->
+              <label class="control-label">Codigo Postal</label>
+              <input
+                type="text"
+                class="form-control"
+                id="envioCP"
+                maxlength="4"
+                minlength="4"
+                onkeypress="return isNumberKey(event)"
+                required
+              />
+              <div class="valid-feedback">Listo.</div>
+              <div class="invalid-feedback">Campo no válido</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 form-group">
+              <!-- Codigo postal-->
+              <label class="control-label">Telefono</label>
+              <input
+                type="text"
+                class="form-control"
+                id="envioCP"
+                minlength="10"
+                maxlength="10"
+                onkeypress="return isNumberKey(event)"
+                required
+              />
+              <div class="valid-feedback">Listo.</div>
+              <div class="invalid-feedback">Campo no válido</div>
+            </div>
+          </div>
+        </form>
+        <!-- Botones   -->
+        <div class="row pt-4">
+          <div class="col form-group">
+            <!-- Div boton seguir viendo -->
+            <button class="btnRegresar" onclick="btnVolveralCarrito()">
+              <span>
+                <i class="fa-solid fa-arrow-left"></i> Volver al carrito
+              </span>
+            </button>
+          </div>
+          <div class="col form-group posicionRight">
+            <!-- Submit Button -->
+            <button
+              onclick="abrirPestana('tituloPestana1','formadepago')"
+              class="btnRegresar"
+            >
+              <span> Continuar </span>
+            </button>
+          </div>
+        </div>
+        <!--#-->
+      </div>
+      <!--  -->
+      <!-- Tab content Forma de pago -->
+      <div id="formadepago" class="tabcontent pt-5 p-3 formulario">
+        <!-- # div FORMA DE PAGO -->
+        <form action=""class="form_contact was-validated" >
+          <!-- Nombre tarjeta -->
+          <div class="form-group">
+            <label for="nombreTarjeta" class="control-label"
+              >Nombre del titular de la tarjeta</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="nombreTarjeta"
+              minlength="5"
+              required
+            />
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+          <!-- numero tarjeta -->
+          <div class="form-group">
+            <label for="numeroTarjet" class="control-label"
+              >Numero de tarjeta</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="numeroTarjeta"
+              minlength="16"
+              maxlength="16"
+              required
+            />
+            <div class="valid-feedback">Listo.</div>
+            <div class="invalid-feedback">Campo no válido</div>
+          </div>
+          <!-- Vencimiento  y CVV-->
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-3">
+                <label class="control-label">Vencimiento</label>
+                <!-- mes -->
+                <select class="form-control" id="mesVencimiento" required>
+                  <option value="01">Enero</option>
+                  <option value="02">Febrero</option>
+                  <option value="03">Marzo</option>
+                  <option value="04">Abril</option>
+                  <option value="05">Mayo</option>
+                  <option value="06">Junio</option>
+                  <option value="07">Julio</option>
+                  <option value="08">Agosto</option>
+                  <option value="09">Septiembre</option>
+                  <option value="10">Octubre</option>
+                  <option value="11">Noviembre</option>
+                  <option value="12">Diciembre</option>
+                </select>
+              </div>
+              <!-- año -->
+              <div class="col-md-3">
+                <label for=""></label>
+                <select class="form-control" required>
+                  <option value="1">2022</option>
+                  <option value="2">2023</option>
+                  <option value="3">2024</option>
+                  <option value="4">2025</option>
+                  <option value="5">2026</option>
+                  <option value="6">2027</option>
+                </select>
+                <!-- CVV -->
+              </div>
+              <!-- CVV -->
+              <div class="col-md-3">
+                <label for="" class="control-label">CVV</label>
+                <input
+                  type="text"
+                  name=""
+                  id="cvv"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Tipo tarjetas -->
+          <div class="form-group" id="tipoTarjetas">
+            <img src="assets/images/visa.jpg" id="visa" />
+            <img src="assets/images/mastercard.jpg" id="mastercard" />
+            <img src="assets/images/amex.jpg" id="amex" />
+          </div>
+          <!--  -->
+          <!-- Botones   -->
+
+          
+          <div class="form-group posicionCenter">
+            <!-- Submit Button -->
+            <button
+              onclick="abrirPestana('tituloPestana1','formadepago')"
+              class="btnRegresar"
+            >
+              <span> Pagar </span>
+            </button>
+          </div>
+          <div >
+            <button  class="btn btnTrashIcon" onclick="abrirPestana('tituloPestana2','envio')"> Volver</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <!-- ! -->
+    <footer class="footerPlantilla"></footer>
+
+    <!--*funciones -->
+    <script src="/assets/JS/procesodepago.js"></script>
+  </body>
+</html>
