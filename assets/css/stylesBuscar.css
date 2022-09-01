@@ -1,0 +1,482 @@
+@charset "UTF-8";
+/****************************FILTRO***********************/
+/* Caracteristicas de posicionamiento del filtro*/
+.menu-filtro {
+  height: 100%;
+  width: 300px;
+  position: relative;
+  /* position:fixed; */
+  float: left;
+  top: 72px;
+}
+
+/* Icono de filtro*/
+.menu-filtro .menu-btn {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  background: #F2DF3A;
+  color: white;
+  height: 45px;
+  width: 45px;
+  z-index: 100;
+  border: 1px solid #F2DF3A;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/*Al clickear el boton  menu-btn lo desplaza a y mantiene alinieado 247px a la izqueierda de la pantalla*/
+#btn:checked ~ .menu-btn {
+  left: 247px;
+}
+
+/*Posicion del icono de filtro */
+.menu-filtro .menu-btn i.fa-filter {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+/*La opcacidad del icono x inicia en 0 para que mientras este 
+NO clickeado el boton, este sea invisible y no se vea encimado al icono del filtro, 
+ya que los 2 iconos estan en el mismo boton*/
+.menu-filtro .menu-btn i.fa-times {
+  opacity: 0;
+}
+
+/*Al clickear el boton del filtro, la opacidad del icono x 
+cambia a 1 para que sea visible y se rota*/
+#btn:checked ~ .menu-btn i.fa-times {
+  opacity: 1;
+  transform: rotate(-180deg);
+}
+
+/*Al clickear el boton del filtro, la opacidad del icono filtro
+cambia a 0 para que sea invisible y se rota para que no se vea encimado al icono x*/
+#btn:checked ~ .menu-btn i.fa-filter {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+/*Caracteristicas del slidebar*/
+#sidebar {
+  /* position: fixed; */
+  position: relative;
+  background: #0078AA;
+  /* height: 100%;  */
+  height: 650px;
+  width: 270px;
+  overflow: hidden;
+  left: -270px; /*Lo que permite el desplazamiento del filtro*/
+  /* margin-top: 0px; */
+  float: left;
+  transition: all 0.3s ease;
+}
+
+/*cuando el input con id=btn es cliceado, selecciona todo lo que sea nav slidebar
+y lo posicion a la ozquieda */
+#btn:checked ~ #sidebar {
+  left: 0;
+}
+
+/*Caracteristicas del titulo del filtro*/
+#sidebar .title {
+  line-height: 65px;
+  text-align: center;
+  background: #0078AA;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #f2f2f2;
+  border-bottom: 1px solid #1f85b8;
+}
+
+h6 {
+  color: #f2f2f2;
+  font-size: 14px;
+  margin-left: 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+/*Caracteristicas del body de a barra de navegación*/
+#sidebar .list-items {
+  position: relative;
+  background: #404040;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding-left: 10px;
+}
+
+#sidebar .list-items li {
+  padding-left: 10px;
+  line-height: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+#sidebar .list-items li:hover {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 0px 10px 3px #222;
+}
+
+#sidebar .list-items li:first-child {
+  border-top: none;
+}
+
+#sidebar .list-items li a {
+  color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+/*Margen de los iconos*/
+#sidebar .list-items li a i {
+  margin-right: 20px;
+}
+
+#sidebar .list-items .redes {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  position: absolute;
+  bottom: 100px;
+  line-height: 40px;
+  display: flex;
+  margin-left: 10px;
+  justify-content: center;
+}
+
+/*darle formato en aspecto a cada icono de las redes sociales*/
+#sidebar .list-items .redes a {
+  height: 100%;
+  width: 40px;
+  /* display: block; */
+  margin: 0 5px;
+  font-size: 18px;
+  color: #f2f2f2;
+  background: #4a4a4a;
+  border-radius: 5px;
+  border: 1px solid #383838;
+  transition: all 0.3s ease;
+}
+
+#sidebar .list-items .redes a:hover {
+  background: #404040;
+}
+
+.icons {
+  align-items: center;
+  padding-top: 0px;
+}
+
+#slidebar input {
+  padding-left: 40px;
+  line-height: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.navPrimario {
+  background-color: #0078aa;
+}
+.navPrimario img {
+  width: 150px;
+  position: fixed;
+  top: 5px;
+}
+
+.formBuscar .btnBuscar {
+  color: white;
+}
+.formBuscar .txtBuscar {
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.formBuscar:hover .btnBuscar {
+  color: #F0DD3A;
+}
+
+.nav-link {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.nav-link:hover {
+  color: #F0DD3A;
+}
+
+.contCarrito {
+  position: absolute;
+  border-radius: 15px;
+  color: black;
+  display: inline-block;
+  word-break: break-word;
+  line-height: 1;
+  background-color: #FAA077;
+  z-index: 10 !important;
+  white-space: nowrap !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 17px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.navInicioSesion {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+.dropdown-item {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.dropdown-item:hover {
+  background-color: #F0DD3A;
+}
+
+.linksCategoriasScroll {
+  display: none;
+}
+.linksCategoriasScroll .linksCategorias:hover {
+  border-bottom: 3px solid #73C8F3;
+}
+
+.navLinksCTG {
+  display: none;
+}
+.navLinksCTG .linksCategorias:hover {
+  border-bottom: 3px solid #73C8F3;
+}
+
+.linksCategorias {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.linksCategorias:hover {
+  color: #F0DD3A;
+  border-bottom: 3px solid #0078aa;
+}
+
+.footerPlantilla {
+  background-color: #0078aa;
+  bottom: 0;
+  color: white;
+}
+.footerPlantilla h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.footerPlantilla .rowFooter {
+  padding: 30px;
+}
+.footerPlantilla form {
+  display: block;
+  color: white;
+}
+.footerPlantilla form #txtCorreo {
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 35px;
+  width: 100%;
+}
+.footerPlantilla form #txtCorreo:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+.footerPlantilla form div .btnEnviar {
+  left: 75%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 80px;
+  height: 1.9375rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: 0.3s ease all;
+  position: relative;
+  overflow: hidden;
+}
+.footerPlantilla form div .btnEnviar span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.footerPlantilla form div .btnEnviar::after {
+  content: "";
+  width: 120px;
+  height: 1.9375rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-150% - 1.9375rem);
+  border-bottom: 1.9375rem solid #73C8F3;
+  border-right: 0.96875rem solid transparent;
+  transition: 0.5s ease-in-out all;
+}
+.footerPlantilla form div .btnEnviar:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.5s;
+}
+.footerPlantilla form div .btnEnviar:hover::after {
+  left: 0;
+}
+.footerPlantilla a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.footerPlantilla a:hover {
+  color: #F0DD3A;
+}
+.footerPlantilla .fotRedes #facebook {
+  display: inline;
+}
+.footerPlantilla .fotRedes #facebook:hover {
+  color: #3b5998;
+}
+.footerPlantilla .fotRedes #instagram {
+  display: inline;
+}
+.footerPlantilla .fotRedes #instagram:hover {
+  color: #3b1863;
+}
+.footerPlantilla .fotRedes #twitter {
+  display: inline;
+}
+.footerPlantilla .fotRedes #twitter:hover {
+  color: #00acee;
+}
+.footerPlantilla .fotRedes #youtube {
+  display: inline;
+}
+.footerPlantilla .fotRedes #youtube:hover {
+  color: #c4302b;
+}
+
+@media (max-width: 992px) {
+  .navPrimario img {
+    width: 100px;
+    position: fixed;
+    top: 5px;
+  }
+  .nav-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 492px) {
+  .navPrimario img {
+    width: 50px;
+    position: fixed;
+    top: 5px;
+  }
+  .linksCategorias {
+    color: white;
+  }
+}
+.tituloDeBusqueda {
+  color: #0078AA;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.productoBuscado .col {
+  display: flex;
+  justify-content: center;
+}
+.productoBuscado .col .cardUltimo {
+  margin: 0 3em;
+  border: none;
+  border-radius: 10px;
+  max-width: 300px;
+  min-width: 300px;
+}
+.productoBuscado .col .cardUltimo:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.6s;
+}
+.productoBuscado .col .cardUltimo p {
+  margin-top: 0.625rem;
+}
+.productoBuscado .col .cardUltimo img {
+  max-width: 100%;
+  min-height: 222px;
+  max-height: 222px;
+}
+.productoBuscado .col .cardUltimo .btnUltimo {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 160px;
+  height: 2.1875rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: 0.3s ease all;
+  position: relative;
+  overflow: hidden;
+}
+.productoBuscado .col .cardUltimo .btnUltimo span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.productoBuscado .col .cardUltimo .btnUltimo::after {
+  content: "";
+  width: 240px;
+  height: 2.1875rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-150% - 2.1875rem);
+  border-bottom: 2.1875rem solid #00acee;
+  border-right: 1.09375rem solid transparent;
+  transition: 0.5s ease-in-out all;
+}
+.productoBuscado .col .cardUltimo .btnUltimo:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.5s;
+}
+.productoBuscado .col .cardUltimo .btnUltimo:hover::after {
+  left: 0;
+}/*# sourceMappingURL=stylesBuscar.css.map */

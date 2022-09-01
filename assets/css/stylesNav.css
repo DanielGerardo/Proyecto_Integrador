@@ -213,4 +213,58 @@
   .linksCategorias {
     color: white;
   }
+}
+@-webkit-keyframes mostarArriba {
+  0% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes mostarArriba {
+  0% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes mostarDerecha {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes mostarDerecha {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.imgLogo:hover {
+  -webkit-animation: mostarDerecha 1s linear infinite;
+          animation: mostarDerecha 1s linear infinite;
 }/*# sourceMappingURL=stylesNav.css.map */
