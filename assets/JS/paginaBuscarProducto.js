@@ -43,13 +43,13 @@ function buscarProducto(productoABuscar){
             if(productos[i].name.match(pattern)||productos[i].categoria.match(pattern)&&pattern !== null){
                 addItem(productos[i]);
                 contador= contador+1;
-                resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda mt-3">"${pattern}"</h2>
-      <h4>${contador} Resultados</h4>`;
+                resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda mt-5">"${pattern}"</h2>
+      <h5>${contador} Resultados</h5>`;
                
             }
         }
         if(contador===0){
-            resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda mt-3">"${pattern}"</h2>
+            resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda mt-2">"${pattern}"</h2>
   <h4>${0} Resultados</h4>
   <div class="mt-5">
     <img

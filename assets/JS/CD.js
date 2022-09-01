@@ -31,7 +31,7 @@ function addLibro(){
     .then(json =>{
        productos = JSON.stringify(json);
        productos = JSON.parse(productos);
-       let libro = "Libros";
+       let libro = "CD";
        var contador =0;
         for (let i = 0; i< productos.length; i++) {
             if(productos[i].categoria.match(libro) && libro !== null){

@@ -1,44 +1,35 @@
 @use "mixinProductos";
+@use "navStyles";
+@use 'menufiltroBuscar';
 
 
-.btnEnviar{  
-    @include mixinProductos.botones(12.5rem);   
-    
+
+.bookContainer{   
+  .card{            
+      margin: 0 1em;            
+      border: none;
+      border-radius: 10px;
+      max-width: 300px;
+      min-width: 300px;
+      margin-bottom: 50px;
+      &:hover{
+          box-shadow: 0 4px 4px rgba(0, 0, 0,0.3);
+          transition: .6s;
+      }
+      p{
+         margin-top: 0.625rem;
+      }
+      .cardPrecio{
+         font-weight: bold;
+      }
+      img {
+         max-width: 100%;
+         min-height: 222px;
+         max-height: 222px;
+     }
+      .btnLibros{ 
+         text-decoration: none;
+         @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);                
+        }
+      }  
 }
-.btnEnviar:hover{
- background-color: #0078AA;
-
-}
-
-
-  .añadirAlCarrito{
-    color: rgb(0, 0, 0);
-    /* color: white; */
-    width: 12.5rem;
-    background-color: #F0DD3A;
-    border-radius: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-  }
-  
-  .añadirAlCarrito:hover {
-    background-color: #0078AA;
-    color: white;
-    font-family:'Montserrat',sans-serif;
-  }
-  
-  .card-title{
-    color: black;
-    font-family: 'Poppins',sans-serif;
-    font-weight: 700;
-  }
-  
-  .card-description{
-    color: black;
-    font-family:'Montserrat',sans-serif;
-  }
-  
-  .card-price{
-    color: gray;
-    font-family: 'Poppins', sans-serif;
-  }
