@@ -432,6 +432,9 @@ h6 {
 .productoBuscado .col .cardUltimo p {
   margin-top: 0.625rem;
 }
+.productoBuscado .col .cardUltimo .cardPrecio {
+  font-weight: bold;
+}
 .productoBuscado .col .cardUltimo img {
   max-width: 100%;
   min-height: 222px;

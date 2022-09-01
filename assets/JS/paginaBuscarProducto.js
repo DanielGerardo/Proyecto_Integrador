@@ -18,7 +18,7 @@ function addItem(item){
       <button class="btnUltimo"
         ><span>Agregar al carrito</span></button
       >
-      <p>$${item.precio}</p>
+      <p class="cardPrecio">$${item.precio} MXN</p>
      </div>
     </div>
   </div>`;

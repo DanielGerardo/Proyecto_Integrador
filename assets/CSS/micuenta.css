@@ -1,0 +1,17 @@
+.cuerpo         {background-color: #f6f6f6;}
+.cardPer        {background-color: white;}
+
+.nom            {font-family:'Poppins', sans-serif; color:#f6f6f6; font-weight:400; font-size: 30px;}
+.subs           {font-family:'Montserrat',sans-serif; color:#0078AA; font-weight:400; font-size: 20px; font-weight: bold;}
+.infoCuen       {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 16px;}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6f6f6;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, #0078AA, #73C8F3);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, #0078AA, #73C8F3)
+    }
