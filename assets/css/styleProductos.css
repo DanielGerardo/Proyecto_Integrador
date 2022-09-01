@@ -45,10 +45,31 @@ body{
 .card-img-top{
   width: 250px;
   height: 210px;
-  display: block;
+  display:block;
   margin: 0px auto;
 }
 
+.icon-certificate{
+  position:absolute;
+  left: 220px;
+  top: 10px;
+  background: #8cd4f8; 
+  color: white;
+  height: 45px;
+  width: 45px;
+  /* z-index:100; */
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-certificate:hover{
+  background: #404040;
+  
+}
 .card-body p{
   margin: 2px;
   background-color: white;
@@ -72,10 +93,11 @@ h2{
   text-align: center;
   font-size: 35px;
   /* display:inline;  */  
-  margin: 10px /*Separacion del titulo con la barra de navegación*/
+  margin: 20px /*Separacion del titulo con la barra de navegación*/
 }
 
 .container{
+  margin:30px;
   width: 1065px;
   margin-left: 270px;
   transition: all ease-in-out 300ms; 
@@ -96,7 +118,7 @@ h2{
   position: relative;
   /* position:fixed; */
   float:left;
-  top: 72px;   
+  top: 6px;   
  
 }
 
@@ -268,7 +290,7 @@ h6{
   transition: all 0.3s ease;
 }
 
-#sidebar .list-items .icons a:hover{
+#sidebar .list-items .redes a:hover{
   background: #404040;
   
 }
