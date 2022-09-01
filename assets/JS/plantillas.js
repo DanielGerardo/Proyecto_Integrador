@@ -1,6 +1,4 @@
 // Aqui van a ir el JS de todas las platillas ejemplo: Footer y La barra de navegacion 
-<<<<<<< HEAD
-=======
 
 let navPrimario = document.querySelector('.navPrimario');
 let navSecundario = document.querySelector('.navSecundario');
@@ -204,7 +202,7 @@ function inicioSesion(user){
 }  
 // Este es el objeto de User
 let objUser = {
- username:"Daniel",
+ username:"",
  carrito: 2
 }
 
@@ -286,8 +284,3 @@ let scrollTop = document.documentElement.scrollTop;
 
 window.addEventListener('scroll',mostrarLinks);
 
-<<<<<<< HEAD
->>>>>>> Gerardo
-=======
-
->>>>>>> Gerardo
