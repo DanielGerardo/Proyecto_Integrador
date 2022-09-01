@@ -1,22 +1,7 @@
-.títuloCon     {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
+.títuloCon    {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
 .infoCon      {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
 
 .container-sm    {background-color: white;}
-
-#enviar{
-    color: rgb(0, 0, 0);
-    width: 12.5rem;
-    background-color: #F0DD3A;
-    border-radius: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-  }
-  
-#enviar:hover {
-    background-color: #0078AA;
-    color: white;
-    font-family:'Montserrat',sans-serif;
-  }
 
 #check {
     margin: top left;

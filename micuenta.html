@@ -22,9 +22,9 @@
     />
 
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="./assets/css/stylesMaryana.css" />
-    <link rel="stylesheet" href="./assets/css/micuenta.css" />
+    <link rel="stylesheet" href="./assets/css/micuenta.css" /> 
     <link rel="stylesheet" href="./assets/css/stylesNav.css" />
+    <link rel="stylesheet" href="./assets/css/botones.css" />
 
     <!-- CSS -->
     <script
@@ -49,93 +49,75 @@
 
     <!-- JS -->
     <script src="assets/JS/plantillas.js" defer></script>
-
-    <link
-      href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
-
-    <title>Mi perfil POPcollector</title>
+    <title>Mi cuenta POPcollector</title>
   </head>
-
-  <br />
+  
   <body class="cuerpo">
     <!-- Barra de navegación -Se llama desde los styles- -->
     <nav class="navPrimario"></nav>
     <nav class="navSecundario"></nav>
 
-    <div class="container">
-      <div class="row">
-        <div class="panel panel-default shadow-sm h-1000">
-          <div class="panel-heading" id="panelcolor">
-            <h4 class="títuloCuen">Mi perfil</h4>
-          </div>
-          <div class="panel-body">
-            <div class="buttons">
-              <button
-                class="btn btn-outline-primary col-lg-1 col-md-11 col-md-offset-11"
-              >
-                Editar
-              </button>
-            </div>
+    <section class="vh-100" style="background-color: #f6f6f6;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-lg-6 mb-4 mb-lg-0">
+            <div class="card-sm shadow cardPer mb-3" style="border-radius: .5rem;">
+              <div class="row g-0">
+                <div class="col-md-4 gradient-custom text-center text-white"
+                  style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                  <img src="/assets/img/usuario.jpg"
+                    alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                  <h5 class="nom">Finn el Humano</h5>
+                  <p class="infoCuen">Coleccionista estrella</p>
+                  <a class="btn" href="#">
+                  <i class="far fa-edit mb-1"></i></a>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body p-4">
+                    <h6 class="subs">Información</h6>
+                    <hr class="mt-0 mb-4">
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6 class="subs">Email</h6>
+                        <a class="infoCuen" href="fin@humano.com">finn@humano.com</a>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6 class="subs">Teléfono</h6>
+                        <p class="infoCuen">123 456 789</p>
+                      </div>
+                    </div>
+                    <h6 class="subs" >Descripción</h6>
+                    <hr class="mt-0 mb-4">
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6 class="subs">Sobre mí</h6>
+                        <p class="infoCuen">Coleccionista de objetos artículos mediavales desde 2004</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6 class="subs">Intereses</h6>
+                        <p class="infoCuen">Objetos de la edad media</p>
+                        <p class="infoCuen">Libros historicos</p>
+                      </div>
+                    </div>
+                    <!-- <div class="d-flex justify-content-start">
+                      <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                      <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                      <a href="#!"><i class="fab fa-instagram fa-lg"></i></a> -->
 
-            <div class="col-md-4 col-xs-8 col-sm-6 col-lg-4">
-              <img
-                alt="User Pic"
-                src="./assets/img/usuario.jpg"
-                id="profile-image1"
-                class="img-circle img-responsive"
-              />
-            </div>
-            <!--div imagen de usuario-->
-            <div class="col-md-8 col-xs-8 col-sm-6 col-lg-8">
-              <div class="container">
-                <h2 class="nombre">Finn el humano</h2>
-              </div>
-              <hr />
-              <h5 class="infoCuen">
-                <ul>
-                  <li>
-                    <p>
-                      <span
-                        class="glyphicon glyphicon-user one"
-                        style="width: 50px"
-                      ></span
-                      >finn.coleccionista
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <span
-                        class="glyphicon glyphicon-envelope one"
-                        style="width: 50px"
-                      ></span
-                      >finn@humano.com
-                    </p>
-                  </li>
-                </ul>
-              </h5>
-
-              <hr />
-              <div class="col-sm-8 col-xs-8 tital">
-                <h4 class="infoCuen">
-                  Coleccionista experto de articulos de guerra medieval
-                </h4>
-              </div>
-
-              <div>
-                <button
-                  class="btn btn-primary col-lg-2 col-md-3 col-md-offset-3"
-                > Mis pedidos
-                </button>
+                      <button class="btn" type="submit" id="pedidos">
+                        Mis Pedidos
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-          <!-- Footer -Se llama desde Styles- -->
-          <footer class="footerPlantilla"></footer> 
+    </section>
+
+    <!-- Footer -Se llama desde Styles- -->
+    <footer class="footerPlantilla"></footer>
   </body>
 </html>
