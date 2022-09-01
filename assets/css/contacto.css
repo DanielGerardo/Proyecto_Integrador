@@ -1,5 +1,5 @@
-.título     {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
-.info       {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
+.títuloCon     {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
+.infoCon      {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
 
 .container-sm    {background-color: white;}
 
@@ -25,3 +25,13 @@
 #check {
     margin: -100px 50px;
 }
+
+#estante{
+    border-radius: 2.5rem;
+    margin: top left;
+}
+
+#estante{
+    margin: 60px 100px;
+}
+

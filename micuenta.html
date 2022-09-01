@@ -6,25 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Fonts -->
-    <!-- Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Estilos CSS -->
-    <link rel="stylesheet" href="./assets/css/stylesMaryana.css" />
-    <link rel="stylesheet" href="./assets/css/perfilUsuario.css" />
 
     <!-- Bootstrap https://getbootstrap.com/ -->
     <link
@@ -33,6 +20,11 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="./assets/css/stylesMaryana.css" />
+    <link rel="stylesheet" href="./assets/css/micuenta.css" />
+    <link rel="stylesheet" href="./assets/css/stylesNav.css" />
 
     <!-- CSS -->
     <script
@@ -64,16 +56,20 @@
       id="bootstrap-css"
     />
 
-    <title>Perfil de Usuario POPcollector</title>
+    <title>Mi perfil POPcollector</title>
   </head>
 
   <br />
   <body class="cuerpo">
+    <!-- Barra de navegación -Se llama desde los styles- -->
+    <nav class="navPrimario"></nav>
+    <nav class="navSecundario"></nav>
+
     <div class="container">
       <div class="row">
         <div class="panel panel-default shadow-sm h-1000">
           <div class="panel-heading" id="panelcolor">
-            <h4 class="título">Perfil de usuario</h4>
+            <h4 class="títuloCuen">Mi perfil</h4>
           </div>
           <div class="panel-body">
             <div class="buttons">
@@ -98,7 +94,7 @@
                 <h2 class="nombre">Finn el humano</h2>
               </div>
               <hr />
-              <h5 class="info">
+              <h5 class="infoCuen">
                 <ul>
                   <li>
                     <p>
@@ -123,7 +119,7 @@
 
               <hr />
               <div class="col-sm-8 col-xs-8 tital">
-                <h4 class="info">
+                <h4 class="infoCuen">
                   Coleccionista experto de articulos de guerra medieval
                 </h4>
               </div>
@@ -139,5 +135,7 @@
         </div>
       </div>
     </div>
+          <!-- Footer -Se llama desde Styles- -->
+          <footer class="footerPlantilla"></footer> 
   </body>
 </html>
