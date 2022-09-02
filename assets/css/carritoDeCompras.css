@@ -1,3 +1,43 @@
+body {
+  background-color: #f6f6f6;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 2.5px solid #0078aa;
+}
+
+input[type=number] {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  background-color: rgba(252, 253, 255, 0);
+}
+
+.precioTotal {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.cardItem {
+  border: #0078aa;
+  background-color: #fcfdff;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
+  width: auto;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.cardItem img {
+  max-width: 40%;
+  height: auto;
+}
+
 .navPrimario {
   background-color: #0078aa;
 }
@@ -214,57 +254,172 @@
     color: white;
   }
 }
-@-webkit-keyframes mostarArriba {
-  0% {
-    transform: translateY(80px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.btnTrash {
+  font-size: 0.7rem;
+  color: #d03232;
+  padding: 0.2rem;
+  font-family: "Poppins", sans-serif;
 }
-@keyframes mostarArriba {
-  0% {
-    transform: translateY(80px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.btnTrash:hover {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #d03232;
 }
-@-webkit-keyframes mostarDerecha {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(30deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+
+.btnTrashIcon {
+  font-size: 0.6rem;
+  color: #d03232;
+  padding: 0.2rem;
+  font-family: "Poppins", sans-serif;
 }
-@keyframes mostarDerecha {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(30deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.btnTrashIcon:hover {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #d03232;
 }
-.imgLogo:hover {
-  -webkit-animation: mostarDerecha 1s linear infinite;
-          animation: mostarDerecha 1s linear infinite;
-}/*# sourceMappingURL=stylesNav.css.map */
+
+.btnAtras {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 8rem;
+  height: 2.2rem;
+  background-color: rgba(0, 120, 170, 0.7);
+  border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: 0.3s ease all;
+  position: relative;
+  overflow: hidden;
+  font-size: 13px;
+}
+.btnAtras span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.btnAtras::after {
+  content: "";
+  width: 12rem;
+  height: 2.2rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-150% - 2.2rem);
+  border-bottom: 2.2rem solid #f0dd3a;
+  border-right: 1.1rem solid transparent;
+  transition: 0.5s ease-in-out all;
+}
+.btnAtras:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: black;
+  transition: 0.5s;
+}
+.btnAtras:hover::after {
+  left: 0;
+}
+
+.btnAdelante {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 8rem;
+  height: 2.2rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: 0.3s ease all;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+}
+.btnAdelante span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.btnAdelante::after {
+  content: "";
+  width: 12rem;
+  height: 2.2rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-150% - 2.2rem);
+  border-bottom: 2.2rem solid #0078aa;
+  border-right: 1.1rem solid transparent;
+  transition: 0.5s ease-in-out all;
+}
+.btnAdelante:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.5s;
+}
+.btnAdelante:hover::after {
+  left: 0;
+}
+
+.btnRegresar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 9rem;
+  height: 2.2rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: 0.3s ease all;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+}
+.btnRegresar span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.btnRegresar::after {
+  content: "";
+  width: 13.5rem;
+  height: 2.2rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-150% - 2.2rem);
+  border-bottom: 2.2rem solid #0078aa;
+  border-right: 1.1rem solid transparent;
+  transition: 0.5s ease-in-out all;
+}
+.btnRegresar:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.5s;
+}
+.btnRegresar:hover::after {
+  left: 0;
+}
+
+.posicionCenter {
+  text-align: center;
+}
+
+.posicionLeft {
+  text-align: left;
+}
+
+.posicionRight {
+  text-align: right;
+}/*# sourceMappingURL=carritoDeCompras.css.map */

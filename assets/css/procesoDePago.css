@@ -1,3 +1,43 @@
+body {
+  background-color: #f6f6f6;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 2.5px solid #0078aa;
+}
+
+input[type=number] {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  background-color: rgba(252, 253, 255, 0);
+}
+
+.precioTotal {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.cardItem {
+  border: #0078aa;
+  background-color: #fcfdff;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
+  width: auto;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.cardItem img {
+  max-width: 40%;
+  height: auto;
+}
+
 .navPrimario {
   background-color: #0078aa;
 }
@@ -214,57 +254,80 @@
     color: white;
   }
 }
-@-webkit-keyframes mostarArriba {
-  0% {
-    transform: translateY(80px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.formulario {
+  background-color: #fcfdff;
+  border: 1px solid rgba(197, 195, 195, 0.411);
+  border-top: none;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
 }
-@keyframes mostarArriba {
-  0% {
-    transform: translateY(80px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+
+.form-group {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 }
-@-webkit-keyframes mostarDerecha {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(30deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+
+.tab {
+  overflow: hidden;
 }
-@keyframes mostarDerecha {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(30deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-30deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  font-family: "Poppins", sans-serif;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
 }
-.imgLogo:hover {
-  -webkit-animation: mostarDerecha 1s linear infinite;
-          animation: mostarDerecha 1s linear infinite;
-}/*# sourceMappingURL=stylesNav.css.map */
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #fcfdff;
+  border: 1px solid rgba(197, 195, 195, 0.411);
+  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
+  border-bottom: none;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+.tab button.active span {
+  border-bottom: 2px solid #f0dd3a;
+}
+
+.inputbox {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.inputbox span {
+  position: absolute;
+  top: 7px;
+  left: 11px;
+  transition: 0.5s;
+}
+
+.inputbox i {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  transition: 0.5s;
+  color: #3F51B5;
+}
+
+.inputbox input:focus ~ span {
+  transform: translateX(0px) translateY(-15px);
+  font-size: 12px;
+}
+
+.inputbox input:valid ~ span {
+  transform: translateX(0px) translateY(-15px);
+  font-size: 12px;
+}
+
+.decoration:hover {
+  text-decoration: none;
+  color: #fdcc49;
+}/*# sourceMappingURL=procesoDePago.css.map */
