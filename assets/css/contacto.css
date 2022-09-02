@@ -1,0 +1,27 @@
+.títuloCon    {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
+.infoCon      {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
+
+.container-sm    {background-color: white;}
+
+#check {
+    margin: top left;
+}
+
+#check {
+    margin: -100px 20px;
+}
+
+#estante{
+    border-radius: 2.5rem;
+    margin: top left;
+}
+
+#estante{
+    /* margin: 60px 100px; */
+}
+.imgEstante{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}

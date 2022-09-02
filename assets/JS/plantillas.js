@@ -1,12 +1,16 @@
 // Aqui van a ir el JS de todas las platillas ejemplo: Footer y La barra de navegacion 
-
+// variable de la primera barra de navegacion
 let navPrimario = document.querySelector('.navPrimario');
+// variable de la segunda barra de navegacion
 let navSecundario = document.querySelector('.navSecundario');
+// variable footer de la pagina
 let footerPlantilla = document.querySelector('.footerPlantilla');
 
+// Se agrega el HTML a la varibale navPrimera 
 navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrimario">
       <div class="container-fluid p-0">
-        <a href="#">
+     
+        <a href="/popCollector.html">
           <img
             class="navbar-brand imgLogo"
             src="assets/img/Logo/logo-1.1.png"
@@ -30,7 +34,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
             <a class="nav-link linksCategorias" href="vinilos.html">VINILOS</a>
           </li>
         </ul>
-
+        
         <button
           class="navbar-toggler collapsed"
           type="button"
@@ -47,6 +51,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
           <div class="me-auto"></div>
           <div class="me-auto"></div>
           <div class="me-auto linksCategoriasScroll">
+         
             <ul class="navbar-nav nav justify-content-center">
               <li class="nav-item">
                 <a class="nav-link linksCategorias" href="libros.html">LIBROS</a>
@@ -67,6 +72,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
           </div>
           <ul class="navbar-nav me-0 mb-2 mb-lg-0">
             <li class="nav-item">
+           
               <form class="d-flex formBuscar" role="search">
                 <input
                   class="form-control me-2 txtBuscar"
@@ -84,6 +90,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
                 </button>
               </form>
             </li>
+          
             <li class="nav-item py-1 col-12 col-lg-auto">
               <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
               <hr class="d-lg-none text-white-50" />
@@ -103,7 +110,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
         </div>
       </div>
     </nav>`;
-
+// Se agrega el HTML a la variable navSecundario
 navSecundario.outerHTML = "<nav class='navbar navbar-expand navSecundario' style='height: 40px; background-color: #3ab4f2'><div class='container-fluid'><div class='collapse navbar-collapse'><div class='navbar-nav me-auto mb-lg-0'></div><ul class='navbar-nav nav justify-content-center'><li class='nav-item'><a class='nav-link linksCategorias' href='libros.html'>LIBROS</a></li><li class='nav-item'><a class='nav-link linksCategorias' href='series.html'>SERIES</a></li><li class='nav-item'><a class='nav-link linksCategorias' href='peliculas.html'>PELICULAS</a></li><li class='nav-item'><a class='nav-link linksCategorias' href='CD.html'>CD´S</a></li><li class='nav-item'><a class='nav-link linksCategorias' href='vinilos.html'>VINILOS</a></li></ul><div class='navbar-nav me-auto mb-lg-0'></div></div></div></nav>";
 
 footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
@@ -177,6 +184,9 @@ let txtBuscar = document.querySelector(".txtBuscar");
 let navUsername = document.querySelector('.navUsername');
 let navInicioSesion = document.querySelector('.navInicioSesion');
 let contCarrito = document.querySelector('.contCarrito');
+
+
+
 function inicioSesion(user){
   let dropstart = '';
   if(user == null || user == ""){
@@ -227,13 +237,17 @@ let objUser = {
 revisarUser(localUser);
 let estadoTxtBuscar = false;
 
+//Metodo de onClick
 btnBuscar.addEventListener("click",(e)=>{
    e.preventDefault();
    estadoTxtBuscar = !estadoTxtBuscar;
    if(estadoTxtBuscar){
        txtBuscar.style.display  = "block";
+       txtBuscar.focus();
+       estadoTxtBuscar = !estadoTxtBuscar;
     if(txtBuscar.value != ""){       
-        estadoTxtBuscar = false;
+      localStorage.setItem("BuscarProducto",txtBuscar.value);
+      window.open("/buscarProducto.html", "_self"); 
       }else{
     }
 }else{
@@ -241,7 +255,7 @@ btnBuscar.addEventListener("click",(e)=>{
    }
  });
 
- 
+
 
 
 
@@ -254,6 +268,7 @@ function transicionImg(imgen,ancho,display){
         linksCategoriasScroll.style.display = "none";
     }
     imgLogo.style.width = `${ancho}px`;
+   
 }
 
 
@@ -271,9 +286,8 @@ let scrollTop = document.documentElement.scrollTop;
     transicionImg("logo-3.1.png",50,1);
     }else{
     transicionImg("logo-1.1.png",150,0);
-    }  
+    }
 }
 
 window.addEventListener('scroll',mostrarLinks);
-
 
