@@ -1,0 +1,116 @@
+//! ICONO TRASH <i type="button" class="btnTrash fa-solid fa-trash-can">
+
+//?Variables
+$fontMontserrat: "Montserrat", sans-serif;
+$fontPoppins: "Poppins", sans-serif;
+$colorrojo: #d03232;
+$colorAzul: #0078aa;
+$colorCeleste: #73c8f3;
+$colorBotones: #f0dd3a;
+$colorfondo: #f6f6f6;
+$colorblanco: #fcfdff;
+$coloratras: rgba(0, 120, 170, 0.7);
+$bordeAzul: 1px solid rgba(41, 99, 125, 0.3);
+$sombra: 0px 4px 4px rgba(14, 11, 11, 0.314);
+
+//*Etiquetas
+body {
+  background-color: $colorfondo;
+}
+
+// Estilo titulo de la página
+h2{
+  font-family: $fontPoppins;
+  width: fit-content;
+  border-bottom: 2.5px solid $colorAzul;
+}
+
+// Estilo input:number cantidad
+input[type="number"] {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  background-color: #fcfdff00;
+}
+// ?______________________________________________
+
+//*Funciones
+
+//Estilo btn Basura
+@mixin btnBasura($ancho) {
+  font-size: $ancho;
+  color: $colorrojo;
+  padding: 0.2rem;
+  // padding-right: 5px;
+  // padding-left: 5px;
+  font-family: $fontPoppins;
+  &:hover {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: $colorrojo;
+  }
+}
+
+// Estilo boton hacia atras
+@mixin btnAtras($ancho, $altura) {
+  font-size: $ancho;
+  font-family: $fontPoppins;
+  font-style: bold;
+  background: $coloratras;
+  box-shadow: $sombra;
+  color: $colorblanco;
+  border-radius: 40px;
+  &:hover {
+    color: white;
+    background-color: $colorAzul;
+  }
+}
+// Estilo boton hacia adelante
+@mixin btnAdelante($ancho, $altura) {
+  text-align: center;
+  font-size: $ancho;
+  font-family: $fontPoppins;
+  font-style: bold;
+  background: $colorBotones;
+  box-shadow: $sombra;
+  border-radius: 40px;
+  &:hover {
+    border-color: $colorblanco;
+    background-color: #dccb35;
+  }
+}
+
+// Posicion
+@mixin posicion($alineacion) {
+  text-align: $alineacion;
+}
+// ?___________________________________________________-
+
+// * Clases
+// Estilo precio final
+.precioTotal {
+  font-family: $fontPoppins;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+// Estilo card item en donde se coloca los items añadidos al carrito
+.cardItem {
+  border: #0078aa;
+  background-color:$colorblanco;
+  border-radius: 25px;
+box-shadow: $sombra;
+  width: auto;
+  font-size: 14px;
+  text-align: center;
+  font-family: $fontMontserrat;
+  img {
+    max-width: 40%;
+    height: auto;
+  }
+}
+
+
+// ?_________________________________-
+

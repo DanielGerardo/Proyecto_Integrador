@@ -1,0 +1,333 @@
+body {
+  background-color: #f6f6f6;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 2.5px solid #0078aa;
+}
+
+input[type=number] {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  background-color: rgba(252, 253, 255, 0);
+}
+
+.precioTotal {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.cardItem {
+  border: #0078aa;
+  background-color: #fcfdff;
+  border-radius: 25px;
+  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
+  width: auto;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.cardItem img {
+  max-width: 40%;
+  height: auto;
+}
+
+.navPrimario {
+  background-color: #0078aa;
+}
+.navPrimario img {
+  width: 150px;
+  position: fixed;
+  top: 5px;
+}
+
+.formBuscar .btnBuscar {
+  color: white;
+}
+.formBuscar .txtBuscar {
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.formBuscar:hover .btnBuscar {
+  color: #F0DD3A;
+}
+
+.nav-link {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.nav-link:hover {
+  color: #F0DD3A;
+}
+
+.contCarrito {
+  position: absolute;
+  border-radius: 15px;
+  color: black;
+  display: inline-block;
+  word-break: break-word;
+  line-height: 1;
+  background-color: #FAA077;
+  z-index: 10 !important;
+  white-space: nowrap !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 17px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.navInicioSesion {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+.dropdown-item {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.dropdown-item:hover {
+  background-color: #F0DD3A;
+}
+
+.linksCategoriasScroll {
+  display: none;
+}
+.linksCategoriasScroll .linksCategorias:hover {
+  border-bottom: 3px solid #73C8F3;
+}
+
+.navLinksCTG {
+  display: none;
+}
+.navLinksCTG .linksCategorias:hover {
+  border-bottom: 3px solid #73C8F3;
+}
+
+.linksCategorias {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.linksCategorias:hover {
+  color: #F0DD3A;
+  border-bottom: 3px solid #0078aa;
+}
+
+.footerPlantilla {
+  background-color: #0078aa;
+  bottom: 0;
+  color: white;
+}
+.footerPlantilla h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.footerPlantilla .rowFooter {
+  padding: 30px;
+}
+.footerPlantilla form {
+  display: block;
+  color: white;
+}
+.footerPlantilla form #txtCorreo {
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 35px;
+  width: 100%;
+}
+.footerPlantilla form #txtCorreo:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+.footerPlantilla form div .btnEnviar {
+  left: 75%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 80px;
+  height: 1.9375rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: 0.3s ease all;
+  position: relative;
+  overflow: hidden;
+}
+.footerPlantilla form div .btnEnviar span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.footerPlantilla form div .btnEnviar::after {
+  content: "";
+  width: 120px;
+  height: 1.9375rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-150% - 1.9375rem);
+  border-bottom: 1.9375rem solid #73C8F3;
+  border-right: 0.96875rem solid transparent;
+  transition: 0.5s ease-in-out all;
+}
+.footerPlantilla form div .btnEnviar:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.5s;
+}
+.footerPlantilla form div .btnEnviar:hover::after {
+  left: 0;
+}
+.footerPlantilla a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.footerPlantilla a:hover {
+  color: #F0DD3A;
+}
+.footerPlantilla .fotRedes #facebook {
+  display: inline;
+}
+.footerPlantilla .fotRedes #facebook:hover {
+  color: #3b5998;
+}
+.footerPlantilla .fotRedes #instagram {
+  display: inline;
+}
+.footerPlantilla .fotRedes #instagram:hover {
+  color: #3b1863;
+}
+.footerPlantilla .fotRedes #twitter {
+  display: inline;
+}
+.footerPlantilla .fotRedes #twitter:hover {
+  color: #00acee;
+}
+.footerPlantilla .fotRedes #youtube {
+  display: inline;
+}
+.footerPlantilla .fotRedes #youtube:hover {
+  color: #c4302b;
+}
+
+@media (max-width: 992px) {
+  .navPrimario img {
+    width: 100px;
+    position: fixed;
+    top: 5px;
+  }
+  .nav-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 492px) {
+  .navPrimario img {
+    width: 50px;
+    position: fixed;
+    top: 5px;
+  }
+  .linksCategorias {
+    color: white;
+  }
+}
+.formulario {
+  background-color: #fcfdff;
+  border: 1px solid rgba(197, 195, 195, 0.411);
+  border-top: none;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.form-group {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  font-family: "Poppins", sans-serif;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #fcfdff;
+  border: 1px solid rgba(197, 195, 195, 0.411);
+  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
+  border-bottom: none;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+.tab button.active span {
+  border-bottom: 2px solid #f0dd3a;
+}
+
+.inputbox {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.inputbox span {
+  position: absolute;
+  top: 7px;
+  left: 11px;
+  transition: 0.5s;
+}
+
+.inputbox i {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  transition: 0.5s;
+  color: #3F51B5;
+}
+
+.inputbox input:focus ~ span {
+  transform: translateX(0px) translateY(-15px);
+  font-size: 12px;
+}
+
+.inputbox input:valid ~ span {
+  transform: translateX(0px) translateY(-15px);
+  font-size: 12px;
+}
+
+.decoration:hover {
+  text-decoration: none;
+  color: #fdcc49;
+}/*# sourceMappingURL=procesoDePago.css.map */

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap https://getbootstrap.com/ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- styles CSS -->
+    <link rel="stylesheet" href="./assets/css/styleProductos.css" />
+    <link rel="stylesheet" href="./assets/css/stylesNav.css" />
+    <!-- CSS -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!--Boostrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- JS -->
+    <script src="assets/JS/plantillas.js" defer></script>
+    <script src="assets/JS/series.js" defer></script>
+    <!--Iconos-->
+    <script
+      src="https://kit.fontawesome.com/5de74547fa.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Libros Pop Collector</title>
+  </head>
+
+  <body>
+    <nav class="navPrimario"></nav>
+    <nav class="navSecundario"></nav>
+
+    <div class="menu-filtro">
+      <input type="checkbox" id="btn" hidden />
+      <label for="btn" class="menu-btn">
+        <i class="fa-solid fa-filter"></i>
+        <i class="fas fa-times"></i>
+      </label>
+      <nav id="sidebar">
+        <div class="title">Filtrar por..</div>
+        <ul class="list-items">
+          <h6 class="">Por Categoria</h6>
+          <li>
+            <button class="btn-filtro">
+              <i class="fa-solid fa-certificate"></i>Certicado
+            </button>
+          </li>
+          <li>
+            <button class="btn-filtro">
+              <i class="fa-solid fa-compact-disc"></i>Exclusivo
+            </button>
+          </li>
+
+          <h6>Precio</h6>
+          <li>
+            <button class="btn-filtro">
+              <i class="fa-solid fa-left-long"></i>Menor precio
+            </button>
+          </li>
+          <li>
+            <button class="btn-filtro">
+              <i class="fa-solid fa-right-long"></i>Mayor precio
+            </button>
+          </li>
+
+          <h6 class="">Best Sellers</h6>
+          <li>
+            <button class="btn-filtro">
+              <i class="fa-solid fa-eye"></i>Mostrar
+            </button>
+          </li>
+          <li>
+            <button class="btn-filtro">
+              <i class="fa-solid fa-eye-slash"></i>Ocultar
+            </button>
+          </li>
+
+          <!-- Icons -->
+          <div class="redes">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="resultadoBusqueda"></div>
+      <h3
+        class="titulo text-center"
+        style="
+          color: #0078aa;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 700;
+          margin-bottom: 100px;
+          margin-top: 50px;
+        "
+      >
+        NUESTROS SERIES
+      </h3>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-5 bookContainer">
+      <!--Se dividen 3 tarjetas con el mismo ancho en varias filas, si view fuera g se dividen en 4 sm=1 md=3 g=4-->
+    </div>
+    <!--row-->
+    <footer class="footerPlantilla"></footer>
+  </body>
+</html>

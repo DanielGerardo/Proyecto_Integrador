@@ -322,7 +322,10 @@ p {
   border-radius: 10px;
   max-width: 300px;
   min-width: 300px;
+}
+.carouselUltimo .carouselInnerUltimo .cardWrapperUltimo .cardUltimo:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.6s;
 }
 .carouselUltimo .carouselInnerUltimo .cardWrapperUltimo .cardUltimo p {
   margin-top: 0.625rem;
@@ -338,7 +341,7 @@ p {
   align-items: center;
   justify-content: center;
   color: black;
-  width: 150px;
+  width: 160px;
   height: 2.1875rem;
   background-color: #F0DD3A;
   border-radius: 2.5rem;
@@ -357,7 +360,7 @@ p {
 }
 .carouselUltimo .carouselInnerUltimo .cardWrapperUltimo .cardUltimo .btnUltimo::after {
   content: "";
-  width: 225px;
+  width: 240px;
   height: 2.1875rem;
   position: absolute;
   z-index: 1;

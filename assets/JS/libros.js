@@ -1,28 +1,24 @@
 const resultadoBusqueda = document.querySelector(".resultadoBusqueda"); //obtenemos el div del HTML
 function addItem(item){
     const itemHTML = 
-    `<div class="col">
-             <!--Primer tarjeta-->
-             <div class="card text-center shadow-sm">
-               <img
-                 src="${item.img}"
-                 class="card-img-top"
-                 alt="${item.name}"
-               />
-               <!--Img del producto-->
-               <div class="card-body">
-                 <h5 class="card-title">${item.name}</h5>
-                 <!--Titulo del producto-->
-                 <p class="card-description">
-                   ${item.description}
-                 </p>
-                 <button class="btn añadirAlCarrito shadow-sm" type="submit">
-                   Añadir al carrito
-                 </button>
-               </div>
-               <p class="card-price">$${item.precio}</p>
-             </div>`;
-    const itemsContainer = document.querySelector(".contenedorProductos");
+    `<div class="card cardLibros">
+    <img
+      src="${item.img}"
+      class="card-img-top"
+      alt="${item.name}"
+    />
+    <div class="card-body text-center">
+    <h5 class="card-title">${item.name}</h5>
+      <p class="card-text">
+        ${item.description}
+      </p>
+      <button class="btnLibros"
+        ><span>Agregar al carrito</span></button
+      >
+      <p class="cardPrecio">$${item.precio} MXN</p>
+     </div>
+    </div>`;
+    const itemsContainer = document.querySelector(".bookContainer");
     itemsContainer.innerHTML += itemHTML;
 }
 
@@ -38,9 +34,9 @@ function addLibro(){
        let libro = "Libros";
        var contador =0;
         for (let i = 0; i< productos.length; i++) {
-            if(productos[i].name.match(libro)||productos[i].categoria.match(libro) && libro !== null){
+            if(productos[i].categoria.match(libro) && libro !== null){
                 addItem(productos[i]);
-                contador= contador + 1;              
+                contador= contador + 1;         
             }
         }
         if(contador===0){
