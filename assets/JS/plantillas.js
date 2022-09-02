@@ -1,8 +1,5 @@
 // Aqui van a ir el JS de todas las platillas ejemplo: Footer y La barra de navegacion 
-<<<<<<< HEAD
-=======
 // variable de la primera barra de navegacion
->>>>>>> f80ef620e7db25242b7c742c589e44ae0802e2b2
 let navPrimario = document.querySelector('.navPrimario');
 // variable de la segunda barra de navegacion
 let navSecundario = document.querySelector('.navSecundario');

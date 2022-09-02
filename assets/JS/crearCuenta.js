@@ -1,6 +1,9 @@
+
 const registroUsuario = document.getElementById('registroUsuario');
+//Para almacenar los inputs del formulario registroUsuario
 const inputs = document.querySelectorAll('#registroUsuario input');
 
+//Expresiones regulares para validar contenidos
 const expresiones = {
 	nombres: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     apellidos: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -16,8 +19,8 @@ const campos = {
 }
 
 const validarRegistroUsuario = (e) => {
-    switch (e.target.name) {
-        case "nombres":
+    switch (e.target.name) { 
+        case "nombres": //En caso de que el nombre sea "" quiero ejecutar:
             validarCampo(expresiones.nombres, e.target, 'nombres');
         break;
 
@@ -80,14 +83,16 @@ const validarPassword2 = () => {
     }
 }
 
-
+//Por cada input se ejecute un código
 inputs.forEach((input) => {
-    input.addEventListener('keyup', validarRegistroUsuario);
-    input.addEventListener('blur', validarRegistroUsuario);
+    input.addEventListener('keyup', validarRegistroUsuario); //Por cada input wuiero agregar un Event Listener. Si el usuario presiona una tecla, cada que la levante se ejecuta el código
+    input.addEventListener('blur', validarRegistroUsuario); //Cuando den clic fuera se ejecuta
 });
 
+//ingresar a formulario regustroUsuario y lanzar un event listener
+//Cuando se pica al botón Crear cuenta, se ejecuta la función
 registroUsuario.addEventListener('submit', (e) => {
-    e.preventDefault();
+    e.preventDefault(); //Para que no se envíe sin todos los datos completados
 
     if(campos.nombres && campos.apellidos && campos.email && campos.password){
 		registroUsuario.reset();
