@@ -1,0 +1,41 @@
+@use "variablesCarritodeCompras";
+@use "navStyles";
+
+// *Botones
+// Estilos boton basura
+.btnTrash {
+  @include variablesCarritodeCompras.btnBasura(0.7rem);
+}
+.btnTrashIcon {
+  @include variablesCarritodeCompras.btnBasura(0.6rem);
+}
+// Btn seguir viendo y comprar
+.btnAtras {
+  @include navStyles.botones(8rem,2.2rem, variablesCarritodeCompras.$coloratras, variablesCarritodeCompras.$colorBotones,white, black); 
+  font-size: 13px;
+}
+.btnAdelante {
+  @include navStyles.botones(8rem,2.2rem, #F0DD3A, variablesCarritodeCompras.$colorAzul, black,white); 
+  font-size: 14px;
+}
+.btnRegresar {
+  @include navStyles.botones(9rem,2.2rem, #F0DD3A, variablesCarritodeCompras.$colorAzul, black,white); 
+  font-size: 14px;
+}
+
+// *______________________________________
+
+//? Posiciones de alineacion de texto
+.posicionCenter {
+  @include variablesCarritodeCompras.posicion(center);
+}
+.posicionLeft {
+  @include variablesCarritodeCompras.posicion(left);
+}
+.posicionRight {
+  @include variablesCarritodeCompras.posicion(right);
+}
+
+
+// *_______________________________________________________________
+

@@ -22,7 +22,7 @@
     />
 
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="./assets/css/contacto.css" /> 
+    <link rel="stylesheet" href="./assets/css/contacto.css" />
     <link rel="stylesheet" href="./assets/css/stylesNav.css" />
     <link rel="stylesheet" href="./assets/css/botones.css" />
 
@@ -53,99 +53,156 @@
   </head>
 
   <body class="cuerpo">
-  <!-- Barra de navegación -Se llama desde los styles- -->
-  <nav class="navPrimario"></nav>
-  <nav class="navSecundario"></nav> <br>
+    <!-- Barra de navegación -Se llama desde los styles- -->
+    <nav class="navPrimario"></nav>
+    <nav class="navSecundario"></nav>
+    <br />
 
-        <!-- Contenedor con sombra -->
-        <div class="container-sm shadow">
+    <!-- Contenedor con sombra -->
+    <div class="container-sm shadow">
+      <!--Título centrado-->
+      <br />
+      <div class="títuloCon justify-content-center">
+        <h2>Contacto</h2>
+      </div>
 
-        <!-- Imagen -->
-        <img src="assets/img/estante.jpg" alt="Estante retro" width="320" height="750" align="right" id="estante">
-
-        <!--Título centrado-->
-            <br>
-            <div class="títuloCon justify-content-center">
-                <h2>Contacto</h2>
+      <!--Formulario de contacto-->
+      <div class="row">
+        <div class="col">
+          <form>
+            <!-- Div de Nombre(s) -->
+            <div class="infoCon col-lg-9">
+              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+              <label for="Nombre" class="form-label">Nombre(s)</label>
+              <input type="text" class="form-control" id="Nombre" />
+              <!--Input tipo texto y clase de formulario-->
             </div>
+            <br />
 
-        <!--Formulario de contacto-->
-              <form> 
-        <!-- Div de Nombre(s) -->
-                <div class="infoCon col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-                  <label for="Nombre" class="form-label">Nombre(s)</label>
-                    <input type="text" class="form-control" id="Nombre"> <!--Input tipo texto y clase de formulario-->
-                </div><br>
+            <!-- Div de Apellidos -->
+            <div class="infoCon col-lg-9">
+              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+              <label for="Apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="Apellidos" />
+              <!--Input tipo texto y clase de formulario-->
+            </div>
+            <br />
 
-        <!-- Div de Apellidos -->
-                <div class="infoCon col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-                  <label for="Apellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="Apellidos"> <!--Input tipo texto y clase de formulario-->
-                </div><br>
+            <!-- Div de Correo electrónico -->
+            <div class="infoCon col-lg-9">
+              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+              />
+              <!--Input tipo email, clase de formulario y  pattern restrinctivo de caracteres-->
+            </div>
+            <br />
 
-        <!-- Div de Correo electrónico -->
-              <div class="infoCon col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-                <label for="email" class="form-label">Correo electrónico</label>
-                  <input type="email" class="form-control" id="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"> <!--Input tipo email, clase de formulario y  pattern restrinctivo de caracteres-->
-              </div><br>
-                          
-        <!-- Div de Correo electrónico -->
-              <div class="infoCon col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-                <label for="tel" class="form-label">Télefono (opcional)</label>
-                  <input type="tel" class="form-control" id="phone"   pattern="[0-9]{10}"> <!--Input tipo tel, clase de formulario y  pattern restrinctivo de caracteres-->
-              </div><br>
+            <!-- Div de Correo electrónico -->
+            <div class="infoCon col-lg-9">
+              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+              <label for="tel" class="form-label">Télefono (opcional)</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                pattern="[0-9]{10}"
+              />
+              <!--Input tipo tel, clase de formulario y  pattern restrinctivo de caracteres-->
+            </div>
+            <br />
 
-        <!--Div de checkform-->
-          <div class="infoCon form-check">
-          <!--Check Pedido-->
-            <label class="form-check-label" id="check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault"> 
+            <!--Div de checkform-->
+            <div class="infoCon form-check">
+              <!--Check Pedido-->
+              <label class="form-check-label" id="check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
                 <span>Pedido</span>
-            </label>
-          <!--Check Producto-->
-            <label class="form-check-label" id="check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault">
+              </label>
+              <!--Check Producto-->
+              <label class="form-check-label" id="check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
                 <span>Producto</span>
-            </label>
-          <!--Check General-->
-            <label class="form-check-label" id="check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault">
+              </label>
+              <!--Check General-->
+              <label class="form-check-label" id="check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
                 <span>General</span>
-            </label>
-         <!--Check Sugerencia-->
-            <label class="form-check-label" id="check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault">
+              </label>
+              <!--Check Sugerencia-->
+              <label class="form-check-label" id="check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
                 <span>Sugerencias</span>
-            </label>
-          </div> <br>   <!--Div de checkform-->
+              </label>
+            </div>
+            <br />
+            <!--Div de checkform-->
 
-      <!-- Div de Mensaje -->
-          <div class="infoCon col-lg-7"> <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-            <label for="Mensaje" class="form-label">Mensaje</label>
-              <input type="text" class="form-control" id="Mensaje"> <!--Input tipo texto y clase de formulario-->
-          </div><br>
+            <!-- Div de Mensaje -->
+            <div class="infoCon col-lg-9">
+              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
+              <label for="Mensaje" class="form-label">Mensaje</label>
+              <input type="text" class="form-control" id="Mensaje" />
+              <!--Input tipo texto y clase de formulario-->
+            </div>
+            <br />
 
-      <!-- Div del contenedor del botón enviar y nota de contacto -->
-          <div class="container">
-            <div class="row">
+            <!-- Div del contenedor del botón enviar y nota de contacto -->
+            <div class="container">
+              <div class="row">
+                <!-- Botón enviar -->
+                <button class="btn col-3 mb-5" id="enviar" type="submit">
+                  Enviar
+                </button>
 
-        <!-- Botón enviar -->
-          <button class="btn col-3 mb-5" id="enviar" type="submit">Enviar</button>
-                  
-        <!-- Div de nota de contacto-->
-          <div class="infoCon col-6 col-lg-4 mb-5">
-            <a>Nos pondremos en contacto contigo en un plazo máximo de 48 hrs</a>
-          </div>
-
+                <!-- Div de nota de contacto-->
+                <div class="infoCon col-6 col-lg-6 mb-5">
+                  <a
+                    >Nos pondremos en contacto contigo en un plazo máximo de 48
+                    hrs</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Div del contenedor del botón enviar y nota de contacto -->
+          </form>
+          <!--Forulario de contacto-->
         </div>
-      </div>  <!-- Div del contenedor del botón enviar y nota de contacto -->
-        
-    </form>   <!--Forulario de contacto-->
-  </div>      <!--Contenedor con sombra del formulario--> 
-<br>
+        <div class="col-4">
+          <!-- Imagen -->
+          <img
+            class="imgEstante"
+            src="assets/img/estante.jpg"
+            alt="Estante retro"
+            id="estante"
+          />
+        </div>
+      </div>
+    </div>
+    <!--Contenedor con sombra del formulario-->
+    <br />
 
-  <!-- Footer -Se llama desde Styles- -->
-    <footer class="footerPlantilla"></footer> 
-    
+    <!-- Footer -Se llama desde Styles- -->
+    <footer class="footerPlantilla"></footer>
   </body>
 </html>

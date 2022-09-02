@@ -1,0 +1,35 @@
+@use "mixinProductos";
+@use "navStyles";
+@use 'menufiltroBuscar';
+
+
+
+.bookContainer{   
+  .card{            
+      margin: 0 1em;            
+      border: none;
+      border-radius: 10px;
+      max-width: 300px;
+      min-width: 300px;
+      margin-bottom: 50px;
+      &:hover{
+          box-shadow: 0 4px 4px rgba(0, 0, 0,0.3);
+          transition: .6s;
+      }
+      p{
+         margin-top: 0.625rem;
+      }
+      .cardPrecio{
+         font-weight: bold;
+      }
+      img {
+         max-width: 100%;
+         min-height: 222px;
+         max-height: 222px;
+     }
+      .btnLibros{ 
+         text-decoration: none;
+         @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);                
+        }
+      }  
+}
