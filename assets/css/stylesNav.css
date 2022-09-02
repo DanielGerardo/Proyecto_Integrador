@@ -197,7 +197,7 @@
     position: fixed;
     top: 5px;
   }
-  .nav-link {
+  .linksCategorias {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -210,7 +210,11 @@
     position: fixed;
     top: 5px;
   }
+  .formBuscar {
+    margin-top: 30px;
+  }
   .linksCategorias {
+    font-size: small;
     color: white;
   }
 }

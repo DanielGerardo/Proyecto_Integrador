@@ -8,15 +8,16 @@ $fontPoppins: 'Poppins', sans-serif;
     font-weight: 700;
  }
   .productoBuscado{
-    .col{
+    
         display: flex;
         justify-content: center;
         .cardUltimo{            
-            margin: 0 3em;            
+            margin: 0 1em;            
             border: none;
             border-radius: 10px;
             max-width: 300px;
             min-width: 300px;
+            margin-top: 50px;
             &:hover{
                 box-shadow: 0 4px 4px rgba(0, 0, 0,0.3);
                 transition: .6s;
@@ -37,5 +38,5 @@ $fontPoppins: 'Poppins', sans-serif;
                @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);                
               }
             }
-    }      
+        
     }

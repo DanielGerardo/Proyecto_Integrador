@@ -3,7 +3,7 @@ let productoABuscar = localStorage.getItem("BuscarProducto");
 const resultadoBusqueda = document.querySelector(".resultadoBusqueda");
 function addItem(item){
     const itemHTML = 
-    `<div class="col">
+    `
     <div class="card cardUltimo">
     <img
       src="${item.img}"
@@ -21,7 +21,7 @@ function addItem(item){
       <p class="cardPrecio">$${item.precio} MXN</p>
      </div>
     </div>
-  </div>`;
+  `;
     const itemsContainer = document.querySelector(".productoBuscado");
     itemsContainer.innerHTML += itemHTML;
 }

@@ -167,3 +167,76 @@ p{
    }
 }
 }
+// Pantalla de fondo al cargar la pagina
+.carga {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #393e46ee;
+    line-height: 100vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: desvanecer 6s linear;
+}
+// Desvanece el fondo de carga
+@keyframes desvanecer{
+    0%
+    {
+      opacity: 1;
+    }
+    50%
+    {
+      opacity: 1;
+    }
+    70%
+    {
+      opacity: 0;
+    }
+    100%
+    {
+      opacity: 0;
+    }
+  }
+
+.imagenCarga {
+    width: 10rem;
+    animation: logoCargaRotar 3s;
+}
+.moverLogoCarga{
+    animation: logoCargaEntrada 3s;
+    position: absolute;
+    
+}
+
+
+  //Nueve el logo de izquierda a derecha
+  @keyframes logoCargaEntrada{      
+    0%{       
+        transform: translateX(-1000px);
+                 
+    }
+    80%{       
+        transform: translateX(150px);         
+    }
+    100%{
+        transform: translateX(0);
+        
+    }
+  }
+  //Rota el Logo 
+  @keyframes logoCargaRotar{      
+        0%{
+            transform: rotate(-360deg);
+        }
+        80%{
+            transform: rotate(200deg);
+        }
+        90%{
+            transform: rotate(3000deg);
+        }
+        100%{
+            transform: rotate(300deg);
+        }
+  }

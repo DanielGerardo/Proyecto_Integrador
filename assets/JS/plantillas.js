@@ -98,7 +98,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
             <li class="nav-item">
               <a class="nav-link" style="margin-right: 5px" href="carrito.html"
                 ><i class="fa-solid fa-cart-shopping"></i
-                ><span
+                ><span class="textoCarrito d-lg-none d-sm-block">Carrito</span><span
                   class="contCarrito"
                   data-selector="header-cart-count"
                   aria-hidden="true"
