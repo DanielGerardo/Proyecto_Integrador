@@ -209,7 +209,7 @@ function inicioSesion(user){
 }  
 // Este es el objeto de User
 let objUser = {
- username:"Kathia",
+ username:"",
  carrito: 2
 }
 
