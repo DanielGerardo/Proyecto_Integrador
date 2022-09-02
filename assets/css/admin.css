@@ -252,72 +252,21 @@ input[type=number] {
     color: white;
   }
 }
-.form-group {
+table {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  text-align: "";
-}
-
-.subprecios {
-  font-family: "Poppins", sans-serif;
-  font-size: 13px;
-  text-align: "right";
-}
-
-.subtitulo {
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  text-align: "";
+  text-align: "center";
+  vertical-align: middle;
+  border-color: #73c8f3;
 }
 
 .divResumen {
-  background-color: #f6f6f6;
-  border: 1px solid #0078aa;
+  background-color: #fcfdff;
+  border: "";
   border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  box-shadow: "";
 }
 
-.formulario {
-  background-color: #fcfdff;
-  border: 1px solid rgba(197, 195, 195, 0.411);
-  border-top: none;
-  border-bottom-left-radius: 13px;
-  border-bottom-right-radius: 13px;
-}
-
-.tab {
-  overflow: hidden;
-}
-.tab button {
-  font-family: "Poppins", sans-serif;
-  background-color: none;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
-
-.active {
-  background-color: #fcfdff;
-  border: 1px solid rgba(197, 195, 195, 0.411);
-  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
-  border-bottom: none;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-}
-.active span {
-  border-bottom: 2px solid #f0dd3a;
-}
-
-.cuadroCompra {
-  max-height: 20rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}/*# sourceMappingURL=procesoDePago.css.map */
+.table-yellow {
+  background-color: #f0dd3a;
+}/*# sourceMappingURL=admin.css.map */

@@ -52,7 +52,7 @@
       defer
     ></script>
 
-    <title>PopCollector/ProcesodePago</title>
+    <title>PopCollector</title>
   </head>
 
   <body>
@@ -60,9 +60,9 @@
     <nav class="navSecundario"></nav>
 
     <!--! Div cuerpo -->
-    <div class="row">
+    <div class="row justify-content-center">
       <!-- Columna 1 -->
-      <div class="col-md-6">
+      <div class="col-md-5 ms-2">
         <div class="container p-3 my-3">
           <!-- Tab links -->
           <div class="tab">
@@ -95,7 +95,7 @@
                   id="envioNombre"
                   minlength="4"
                   maxlength="20"
-                  onkeypress="return isNumericKey(event)"
+                  onkeypress="return letraKey(event)"
                   required
                 />
                 <div class="valid-feedback">Listo.</div>
@@ -140,7 +140,7 @@
                   type="text"
                   class="form-control"
                   id="envioMunicipio"
-                  onkeypress="return isNumericKey(event)"
+                  onkeypress="return letraKey(event)"
                   minlength="7"
                   required
                 />
@@ -204,9 +204,9 @@
                     type="text"
                     class="form-control"
                     id="envioCP"
-                    maxlength="4"
-                    minlength="4"
-                    onkeypress="return isNumberKey(event)"
+                    maxlength="5"
+                    minlength="5"
+                    onkeypress="return numeroKey(event)"
                     required
                   />
                   <div class="valid-feedback">Listo.</div>
@@ -223,7 +223,7 @@
                     id="envioCP"
                     minlength="10"
                     maxlength="10"
-                    onkeypress="return isNumberKey(event)"
+                    onkeypress="return numeroKey(event)"
                     required
                   />
                   <div class="valid-feedback">Listo.</div>
@@ -255,12 +255,12 @@
           </div>
           <!--  -->
           <!-- Tab content Forma de pago -->
-          <div id="formadepago" class="tabcontent pt-5 p-3 formulario">
+          <div id="formadepago" class="tabcontent pt-4 p-3 formulario">
             <!-- # div FORMA DE PAGO -->
             <form action="" class="form_contact was-validated">
               <!-- Nombre tarjeta -->
               <div class="form-group">
-                <label for="nombreTarjeta" class="control-label"
+                <label for="nombreTarjeta"   class="control-label"
                   >Nombre del titular de la tarjeta</label
                 >
                 <input
@@ -268,14 +268,15 @@
                   class="form-control"
                   id="nombreTarjeta"
                   minlength="5"
+                  onkeypress="return letraKey(event)"
                   required
                 />
                 <div class="valid-feedback">Listo.</div>
                 <div class="invalid-feedback">Campo no válido</div>
               </div>
               <!-- numero tarjeta -->
-              <div class="form-group">
-                <label for="numeroTarjet" class="control-label"
+              <div class="pt-2 form-group">
+                <label for="numeroTarjet"  class="control-label"
                   >Numero de tarjeta</label
                 >
                 <input
@@ -284,13 +285,14 @@
                   id="numeroTarjeta"
                   minlength="16"
                   maxlength="16"
+                  onkeypress="return numeroKey(event)"
                   required
                 />
                 <div class="valid-feedback">Listo.</div>
                 <div class="invalid-feedback">Campo no válido</div>
               </div>
               <!-- Vencimiento  y CVV-->
-              <div class="form-group">
+              <div class="pt-2 form-group">
                 <div class="row">
                   <div class="col-md-3">
                     <label class="control-label">Vencimiento</label>
@@ -309,6 +311,7 @@
                       <option value="11">Noviembre</option>
                       <option value="12">Diciembre</option>
                     </select>
+                    
                   </div>
                   <!-- año -->
                   <div class="col-md-3">
@@ -330,22 +333,27 @@
                       type="text"
                       name=""
                       id="cvv"
+                      minlength="3"
+                      maxlength="3"
+                      onkeypress="return numeroKey(event)"
                       class="form-control"
                       required
                     />
+                    <div class="valid-feedback">Listo.</div>
+                <div class="invalid-feedback">Campo no válido</div>
                   </div>
                 </div>
               </div>
               <!-- Tipo tarjetas -->
-              <div class="form-group" id="tipoTarjetas">
-                <img src="assets/images/visa.jpg" id="visa" />
-                <img src="assets/images/mastercard.jpg" id="mastercard" />
-                <img src="assets/images/amex.jpg" id="amex" />
+              <div class=" pt-4 posicionCenter form-group" id="tipoTarjetas">
+                <img src="assets/imagenes/visa.jpg" id="visa" />
+                <img src="assets/imagenes/mastercard.jpg" id="mastercard" />
+                <img src="assets/imagenes/amex.jpg" id="amex" />
               </div>
               <!--  -->
               <!-- Botones   -->
 
-              <div class="form-group posicionCenter">
+              <div class="mt-4 form-group posicionCenter">
                 <!-- Submit Button -->
                 <button
                   onclick="abrirPestana('tituloPestana1','formadepago')"
@@ -367,30 +375,34 @@
         </div>
       </div>
       <!-- Columna 2 -->
-      <div class="col-md-6 	d-none d-md-block " > <!--d-none d-md-block para desaparecer la columna en pantallas de tamñao mediano hacia abajo-->
-        <div class="row pt-4 p-3 my-5 border resumenCompra ">
-          <h4>Resumen de compra</h4>
-          <div class=" row border itemenPago">
-            <p class="col-6">Nombre del producto</p>
+      <div class="col-md-4 mt-5 mb-5 p-2 posicionCenter d-none d-md-block border divResumen">
+        <!--d-none d-md-block para desaparecer la columna en pantallas de tamñao mediano hacia abajo-->
+
+        <h4 class="subtitulo pt-2">Resumen de compra</h4>
+        <div class=" mt-4 form-group cuadroCompra">
+          <div class="row posicionCenter justify-content-center border">
+            <p class="col-5">Nombre del producto</p>
             <p class="col-3">x <span>2</span></p>
             <p class="col-3">$ <span>12500</span></p>
           </div>
-          <div>
-       <!--# Div precioTotal  -->
-      <div class="row my-3 p-3 ">
-        <p>Subtotal = $ 
-          <span>12500</span>
-        </p>
-        <p>Envio = $
-          <span>250</span>
-        </p>
-        <p class="precioTotal">
-          Total = $
-          <span>1200</span>
-        </p>
-      </div>
-      <!--#-->
-          </div>
+        </div>
+            <!--# Div precioTotal  -->
+            <div class="row mt-3  me-2 posicionRight ">
+              <p class="subprecios">
+                Subtotal = $
+                <span>12500</span>
+              </p>
+              <p class="subprecios">
+                Envio = $
+                <span>250</span>
+              </p>
+              <p class="precioTotal">
+                Total = $
+                <span>1200</span>
+              </p>
+            </div>
+            <!--#-->
+          
         </div>
       </div>
     </div>

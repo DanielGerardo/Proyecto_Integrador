@@ -4,8 +4,8 @@ function btncomprarPaso1() {
 }
 
 // Boton Regresar
-function btnRegresar() {
-  window.location.href = "";
+function btnInicio() {
+  window.location.href = "popCollector.html";
 }
 // Boton Volver al carrito
 function btnVolveralCarrito() {
@@ -43,7 +43,7 @@ document.getElementById("tituloPestana2").click();
 
 // !Validacion para formularios
 // Validacion numeros en input
-function isNumberKey(evt) //evt la tecla presionada
+function numeroKey(evt) //evt la tecla presionada
 {
   //declarar vaiable extraer el codigo de caracter para su validacion
   var charCode =  evt.which|| evt.keyCode; //
@@ -54,7 +54,7 @@ function isNumberKey(evt) //evt la tecla presionada
 }  
 
 // Validacion letras en input
-function isNumericKey(evt)
+function letraKey(evt)
 {
   var charCode = evt.which || evt.keyCode;
   if (charCode != 46 && (charCode < 48 || charCode > 57))
