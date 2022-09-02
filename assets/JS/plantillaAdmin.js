@@ -36,7 +36,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
             <a class="nav-link linksCategorias" href="admin.html">PRODUCTOS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link linksCategorias" href="RVENTAS.html">VENTAS</a>
+            <a class="nav-link linksCategorias" href="ventas.html">VENTAS</a>
           </li>
             </ul>
           </div>
@@ -53,7 +53,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
       </div>
     </nav>`;
 // Se agrega el HTML a la variable navSecundario
-navSecundario.outerHTML = "<nav class='navbar navbar-expand navSecundario' style='height: 40px; background-color: #3ab4f2'><div class='container-fluid'><div class='collapse navbar-collapse'><div class='navbar-nav me-auto mb-lg-0'></div><ul class='navbar-nav nav justify-content-center'><li class='nav-item'><a class='nav-link linksCategorias ' href='admin.html'>PRODUCTOS</a></li><li class='nav-item'><a class='nav-link linksCategorias' href='RVENTAS.html'>VENTAS</a></li></ul><div class='navbar-nav me-auto mb-lg-0'></div></div></div></nav>";
+navSecundario.outerHTML = "<nav class='navbar navbar-expand navSecundario' style='height: 40px; background-color: #3ab4f2'><div class='container-fluid'><div class='collapse navbar-collapse'><div class='navbar-nav me-auto mb-lg-0'></div><ul class='navbar-nav nav justify-content-center'><li class='nav-item'><a class='nav-link linksCategorias ' href='admin.html'>PRODUCTOS</a></li><li class='nav-item'><a class='nav-link linksCategorias' href='ventas.html'>VENTAS</a></li></ul><div class='navbar-nav me-auto mb-lg-0'></div></div></div></nav>";
 
 footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
 <div class="row rowFooter">

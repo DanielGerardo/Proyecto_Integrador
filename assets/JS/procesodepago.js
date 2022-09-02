@@ -62,6 +62,10 @@ function letraKey(evt)
   return false;
 } 
 
+function Administrador(){
+  window.location.href = "admin.html";
+}
+
 
 // function submit(){
 

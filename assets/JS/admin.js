@@ -26,11 +26,13 @@ function siDatos(){
 function pullitem(){
 
         fetch("/productos.json")
-        .then(res  =>  res.json())
-            .then(json =>{
-                productos = JSON.stringify(json);
-                productos = JSON.parse(productos);
-               
+        .then(response => {
+            return response.json();
+         })
+         .then(json =>{
+            productos = JSON.stringify(json);
+            productos = JSON.parse(productos);
+            
             if(productos.length!=0){
                 for (let i = 0; i< productos.length; i++) {
                    
