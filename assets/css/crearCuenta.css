@@ -16,6 +16,21 @@ body{
     font-size: 16px;
 }
 
+.registroUsuario__btn {
+  color: white;
+  width: 12.5rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.registroUsuario__btn:hover {
+  background-color: #0078AA;
+  color: white;
+}/*# sourceMappingURL=styles.css.map*/
+
+
 .form-label {
 	display: block;
 	font-weight: 700;
@@ -107,21 +122,23 @@ body{
 }
 
 /*----------Mediaquerys---------------*/
+@media screen and (max-width: 800px){
+  .registroUsuario {
+    grid-column: 1fr;
+  }
 
+  .registroUsuario__btn{
+    width: 100%;
+  }
+
+  h2{
+    justify-content: center;
+  }
+}
   
 /*--------Otros------*/
-.registroUsuario__btn {
-  color: white;
-  width: 12.5rem;
-  background-color: #F0DD3A;
-  border-radius: 2.5rem;
-}
-/*
-.registroUsuario__btn :hover {
-  background-color: #0078AA;
-}/*# sourceMappingURL=styles.css.map */
 
-h2{
+  h2{
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     color: #0078AA;

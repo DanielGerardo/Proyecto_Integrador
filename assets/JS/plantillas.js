@@ -98,7 +98,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
             <li class="nav-item">
               <a class="nav-link" style="margin-right: 5px" href="carrito.html"
                 ><i class="fa-solid fa-cart-shopping"></i
-                ><span
+                ><span class="textoCarrito d-lg-none d-sm-block">Carrito</span><span
                   class="contCarrito"
                   data-selector="header-cart-count"
                   aria-hidden="true"
@@ -187,7 +187,7 @@ let contCarrito = document.querySelector('.contCarrito');
 
 
 
-function inicioSesion(user){
+function inicioSesionNav(user){
   let dropstart = '';
   if(user == null || user == ""){
     //Visualiza solo el icono de inicio de sesion y Crear cuenta
@@ -198,37 +198,40 @@ function inicioSesion(user){
     }
     //Agrega el username al icono junto con mi cuenta, mis pedidos y cierre de sesion
     navInicioSesion.outerHTML = `<li class='nav-item dropdown navInicioSesion ${dropstart}'><a class='nav-link' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i> ${user}</a><ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'><li><a class="dropdown-item" href="micuenta.html"><i class="fa-regular fa-user"></i> Mi Cuenta</a>
-    </li><li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</a></li><li><a class="dropdown-item" id='cerrarSesion' href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</a></li>`
+    </li><li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</a></li><li><a class="dropdown-item" id='cerrarSesion' href="/popCollector.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</a></li>`
     let cerrarSesion =document.getElementById('cerrarSesion');
-    cerrarSesion.addEventListener("click",()=>{    
-      // localUser.username = localUser.username+"";
-      // localStorage.setItem('perfil',JSON.stringify(localUser));
-      // revisarUser(localUser);
+    cerrarSesion.addEventListener("click",(e)=>{
+      if(localUser.sesion){
+        localUser.sesion = localUser.sesion = false;
+        localStorage.setItem('perfil',JSON.stringify(localUser));
+        revisarUser(localUser);
+       
+      }        
     });
   }
 }  
 // Este es el objeto de User
-let objUser = {
- username:"Daniel",
- carrito: 2
-}
+// let objUser = {
+//  username:"",
+//  carrito: 2
+// }
 
 //Agarra los datos del localstorage
     let localUser = JSON.parse(localStorage.getItem('perfil'));
 
 // //Se agrega a la memoria local 
-    localStorage.setItem("perfil",JSON.stringify(objUser));
+  //  localStorage.setItem("perfil",JSON.stringify(objUser));
     
         
    function revisarUser(User){
-  if(User.username!=null){
+  if(User.email!=null&&User.sesion == true){
     //Agrega al icono del carrito la cantidad de pedidos
     contCarrito.innerText = localUser.carrito;  
-    inicioSesion(User.username);
+    inicioSesionNav(User.nombres);
 
   }else{
 
-     inicioSesion("");
+     inicioSesionNav("");
      //Inicializa la cantidad de pedidos en 0 
      contCarrito.textContent = '0';
   }

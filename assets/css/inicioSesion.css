@@ -3,6 +3,21 @@ body{
     background-color: #f6f6f6;
 }
 
+/*--------Botón------*/
+.iniciarSesion__btn {
+  color: white;
+  width: 12.5rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.iniciarSesion__btn:hover {
+  background-color: #0078AA;
+  color: white;
+}/*# sourceMappingURL=styles.css.map*/
+
 .container-sm{
     max-width: 800px;
     width: 98%;
@@ -16,6 +31,8 @@ body{
     font-size: 16px;
 }
 
+
+/*------Formulario---------*/
 .form-label {
 	display: block;
 	font-weight: 700;
@@ -23,6 +40,7 @@ body{
 	cursor: pointer;
 }
 
+/*---------------*/
 .iniciarSesion__grupo_input{
   position: relative;
 }
@@ -62,20 +80,11 @@ body{
 	opacity: 0;
 }
 
-
+/* 
 .iniciarSesion__mensaje p {
   margin: 0;
-}
+} */
 
-.iniciarSesion__mensaje_exito {
-	font-size: 13px;
-	color: #0078AA;
-	display: none;
-}
-
-.iniciarSesion__mensaje_exito_activo {
-	display: block;
-}
 /*---------Estilos para validación---------*/
 .iniciarSesion__grupo_correcto .iniciarSesion__validacion_estado {
 	color: #0078AA;
@@ -96,19 +105,18 @@ body{
 }
 
 /*----------Mediaquerys---------------*/
+@media screen and (max-width: 800px){
+  .iniciarSesion {
+    grid-column: 1fr;
+  }
+
+  h2{
+    justify-content: center;
+  }
+}
 
   
-/*--------Otros------*/
-.iniciarSesion__btn {
-  color: white;
-  width: 12.5rem;
-  background-color: #F0DD3A;
-  border-radius: 2.5rem;
-}
-/*
-.iniciarSesion_btn :hover {
-  background-color: #0078AA;
-}/*# sourceMappingURL=styles.css.map */
+
 
 h2{
     font-family: 'Poppins', sans-serif;
