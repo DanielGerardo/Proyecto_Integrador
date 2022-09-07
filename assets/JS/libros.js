@@ -1,6 +1,11 @@
+const btnCertificate = document.querySelector(".btnCertificate"); //obtenemos el boton del HTML
 const resultadoBusqueda = document.querySelector(".resultadoBusqueda"); //obtenemos el div del HTML
-function addItem(item){
-    const itemHTML = 
+const itemsContainer = document.querySelector(".bookContainer"); //obtenemos el div de los elementos
+
+
+
+function addItem(item, clase){
+   const itemHTML = 
     `<div class="card cardLibros">
     <img
       src="${item.img}"
@@ -12,18 +17,15 @@ function addItem(item){
       <p class="card-text">
         ${item.description}
       </p>
-      <button class="btnLibros"
-        ><span>Agregar al carrito</span></button
+      <button id="${item.codigo}" class="btnLibros"
+        ><span class="Agregar">Agregar al carrito</span></button
       >
-      <p class="cardPrecio">$${item.precio} MXN</p>
+      <p class="cardPrecio">$<span id="precio">${item.precio} MXN</p>
      </div>
     </div>`;
-    const itemsContainer = document.querySelector(".bookContainer");
-    itemsContainer.innerHTML += itemHTML;
+    clase.innerHTML += itemHTML;
 }
-
-function addLibro(){
-     
+function buscarLibro(){
     fetch("/productos.json")
     .then(response => {
        return response.json();
@@ -32,10 +34,10 @@ function addLibro(){
        productos = JSON.stringify(json);
        productos = JSON.parse(productos);
        let libro = "Libros";
-       var contador =0;
+       var contador=0;
         for (let i = 0; i< productos.length; i++) {
             if(productos[i].categoria.match(libro) && libro !== null){
-                addItem(productos[i]);
+                addItem(productos[i],itemsContainer);
                 contador= contador + 1;         
             }
         }
@@ -54,6 +56,8 @@ function addLibro(){
           </div>`;
                 }
             });
-   
-        }
-addLibro();
+}
+
+
+buscarLibro();
+
