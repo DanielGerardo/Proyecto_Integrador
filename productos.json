@@ -45,7 +45,7 @@
         "precio": 399,
         "cantidad": 2,
         "categoria": "Libros",
-        "certificado": true,
+        "certificado": false,
         "exclusivo": false,
         "bestCallers": true,
         "img": "https://http2.mlstatic.com/D_NQ_NP_2X_632841-MLM45150362630_032021-F.webp",

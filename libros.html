@@ -40,7 +40,7 @@
     <!-- JS -->
     <script src="assets/JS/plantillas.js" defer></script>
     <script src="assets/JS/libros.js" defer></script>
-    <script src="assets/JS/filtro.js" defer></script>
+    <script src="assets/JS/filtroProducto.js" defer></script>
     <!--Iconos-->
     <script
       src="https://kit.fontawesome.com/5de74547fa.js"
@@ -53,7 +53,8 @@
   <body>
     <nav class="navPrimario"></nav>
     <nav class="navSecundario"></nav>
-
+    <h4 class="titulo">NUESTROS LIBROS </h4> 
+    <div class="tituloFiltro"></div>
     <div class="menu-filtro">
       <input type="checkbox" id="btn" hidden>
       <label for="btn" class="menu-btn">
@@ -65,7 +66,7 @@
         <ul class="list-items">
           <h6 class="">Por Categoria</h6>
           <li>
-            <button class="btn-filtro">
+            <button class="btn-filtro btnCertificate">
               <i class="fa-solid fa-certificate"></i>Certicado
             </button>
           </li>
@@ -108,21 +109,9 @@
         </ul>
       </nav>
     </div>
-
+    
     <div class="container">
       <div class="resultadoBusqueda"></div>
-      <h3
-        class="titulo text-center"
-        style="
-          color: #0078aa;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 700;
-          margin-bottom: 100px;
-          margin-top: 50px;
-        "
-      >
-        NUESTROS LIBROS
-      </h3>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-5 bookContainer">
       <!--Se dividen 3 tarjetas con el mismo ancho en varias filas, si view fuera g se dividen en 4 sm=1 md=3 g=4-->

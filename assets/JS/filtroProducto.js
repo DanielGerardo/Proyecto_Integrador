@@ -1,47 +1,27 @@
-const btnCertificate = document.querySelector("#btnCertificate"); //obtenemos el boton del HTML
-const resultadoBusqueda = document.querySelector(".resultadoBusqueda");//obtenemos el div del HTML
-
 btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el boton, entonces ejecutamos esta funcion
-    e.preventDefault(); //evitamos que el navegador se recargue
-    let filtroSeleccionado = "certificado"; //determinamos que botón se seleccionó
-    buscarProducto(filtroSeleccionado); //llamamos a la funcion buscarProducto, pasandole el valor del filtro seleccionado
-}
-);
+  e.preventDefault(); //evitamos que el navegador se recargue
+  cartaVacia();
+  let contFiltro = document.querySelector(".bookContainer");//obtenemos el div de los elementos
+  let tituloFiltro = document.querySelector(".tituloFiltro");//obtenemos el div del titulo del filtro
 
-function traerPokemon(pokemon){ //funcion que trae los pokemon
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`) //realizamos la peticion a una URL
-        .then(res => res.json()) //cuando la promesa es resuelta, asignamos la info a la variable res
-        .then((data) => { //
-            crearPokemon(data); //llamamos a la funcion crearPokemon, pasandole la informacion del pokemon
-        });
-}
-
-function buscarProducto(filtroSeleccionado){  //funcion que trae a los productos
   fetch("/productos.json") //realizamos la peticion a la ruta de nuestro JSON
   .then(response => { 
-     return response.json(); //cuando la promesa es resuelta, asignamos la info a la variable res
+    return response.json(); //cuando la promesa es resuelta, asignamos la info a la variable response
   })
   .then(json =>{ 
-     productos = JSON.stringify(json); //cuando la promesa es resuelta, convertimos el objeto a una cadena de texto JSON, 
-     productos = JSON.parse(productos); //analiza el JSON, y lo transforma en productos
-     
-     let filtroSeleccionado = filtroSeleccionado; //asigmos el valor de filtroSeleccionado
-     
-     if(filtroSeleccionado === ""){
-      filtroSeleccionado=null;//si filtroSeleccionado = nada entonces filtroSeleccionado = null
-     }
-     var contador = 0;
-      for (let i = 0; i< productos.length; i++) {
-          if(productos[i].name.match(pattern)||productos[i].categoria.match(pattern)&&pattern !== null){
-              addItem(productos[i]);
-              contador= contador+1;
-              resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda">"${pattern}"</h2>
-    <h4>${contador} Resultados</h4>`;
-             
+    productos = JSON.stringify(json); //convertimos el objeto a una cadena de texto JSON, 
+    productos = JSON.parse(productos); //analiza el JSON, y lo transforma en productos
+    var contador = 0; 
+    for (let i = 0; i< productos.length; i++) { //recorre todo el arreglo de productos 
+        if(productos[i].categoria.match("Libros") && productos[i].certificado.valueOf(true)){ //si su categoria es libro y tiene certificado
+          addItem(productos[i],contFiltro); //llamamos a la función addItem, pasandole la info del producto
+            contador= contador+1;  //se incrementa el contador
+            tituloFiltro.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
+    <p>${contador} Resultados</p>`;
           }
       }
-      if(contador===0){
-          resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda">"Gatos Voladores"</h2>
+      if(contador===0){console.log("Verifica contador");
+          resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda">"Libros con Certificado"</h2>
           <h4>${0} Resultados</h4>
           <div class="mt-5">
             <img
@@ -50,44 +30,41 @@ function buscarProducto(filtroSeleccionado){  //funcion que trae a los productos
               width="120px"
             />
             <h3>
-              Su búsqueda de "Gatos Voladores" no tuvo resultados. Prueba Buscando
+            Libros con Certificado se han agotado. Prueba Buscando en
               otro producto
             </h3>
           </div>`;
-                }
+        }
       });
- 
+});
+
+function addItem(item, clase){
+  const itemHTML = 
+  `<div class="card cardLibros">
+  <img
+    src="${item.img}"
+    class="card-img-top"
+    alt="${item.name}"
+  />
+  <div class="card-body text-center">
+  <h5 class="card-title">${item.name}</h5>
+    <p class="card-text">
+      ${item.description}
+    </p>
+    <button id="${item.codigo}" class="btnLibros"
+      ><span class="Agregar">Agregar al carrito</span></button
+    >
+    <p class="cardPrecio">$<span id="precio">${item.precio} MXN</p>
+   </div>
+  </div>`;
+  clase.innerHTML += itemHTML;
+
 }
 
 
-
-
-function addItem(item){
-    const itemHTML = 
-    `<div class="col">
-             <!--Primer tarjeta-->
-             <div class="card text-center shadow-sm">
-               <img
-                 src="${item.img}"
-                 class="card-img-top"
-                 alt="${item.name}"
-               />
-               <!--Img del producto-->
-               <div class="card-body">
-                 <h5 class="card-title">${item.name}</h5>
-                 <!--Titulo del producto-->
-                 <p class="card-description">
-                   ${item.description}
-                 </p>
-                 <button class="btn añadirAlCarrito shadow-sm" type="submit">
-                   Añadir al carrito
-                 </button>
-               </div>
-               <p class="card-price">$${item.precio}</p>
-             </div>`;
-    const itemsContainer = document.querySelector(".contenedorProductos");
-    itemsContainer.innerHTML += itemHTML;
+function cartaVacia(){
+  const itemHTML = 
+   `<div class="row row-cols-1 row-cols-md-3 g-5 bookContainer">
+ </div>`;
+   itemsContainer.outerHTML = itemHTML;
 }
-
-
-buscarProducto();
