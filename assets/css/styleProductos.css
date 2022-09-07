@@ -2,6 +2,34 @@
 .navPrimario {
   background-color: #0078aa;
 }
+
+body{
+  background-color: #F6F6F6;
+}
+
+.titulo{
+  color: #0078aa;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  margin-top: 35px;
+  /* margin-bottom: 55px; */
+  text-align: center;
+}
+
+.tituloFiltro{
+  color: #062836;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.tituloFiltro p{
+margin-bottom: auto;
+}
+
 .navPrimario img {
   width: 150px;
   position: fixed;
@@ -91,6 +119,7 @@
   background-color: #0078aa;
   bottom: 0;
   color: white;
+  margin-top: 30px;
 }
 .footerPlantilla h4 {
   font-family: "Poppins", sans-serif;
@@ -223,7 +252,8 @@
   position: relative;
   /* position:fixed; */
   /* float: left; */
-  top: 72px;
+  /* top: 72px; */
+  margin-bottom: 30px;
 }
 
 /* Icono de filtro*/
@@ -412,6 +442,11 @@ h6 {
   transition: all 0.3s ease;
 }
 
+.bookContainer{
+  margin-top: auto;
+  
+}
+
 .bookContainer .card {
   margin: 0 1em;
   border: none;
@@ -419,11 +454,15 @@ h6 {
   max-width: 300px;
   min-width: 300px;
   margin-bottom: 50px;
-}
-.bookContainer .card:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   transition: 0.6s;
+  /* align-content: center; */
 }
+.bookContainer .card:hover {
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.6s;
+}
+
 .bookContainer .card p {
   margin-top: 0.625rem;
 }
