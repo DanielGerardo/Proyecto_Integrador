@@ -45,9 +45,9 @@ function buscarLibro(){
           resultadoBusqueda.innerHTML = 
           `<div class="mt-5">
             <img
+              id ="caritaTriste"
               src="/assets/img/productos/cara-triste.jpg"
               alt="Carita triste por no encontrar productos disponibles"
-              width="180px"
             />
             <h3>
               Por el momento no tenemos Libros. Prueba Buscando
@@ -57,7 +57,5 @@ function buscarLibro(){
                 }
             });
 }
-
-
 buscarLibro();
 

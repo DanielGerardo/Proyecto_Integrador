@@ -7,6 +7,7 @@ body{
   background-color: #F6F6F6;
 }
 
+
 .titulo{
   color: #0078aa;
   font-family: 'Poppins', sans-serif;
@@ -17,17 +18,39 @@ body{
   text-align: center;
 }
 
-.tituloFiltro{
+.tituloDeBusqueda{
   color: #062836;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 25px;
   text-align: center;
   margin-bottom: 12px;
 }
+.mt-5{
+  margin-left: auto;
+}
 
-.tituloFiltro p{
-margin-bottom: auto;
+#caritaTriste {
+  max-width: 100%;
+  min-height: 222px;
+  max-height: 222px;
+  display:block;
+  margin:auto;
+}
+
+
+#leyenda{
+  text-align: center; 
+}
+
+h6 {
+  color: #f2f2f2;
+  font-size: 14px;
+  margin-left: 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 15px;
 }
 
 .navPrimario img {
@@ -120,6 +143,7 @@ margin-bottom: auto;
   bottom: 0;
   color: white;
   margin-top: 30px;
+  float: left;
 }
 .footerPlantilla h4 {
   font-family: "Poppins", sans-serif;
@@ -247,13 +271,14 @@ margin-bottom: auto;
 /****************************FILTRO***********************/
 /* Caracteristicas de posicionamiento del filtro*/
 .menu-filtro {
-  height: 100%;
+  /* height: 100%; */
   width: 300px;
   position: relative;
   /* position:fixed; */
-  /* float: left; */
+  float: left;
   /* top: 72px; */
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
+  margin-bottom: auto;
 }
 
 /* Icono de filtro*/
@@ -316,7 +341,7 @@ cambia a 0 para que sea invisible y se rota para que no se vea encimado al icono
   width: 270px;
   overflow: hidden;
   left: -270px;   /*Lo que permite el desplazamiento del filtro */
-  /* margin-top: 0px; */
+  margin-bottom:auto;
   float: left;
   transition: all 0.3s ease;
 }
@@ -337,17 +362,10 @@ y lo posicion a la ozquieda */
   font-size: 18px;
   color: #f2f2f2;
   border-bottom: 1px solid #1f85b8;
+  
 }
 
-h6 {
-  color: #f2f2f2;
-  font-size: 14px;
-  margin-left: 1px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  padding-top: 15px;
-}
+
 
 /*Caracteristicas del body de a barra de navegación*/
 #sidebar .list-items {
@@ -444,7 +462,7 @@ h6 {
 
 .bookContainer{
   margin-top: auto;
-  
+  margin-left: auto;
 }
 
 .bookContainer .card {

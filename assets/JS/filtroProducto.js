@@ -13,23 +13,26 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
     productos = JSON.parse(productos); //analiza el JSON, y lo transforma en productos
     var contador = 0; 
     for (let i = 0; i< productos.length; i++) { //recorre todo el arreglo de productos 
-        if(productos[i].categoria.match("Libros") && productos[i].certificado.valueOf(true)){ //si su categoria es libro y tiene certificado
+        if(productos[i].categoria.match("-") && productos[i].certificado.valueOf(false)){ //si su categoria es libro y tiene certificado
           addItem(productos[i],contFiltro); //llamamos a la función addItem, pasandole la info del producto
             contador= contador+1;  //se incrementa el contador
             tituloFiltro.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
     <p>${contador} Resultados</p>`;
           }
       }
-      if(contador===0){console.log("Verifica contador");
-          resultadoBusqueda.innerHTML = `<h2 class="tituloDeBusqueda">"Libros con Certificado"</h2>
-          <h4>${0} Resultados</h4>
+      if(contador===0){
+          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
+          <p  class="tituloDeBusqueda">${0} Resultados</p>
           <div class="mt-5">
             <img
+              id ="caritaTriste"
               src="/assets/img/cara-triste-en-cuadrado-redondeado.png"
-              alt=""
-              width="120px"
+              alt="Carita triste por no encontrar productos disponibles"
             />
-            <h3>
+            <br>
+            <h3
+            id ="leyenda"
+            >
             Libros con Certificado se han agotado. Prueba Buscando en
               otro producto
             </h3>
