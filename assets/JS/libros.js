@@ -12,10 +12,10 @@ function addItem(item){
       <p class="card-text">
         ${item.description}
       </p>
-      <button class="btnLibros"
-        ><span>Agregar al carrito</span></button
+      <button id="${item.codigo}"class="btnLibros"
+        ><span class ="Agregar">Agregar al carrito</span></button
       >
-      <p class="cardPrecio">$${item.precio} MXN</p>
+      <p class="cardPrecio">$<span id="precio">${item.precio}</span>MXN</p>
      </div>
     </div>`;
     const itemsContainer = document.querySelector(".bookContainer");
@@ -57,3 +57,25 @@ function addLibro(){
    
         }
 addLibro();
+
+//Añadir carrito
+
+//Variables
+
+//funciones
+// function eventoslisteners() {
+//   cardContainer.addEventListener("click", agregarCarrito);
+// }
+// const itemsContainer = document.querySelector(".btnLibros");
+// itemsContainer.addEventListener('click', e =>{
+//     agregarCarrito(e);
+// })
+
+
+ 
+   
+  
+
+
+
+

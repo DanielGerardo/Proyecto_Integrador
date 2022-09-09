@@ -64,13 +64,13 @@
     <div class="container p-3 my-3">
       <!-- ? Titulo página -->
       <div class="row posicionCenter">
-        <h2>CARRITO (<span>0</span>)</h2>
+        <h2>CARRITO (<span id="contador">0</span>)</h2>
       </div>
       <!-- ? -->
 
       <!--* Btn Vaciar Carrito -->
-      <div class="posicionRight me-5">
-        <span id="vaciarCarrito" type="button" class="btn btnTrashIcon">
+      <div class="carritolleno posicionRight me-5">
+        <span id="vaciarCarrito" type="button" onclick="vaciarCarrito()" class="btn btnTrashIcon">
           <i class="fa-solid fa-trash-can"></i> Vaciar carrito
         </span>
       </div>
@@ -78,97 +78,54 @@
 
       <!-- ? Div Carrito -->
       <div id="carrito" class="container">
-        <div class="row border cardItem">
-          <div class="col-sm-3 align-self-center p-3">
-            <!--Imagen-->
-            <img
-              class="card-text"
-              src="/assets/imagenes/discoejemplocarrito.jpg"
-              alt="mdmo"
-            />
-          </div>
-          <div class="col-sm-3 align-self-center p-3">
-            <!--Nombre del producto-->
-            <p class="">Nombre del producto</p>
-          </div>
-          <div class="col-sm-3 align-self-center p-3">
-            <!--Cantidad-->
-            <input type="number" name="" id="" value="1" min="1" max="10" />
-            <!-- Eliminar -->
-            <div class="my-1">
-              <button class="btn btnTrashIcon">Eliminar</button>
-            </div>
-          </div>
-          <div class="col-sm-3 align-self-center p-3">
-            <!--Precio unitario-->
-            <p>$ <span>1200</span></p>
-          </div>
+        <!-- !Carrito vacio -->
+        <div class="carritoVacio">
+          <br><br>
+        <p class="text-center">No hay productos en tu carrito</p>
+        <div class="col posicionCenter p-3">
+            <!-- Div boton seguir viendo -->
+            <button class="btnAdelante2" onclick="btnInicio()">
+              <span> Seguir viendo </span>
+            </button>
         </div>
+      </div>
 
-        <!--*-->
 
-        <!--* Item individual -->
-        <div class="row my-3 border cardItem">
-          <div class="col-sm-3 p-3">
-            <!--Imagen-->
-            <img
-              class="card-text"
-              src="/assets/imagenes/discoejemplocarrito.jpg"
-              alt="mdmo"
-            />
-          </div>
-          <div class="col-sm-3 p-3">
-            <!--Nombre del producto-->
-            <p class="">Nombre del producto</p>
-          </div>
-          <div class="col-sm-3 p-3">
-            <!--Cantidad-->
-            <input type="number" name="" id="" value="1" min="1" max="10" />
-            <!-- Eliminar -->
-            <div class="my-1">
-              <button class="btn btnTrashIcon">Eliminar</button>
-            </div>
-          </div>
-          <div class="col-sm-3 p-3">
-            <!--Precio unitario-->
-            <p>$ <span>1200</span></p>
-          </div>
-        </div>
-        <!--*-->
       </div>
       <!--?-->
 
       <!--# Div precioTotal  -->
-      <div class="row me-5 p-3 ">
+      <div class="row carritolleno  p-3 cardItem divTotal align-self-center">
         <p class="precioTotal">
           Total = $
-          <span>1200</span>
+          <span id="precioTotal">1200</span>
         </p>
       </div>
       <!--#-->
 
       <!-- * Div Botones de seguimiento -->
-      <div class="row">
+      <div class="row carritolleno">
         <div class="col p-3">
           <!-- Div boton seguir viendo -->
-          <button class="btnAdelante" onclick="btnInicio()">
-            <span> <i class="fa-solid fa-arrow-left"></i> Seguir viendo </span>
+          <button class="btnAdelante2" onclick="btnInicio()">
+            <span> Seguir viendo </span>
           </button>
         </div>
         <div class="col p-3 posicionRight">
           <!-- Div boton comprar -->
           <button class="btnAdelante" onclick="btncomprarPaso1()">
-            <span> Comprar <i class="fa-solid fa-arrow-right"></i></span>
+            <span> Comprar </i></span>
           </button>
         </div>
       </div>
       <!-- * -->
-      <button onclick="Administrador()">Administrador</button>
+      
     </div>
     <!--!-->
 
     <footer class="footerPlantilla"></footer>
 
-    <script src="/assets/JS/procesodepago.js"></script>
+    
+    <script src="/assets/JS/carrito2.js"></script>
   </body>
 </html>

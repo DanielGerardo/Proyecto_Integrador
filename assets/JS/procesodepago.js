@@ -14,8 +14,6 @@ function btnVolveralCarrito() {
 
 
 // Btn formadepago B5
-
-
 function abrirPestana(evt,nombrePestana) {
   var i, tabcontent, tablinks;//declaracion variables
   tabcontent = document.getElementsByClassName("tabcontent"); //elemento con clase tab content
@@ -65,6 +63,8 @@ function letraKey(evt)
 function Administrador(){
   window.location.href = "admin.html";
 }
+
+
 
 
 // function submit(){

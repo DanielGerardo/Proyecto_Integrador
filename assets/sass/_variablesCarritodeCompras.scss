@@ -93,6 +93,7 @@ input[type="number"] {
 @mixin precios ($size, $align,  $fuente){
   font-family: $fuente;
   font-size: $size;
+  font-style: bold;
   text-align: $align;
 }
 
@@ -114,9 +115,10 @@ input[type="number"] {
   margin-right: 30px;
   border: #0078aa;
   background-color:$colorblanco;
-  border-radius: 25px;
+  margin-bottom: 0;
+  border-radius: 5px;
 box-shadow: $sombra;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   font-family: $fontMontserrat;
   img {
@@ -125,7 +127,10 @@ box-shadow: $sombra;
   }
 }
 
-
+.divTotal{
+  border: 2px  solid $colorAzul;
+border-style: dotted;
+}
 
 
 // ?_________________________________-

@@ -215,15 +215,16 @@ let objUser = {
 
 //Agarra los datos del localstorage
     let localUser = JSON.parse(localStorage.getItem('perfil'));
-
+  
+    let cantcarrito = JSON.parse(localStorage.getItem('cantCarrito'));
+    console.log(cantcarrito);
 // //Se agrega a la memoria local 
     localStorage.setItem("perfil",JSON.stringify(objUser));
-    
-        
+  
    function revisarUser(User){
   if(User.username!=null){
     //Agrega al icono del carrito la cantidad de pedidos
-    contCarrito.innerText = localUser.carrito;  
+    contCarrito.innerText = cantcarrito;  
     inicioSesion(User.username);
 
   }else{
