@@ -37,3 +37,71 @@ values
 "Título del libro: Colección Autor: Lewis, Carroll Idioma: Español Editorial del libro: Fractales Tapa del libro: Dura Tamaño de la letra de la Biblia: Estándar Con índice: Sí Año de publicación: 2020",
 "https://http2.mlstatic.com/D_NQ_NP_2X_632841-MLM45150362630_032021-F.webp",
 1237,399,1,true,false,sysDate(),1);
+
+--  
+insert into `products` 
+(`name`,`description`,`img`,`codigo`,`precio`,`cantidad`,`certificado`,`exclusivo`,`fechaRegistro`,`categorias_idCategorias`)
+values
+("Volunteered Slavery by Rahsaan Roland Kirk (CD, 2002)",
+"Nuevo: Un artículo que nunca fue abierto o sacado de la empaquetadura del fabricante (si corresponde). El artículo está en su envasado adherente original (si corresponde).",
+"https://i.ebayimg.com/images/g/5TcAAOSwypJghull/s-l640.jpg",
+1238,378.4,7,true,false,sysDate(),2);
+
+insert into `products` 
+(`name`,`description`,`img`,`codigo`,`precio`,`cantidad`,`certificado`,`exclusivo`,`fechaRegistro`,`categorias_idCategorias`)
+values
+("Something for everybody Artist Elvis Presley Format:CD / Album Digipak",
+"Algo para todos Artista Elvis Presley Formato: CD/álbum Digipak Label: L.M.L.R. Género: Rock and Roll Nº de discos: 1",
+"https://i.ebayimg.com/images/g/Is0AAOSwLLJjB6LY/s-l1600.jpg",
+1239,409.89,2,true,false,sysDate(),2);
+
+insert into `products` 
+(`name`,`description`,`img`,`codigo`,`precio`,`cantidad`,`certificado`,`exclusivo`,`fechaRegistro`,`categorias_idCategorias`)
+values
+("sings the mad professor Artist Elvis Presley Format:CD / Album Digipak",
+"Something for everybody Artist Elvis Presley Format:CD / Album Digipak Label:L.M.L.R.",
+"https://i.ebayimg.com/images/g/~QAAAOSwbLRjB6O-/s-l1600.jpg",
+1240,500,1,false,false,sysDate(),2);
+
+insert into `products` 
+(`name`,`description`,`img`,`codigo`,`precio`,`cantidad`,`certificado`,`exclusivo`,`fechaRegistro`,`categorias_idCategorias`)
+values
+("Beethoven for All: Symphonies Nos. 1-9 by Daniel Barenboim / West-Eastern Divan Orchestra (CD, 2012)",
+"DANIEL BARENBOIM ; Beethoven For All - Symphonies 1-9 ; DECCA 2011 5CD Boxed Set",
+"https://i.ebayimg.com/images/g/Y6UAAOSwPFBh~qTI/s-l640.jpg",
+1241,482.82,2,false,false,sysDate(),2);
+-- 
+insert into `products` 
+(`name`,`description`,`img`,`codigo`,`precio`,`cantidad`,`certificado`,`exclusivo`,`fechaRegistro`,`categorias_idCategorias`)
+values
+("Lote de 18 Cintas De Vhs Walt Disney Black Diamond",
+"Este Lote de cintas VHS están en perfectas condiciones.Sin embargo, sus casos mostrar signos de uso.Sin embargo, están en perfectas condiciones de jugar.También han sido bien cuidados y vienen de un hogar libre de mascotas y humo",
+"https://i.ebayimg.com/images/g/mEYAAOSwSc9jAVQG/s-l300.jpg",
+1242,1400,1,true,true,sysDate(),3);
+
+insert into `products` 
+(`name`,`description`,`img`,`codigo`,`precio`,`cantidad`,`certificado`,`exclusivo`,`fechaRegistro`,`categorias_idCategorias`)
+values
+("FARGO SEALED VHS movie video",
+"Disfruta de esta gran historia en edición VHS.",
+"https://i.ebayimg.com/images/g/AdEAAOSwXgFi9vhj/s-l1600.jpg",
+1243,700.52,2,true,false,sysDate(),3);
+
+insert into `products` 
+(`name`,`description`,`img`,`codigo`,`precio`,`cantidad`,`certificado`,`exclusivo`,`fechaRegistro`,`categorias_idCategorias`)
+values
+("RARE Bugs Bunny - Vintage Cartoon Classics",
+"Con pequeña rotura en el sello. Bugs Bunny - Película clásica de dibujos animados vintage - Incluye 3 episodios diferentes.",
+"https://i.ebayimg.com/images/g/anUAAOSw74FhHuLU/s-l1600.jpg",
+1244,625.99,1,true,true,sysDate(),3);
+
+insert into `products` 
+(`name`,`description`,`img`,`codigo`,`precio`,`cantidad`,`certificado`,`exclusivo`,`fechaRegistro`,`categorias_idCategorias`)
+values
+("Beetlejuice (VHS, 1993)",
+"Dirigida por Tim Burton y lanzada en 1993 en VHS, espera lo inesperado en esta cómica aventura.",
+"https://i.ebayimg.com/images/g/XK0AAMXQgJRQ9wM2/s-l640.jpg",
+1245,852,2,true,true,sysDate(),3);
+
+-- 000
+
