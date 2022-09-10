@@ -1,25 +1,25 @@
-/****************************FILTRO***********************/
 /* Caracteristicas de posicionamiento del filtro*/
-.menu-filtro{
-  height: 100%;
+.menu-filtro {
+  /* height: 100%; */
   width: 300px;
   position: relative;
   /* position:fixed; */
-  float:left;
-  top: 72px;   
- 
+  float: left;
+  /* top: 72px; */
+  /* margin-bottom: 30px; */
+  margin-bottom: auto;
 }
 
 /* Icono de filtro*/
-.menu-filtro .menu-btn{ 
-  position:absolute;
+.menu-filtro .menu-btn {
+  position: absolute;
   left: 20px;
   top: 10px;
-  background: #F2DF3A; 
+  background: #F2DF3A;
   color: white;
   height: 45px;
   width: 45px;
-  z-index:100;
+  z-index: 100;
   border: 1px solid #F2DF3A;
   border-radius: 5px;
   cursor: pointer;
@@ -30,12 +30,12 @@
 }
 
 /*Al clickear el boton  menu-btn lo desplaza a y mantiene alinieado 247px a la izqueierda de la pantalla*/
-#btn:checked ~ .menu-btn{
+#btn:checked ~ .menu-btn {
   left: 247px;
 }
 
 /*Posicion del icono de filtro */
-.menu-filtro .menu-btn i.fa-filter{
+.menu-filtro .menu-btn i.fa-filter {
   position: absolute;
   transition: all 0.3s ease;
 }
@@ -43,72 +43,60 @@
 /*La opcacidad del icono x inicia en 0 para que mientras este 
 NO clickeado el boton, este sea invisible y no se vea encimado al icono del filtro, 
 ya que los 2 iconos estan en el mismo boton*/
-.menu-filtro .menu-btn i.fa-times{
+.menu-filtro .menu-btn i.fa-times {
   opacity: 0;
 }
 
 /*Al clickear el boton del filtro, la opacidad del icono x 
 cambia a 1 para que sea visible y se rota*/
-#btn:checked ~ .menu-btn i.fa-times{
+#btn:checked ~ .menu-btn i.fa-times {
   opacity: 1;
   transform: rotate(-180deg);
 }
+
 /*Al clickear el boton del filtro, la opacidad del icono filtro
 cambia a 0 para que sea invisible y se rota para que no se vea encimado al icono x*/
-#btn:checked ~ .menu-btn i.fa-filter{
+#btn:checked ~ .menu-btn i.fa-filter {
   opacity: 0;
   transform: rotate(180deg);
 }
 
-
 /*Caracteristicas del slidebar*/
-#sidebar{
-  /* position: fixed; */
+#sidebar {
   position: relative;
   background: #0078AA;
   /* height: 100%;  */
-  height: 650px;
-  width: 270px;
+  height: 650px; /*alto del menú*/
+  width: 270px; /*Ancho del menú*/
   overflow: hidden;
-  left: -270px;  /*Lo que permite el desplazamiento del filtro*/
-  /* margin-top: 0px; */
-  float:left;
+  left: -270px;   /*Lo que permite el desplazamiento del filtro */
+  margin-bottom:auto;
+  float: left;
   transition: all 0.3s ease;
-  
 }
 
 /*cuando el input con id=btn es cliceado, selecciona todo lo que sea nav slidebar
 y lo posicion a la ozquieda */
-#btn:checked ~ #sidebar{
+#btn:checked ~ #sidebar {
   left: 0;
 }
 
-
 /*Caracteristicas del titulo del filtro*/
-#sidebar .title{
+#sidebar .title {
   line-height: 65px;
   text-align: center;
   background: #0078AA;
-  font-family: 'Poppins',sans-serif;
-  font-weight:500;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   color: #f2f2f2;
-  border-bottom: 1px solid#1f85b8;
-  
+  border-bottom: 1px solid #1f85b8;
 }
 
-h6{
-  color:#f2f2f2;
-  font-size: 14px;
-  margin-left: 1px;
-  font-family: 'Poppins',sans-serif;
-  font-weight:500;
-  font-size: 18px;
-  padding-top: 15px;
-}
+
 
 /*Caracteristicas del body de a barra de navegación*/
-#sidebar .list-items{
+#sidebar .list-items {
   position: relative;
   background: #404040;
   width: 100%;
@@ -117,11 +105,10 @@ h6{
   padding-left: 10px;
 }
 
-
-#sidebar .list-items li{
+#sidebar .list-items li {
   padding-left: 10px;
   line-height: 50px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid #333;
   transition: all 0.3s ease;
 }
@@ -132,12 +119,16 @@ h6{
   box-shadow: 0 0px 10px 3px #222;
 }
 
-#sidebar .list-items li:first-child{
+#sidebar .list-items li:first-child {
   border-top: none;
 }
 
-#sidebar .list-items li a{
+/*Botones del menú de filtro cada renglon*/
+.list-items .btn-filtro{
   color: #f2f2f2;
+  background-color: #404040;
+  text-align: left;
+  border: none;
   font-family:'Montserrat',sans-serif;
   font-weight:500;
   size: 16px;
@@ -148,11 +139,13 @@ h6{
   display: block;
 }
 
+
 /*Margen de los iconos*/
-#sidebar .list-items li a i{
+#sidebar .list-items li i {
   margin-right: 20px;
 }
-#sidebar .list-items .redes{
+
+#sidebar .list-items .redes {
   width: 100%;
   height: 40px;
   text-align: center;
@@ -165,7 +158,7 @@ h6{
 }
 
 /*darle formato en aspecto a cada icono de las redes sociales*/
-#sidebar .list-items .redes a{
+#sidebar .list-items .redes a {
   height: 100%;
   width: 40px;
   /* display: block; */
@@ -178,20 +171,92 @@ h6{
   transition: all 0.3s ease;
 }
 
-#sidebar .list-items .redes a:hover{
+#sidebar .list-items .redes a:hover {
   background: #404040;
-  
 }
-.icons{
-align-items: center;
-padding-top: 0px;
+
+.icons {
+  align-items: center;
+  padding-top: 0px;
 }
-#slidebar{ 
-input{
+
+h6{
+  color: #f2f2f2;
+  margin-left: 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
+#slidebar input {
   padding-left: 40px;
   line-height: 50px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid #333;
   transition: all 0.3s ease;
 }
-} 
+
+/****************MEDIA DEL FILTRO********************/
+@media (max-width: 1220px) { //hasta los 500px
+  .menu-filtro {
+  width: 0px; /*ancho del margen*/
+  height: 30px;
+  float: left;
+  margin-bottom: auto;
+  margin-bottom: auto ;
+  z-index: 100;
+  } 
+
+/* Icono de filtro*/
+.menu-filtro .menu-btn {
+  position: absolute;
+  left: 5px;
+  // height: 45px;
+  // width: 45px;
+}
+
+  /*Caracteristicas del slidebar*/
+#sidebar {
+  position: relative;
+  /* height: 100%;  */
+  height: 650px; /*alto del menú*/
+  width: 270px; /*Ancho del menú*/
+  overflow: hidden;
+  left: -270px;   /*Lo que permite el desplazamiento del filtro */
+  margin-bottom:auto;
+  float: left;
+  transition: all 0.3s ease;
+}
+
+
+/*Caracteristicas del titulo del filtro*/
+#sidebar .title {
+  font-size: 18px;
+}
+
+/*Al clickear el boton  menu-btn lo desplaza a y mantiene alinieado 247px a la izqueierda de la pantalla*/
+#btn:checked ~ .menu-btn {
+  left: 247px;
+}
+
+h6{
+  font-size: 18px;
+}
+
+
+
+
+}/*mediaQuery*/
+
+
+// @media (max-width: 500px) {
+//   .menu-filtro {
+//   /* height: 100%; */
+//   width: 0px; /*ancho del margen*/
+//   height: 30px;
+//   float: left;
+//   margin-bottom: auto;
+//     z-index: 100;
+//   } 
+// }

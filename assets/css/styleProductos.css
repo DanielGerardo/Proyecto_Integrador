@@ -2,57 +2,6 @@
 .navPrimario {
   background-color: #0078aa;
 }
-
-body{
-  background-color: #F6F6F6;
-}
-
-
-.titulo{
-  color: #0078aa;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.tituloDeBusqueda{
-  color: #062836;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 12px;
-}
-.mt-5{
-  margin-left: auto;
-}
-
-#caritaTriste {
-  max-width: 100%;
-  min-height: 222px;
-  max-height: 222px;
-  display:block;
-  margin:auto;
-}
-
-
-#leyenda{
-  text-align: center; 
-}
-
-h6 {
-  color: #f2f2f2;
-  font-size: 14px;
-  margin-left: 1px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  padding-top: 15px;
-}
-
 .navPrimario img {
   width: 150px;
   position: fixed;
@@ -268,8 +217,6 @@ h6 {
     color: white;
   }
 }
-
-/************************************FILTRO*********************************************/
 /* Caracteristicas de posicionamiento del filtro*/
 .menu-filtro {
   /* height: 100%; */
@@ -281,87 +228,6 @@ h6 {
   /* margin-bottom: 30px; */
   margin-bottom: auto;
 }
-
-@media (max-width: 375px) {
-  .titulo{
-    font-size: 20px;
-    margin-top: 35px;
-    margin-bottom: 18px;
-    text-align: center;
-  }
-  .bookContainer{
-    display:block; /*Quitar el espacio raro que se hacia a la derecha*/
-  }
-  /* .bookContainer .card {
-    margin: 0 1em;
-    max-width: 4px;
-    min-width: 4px;
-  } */
-
- .menu-filtro {
-  /* height: 100%; */
-  width: 0px; /*ancho del margen*/
-  height: 30px;
-  position: relative;
-  /* position:fixed; */
-  float: left;
-  margin-bottom: auto;
-    z-index: 100;
-  } 
-
-/* Icono de filtro*/
-.menu-filtro .menu-btn {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  height: 45px;
-  width: 45px;
-  z-index: 110;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-
-  /*Caracteristicas del slidebar*/
-#sidebar {
-  position: sticky;
-  height: 50px; /*alto*/
-  width: 70px; /*ancho*/
-  overflow: hidden;
-  left: -70px;  /*Lo que permite el desplazamiento del filtro */
-  margin-bottom:auto;
-  float: left;
-  transition: all 0.3s ease;
-}
-
-
-/*Caracteristicas del titulo del filtro*/
-#sidebar .title {
-  line-height: 65px;
-  text-align: left;
-  background: #0078AA;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 3px;
-}
-
-/*Al clickear el boton  menu-btn lo desplaza a y mantiene alinieado 247px a la izqueierda de la pantalla*/
-#btn:checked ~ .menu-btn {
-  left: 70px;
-}
-
-/*Posicion del icono de filtro */
-.menu-filtro .menu-btn i.fa-filter {
-  position: absolute;
-  transition: all 0.3s ease;
-}
-
-
-
-}/*mediaQuery*/
 
 /* Icono de filtro*/
 .menu-filtro .menu-btn {
@@ -422,8 +288,8 @@ cambia a 0 para que sea invisible y se rota para que no se vea encimado al icono
   height: 650px; /*alto del menú*/
   width: 270px; /*Ancho del menú*/
   overflow: hidden;
-  left: -270px;   /*Lo que permite el desplazamiento del filtro */
-  margin-bottom:auto;
+  left: -270px; /*Lo que permite el desplazamiento del filtro */
+  margin-bottom: auto;
   float: left;
   transition: all 0.3s ease;
 }
@@ -446,8 +312,6 @@ y lo posicion a la ozquieda */
   border-bottom: 1px solid #1f85b8;
 }
 
-
-
 /*Caracteristicas del body de a barra de navegación*/
 #sidebar .list-items {
   position: relative;
@@ -466,7 +330,7 @@ y lo posicion a la ozquieda */
   transition: all 0.3s ease;
 }
 
-#sidebar .list-items li:hover{
+#sidebar .list-items li:hover {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: 0 0px 10px 3px #222;
@@ -477,13 +341,13 @@ y lo posicion a la ozquieda */
 }
 
 /*Botones del menú de filtro cada renglon*/
-.list-items .btn-filtro{
+.list-items .btn-filtro {
   color: #f2f2f2;
   background-color: #404040;
   text-align: left;
   border: none;
-  font-family:'Montserrat',sans-serif;
-  font-weight:500;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   size: 16px;
   text-decoration: none;
   font-weight: 500;
@@ -491,7 +355,6 @@ y lo posicion a la ozquieda */
   width: 100%;
   display: block;
 }
-
 
 /*Margen de los iconos*/
 #sidebar .list-items li i {
@@ -533,6 +396,15 @@ y lo posicion a la ozquieda */
   padding-top: 0px;
 }
 
+h6 {
+  color: #f2f2f2;
+  margin-left: 1px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
 #slidebar input {
   padding-left: 40px;
   line-height: 50px;
@@ -541,13 +413,45 @@ y lo posicion a la ozquieda */
   transition: all 0.3s ease;
 }
 
-.bookContainer{
-  margin-top: auto;
-  margin-left: auto;
-  width: auto; 
-  margin: auto auto;
-}
-
+/****************MEDIA DEL FILTRO********************/
+@media (max-width: 1220px) {
+  .menu-filtro {
+    width: 0px; /*ancho del margen*/
+    height: 30px;
+    float: left;
+    margin-bottom: auto;
+    margin-bottom: auto;
+    z-index: 100;
+  }
+  /* Icono de filtro*/
+  .menu-filtro .menu-btn {
+    position: absolute;
+    left: 5px;
+  }
+  /*Caracteristicas del slidebar*/
+  #sidebar {
+    position: relative;
+    /* height: 100%;  */
+    height: 650px; /*alto del menú*/
+    width: 270px; /*Ancho del menú*/
+    overflow: hidden;
+    left: -270px; /*Lo que permite el desplazamiento del filtro */
+    margin-bottom: auto;
+    float: left;
+    transition: all 0.3s ease;
+  }
+  /*Caracteristicas del titulo del filtro*/
+  #sidebar .title {
+    font-size: 18px;
+  }
+  /*Al clickear el boton  menu-btn lo desplaza a y mantiene alinieado 247px a la izqueierda de la pantalla*/
+  #btn:checked ~ .menu-btn {
+    left: 247px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+} /*mediaQuery*/
 .bookContainer .card {
   margin: 0 1em;
   border: none;
@@ -556,14 +460,12 @@ y lo posicion a la ozquieda */
   min-width: 300px;
   margin-bottom: 50px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  transition: 0.6s;
-  /* align-content: center; */
+  transition: 0.2s;
 }
 .bookContainer .card:hover {
-  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
-  transition: 0.6s;
+  transition: 0.2s;
+  transform: scale(1.1);
 }
-
 .bookContainer .card p {
   margin-top: 0.625rem;
 }
@@ -617,4 +519,39 @@ y lo posicion a la ozquieda */
 }
 .bookContainer .card .btnLibros:hover::after {
   left: 0;
+}
+
+@media (max-width: 1220px) {
+  .bookContainer {
+    margin-left: 45px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .bookContainer {
+    margin-left: 100px;
+    margin-right: 0px;
+  }
+}
+body {
+  background-color: rgba(246, 246, 246, 0.9647058824);
+}
+
+.titulo {
+  color: #0078AA;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+@media (max-width: 1312px) {
+  .titulo {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=styleProductos.css.map */

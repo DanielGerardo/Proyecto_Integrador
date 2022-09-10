@@ -130,6 +130,8 @@ input[type=number] {
   background-color: #0078aa;
   bottom: 0;
   color: white;
+  margin-top: 30px;
+  float: left;
 }
 .footerPlantilla h4 {
   font-family: "Poppins", sans-serif;

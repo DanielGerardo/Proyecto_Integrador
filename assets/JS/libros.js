@@ -6,7 +6,8 @@ const itemsContainer = document.querySelector(".bookContainer"); //obtenemos el 
 
 function addItem(item, clase){
    const itemHTML = 
-    `<div class="card cardLibros">
+    `<div class="col-12 col-sm-3">
+    <div class="card cardLibros">
     <img
       src="${item.img}"
       class="card-img-top"
@@ -22,6 +23,7 @@ function addItem(item, clase){
       >
       <p class="cardPrecio">$<span id="precio">${item.precio} MXN</p>
      </div>
+    </div>
     </div>`;
     clase.innerHTML += itemHTML;
 }
