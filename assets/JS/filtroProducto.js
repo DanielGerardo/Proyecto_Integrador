@@ -10,19 +10,19 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
   })
   .then(json =>{ 
     productos = JSON.stringify(json); //convertimos el objeto a una cadena de texto JSON, 
-    productos = JSON.parse(productos); //analiza el JSON, y lo transforma en productos
+    productos = JSON.parse(productos); //analiza el JSON, y lo transforma en objeto que se almacena en productos
     var contador = 0; 
     for (let i = 0; i< productos.length; i++) { //recorre todo el arreglo de productos 
-        if(productos[i].categoria.match("-") && productos[i].certificado.valueOf(false)){ //si su categoria es libro y tiene certificado
+        if(productos[i].categoria.match("Libros") && productos[i].certificado.match("false")){ //si su categoria es libro y tiene certificado
           addItem(productos[i],contFiltro); //llamamos a la función addItem, pasandole la info del producto
             contador= contador+1;  //se incrementa el contador
-            tituloFiltro.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
-    <p>${contador} Resultados</p>`;
+            // tituloFiltro.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
+            //                           <p class="resultados">${contador} Resultados</p>`;
           }
       }
       if(contador===0){
           resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
-          <p  class="tituloDeBusqueda">${0} Resultados</p>
+          <p  class="resultados">${0} Resultados</p>
           <div class="mt-5">
             <img
               id ="caritaTriste"
@@ -30,11 +30,8 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
               alt="Carita triste por no encontrar productos disponibles"
             />
             <br>
-            <h3
-            id ="leyenda"
-            >
-            Libros con Certificado se han agotado. Prueba Buscando en
-              otro producto
+            <h3 id ="leyenda">
+            Los libros con Certificado se han agotado. Prueba Buscando en otro producto
             </h3>
           </div>`;
         }

@@ -44,15 +44,15 @@ function buscarLibro(){
         if(contador===0){
           resultadoBusqueda.innerHTML = 
           `<div class="mt-5">
-            <img
-              id ="caritaTriste"
-              src="/assets/img/productos/cara-triste.jpg"
-              alt="Carita triste por no encontrar productos disponibles"
-            />
-            <h3>
-              Por el momento no tenemos Libros. Prueba Buscando
-              otro producto
-            </h3>
+              <img
+                id ="caritaTriste"
+                src="/assets/img/cara-triste-en-cuadrado-redondeado.png"
+                alt="Carita triste por no encontrar productos disponibles"
+              />
+              <br>
+              <h3 id ="leyenda">
+              Libros con Certificado se han agotado. Prueba Buscando en otro producto
+              </h3>
           </div>`;
                 }
             });

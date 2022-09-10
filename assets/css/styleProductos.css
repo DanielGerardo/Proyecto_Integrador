@@ -13,8 +13,8 @@ body{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 32px;
-  margin-top: 35px;
-  /* margin-bottom: 55px; */
+  margin-top: 20px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -268,7 +268,8 @@ h6 {
     color: white;
   }
 }
-/****************************FILTRO***********************/
+
+/************************************FILTRO*********************************************/
 /* Caracteristicas de posicionamiento del filtro*/
 .menu-filtro {
   /* height: 100%; */
@@ -280,6 +281,87 @@ h6 {
   /* margin-bottom: 30px; */
   margin-bottom: auto;
 }
+
+@media (max-width: 375px) {
+  .titulo{
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .bookContainer{
+    display:block; /*Quitar el espacio raro que se hacia a la derecha*/
+  }
+  /* .bookContainer .card {
+    margin: 0 1em;
+    max-width: 4px;
+    min-width: 4px;
+  } */
+
+ .menu-filtro {
+  /* height: 100%; */
+  width: 0px; /*ancho del margen*/
+  height: 30px;
+  position: relative;
+  /* position:fixed; */
+  float: left;
+  margin-bottom: auto;
+    z-index: 100;
+  } 
+
+/* Icono de filtro*/
+.menu-filtro .menu-btn {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 45px;
+  width: 45px;
+  z-index: 110;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+
+  /*Caracteristicas del slidebar*/
+#sidebar {
+  position: sticky;
+  height: 50px; /*alto*/
+  width: 70px; /*ancho*/
+  overflow: hidden;
+  left: -70px;  /*Lo que permite el desplazamiento del filtro */
+  margin-bottom:auto;
+  float: left;
+  transition: all 0.3s ease;
+}
+
+
+/*Caracteristicas del titulo del filtro*/
+#sidebar .title {
+  line-height: 65px;
+  text-align: left;
+  background: #0078AA;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 3px;
+}
+
+/*Al clickear el boton  menu-btn lo desplaza a y mantiene alinieado 247px a la izqueierda de la pantalla*/
+#btn:checked ~ .menu-btn {
+  left: 70px;
+}
+
+/*Posicion del icono de filtro */
+.menu-filtro .menu-btn i.fa-filter {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+
+
+}/*mediaQuery*/
 
 /* Icono de filtro*/
 .menu-filtro .menu-btn {
@@ -336,9 +418,9 @@ cambia a 0 para que sea invisible y se rota para que no se vea encimado al icono
 #sidebar {
   position: relative;
   background: #0078AA;
-  height: 100%; 
-  height: 650px;
-  width: 270px;
+  /* height: 100%;  */
+  height: 650px; /*alto del menú*/
+  width: 270px; /*Ancho del menú*/
   overflow: hidden;
   left: -270px;   /*Lo que permite el desplazamiento del filtro */
   margin-bottom:auto;
@@ -362,7 +444,6 @@ y lo posicion a la ozquieda */
   font-size: 18px;
   color: #f2f2f2;
   border-bottom: 1px solid #1f85b8;
-  
 }
 
 
@@ -463,6 +544,8 @@ y lo posicion a la ozquieda */
 .bookContainer{
   margin-top: auto;
   margin-left: auto;
+  width: auto; 
+  margin: auto auto;
 }
 
 .bookContainer .card {
