@@ -1,0 +1,24 @@
+@use 'mixinProductos';
+@use "productos";
+
+body{
+    background-color:#F6F6F6F6 ;
+}
+.titulo {
+    color: #0078AA;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+
+  @media (max-width: 1312px) {
+    .titulo{
+      font-size: 28px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }//media 1015px
