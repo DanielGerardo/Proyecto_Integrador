@@ -1,4 +1,3 @@
-const btnCertificate = document.querySelector(".btnCertificate"); //obtenemos el boton del HTML
 const resultadoBusqueda = document.querySelector(".resultadoBusqueda"); //obtenemos el div del HTML
 const itemsContainer = document.querySelector(".bookContainer"); //obtenemos el div de los elementos
 

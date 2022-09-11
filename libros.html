@@ -71,13 +71,13 @@
             </button>
           </li>
           <li>
-            <button class="btn-filtro">
+            <button class="btn-filtro btnExclusive">
               <i class="fa-solid fa-compact-disc"></i>Exclusivo
             </button>
           </li>
 
           <h6>Precio</h6>
-          <li>
+          <!-- <li>
             <button class="btn-filtro">
               <i class="fa-solid fa-left-long"></i>Menor precio
             </button>
@@ -86,8 +86,24 @@
             <button class="btn-filtro">
               <i class="fa-solid fa-right-long"></i>Mayor precio
             </button>
-          </li>
+          </li> -->
+          <!-- <div class="input-group"> -->
+            <span>
+              <label class="titleInput">Min:</label>
+              <input class="busquedaPrecio" type="number" id="min" placeholder="0"autocomplete="off"/>
+              <label class="titleInput">Max:</label>
+              <input class="busquedaPrecio" type="number"  id="max" placeholder="1220" autocomplete="off"/>
+          </span>
+          <!-- </div> -->
 
+
+          <button 
+          class="btnBusquedaxPrecio"
+          type="submit">
+          <i class="fa-solid fa-magnifying-glass-dollar"></i>
+            Buscar
+        </button>
+          <hr>
           <!-- Icons -->
           <div class="redes">
             <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
