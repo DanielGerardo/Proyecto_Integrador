@@ -5,7 +5,7 @@
 $Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
 
 .bookContainer{  
-   // padding: 0px;
+   // margin-left: auto;
 
   .card{  
       margin: 0 1em;            
@@ -40,12 +40,16 @@ $Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
 
 @media (max-width: 1220px) {
    .bookContainer{
-      margin-left: 45px;
+      margin-left: 120px;
       margin-right: 0px;
    }
-   // .card{
-   //    padding: 0; 
-   // }
+}
+
+@media (max-width: 920px) {
+   .bookContainer{
+      margin-left: 120px;
+      margin-right: 0px;
+   }
 }
 
 @media (max-width: 500px) {
@@ -53,5 +57,11 @@ $Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
       margin-left: 100px;
       margin-right: 0px;
    }
+}
 
+@media (max-width: 480px) {
+   .bookContainer{
+      margin-left: 50px;
+      margin-right: 0px;
+   }
 }

@@ -58,13 +58,12 @@ function addItem(item, clase){
    </div>
   </div>`;
   clase.innerHTML += itemHTML;
-
 }
 
 
 function cartaVacia(){
   const itemHTML = 
-   `<div class="row row-cols-1 row-cols-md-3 g-5 bookContainer">
+   `<div class="bookContainer">
  </div>`;
    itemsContainer.outerHTML = itemHTML;
 }

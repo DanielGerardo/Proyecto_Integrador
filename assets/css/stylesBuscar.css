@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  opacity: 0;
 }
 
 /*Al clickear el boton  menu-btn lo desplaza a y mantiene alinieado 247px a la izqueierda de la pantalla*/
@@ -67,10 +68,9 @@ cambia a 0 para que sea invisible y se rota para que no se vea encimado al icono
   position: relative;
   background: #0078AA;
   /* height: 100%;  */
-  height: 650px; /*alto del menú*/
+  height: 480px; /*alto del menú*/
   width: 270px; /*Ancho del menú*/
   overflow: hidden;
-  left: -270px; /*Lo que permite el desplazamiento del filtro */
   margin-bottom: auto;
   float: left;
   transition: all 0.3s ease;
@@ -201,7 +201,7 @@ h6 {
     width: 0px; /*ancho del margen*/
     height: 30px;
     float: left;
-    margin-bottom: auto;
+    position: relative;
     margin-bottom: auto;
     z-index: 100;
   }
@@ -209,26 +209,18 @@ h6 {
   .menu-filtro .menu-btn {
     position: absolute;
     left: 5px;
+    opacity: 1;
   }
   /*Caracteristicas del slidebar*/
   #sidebar {
     position: relative;
-    /* height: 100%;  */
-    height: 650px; /*alto del menú*/
+    height: 480px; /*alto del menú*/
     width: 270px; /*Ancho del menú*/
-    overflow: hidden;
     left: -270px; /*Lo que permite el desplazamiento del filtro */
-    margin-bottom: auto;
-    float: left;
-    transition: all 0.3s ease;
   }
   /*Caracteristicas del titulo del filtro*/
   #sidebar .title {
     font-size: 18px;
-  }
-  /*Al clickear el boton  menu-btn lo desplaza a y mantiene alinieado 247px a la izqueierda de la pantalla*/
-  #btn:checked ~ .menu-btn {
-    left: 247px;
   }
   h6 {
     font-size: 18px;
