@@ -86,16 +86,6 @@ btnBusquedaxPrecio.addEventListener("click", (e) => { //cuando se hace click en 
       });
 });
 
-
-
-
-
-
-
-
-
-
-
 //agrega las cards al contenedor
 function addItem(item, clase){
   const itemHTML = 
@@ -113,40 +103,18 @@ function addItem(item, clase){
     <button id="${item.codigo}" class="btnLibros"
       ><span class="Agregar">Agregar al carrito</span></button
     >
-    <p class="cardPrecio">$<span id="precio">${item.precio} MXN</p>
+    <p class="cardPrecio">$<span id="precio">${item.precio} </span>MXN</p>
    </div>
   </div>`;
   clase.innerHTML += itemHTML;
 }
 
-// function addCard(item, clase){
-//   const itemHTML = 
-//    `<div class="col-12 col-sm-3">
-//    <div class="card cardLibros">
-//    <img
-//      src="${item.img}"
-//      class="card-img-top"
-//      alt="${item.name}"
-//    />
-//    <div class="card-body text-center">
-//    <h5 class="card-title">${item.name}</h5>
-//      <p class="card-text">
-//        ${item.description}
-//      </p>
-//      <button id="${item.codigo}" class="btnLibros"
-//        ><span class="Agregar">Agregar al carrito</span></button
-//      >
-//      <p class="cardPrecio">$<span id="precio">${item.precio} MXN</p>
-//     </div>
-//    </div>
-//    </div>`;
-//    clase.innerHTML += itemHTML;
-// }
 
 //reemplaza el bookContainer por uno sin cards
 function cartaVacia(){
+  let contFiltro = document.querySelector(".bookContainer");
   const itemHTML = 
-   `<div class="bookContainer">
+   `<div class=" row bookContainer">
  </div>`;
-   itemsContainer.outerHTML = itemHTML;
+ contFiltro.outerHTML = itemHTML;
 }
