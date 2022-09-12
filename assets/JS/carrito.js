@@ -45,12 +45,12 @@ let contador = 0;
   carrito[producto.id] = { ...producto };
   // Limpiar carrito
   // carrito= {};
-  console.log(carrito);
+  // console.log(carrito);
   localStorage.setItem("carrito", JSON.stringify(carrito));
   
   Object.values(carrito).forEach((producto) => {
     contador += producto.cantidad;
-    console.log(contador);
+    // console.log(contador);
     localStorage.setItem("cantCarrito", JSON.stringify(contador));
   });
   
@@ -58,6 +58,5 @@ let contador = 0;
   let cantcarrito = JSON.parse(localStorage.getItem('cantCarrito'));
   contCarrito.innerText = cantcarrito; 
   
-  
-  //funcion para visualizarlo en pestaña carrito
+
 };

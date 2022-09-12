@@ -261,75 +261,125 @@ body {
     color: white;
   }
 }
-.form-group {
+.fM {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-style: bold;
-  text-align: "";
 }
 
-.subprecios {
-  font-family: "Poppins", sans-serif;
+.bold {
   font-size: 13px;
-  font-style: bold;
-  text-align: "right";
+  font-weight: 500;
 }
 
-.subtitulo {
+.fP {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-style: bold;
-  text-align: "";
 }
 
-.divResumen {
-  background-color: #f6f6f6;
-  border: 1px solid #0078aa;
-  border-radius: 10px;
-  box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-.formulario {
-  background-color: #fcfdff;
-  border: 1px solid rgba(197, 195, 195, 0.411);
-  border-top: none;
-  border-bottom-left-radius: 13px;
-  border-bottom-right-radius: 13px;
-}
-
-.tab {
+.btnAdelante {
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 10rem;
+  height: 2.1875rem;
+  background-color: #f0dd3a;
+  border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: 0.3s ease all;
+  position: relative;
   overflow: hidden;
 }
-.tab button {
-  font-family: "Poppins", sans-serif;
-  background-color: none;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  float: left;
-  border: none;
-  outline: none;
+.btnAdelante span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.btnAdelante::after {
+  content: "";
+  width: 15rem;
+  height: 2.1875rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-150% - 2.1875rem);
+  border-bottom: 2.1875rem solid #00acee;
+  border-right: 1.09375rem solid transparent;
+  transition: 0.5s ease-in-out all;
+}
+.btnAdelante:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.5s;
+}
+.btnAdelante:hover::after {
+  left: 0;
+}
+
+.codigo {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  color: gray;
+}
+
+.cantidad {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.descripcion {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.imgBig {
+  overflow: hidden;
+  text-align: center;
+  width: 40%;
+}
+.imgBig img {
+  height: 360px;
+  transition: 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.imgBig img:hover {
+  transform: scale(1.5, 1.5);
+}
+
+.imgSmall .col {
+  text-align: center;
+  margin-top: 10px;
+}
+.imgSmall img {
+  width: 70%;
+  border: 1px solid rgba(112, 110, 110, 0.648);
+  padding: 8px;
   cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
+  transition: 0.5s;
+}
+.imgSmall img:hover {
+  transform: scale(1.1, 1.1);
 }
 
-.active {
-  background-color: #fcfdff;
-  border: 1px solid rgba(197, 195, 195, 0.411);
+.posicionCenter {
+  text-align: center;
+}
+
+.posicionLeft {
+  text-align: left;
+}
+
+.posicionRight {
+  text-align: right;
+}
+
+.detalleProducto {
+  background-color: white;
+  border: red;
+  border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
-  border-bottom: none;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-}
-.active span {
-  border-bottom: 2px solid #f0dd3a;
-}
-
-.cuadroCompra {
-  max-height: 20rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}/*# sourceMappingURL=procesoDePago.css.map */
+}/*# sourceMappingURL=detalleProducto.css.map */

@@ -1,0 +1,84 @@
+@use "variablesCarritodeCompras";
+@use "navStyles";
+
+.fM{
+    font-family: variablesCarritodeCompras.$fontMontserrat;
+}
+.bold{
+    font-size: 13px;
+    font-weight: 500;
+}
+.fP{
+    font-family: variablesCarritodeCompras.$fontPoppins;
+}
+.btnAdelante {
+  // @include navStyles.botones(10rem,2.2rem, #F0DD3A, #00acee, black,white);
+  text-decoration: none;
+  font-size: 14px;
+  @include navStyles.botones(10rem, 2.1875rem, #f0dd3a, #00acee, black, white);
+}
+
+.codigo {
+  font-size: 12px;
+  font-family: variablesCarritodeCompras.$fontMontserrat;
+  color: gray;
+}
+.cantidad {
+  font-size: 14px;
+  font-family: variablesCarritodeCompras.$fontMontserrat;
+}
+
+.descripcion{
+font-size: 13px;
+font-family: variablesCarritodeCompras.$fontMontserrat;
+}
+.imgBig {
+    overflow: hidden;
+    text-align: center;
+  img {
+    height: 360px;
+    transition: 0.5s;
+    object-fit: cover;
+    &:hover{
+        transform: scale(1.5,1.5);
+    }
+  }
+  
+  width: 40%;
+ 
+}
+
+.imgSmall {
+
+  .col {
+    text-align: center;
+    margin-top: 10px;
+  }
+  img {
+   
+    width: 70%;
+    border: 1px solid rgba(112, 110, 110, 0.648);
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.1,1.1);
+    }
+  }
+}
+//? Posiciones de alineacion de texto
+.posicionCenter {
+  @include variablesCarritodeCompras.posicion(center);
+}
+.posicionLeft {
+  @include variablesCarritodeCompras.posicion(left);
+}
+.posicionRight {
+  @include variablesCarritodeCompras.posicion(right);
+}
+
+//  bordes
+
+.detalleProducto{
+    @include variablesCarritodeCompras.marcosfloat(red,white,variablesCarritodeCompras.$sombra)
+}

@@ -37,9 +37,8 @@ input[type=number] {
   height: auto;
 }
 
-.divTotal {
-  border: 2px solid #0078aa;
-  border-style: dotted;
+.eliminarItem {
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
