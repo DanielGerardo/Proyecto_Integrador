@@ -7,9 +7,8 @@
 
 .listas         {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px; font-style:italic}
 
-.pedidos {
-    color: white;
-    width: 12.5rem;
-    background-color: #F0DD3A;
-    border-radius: 2.5rem;
-  }
+.accordion-item{
+  margin-left: 20px;
+  margin-right: 20px;
+} 
+
