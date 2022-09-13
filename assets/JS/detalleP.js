@@ -1,37 +1,16 @@
+
+codigo = localStorage.getItem("codigo");
+// import* as codigo from './abritDetalle';
 const contenedor = document.getElementById("divDetalle");
 const vinculos = document.getElementById("vinculos");
-let linkCat="";
 
+// Cambiar imagen div
 function cambiarImg(imgSmall) {
   var fullImg = document.getElementById("img-box");
   fullImg.src = imgSmall.src;
 }
 
-function categorias(){
-console.log(this.id);
-//  linkCat=cat.toLowerCase();
-
- 
-//   switch (linkCat ) {
-//     case "libro":
-//       window.location.href = "libros.html";
-//       break;
-//   case "cd":
-//        window.location.href = "CD.html";
-//        break;
-
-//    case "peliculas":
-//     window.location.href = "peliculas.html";
-//     break;
-//     case "series":
-//    window.location.href = "series.html";
-//    break;
-//    case "vinilos":
-//        window.location.href = "vinilos.html";
-//        break;
-// }
-}
-
+// Llenar plantilla detalle  con el codigo localizado en localstorage
 function detalle(codigo) {
   fetch("/productos.json")
     .then((response) => {
@@ -42,9 +21,12 @@ function detalle(codigo) {
       productos = JSON.parse(productos);
       for (let i = 0; i < productos.length; i++) {
         if (productos[i].codigo == codigo) {
-          let item=productos[i];
-          if(item.categoria!=="CD"){ linkCat = (item.categoria).toLowerCase();}
-          else{linkCat = (item.categoria)};
+          let item = productos[i];
+          if (item.categoria !== "CD") {
+            linkCat = item.categoria.toLowerCase();
+          } else {
+            linkCat = item.categoria;
+          }
           console.log(linkCat);
           const vinculosItem = `    <div class="col">
           <a href="popCollector.html">Menú Principal</a> >
@@ -66,7 +48,7 @@ function detalle(codigo) {
             <div class="row pb-3 imgSmall">
               <!-- img1 -->
               <div class="col ">
-                <img 
+                <img  id="img1"
                   src="https://libreriasdeocasion.com.mx/media/catalog/product/cache/1/image/500x500/9df78eab33525d08d6e5fb8d27136e95/1/7/17050-fi.av-01.jpg"
                   alt="Small"
                   onclick="cambiarImg(this)"
@@ -96,7 +78,7 @@ function detalle(codigo) {
             <div class="row align-middle">
               <h4 class="fP">${item.name}</h4>
               <p class="codigo">Código de Producto: <span>${item.codigo}</span></p>
-              <h4 class="pb-2">$${item.precio}</h4>
+              <h4  class="pb-2">$ <span id="precio">${item.precio}</span></h4>
 
               <h6 class="pb-2">
                 Certificado <i class="fa-solid fa-check-double"></i>
@@ -126,22 +108,78 @@ function detalle(codigo) {
 
             <!--  -->
           </div>
-        </div>`
+        </div>`;
           // console.log(detalleItem);
-          contenedor.innerHTML=detalleItem;
-          vinculos.innerHTML= vinculosItem;
-         
+          // agregar div dentro del cuerpo html
+          contenedor.innerHTML = detalleItem;
+          vinculos.innerHTML = vinculosItem;
         }
-
       }
-    
-          // const detalleItem = `Hola`
-
-        
-        //  console.log(contenedor);
-        // contenedor.innerHTMl+= detalleItem;
-    
     });
 }
 
-detalle(1250);
+detalle(codigo);
+
+// ! AGREGAR AL CARRITO
+//Variable que contiene el div con clase divDetalle en el cual se ingresan las card de los productos
+let cardContainer = document.querySelector("#divDetalle");
+
+//Al div se le agrega evento click en el cual ejecuta la funcion addCarrito
+cardContainer.addEventListener("click", (e) => {
+  addCarrito(e);
+});
+
+// Se define variable carrito del local storage para poder utilizarla en diferentes pestañas y que no se vacie
+// carrito={};
+let carrito = JSON.parse(localStorage.getItem("carrito"));
+
+// Funcion add Carrito en el cual indica que al dar click en el boton de añadir carrito inicie otra funcion
+const addCarrito = (e) => {
+  if (e.target.classList.contains("Agregar")) {
+    // console.log(e.target.classList);
+    parent =
+      e.target.parentElement.parentElement.parentElement.parentElement
+        .parentElement;
+    listaCarrito(parent);
+    // console.log(parent);
+  }
+
+  e.stopPropagation();
+};
+
+// // funcion para crear un objeto con el contenido de las cards
+const listaCarrito = (item) => {
+  // console.log(item.querySelector("input").value);
+  let contador = 0;
+  //   // Se definen el contenido con la card
+  const producto = {
+    title: item.querySelector("h4").textContent,
+    precio: item.querySelector("#precio").textContent,
+    id: item.querySelector("button").id,
+    cantidad: item.querySelector("input").value,
+    img: item.querySelector("#img1").src,
+  };
+
+  //   // Si el id es repetido se suma la variable cantidad
+  if (carrito.hasOwnProperty(producto.id)) {
+    cant = parseInt(producto.cantidad);
+    producto.cantidad = parseInt(carrito[producto.id].cantidad) + cant;
+    // console.log(producto.cantidad);
+  }
+  //   // Se añade producto al objeto carrito
+  carrito[producto.id] = { ...producto };
+  //   // Limpiar carrito
+  //   // carrito= {};
+  console.log(carrito);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  Object.values(carrito).forEach((producto) => {
+    contador += parseInt(producto.cantidad);
+    // console.log(contador);
+    localStorage.setItem("cantCarrito", JSON.stringify(contador));
+  });
+
+  // Se actualiza la variable del icono en el local storage
+  let cantcarrito = JSON.parse(localStorage.getItem("cantCarrito"));
+  contCarrito.innerText = cantcarrito;
+};

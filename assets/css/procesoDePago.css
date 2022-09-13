@@ -293,9 +293,11 @@ body {
 }
 
 .formulario {
+  font-family: "Montserrat", sans-serif;
   background-color: #fcfdff;
   border: 1px solid rgba(197, 195, 195, 0.411);
   border-top: none;
+  font-size: 13px;
   border-bottom-left-radius: 13px;
   border-bottom-right-radius: 13px;
 }
@@ -332,4 +334,10 @@ body {
   max-height: 20rem;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+a {
+  font-size: 12px;
+  color: #0078aa;
+  text-decoration: none;
 }/*# sourceMappingURL=procesoDePago.css.map */

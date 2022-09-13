@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* Posicion iconos */
+.registroUsuario__grupo_input {
+  position: relative;
+}
+
+/* Mensaje error */
+.registroUsuario__input_error {
+  font-size: 12px;
+  margin-left: 3px;
+  color: #BB2929;
+  margin-bottom: 0;
+  display: none;
+}
+
+.registroUsuario__input_error_activo {
+  display: block;
+}
+
+.registroUsuario__validacion_estado {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 100;
+  font-size: 20px;
+  opacity: 0;
+}
+
+.registroUsuario__mensaje {
+  grid-column: span 2;
+}
+
+.registroUsuario__mensaje {
+  height: 45px;
+  line-height: 45px;
+  background: #F66060;
+  padding: 0px 15px;
+  border-radius: 3px;
+  display: none;
+}
+
+.registroUsuario__mensaje p {
+  margin: 0;
+}
+
+.registroUsuario__mensaje_exito {
+  font-size: 13px;
+  color: #0078AA;
+  display: none;
+}
+
+.registroUsuario__mensaje_exito_activo {
+  display: block;
+}
+
+/*---------Estilos para validación---------*/
+.registroUsuario__grupo_correcto .registroUsuario__validacion_estado {
+  color: #0078AA;
+  font-size: 20px;
+  opacity: 1;
+}
+
+.registroUsuario__grupo_incorrecto .registroUsuario__validacion_estado {
+  color: #BB2929;
+  opacity: 1;
+}
+
+/* color iconos error */
+.registroUsuario__grupo_incorrecto .form-control {
+  border: 2px solid rgba(187, 41, 41, 0.6705882353);
+  box-shadow: 0px 0px 5px 2px rgba(187, 41, 41, 0.3764705882);
+}
+
+/*----------Mediaquerys---------------*/
+/*--------Otros------*/
+.registroUsuario__btn {
+  color: white;
+  width: 12.5rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+}/*# sourceMappingURL=prubeavali.css.map */
