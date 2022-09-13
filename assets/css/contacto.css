@@ -1,16 +1,16 @@
-.títuloCon    {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
-.infoCon      {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
+.títuloCon   {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
+.infoCon     {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
 
-.container-sm    {background-color: white;}
-
-#check {
-    margin: top left;
+.cuerpo     {background-color: white;}
+.container-sm    {
+    background-color: #f6f6f6;
+    margin-bottom: 50px;
 }
 
 #check {
-    margin: -100px 20px;
+    margin-top: 20px;
+    margin-left: 50px;
 }
-
 
 .imgServicio{
     border-radius: 2.5rem;
@@ -21,3 +21,110 @@
     min-height: 90%;
     max-height: 90%;
 }
+
+.contacto{
+    gap:50px;
+}
+
+.labelContacto {
+	display: block;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.contactoNombreInput{
+    position: relative;
+}
+
+.grupoInput{
+    width: 70%;
+    background-color:white;
+    border: 1px solid #0078AA;
+    border-radius: 10px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 40px 0px 10px;
+
+}
+
+.grupoInput:focus {
+    border: 3px solid #73C8F3;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.contactoError{
+    font-size: 15px;
+    display: none;
+}
+
+.contactoError-activo{
+    display: block
+}
+
+.validacionContacto{
+    position: relative;
+    width: 80%;
+    right: -555px;
+    bottom: 37px;
+    z-index: 100;
+    font-size: 20px;
+    opacity: 0;
+
+}
+
+.error{
+    width: 61%;
+    height: 45px;
+    line-height: 45px;
+    background-color: #f66060;
+    padding: 0 15px;
+    border-radius: 10px;
+    margin-left: 15px;
+    display: none;
+}
+
+.error-activo{
+    display:block;
+}
+
+.boton{
+    display: flex;
+    margin-left: 230px;
+}
+
+.exito{
+    width: 70%;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    border-radius: 10px;
+    margin-left: 15px;
+    display: none;
+}
+
+.exito-activo{
+    display:block;
+}
+
+/* estilos de validación */
+
+.contactoGrupo-fine .validacionContacto {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+.contactoGrupo-bad .labelContacto{
+    color: #bb2929;
+}
+
+.contactoGrupo-bad .validacionContacto{
+    color: #bb2929;
+    opacity: 1;
+}
+
+.contactoGrupo-bad .grupoInput{
+    border: 2px solid #bb2929;
+    opacity: 1;
+}
+

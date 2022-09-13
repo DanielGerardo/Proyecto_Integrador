@@ -41,169 +41,169 @@
       defer
     ></script>
 
-    <!-- Iconos -->
-    <script
-      src="https://kit.fontawesome.com/9b2ab09150.js"
-      crossorigin="anonymous"
-    ></script>
-
     <!-- JS -->
     <script src="assets/JS/plantillas.js" defer></script>
-    <script src="assets/js/valiCon.js" defer></script>
+    <script src="assets/JS/contacto.js" defer></script>
 
     <title>Contacto POPcollector</title>
   </head>
 
-  <body class="cuerpo">
-    <!-- Barra de navegación -Se llama desde los styles- -->
+<body class="cuerpo">
+  <main>
+  <!-- Barra de navegación -Se llama desde los styles- -->
     <nav class="navPrimario"></nav>
     <nav class="navSecundario"></nav>
-    <br />
+      <br/>
 
-    <!-- Contenedor con sombra -->
+  <!-- Contenedor con sombra -->
     <div class="container-sm shadow">
-      <!--Título centrado-->
-      <br />
-      <div class="títuloCon justify-content-center">
+      <br/>
+  <!--Título centrado y con estilo de .títuloCon-->
+      <div class="justify-content-center títuloCon">
         <h2>CONTACTO</h2>
       </div>
 
-      <!--Formulario de contacto-->
+  <!-- Divs de estructura -->
       <div class="row">
         <div class="col">
-          <form>
-            <!-- Div de Nombre(s) -->
-            <div class="infoCon col-lg-9">
-              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-              <label for="Nombre" class="form-label">Nombre(s)</label>
-              <input type="text" class="form-control" id="Nombre" />
-              <!--Input tipo texto y clase de formulario-->
-            </div>
-            <br />
 
-            <!-- Div de Apellidos -->
-            <div class="infoCon col-lg-9">
-              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-              <label for="Apellido" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="Apellidos" />
-              <!--Input tipo texto y clase de formulario-->
-            </div>
-            <br />
+  <!--Formulario de contacto-->
+          <form action="" class="contacto infoCon" id="contacto">
 
-            <!-- Div de Correo electrónico -->
-            <div class="infoCon col-lg-9">
-              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-              <label for="email" class="form-label">Correo electrónico</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
-              />
-              <!--Input tipo email, clase de formulario y  pattern restrinctivo de caracteres-->
-            </div>
-            <br />
-
-            <!-- Div de Correo electrónico -->
-            <div class="infoCon col-lg-9">
-              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-              <label for="tel" class="form-label">Télefono (opcional)</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="phone"
-                pattern="[0-9]{10}"
-              />
-              <!--Input tipo tel, clase de formulario y  pattern restrinctivo de caracteres-->
-            </div>
-            <br />
-
-            <!--Div de checkform-->
-            <div class="infoCon form-check">
-              <!--Check Pedido-->
-              <label class="form-check-label" id="check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <span>Pedido</span>
-              </label>
-              <!--Check Producto-->
-              <label class="form-check-label" id="check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <span>Producto</span>
-              </label>
-              <!--Check General-->
-              <label class="form-check-label" id="check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <span>General</span>
-              </label>
-              <!--Check Sugerencia-->
-              <label class="form-check-label" id="check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                />
-                <span>Sugerencias</span>
-              </label>
-            </div>
-            <br />
-            <!--Div de checkform-->
-
-            <!-- Div de Mensaje -->
-            <div class="infoCon col-lg-9">
-              <!--Div de formulario con estilo de .info y longitud de 7 columnas-->
-              <label for="Mensaje" class="form-label">Mensaje</label>
-              <input type="text" class="form-control" id="Mensaje" />
-              <!--Input tipo texto y clase de formulario-->
-            </div>
-            <br />
-
-            <!-- Div del contenedor del botón enviar y nota de contacto -->
-            <div class="container">
-              <div class="row">
-                <!-- Botón enviar -->
-                <button class="btn col-3 mb-5" id="enviar" type="submit">
-                  Enviar
-                </button>
-
-                <!-- Div de nota de contacto-->
-                <div class="infoCon col-6 col-lg-6 mb-5">
-                  <a
-                    >Nos pondremos en contacto contigo en un plazo máximo de 48
-                    hrs</a
-                  >
+  <!-- Div de Nombre(s)-->
+            <div class="contactoGrupo" id="grupo_nombre">
+              <label for="nombre" class="labelContacto">Nombre(s)</label>
+                <div class="contactoNombreInput">
+                  <input type="text" class="grupoInput" name="nombreCon" id="nombre" placeholder="Ej: Maryana Ximena">
+                  <i class="validacionContacto fa-solid fa-circle-exclamation"></i>
                 </div>
-              </div>
+                  <p class="contactoError">El nombre solo puede contener letras</p>
             </div>
-            <!-- Div del contenedor del botón enviar y nota de contacto -->
-          </form>
-          <!--Forulario de contacto-->
+
+  <!-- Div de Apellido(s)-->
+            <div class="contactoGrupo" id="grupo_apellido">
+              <label for="apellido" class="labelContacto">Apellidos(s)</label>
+                <div class="contactoApellidoInput">
+                  <input type="text" class="grupoInput" name="apellidoCon" id="apellido" placeholder="Ej: Hernández Delgadillo">
+                  <i class="validacionContacto fa-solid fa-circle-exclamation"></i>
+                </div>
+                  <p class="contactoError">El apellido solo puede contener letras</p>
+            </div>
+
+  <!-- Div de Correo electrónico -->
+          <div class="contactoGrupo" id="grupo_correo">
+            <label for="correo" class="labelContacto">E-mail</label>
+              <div class="contactoCorreoInput">
+                <input type="text" class="grupoInput" name="correoCon" id="correo" placeholder="Ej: maryana.hernandez@gamil.com">
+                <i class="validacionContacto fa-solid fa-circle-exclamation"></i>
+              </div>
+                <p class="contactoError">El apellido solo puede contener letras</p>
+          </div>
+
+  <!-- Div de celular -->
+          <div class="contactoGrupo" id="grupo_cel">
+            <label for="cel" class="labelContacto">Télefono</label>
+              <div class="contactoCelInput">
+                <input type="tel" class="grupoInput" name="celCon" id="cel" placeholder="Ej: 33-2183-7224">
+                <i class="validacionContacto fa-solid fa-circle-exclamation"></i>
+              </div>
+                <p class="contactoError">El teléfono solo puede contener números</p>
+          </div>
+
+  <!--Div de checkform-->
+          <div class="infoCon form-check">
+        <!--Check Pedido-->
+            <label class="form-check-label" id="check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+              />
+                <span>Pedido</span>
+            </label>
+
+        <!--Check Producto-->
+            <label class="form-check-label" id="check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+              />
+                <span>Producto</span>
+            </label>
+
+        <!--Check General-->
+            <label class="form-check-label" id="check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+              />
+                <span>General</span>
+            </label>
+
+        <!--Check Sugerencia-->
+            <label class="form-check-label" id="check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+              />
+                <span>Sugerencias</span>
+            </label>
+            </div><!--Div de checkform-->
+
+  <!-- Div del mensaje-->
+          <div class="contactoGrupo" id="grupo_mnsj">
+            <label for="mensaje" class="labelContacto">Mensaje</label>
+              <div class="contactoMensajeInput">
+                <input type="text" class="grupoInput" name="mensajeCon" id="mensaje" placeholder="Tengo una duda respecto a...">
+                <i class="validacionContacto fa-solid fa-circle-exclamation"></i>
+              </div>
+                <p class="contactoError">Tienes que escribir un mensaje</p>
+          </div>
+
+  <!-- Div del contenedor del botón enviar y nota de contacto -->
+          <div class="enviar infoCon">
+            <div class="row">
+        <!-- Botón enviar -->
+        <div class="boton">
+          <button type="submit" class="btnEnviar">Enviar</button>
         </div>
+              
+        <!-- Div de nota de éxito-->
+              <div class="exito infoCon">
+                <a >Tu mensaje se ha enviado con éxito! Espera respuesta en un plazo máximo de 48 hrs</a>
+              </div>
+        <!-- Div de nota de error-->
+        <div class="error infoCon">
+          <p><i class="fas fa-exclamation-triangle"></i> <b>ERROR:</b> Por favor rellena el formulario correctamente</p>
+        </div>
+            </div>
+          </div><!-- Div del contenedor del botón enviar y nota de contacto -->
+
+          </form><!--Forulario de contacto-->
+        </div><!--Div class col para el formulario-->
+
         <div class="col-4">
-          <!-- Imagen -->
+        <!-- Imagen -->
           <img
             class="imgServicio"
             src="assets/img/contacto.jpg"
             alt="Imagen de servicio"
           />
-        </div>
-      </div>
-    </div>
-    <!--Contenedor con sombra del formulario-->
-    <br />
+        </div><!--Div class col para la imagen-->
+      </div><!--Div class row-->
+    </div><!--Contenedor con sombra del formulario-->
 
     <!-- Footer -Se llama desde Styles- -->
     <footer class="footerPlantilla"></footer>
+
+<!-- Iconos -->
+  <script
+    src="https://kit.fontawesome.com/9b2ab09150.js"
+    crossorigin="anonymous"
+  ></script>
+</main>
   </body>
 </html>
