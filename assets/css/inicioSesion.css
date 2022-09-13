@@ -18,6 +18,7 @@ body{
   color: white;
 }/*# sourceMappingURL=styles.css.map*/
 
+/*Contenedor del formulario*/
 .container-sm{
     max-width: 800px;
     width: 98%;
@@ -40,11 +41,11 @@ body{
 	cursor: pointer;
 }
 
-/*---------------*/
+/*------Íconos---------*/
 .iniciarSesion__grupo_input{
   position: relative;
 }
-
+/*Estilos de los inputs de mi formulario*/
 .iniciarSesion__input{
   width: 100;
   background-color: #f6f6f6;
@@ -70,11 +71,11 @@ body{
 .iniciarSesion__input_error_activo {
 	display: block;
 }
-
+/*íconos de error y confirmación*/
 .iniciarSesion__validacion_estado {
 	position: absolute;
 	right: 10px;
-	bottom: 15px;
+	bottom: 13px;
 	z-index: 100;
 	font-size: 16px;
 	opacity: 0;
@@ -86,22 +87,22 @@ body{
 } */
 
 /*---------Estilos para validación---------*/
+/*Recuadro de validación azul*/
 .iniciarSesion__grupo_correcto .iniciarSesion__validacion_estado {
 	color: #0078AA;
 	opacity: 1;
 }
+/*
 
-.iniciarSesion__grupo_incorrecto .form-label {
-	color: #BB2929;
-}
-
+/*Recuado de validación en rojo cuando sea erróneo*/
 .iniciarSesion__grupo_incorrecto .iniciarSesion__validacion_estado {
 	color: #BB2929;
   opacity: 1;
 }
-
+/*tamaño y color del borde*/
 .iniciarSesion__grupo_incorrecto .form-control {
-	border: 3px solid #bb2929;
+  border: 2px solid #bb2929;
+  box-shadow:  0px 0px 5px 2px #bb292960;
 }
 
 /*----------Mediaquerys---------------*/
@@ -117,7 +118,7 @@ body{
 
   
 
-
+/*Estilo del título*/
 h2{
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
@@ -128,7 +129,7 @@ a{
     color: #0078AA;
 }
 
-/*---------Navbar-----------------*/
+/*---------Navbar (Daniel)-----------------*/
 .navPrimario {
     background-color: #0078aa;
   }

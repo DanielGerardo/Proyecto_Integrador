@@ -25,7 +25,6 @@ const validariniciarSesion = (e) => {
 
         case "password":
             validarCampo(expresiones.password, e.target, 'password');
-		    validarPassword2();
         break;
     }
 }
@@ -35,39 +34,38 @@ const validarCampo = (expresion, input, campo) => {
 		document.getElementById(`grupo__${campo}`).classList.remove('iniciarSesion__grupo_incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.add('iniciarSesion__grupo_correcto');
 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-xmark');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-circle-exclamation');
 		document.querySelector(`#grupo__${campo} .iniciarSesion__input_error`) .classList.remove('iniciarSesion__input_error_activo');
 		campos[campo] = true;
 	} else {
 		document.getElementById(`grupo__${campo}`).classList.add('iniciarSesion__grupo_incorrecto');
 		document.getElementById(`grupo__${campo}`).classList.remove('iniciarSesion__grupo_correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-xmark');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-circle-exclamation');
 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__${campo} .iniciarSesion__input_error`).classList.add('iniciarSesion__input_error_activo');
 		campos[campo] = false;
 	}
 }
+// !Validacion para formularios
+// Validacion numeros en input
+function numeroKey(evt) //evt la tecla presionada
+{
+  //declarar vaiable extraer el codigo de caracter para su validacion
+  var charCode =  evt.which|| evt.keyCode; //
+  //condicion si cumple es que son letras
+  if (charCode != 46 && (charCode < 48 || charCode > 57))
+  return false;//si cumple envia false para prohibir que se escriban en el input
+  return true;//si no cumple envia true para permitir que se escriba en el input
+}  
 
-const validarPassword2 = () => {
-    const inputPassword1 = document.getElementById('password');
-	const inputPassword2 = document.getElementById('password2');
-    
-    if(inputPassword1.value !== inputPassword2.value){
-        document.getElementById(`grupo__password2`).classList.add('iniciarSesion__grupo_incorrecto');
-		document.getElementById(`grupo__password2`).classList.remove('iniciarSesion__grupo_correcto');
-		document.querySelector(`#grupo__password2 i`).classList.add('fa-circle-xmark');
-		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__password2 .iniciarSesion__input_error`).classList.add('iniciarSesion__input_error_activo');
-		campos['password'] = false;
-    } else {
-        document.getElementById(`grupo__password2`).classList.remove('iniciarSesion__grupo_incorrecto');
-		document.getElementById(`grupo__password2`).classList.add('iniciarSesion__grupo_correcto');
-        document.querySelector(`#grupo__password2 i`).classList.remove('fa-circle-xmark');
-        document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__password2 .iniciarSesion__input_error`) .classList.remove('iniciarSesion__input_error_activo');
-		campos['password'] = true;
-    }
-}
+// Validacion letras en input
+function letraKey(evt)
+{
+  var charCode = evt.which || evt.keyCode;
+  if (charCode != 46 && (charCode < 48 || charCode > 57))
+  return true;
+  return false;
+} 
 
 inputs.forEach((input) => {
     input.addEventListener('keyup', validariniciarSesion);
@@ -109,3 +107,16 @@ function navegacionInicioSesion(){
          
     }
 }
+
+//Función por si el usuario olvidó su contraseña
+function olvidarContra (){
+    let email = prompt("Ingrese email");
+    // expresion.test(input.value)
+    if((expresiones.email).test(email)){
+        alert("Correo enviado");
+    }
+    else{
+        alert("Ingrese correo válido");
+    }
+  
+   }

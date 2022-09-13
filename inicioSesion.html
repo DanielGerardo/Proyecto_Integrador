@@ -19,8 +19,8 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="assets/css/stylesInicioSesion.css" />
     <link rel="stylesheet" href="assets/css/stylesNav.css" />
-    <link rel="stylesheet" href="assets/css/inicioSesion.css" />
     <!--JS-->
     <script
       src="https://kit.fontawesome.com/ed54527f6b.js"
@@ -30,7 +30,7 @@
     <script src="assets/JS/plantillas.js" defer></script>
     <script src="assets/JS/inicioSesion.js" defer></script>
     <!--Iconos-->
-    <title>Crea tu cuenta</title>
+    <title>Iniciar Sesión</title>
   </head>
   <body>
     <!--NavBar-->
@@ -41,7 +41,7 @@
     <div class="container-sm ronded shadow my-5 d-md-block">
       <!--Título centrado-->
       <div class="d-flex justify-content-center my-3">
-        <h2>Inicia sesión</h2>
+        <h2>INICIA SESIÓN</h2>
       </div>
 
       <!--Formulario-->
@@ -51,14 +51,16 @@
           <label for="email" class="form-label"> Correo electrónico</label>
           <div class="iniciarSesion__grupo_input">
             <input
-              type="text"
+              type="email"
               class="form-control"
               name="email"
               id="email"
               placeholder="Correo@correo.com"
+              autocomplete="off"
+              required
             />
             <i
-              class="iniciarSesion__validacion_estado fa-solid fa-circle-xmark"
+              class="iniciarSesion__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="iniciarSesion__input_error">
@@ -70,9 +72,9 @@
         <div class="iniciarSesion__grupo mb-4" id="grupo__password">
           <label for="password" class="form-label"> Contraseña </label>
           <div class="iniciarSesion__grupo_input">
-            <input type="password" class="form-control" name="password" id="password" />
+            <input type="password" class="form-control" name="password" id="password" maxlength="12" minlength="4" required/>
             <i
-              class="iniciarSesion__validacion_estado fa-solid fa-circle-xmark"
+              class="iniciarSesion__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="iniciarSesion__input_error">Por favor rellena el campo correctamente</p>
@@ -80,7 +82,7 @@
 
         <!--Mensaje de contraseña olvidada-->
         <div class="container w-100 form-text">
-          <a href="#" class="link"> ¿Olvidaste tu contraseña? </a>
+          <a href="#" class="link" id="olvide" onclick="olvidarContra()"> ¿Olvidaste tu contraseña? </a>
         </div>
 
         <!--Botones-->
