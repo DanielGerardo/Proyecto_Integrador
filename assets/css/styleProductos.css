@@ -605,6 +605,34 @@ body {
   text-align: center;
 }
 
+.tituloDeBusqueda {
+  text-align: center;
+  color: #0078AA;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  left: 100px;
+}
+
+.resultados {
+  text-align: center;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  left: 100px;
+}
+
+#caritaTriste {
+  margin-left: 300px;
+  min-height: 222px;
+  max-height: 222px;
+}
+
+#leyenda {
+  text-align: center;
+  color: #0078AA;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
 @media (max-width: 990px) {
   .titulo {
     font-size: 28px;

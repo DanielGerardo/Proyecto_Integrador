@@ -18,7 +18,7 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
     productos = JSON.parse(productos); //analiza el JSON, y lo transforma en objeto que se almacena en productos
     var contador = 0; 
     for (let i = 0; i< productos.length; i++) { //recorre todo el arreglo de productos 
-        if(productos[i].categoria.match("Hola") && productos[i].certificado.match("true")){ //si su categoria es libro y tiene certificado
+        if(productos[i].categoria.match(varCategoria) && productos[i].certificado.match("true")){ //si su categoria es libro y tiene certificado
           addItem(productos[i],contFiltro); //llamamos a la función addItem, pasandole la info del producto
             contador= contador+1;  //se incrementa el contador
             // tituloFiltro.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
@@ -27,7 +27,7 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
       }
       if(contador===0){//si no hubiera ningún producto, muestra el sieguiente mensaje:
           resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria} con certificado"</p>
-          <p  class="resultados">${0} Resultados</p>
+          <p class="resultados">${0} Resultados</p>
           <div class="mt-5">
             <img
               id ="caritaTriste"
@@ -118,7 +118,7 @@ btnBusquedaxPrecio.addEventListener("click", (e) => { //cuando se hace click en 
             />
             <br>
             <h3 id ="leyenda">
-            Los Productos en ese rango de precio se han agotado. Prueba Buscando en otro producto
+            Su búsqueda de "${varCategoria}" no tuvo resultados. Prueba Buscando en otro producto
             </h3>
           </div>`;
         }
