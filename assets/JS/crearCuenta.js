@@ -128,3 +128,4 @@ registroUsuario.addEventListener('submit', (e) => {
             document.getElementById('registroUsuario__mensaje').classList.add('registroUsuario__mensaje_activo');
         }
 });
+

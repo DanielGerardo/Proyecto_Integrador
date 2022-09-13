@@ -48,6 +48,31 @@
   @include variablesCarritodeCompras.posicion(right);
 }
 
+.Articulos{
+  font-family: variablesCarritodeCompras.$fontPoppins;
+  font-size: 22px;
+  color: variablesCarritodeCompras.$colorAzul;
+  margin-top: 42px;
+  padding-bottom: 5px;
 
+}
+
+#Articulos{
+  font-size: 10px;
+ .card{
+img{
+  max-width: 100%;
+  min-height: 122px;
+  max-height: 150px;
+}
+  
+  margin: 0 1em;            
+  border: none;
+  border-radius: 10px;
+  max-width: 300px;
+  min-width: 100px;
+  margin-bottom: 50px;
+ }
+}
 // *_______________________________________________________________
 

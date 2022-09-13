@@ -104,3 +104,5 @@ iniciarSesion.addEventListener('submit', (e) => {
             document.getElementById('iniciarSesion__mensaje').classList.add('iniciarSesion__mensaje_activo');
         }
 });
+
+

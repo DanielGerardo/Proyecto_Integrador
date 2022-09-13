@@ -313,7 +313,7 @@
           <!-- Tab content Forma de pago -->
           <div id="formadepago" class="tabcontent pt-4 p-3 formulario">
             <!-- # div FORMA DE PAGO -->
-            <form action="" class="form_contact was-validated">
+            <form action="javascript:payform();" class="form_contact" validate>
               <!-- Nombre tarjeta -->
               <div class="form-group">
                 <label for="nombreTarjeta"   class="control-label"
@@ -412,7 +412,8 @@
               <div class="mt-4 form-group posicionCenter">
                 <!-- Submit Button -->
                 <button
-                  onclick="abrirPestana('tituloPestana1','formadepago')"
+                id="btnPagar"
+                  type="submit"
                   class="btnRegresar"
                 >
                   <span> Pagar </span>
@@ -427,6 +428,8 @@
                 </button>
               </div>
             </form>
+   
+          
           </div>
         </div>
       </div>
@@ -435,18 +438,14 @@
         <!--d-none d-md-block para desaparecer la columna en pantallas de tamñao mediano hacia abajo-->
 
         <h4 class="subtitulo pt-2">Resumen de compra</h4>
-        <div class=" mt-4 form-group cuadroCompra">
-          <div class="row posicionCenter justify-content-center border">
-            <p class="col-5">Nombre del producto</p>
-            <p class="col-3">x <span>2</span></p>
-            <p class="col-3">$ <span>12500</span></p>
-          </div>
+        <div id="cuadroCompra"class=" mt-4 form-group cuadroCompra">
+   
         </div>
             <!--# Div precioTotal  -->
             <div class="row mt-3  me-2 posicionRight ">
               <p class="subprecios">
                 Subtotal = $
-                <span>12500</span>
+                <span id="subtotal">12500</span>
               </p>
               <p class="subprecios">
                 Envio = $
@@ -454,7 +453,7 @@
               </p>
               <p class="precioTotal">
                 Total = $
-                <span>1200</span>
+                <span id="precioFinal">1200</span>
               </p>
             </div>
             <!--#-->
