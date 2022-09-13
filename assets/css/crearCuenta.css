@@ -74,6 +74,8 @@ body{
 
 .registroUsuario__input_error {
   font-size: 12px;
+  margin-left: 3px;
+  color: #BB2929;
 	margin-bottom: 0;
   display: none; 
 }
@@ -85,9 +87,9 @@ body{
 .registroUsuario__validacion_estado {
 	position: absolute;
 	right: 10px;
-	bottom: 15px;
+	bottom: 10px;
 	z-index: 100;
-	font-size: 16px;
+	font-size: 20px;
 	opacity: 0;
 }
 
@@ -119,6 +121,7 @@ body{
 /*---------Estilos para validación---------*/
 .registroUsuario__grupo_correcto .registroUsuario__validacion_estado {
 	color: #0078AA;
+  font-size: 20px;
 	opacity: 1;
 }
 
@@ -127,6 +130,7 @@ body{
   opacity: 1;
 }
 
+/* color iconos error */
 .registroUsuario__grupo_incorrecto .form-control {
 	border: 2px solid #bb2929;
   box-shadow:  0px 0px 5px 2px #bb292960;

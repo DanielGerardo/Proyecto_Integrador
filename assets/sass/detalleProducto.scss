@@ -1,0 +1,144 @@
+@use "variablesCarritodeCompras";
+@use "navStyles";
+
+.fM{
+    font-family: variablesCarritodeCompras.$fontMontserrat;
+}
+.bold{
+    font-size: 13px;
+    font-weight: 500;
+}
+.fP{
+    font-family: variablesCarritodeCompras.$fontPoppins;
+}
+.btnAdelante {
+  // @include navStyles.botones(10rem,2.2rem, #F0DD3A, #00acee, black,white);
+  text-decoration: none;
+  font-size: 14px;
+  @include navStyles.botones(10rem, 2.1875rem, #f0dd3a, #00acee, black, white);
+}
+
+.codigo {
+  font-size: 12px;
+  font-family: variablesCarritodeCompras.$fontMontserrat;
+  color: gray;
+}
+.cantidad {
+  font-size: 14px;
+  font-family: variablesCarritodeCompras.$fontMontserrat;
+}
+
+.descripcion{
+font-size: 13px;
+font-family: variablesCarritodeCompras.$fontMontserrat;
+}
+.imgBig {
+    overflow: hidden;
+    text-align: center;
+  img {
+    height: 360px;
+    transition: 0.5s;
+    object-fit: cover;
+    &:hover{
+        transform: scale(1.5,1.5);
+    }
+  }
+  
+  width: 40%;
+ 
+}
+
+.imgSmall {
+
+  .col {
+    text-align: center;
+    margin-top: 10px;
+  }
+  img {
+   
+    width: 70%;
+    border: 1px solid rgba(112, 110, 110, 0.648);
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.1,1.1);
+    }
+  }
+}
+//? Posiciones de alineacion de texto
+.posicionCenter {
+  @include variablesCarritodeCompras.posicion(center);
+}
+.posicionLeft {
+  @include variablesCarritodeCompras.posicion(left);
+}
+.posicionRight {
+  @include variablesCarritodeCompras.posicion(right);
+}
+
+//  bordes
+
+.detalleProducto{
+    @include variablesCarritodeCompras.marcosfloat(red,white,variablesCarritodeCompras.$sombra)
+}
+
+.Articulos{
+  font-family: variablesCarritodeCompras.$fontPoppins;
+  font-size: 12px;
+  
+  color: variablesCarritodeCompras.$colorAzul;
+  margin-top: 42px;
+  padding-bottom: 5px;
+
+}
+
+#Articulos{
+  font-size: 10px;
+ .card{
+img{
+  max-width: 100%;
+  min-height: 122px;
+  max-height: 150px;
+}
+  
+  margin: 0 1em;            
+  border: none;
+  border-radius: 10px;
+  max-width: 300px;
+  min-width: 100px;
+  margin-bottom: 50px;
+ }
+}
+
+
+.bookContainer{   
+  .card{            
+      margin: 0 1em;            
+      border: none;
+      border-radius: 10px;
+      max-width: 300px;
+      min-width: 300px;
+      margin-bottom: 50px;
+      &:hover{
+          box-shadow: 0 4px 4px rgba(0, 0, 0,0.3);
+          transition: .6s;
+      }
+      p{
+         margin-top: 0.625rem;
+      }
+      .cardPrecio{
+         font-weight: bold;
+      }
+      img {
+         max-width: 100%;
+         min-height: 222px;
+         max-height: 222px;
+     }
+      .btnLibros{ 
+         text-decoration: none;
+         @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);                
+        }
+      }  
+    
+}

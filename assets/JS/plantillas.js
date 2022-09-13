@@ -267,7 +267,9 @@ function inicioSesionNav(user){
 
 //Agarra los datos del localstorage
     let localUser = JSON.parse(localStorage.getItem('perfil'));
-
+  
+    let cantcarrito = JSON.parse(localStorage.getItem('cantCarrito'));
+    console.log(cantcarrito);
 // //Se agrega a la memoria local 
   //  localStorage.setItem("perfil",JSON.stringify(objUser));
     

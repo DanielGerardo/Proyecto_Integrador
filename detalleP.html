@@ -26,8 +26,11 @@
 
     <!-- styles CSS -->
 
-    <link rel="stylesheet" href="assets/css/carritoDeCompras.css" />
+    <link rel="stylesheet" href="assets/css/detalleProducto.css" />
+ 
 
+    <link rel="stylesheet" href="assets/css/stylesNav.css" />
+   
     <!--* JS *-->
     <!-- CSS -->
     <script
@@ -61,77 +64,40 @@
     <nav class="navSecundario"></nav>
 
     <!--! Div cuerpo -->
-    <div class="container p-3 my-3">
-      <!-- ? Titulo página -->
-      <div class="row posicionCenter">
-        <h2>CARRITO (<span id="contador">0</span>)</h2>
+    <div class="container mt-5 mb-5">
+      <!-- ? Vinculos -->
+      <div id="vinculos" class="row">
+    
       </div>
       <!-- ? -->
 
-      <!--* Btn Vaciar Carrito -->
-      <div class="carritolleno posicionRight me-5">
-        <span id="vaciarCarrito" type="button" onclick="vaciarCarrito()" class="btn btnTrashIcon">
-          <i class="fa-solid fa-trash-can"></i> Vaciar carrito
-        </span>
+      <!--*Info del producto -->
+      <div id="divDetalle" class="row  mt-3 ps-3 detalleProducto">
+
+        
+        
       </div>
       <!-- * -->
 
-      <!-- ? Div Carrito -->
-      <div id="carrito" class="container">
-        <!-- !Carrito vacio -->
-        <div class="carritoVacio">
-          <br><br>
-        <p class="text-center">No hay productos en tu carrito</p>
-        <div class="col posicionCenter p-3">
-            <!-- Div boton seguir viendo -->
-            <button class="btnAdelante2" onclick="btnInicio()">
-              <span> Seguir viendo </span>
-            </button>
+     
+      <!-- #Articulos Similares -->
+      <div id="Articulos" class="row bookContainer ">
+        <div class="Articulos">  Articulos similares </div>
+       
+         
         </div>
-      </div>
-   
-
 
       </div>
-      <!--?-->
-<!--# Div precioTotal  -->
-<div class="row me-5 carritolleno align-middle p-3 ">
-  <div class="col-12 align-self-center ">
-    <p class="precioTotal ">
-      Total = $
-      <span id="precioTotal"></span>
-    </p>
-  </div>
-</div>
-    <!--#--> 
-
-      <!-- * Div Botones de seguimiento -->
-      <div class="carritolleno">
-      <div class="row ">
-        <div class="col p-3">
-          <!-- Div boton seguir viendo -->
-          <button class="btnAdelante2" onclick="btnInicio()">
-            <span> Seguir viendo </span>
-          </button>
-        </div>
-        <div class="col p-3 posicionRight">
-          <!-- Div boton comprar -->
-          <button class="btnAdelante" onclick="btncomprarPaso1()">
-            <span> Comprar </i></span>
-          </button>
-        </div>
-      </div>
-    </div>
-      <!-- * -->
-      
     </div>
     <!--!-->
 
     <footer class="footerPlantilla"></footer>
 
+    <!-- <script src="/assets/JS/carrito2.js"></script> -->
+    <script src="/assets/JS/detalleP.js"></script>
+    <script src="/assets/JS/abritDetalle.js"></script>
     
-    <script src="/assets/JS/carrito2.js"></script>
-    
+ 
    
   </body>
 </html>

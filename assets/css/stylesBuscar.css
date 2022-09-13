@@ -192,6 +192,10 @@ h6 {
   transition: all 0.3s ease;
 }
 
+body {
+  background-color: #F6F6F6;
+}
+
 .navPrimario {
   background-color: #0078aa;
 }

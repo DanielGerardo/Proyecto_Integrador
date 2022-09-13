@@ -103,6 +103,7 @@ formIniciarSesion.addEventListener('submit', (e) => {
         }
 });
 
+<<<<<<< HEAD
 //Funcion para verificar si el correo de inicio de sesion es igual al que esta en localStorage si es asi la sesion pa pone como true para agregar el nombre a la barra de navegacion
 function navegacionInicioSesion(){
     //Agarra los datos del localstorage
@@ -131,3 +132,6 @@ function olvidarContra (){
   
    }
 >>>>>>> origin/Kathia
+=======
+
+>>>>>>> origin/Berenice

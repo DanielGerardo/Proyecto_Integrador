@@ -26,9 +26,11 @@ height: fit-content;
 
 // *Clases
 .formulario {
+  font-family: variablesCarritodeCompras.$fontMontserrat;
   background-color: variablesCarritodeCompras.$colorblanco;
   border: 1px solid rgba(197, 195, 195, 0.411);
   border-top: none;
+  font-size: 13px;
   border-bottom-left-radius: 13px;
   border-bottom-right-radius: 13px;
 }
@@ -69,3 +71,10 @@ height: fit-content;
   overflow-x: hidden;
   overflow-y:scroll;
 }
+
+a{
+  font-size: 12px;
+  color: variablesCarritodeCompras.$colorAzul;
+  text-decoration: none;
+}
+

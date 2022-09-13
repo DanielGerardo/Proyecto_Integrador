@@ -25,15 +25,24 @@ input[type=number] {
   margin-right: 30px;
   border: #0078aa;
   background-color: #fcfdff;
-  border-radius: 25px;
+  margin-bottom: 0;
+  border-radius: 5px;
   box-shadow: 0px 4px 4px rgba(14, 11, 11, 0.314);
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
 .cardItem img {
   max-width: 35%;
   height: auto;
+}
+
+.eliminarItem {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #F6F6F6;
 }
 
 .navPrimario {
@@ -301,6 +310,7 @@ input[type=number] {
 table {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  font-style: bold;
   text-align: "center";
   vertical-align: middle;
   border-color: #73c8f3;

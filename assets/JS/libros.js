@@ -1,7 +1,8 @@
 const resultadoBusqueda = document.querySelector(".resultadoBusqueda"); //obtenemos el div del HTML
+
 function addItem(item){
     const itemHTML = 
-    `<div class="card cardLibros">
+    `<div id="${item.codigo}" class="card cardLibros">
     <img
       src="${item.img}"
       class="card-img-top"
@@ -12,10 +13,10 @@ function addItem(item){
       <p class="card-text">
         ${item.description}
       </p>
-      <button class="btnLibros"
-        ><span>Agregar al carrito</span></button
+      <button id="${item.codigo}" class="btnLibros"
+        ><span class ="Agregar">Agregar al carrito</span></button
       >
-      <p class="cardPrecio">$${item.precio} MXN</p>
+      <p class="cardPrecio">$<span id="precio">${item.precio}</span>MXN</p>
      </div>
     </div>`;
     const itemsContainer = document.querySelector(".bookContainer");
@@ -57,3 +58,11 @@ function addLibro(){
    
         }
 addLibro();
+
+
+
+
+
+
+
+
