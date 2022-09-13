@@ -20,7 +20,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/stylesNav.css" />
-    <link rel="stylesheet" href="assets/css/crearCuenta.css" />
+    <link rel="stylesheet" href="assets/css/stylesCrearCuenta.css" />
     <!--JS-->
     <script src="assets/js/crearCuenta.js" defer></script>
     <script src="assets/JS/plantillas.js" defer></script>
@@ -38,10 +38,10 @@
     <nav class="navSecundario"></nav>
 
     <!--Contenedor con sombrita-->
-    <div class="container-sm ronded shadow">
+    <div class="container-sm ronded shadow my-5 d-md-block">
       <!--Título centrado-->
       <div class="d-flex justify-content-center pt-3 mb-2">
-        <h2>Crea tu cuenta</h2>
+        <h2>CREA TU CUENTA</h2>
       </div>
 
       <!--Formulario-->
@@ -60,9 +60,11 @@
               id="nombresinput"
               placeholder="Brenda Yosari"
               autocomplete="off"
+              onkeypress="return letraKey(event)"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="registroUsuario__input_error">Caracteres no válidos</p>
@@ -78,9 +80,12 @@
               name="apellidos"
               id="apellidosinput"
               placeholder="Bernal Rodriguez"
+              autocomplete="off"
+              onkeypress="return letraKey(event)"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="registroUsuario__input_error">Caracteres no válidos</p>
@@ -91,14 +96,16 @@
           <label for="email" class="form-label"> Correo electrónico </label>
           <div class="registroUsuario__grupo_input">
             <input
-              type="text"
+              type="email"
               class="form-control"
               name="email"
               id="email"
               placeholder="Correo@correo.com"
+              autocomplete="off"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="registroUsuario__input_error">
@@ -116,9 +123,12 @@
               class="form-control"
               name="password"
               id="password"
+              maxlength="12"
+              minlength="4"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="registroUsuario__input_error">
@@ -137,9 +147,12 @@
               class="form-control"
               name="password2"
               id="password2"
+              maxlength="12"
+              minlength="4"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="registroUsuario__input_error">
@@ -153,15 +166,15 @@
           id="registroUsuario__mensaje"
         >
           <p>
-            <i class="fa-solid fa-circle-exclamation"></i><b>Error:</b> Rellena
+            <i class="fa-solid fa-circle-exclamation"></i><b> Error:</b> Rellena
             los campos correctamente
           </p>
         </div>
 
-        <!--Botón a la orilla-->
+        <!--Botón-->
         <div class="registroUsuario__grupo registroUsuario__grupo-btn my-4">
           <button class="registroUsuario__btn btn" type="submit">
-            Crear cuenta
+            <span>Crear cuenta</span> 
           </button>
           <p
             class="registroUsuario__mensaje_exito"
