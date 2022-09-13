@@ -1,5 +1,4 @@
-
-    [     {
+ [     {
         "id": 1 ,
         "codigo":1234,
         "name": "LA PHILOSOPHIE POSITIVE",
@@ -152,6 +151,58 @@
         "bestCallers": false,
         "img": "https://m.media-amazon.com/images/I/71vps0tbksL._SL1208_.jpg",
         "description": "The debut release of the highly-anticipated recording of CCR at London's Royal Albert Hall. More than 50 years after the legendary 1970 show, the original multitrack tapes have been meticulously restored and mixed by GRAMMY-winning producer Giles Martin and engineer Sam Okell. This 180-gram LP was mastered by Miles Showell at Abbey Road Studios using half-speed technology for the highest-quality listening experience."
+    },
+    {
+        "id": 25,
+        "codigo":1257,
+        "name": "Friends Serie Completa Español Latino Blu-ray",
+        "precio": 600,
+        "cantidad": 2,
+        "categoria": "Series",
+        "certificado": false,
+        "exclusivo": false,
+        "bestCallers": false,
+        "img": "assets/img/paginaInicio/friends.jpg",
+        "description": ""
+    },
+    {
+        "id": 26,
+        "codigo":1258,
+        "name": "KISS Dressed To Kill GAMMA 1975 MEXICO 12 PROMO LP 1st Press Hard Rock",
+        "precio": 7000,
+        "cantidad": 1,
+        "categoria": "Vinilos",
+        "certificado": true,
+        "exclusivo": false,
+        "bestCallers": false,
+        "img": "assets/img/paginaInicio/kiss.png",
+        "description": ""
+    },
+    {
+        "id": 27,
+        "codigo":1259,
+        "name": "JOHN WICK 1-3 4K + DIGITAL [Blu-ray]",
+        "precio": 800,
+        "cantidad": 2,
+        "categoria": "Peliculas",
+        "certificado": false,
+        "exclusivo": false,
+        "bestCallers": false,
+        "img": "assets/img/paginaInicio/wick.jpg",
+        "description": ""
+    },
+    {
+        "id": 28,
+        "codigo":1260,
+        "name": "COLECCIÓN COMPLETA DE QUEEN EN 21 CD",
+        "precio": 400,
+        "cantidad": 4,
+        "categoria": "Vinilos",
+        "certificado": false,
+        "exclusivo": false,
+        "bestCallers": false,
+        "img": "assets/img/paginaInicio/queen.jpg",
+        "description": ""
     }
 
     ]

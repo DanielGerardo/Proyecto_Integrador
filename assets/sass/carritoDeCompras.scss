@@ -22,6 +22,9 @@
   @include navStyles.botones(9rem,2.2rem, #F0DD3A, variablesCarritodeCompras.$colorAzul, black,white); 
   font-size: 14px;
 }
+.precioTotal{
+  @include variablesCarritodeCompras.precios(1.2rem,right,variablesCarritodeCompras.$fontPoppins);
+}
 
 // *______________________________________
 
@@ -38,4 +41,3 @@
 
 
 // *_______________________________________________________________
-

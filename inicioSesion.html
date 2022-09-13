@@ -22,14 +22,14 @@
     <link rel="stylesheet" href="assets/css/stylesNav.css" />
     <link rel="stylesheet" href="assets/css/inicioSesion.css" />
     <!--JS-->
-    <script src="/assets/JS/inicioSesion.js" defer></script>
-    <script src="assets/JS/plantillas.js" defer></script>
-    <!--Iconos-->
     <script
       src="https://kit.fontawesome.com/ed54527f6b.js"
       crossorigin="anonymous"
+      defer
     ></script>
-    <link rel="stylesheet" href="/Formularios/assets/css/inicioSesion.css" />
+    <script src="assets/JS/plantillas.js" defer></script>
+    <script src="assets/JS/inicioSesion.js" defer></script>
+    <!--Iconos-->
     <title>Crea tu cuenta</title>
   </head>
   <body>
@@ -38,14 +38,14 @@
     <nav class="navSecundario"></nav>
 
     <!--Contenedor con sombrita-->
-    <div class="container-sm ronded shadow">
+    <div class="container-sm ronded shadow mt-5">
       <!--Título centrado-->
       <div class="d-flex justify-content-center my-3">
         <h2>Iniciar sesión</h2>
       </div>
 
       <!--Formulario-->
-      <form action="" class="row" id="iniciarSesion">
+      <form class="row" id="formIniciarSesion">
         <!--Contraseña-->
         <div class="iniciarSesion__grupo_input my-5">
           <label for="email" class="form-label"> Correo electrónico</label>
@@ -53,7 +53,6 @@
             <input
               type="email"
               class="form-control"
-              name="email"
               id="email"
               placeholder="Correo@correo.com"
             />

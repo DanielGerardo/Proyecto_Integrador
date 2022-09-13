@@ -2,6 +2,9 @@
 $fontMontserrat: 'Montserrat', sans-serif;
 $fontPoppins: 'Poppins', sans-serif;
 $Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
+body{
+    background-color: #F6F6F6;
+}
 .caruselImgInner{
     max-height: 400px;
     min-height: 400px;
@@ -53,8 +56,11 @@ p{
                 img {
                     border-radius: 10px;
                     height: 100%;
+                    transform: .2s;
                     &:hover{             
-                          box-shadow: $Shadow;                          
+                        box-shadow: $Shadow; 
+                        transition: .6s;
+                        transform: scale(1.1);                       
                   }
                 }
                 .btnCategorias{
@@ -116,9 +122,11 @@ p{
                  border-radius: 10px;
                  max-width: 300px;
                  min-width: 300px;
+                 transition: .2s;
                  &:hover{
-                     box-shadow: $Shadow;
-                     transition: .6s;
+                    box-shadow: $Shadow;
+                    transition: .6s;
+                    transform: scale(1.1);
                  }
                  p{
                     margin-top: 0.625rem;
@@ -135,6 +143,9 @@ p{
                  }
                  
              }
+             .cardPrecio{
+                font-weight: bold;
+              }
        }       
        .carousel-control-prev,
        .carousel-control-next {
@@ -159,12 +170,12 @@ p{
     .cardCategoria {
         img {
       height: 11em;
-       }
+        }
   }
     .cardUltimo {
-    img {
-  height: 11em;
-   }
+     img {
+      height: 11em;
+     }
 }
 }
 // Pantalla de fondo al cargar la pagina

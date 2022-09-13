@@ -1,6 +1,9 @@
+
 const registroUsuario = document.getElementById('registroUsuario');
+//Para almacenar los inputs del formulario registroUsuario
 const inputs = document.querySelectorAll('#registroUsuario input');
 
+//Expresiones regulares para validar contenidos
 const expresiones = {
 	nombres: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     apellidos: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -14,10 +17,11 @@ const campos = {
 	email: false,
     password: false,	
 }
+var registro;
 
 const validarRegistroUsuario = (e) => {
-    switch (e.target.name) {
-        case "nombres":
+    switch (e.target.name) { 
+        case "nombres": //En caso de que el nombre sea "xxxxxxx" quiero ejecutar:
             validarCampo(expresiones.nombres, e.target, 'nombres');
         break;
 
@@ -41,6 +45,7 @@ const validarRegistroUsuario = (e) => {
     }
 }
 
+//Para validar los inputs y que se añadan los iconos y los mensajes
 const validarCampo = (expresion, input, campo) => {
 	if(expresion.test(input.value)){
 		document.getElementById(`grupo__${campo}`).classList.remove('registroUsuario__grupo_incorrecto');
@@ -59,6 +64,7 @@ const validarCampo = (expresion, input, campo) => {
 	}
 }
 
+//Para validar que la segunda contraseña coincida con la primera
 const validarPassword2 = () => {
     const inputPassword1 = document.getElementById('password');
 	const inputPassword2 = document.getElementById('password2');
@@ -80,17 +86,19 @@ const validarPassword2 = () => {
     }
 }
 
-
+//Por cada input ejecuta un código
 inputs.forEach((input) => {
-    input.addEventListener('keyup', validarRegistroUsuario);
-    input.addEventListener('blur', validarRegistroUsuario);
+    input.addEventListener('keyup', validarRegistroUsuario); //Por cada input quiero agregar un Event Listener. Si el usuario presiona una tecla, cada que la levante se ejecuta el código
+    input.addEventListener('blur', validarRegistroUsuario); //Cuando den clic fuera de la caja de texto se ejecuta
 });
 
+//ingresar a formulario regustroUsuario y lanzar un event listener
+//Cuando se pica al botón Crear cuenta, se ejecuta la función
 registroUsuario.addEventListener('submit', (e) => {
-    e.preventDefault();
+    e.preventDefault(); //Para que no se envíe sin todos los datos completados
 
     if(campos.nombres && campos.apellidos && campos.email && campos.password){
-		registroUsuario.reset();
+		
 
         document.getElementById('registroUsuario__mensaje_exito').classList.add('registroUsuario__mensaje_exito_activo');
         setTimeout(() =>{
@@ -99,8 +107,44 @@ registroUsuario.addEventListener('submit', (e) => {
 
         document.querySelectorAll('.registroUsuario__grupo_correcto').forEach((icono) => {
             icono.classList.remove('registroUsuario__grupo_correcto');
-        }); 
+        });
+        
+        agregarDatos();
+        refrescarCampos();
          }else {
             document.getElementById('registroUsuario__mensaje').classList.add('registroUsuario__mensaje_activo');
         }
 });
+
+//Funcion para agregar los datos al localStorage
+function agregarDatos(){
+//Objeto del formulario
+var nombres = document.getElementById("nombresinput").value;    
+var apellidos = document.getElementById("apellidosinput").value;
+var email = document.getElementById("email").value;
+var password = document.getElementById("password").value;
+//Este objeto mas adelante se usara para agregarlo a la base de datos 
+ registro = {
+    nombres,
+    apellidos,
+    email,
+    password
+}
+//Se agregar un objNuevo que este es el que se va agregar al localStorage
+var objPerfilUser = {
+    nombres,
+    email,
+    carrito : 0, 
+    sesion : false
+}
+// //Se agrega a la memoria local 
+localStorage.setItem("perfil",JSON.stringify(objPerfilUser));
+}
+//Refresca los campos para volver a verificar los campos
+function refrescarCampos(){
+    registroUsuario.reset();
+    campos.nombres = false;
+    campos.apellidos = false;
+    campos.email = false;
+    campos.password = false;
+}
