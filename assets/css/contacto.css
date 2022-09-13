@@ -1,30 +1,35 @@
 .títuloCon   {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
 .infoCon     {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
 
-.cuerpo     {background-color: white;}
-.container-sm    {
+.cuerpo      {background-color: white;}
+.container-sm{
     background-color: #f6f6f6;
     margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 #check {
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 40px;
 }
+
 
 .imgServicio{
     border-radius: 2.5rem;
-    margin: 0px -50px;
-
     min-width: 80%;
     max-width: 80%;
     min-height: 90%;
     max-height: 90%;
+    display: block;
+    margin: 0px auto;
 }
 
-.contacto{
-    gap:50px;
-}
+@media only screen and (max-width: 950px) {
+    .imgServicio {
+      width: 100%;
+    }
+  }
+
 
 .labelContacto {
 	display: block;
@@ -37,7 +42,7 @@
 }
 
 .grupoInput{
-    width: 70%;
+    width: 100%;
     background-color:white;
     border: 1px solid #0078AA;
     border-radius: 10px;
@@ -65,7 +70,7 @@
 .validacionContacto{
     position: relative;
     width: 80%;
-    right: -555px;
+    right: -500px;
     bottom: 37px;
     z-index: 100;
     font-size: 20px;
