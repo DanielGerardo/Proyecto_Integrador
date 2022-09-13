@@ -39,8 +39,10 @@
     ></script>
     <!-- JS -->
     <script src="assets/JS/plantillas.js" defer></script>
-    <script src="assets/JS/libros.js" defer></script>
-    <script src="assets/JS/filtro.js" defer></script>
+    <script src="assets/JS/cargarProductos.js" defer></script>
+    <script src="assets/JS/filtroProducto.js" defer></script>
+    <script src="assets/JS/carrito.js" defer></script>
+    <script src="assets/JS/abritDetalle.js" defer></script>
     <!--Iconos-->
     <script
       src="https://kit.fontawesome.com/5de74547fa.js"
@@ -49,11 +51,12 @@
     ></script>
     <title>Libros Pop Collector</title>
   </head>
-
+  <input id="varCategoria" value="Libros" hidden></input>
   <body>
     <nav class="navPrimario"></nav>
     <nav class="navSecundario"></nav>
-
+    <h4 class="titulo">NUESTROS LIBROS </h4> 
+    <div class="tituloFiltro"></div>
     <div class="menu-filtro">
       <input type="checkbox" id="btn" hidden>
       <label for="btn" class="menu-btn">
@@ -63,70 +66,57 @@
       <nav id="sidebar">
         <div class="title">Filtrar por..</div>
         <ul class="list-items">
-          <h6 class="">Por Categoria</h6>
+          <h6>Por Categoria</h6>
           <li>
-            <button class="btn-filtro">
-              <i class="fa-solid fa-certificate"></i>Certicado
+            <!-- <input class="btnCertificate" id="btn-filtro btnCertificate" type="checkbox">Certificado</input> -->
+            <button class="btn-filtro btnCertificate" id="checkCertificate">
+              <i class="fa-solid fa-certificate"></i>Certificado
             </button>
           </li>
           <li>
-            <button class="btn-filtro">
+            <button class="btn-filtro btnExclusive">
               <i class="fa-solid fa-compact-disc"></i>Exclusivo
             </button>
+            <!-- <input class="btnExclusive"id="btn-filtro btnExclusive" type="checkbox">Exclusivo</input> -->
           </li>
 
           <h6>Precio</h6>
-          <li>
-            <button class="btn-filtro">
-              <i class="fa-solid fa-left-long"></i>Menor precio
-            </button>
-          </li>
-          <li>
-            <button class="btn-filtro">
-              <i class="fa-solid fa-right-long"></i>Mayor precio
-            </button>
-          </li>
+            <span>
+              <label class="titleInput">Min:</label>
+              <input 
+                class="busquedaPrecio" 
+                id="min" 
+                type="number" 
+                placeholder="0" 
+                autocomplete="off"/>
+              <label class="titleInput">Max:</label>
+              <input class="busquedaPrecio" type="number" id="max" placeholder="1220" autocomplete="off"/>
+          </span>
+          <!-- </div> -->
 
-          <h6 class="">Best Sellers</h6>
-          <li>
-            <button class="btn-filtro">
-              <i class="fa-solid fa-eye"></i>Mostrar
-            </button>
-          </li>
-          <li>
-            <button class="btn-filtro">
-              <i class="fa-solid fa-eye-slash"></i>Ocultar
-            </button>
-          </li>
 
+          <button 
+          class="btnBusquedaxPrecio"
+          type="submit">
+          <i class="fa-solid fa-magnifying-glass-dollar"></i>
+            Buscar
+        </button>
+          <!-- <hr> -->
           <!-- Icons -->
           <div class="redes">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/"target="_blank"><i class="fab fa-youtube"></i></a>
           </div>
         </ul>
       </nav>
     </div>
-
+    
     <div class="container">
       <div class="resultadoBusqueda"></div>
-      <h3
-        class="titulo text-center"
-        style="
-          color: #0078aa;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 700;
-          margin-bottom: 100px;
-          margin-top: 50px;
-        "
-      >
-        NUESTROS LIBROS
-      </h3>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-5 bookContainer">
-      <!--Se dividen 3 tarjetas con el mismo ancho en varias filas, si view fuera g se dividen en 4 sm=1 md=3 g=4-->
-    </div
+    <div class="row bookContainer">
+    </div>
     <!--row-->
     <footer class="footerPlantilla"></footer>
     <script src="/assets/JS/carrito.js"></script>

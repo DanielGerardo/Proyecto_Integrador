@@ -1,3 +1,57 @@
 @use 'mixinProductos';
 @use "productos";
+$fontPoppins: 'Poppins', sans-serif;
 
+body{
+    background-color:#F6F6F6F6 ;
+}
+.titulo {
+    color: #0078AA;
+    font-family: $fontPoppins;
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+  
+ .tituloDeBusqueda{
+  text-align: center;
+  color: #0078AA;
+  font-family: $fontPoppins;
+  font-weight: 700;
+  left: 100px;
+}
+.resultados{
+  text-align: center;
+  color: #333;
+  font-family: $fontPoppins;
+  left: 100px;
+}
+
+#caritaTriste {
+// display: block;
+margin-left: 300px;
+min-height: 222px;
+max-height: 222px;
+}
+#leyenda{
+   text-align: center;
+   color: #0078AA;
+   font-family: $fontPoppins;
+   font-weight: 700;
+  //  margin-left: 80px;
+}
+
+
+  @media (max-width: 990px) {
+    .titulo{
+      font-size: 28px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }//media 900px
+
+  

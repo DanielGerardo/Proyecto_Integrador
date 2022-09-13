@@ -2,19 +2,29 @@
 @use "navStyles";
 @use 'menufiltroBuscar';
 
+$Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
 
+<<<<<<< HEAD
 .bookContainer{   
   .card{            
+=======
+.bookContainer{  
+   // margin-left: auto;
+
+  .card{  
+>>>>>>> origin/Lucy
       margin: 0 1em;            
       border: none;
       border-radius: 10px;
       max-width: 300px;
       min-width: 300px;
       margin-bottom: 50px;
+      box-shadow: $Shadow;
+      transition: .2s;
       &:hover{
-          box-shadow: 0 4px 4px rgba(0, 0, 0,0.3);
-          transition: .6s;
-      }
+            transition: .2s;
+            transform: scale(1.1);
+         }
       p{
          margin-top: 0.625rem;
       }
@@ -31,4 +41,32 @@
          @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);                
         }
       }  
+}
+
+@media (max-width: 1220px) {
+   .bookContainer{
+      margin-left: 120px;
+      margin-right: 0px;
+   }
+}
+
+@media (max-width: 920px) {
+   .bookContainer{
+      margin-left: 120px;
+      margin-right: 0px;
+   }
+}
+
+@media (max-width: 500px) {
+   .bookContainer{
+      margin-left: 100px;
+      margin-right: 0px;
+   }
+}
+
+@media (max-width: 480px) {
+   .bookContainer{
+      margin-left: 50px;
+      margin-right: 0px;
+   }
 }

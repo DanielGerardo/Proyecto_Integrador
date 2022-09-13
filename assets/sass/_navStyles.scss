@@ -150,6 +150,8 @@ body{
     background-color: #0078aa;
     bottom: 0;
     color: white;
+    margin-top: 30px; //separación con el filtro
+    float: left; //para que respete el espacio del filtro
     h4{      
         font-family: $fontPoppins;
         font-size: 1.25rem;
