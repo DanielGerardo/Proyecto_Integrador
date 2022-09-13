@@ -10,7 +10,7 @@ let footerPlantilla = document.querySelector('.footerPlantilla');
 navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrimario">
       <div class="container-fluid p-0">
      
-        <a href="/popCollector.html">
+        <a href="/popCollector.html" style="margin-left: 30px;">
           <img
             class="navbar-brand imgLogo"
             src="assets/img/Logo/logo-1.1.png"
@@ -49,9 +49,8 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <div class="me-auto"></div>
-          <div class="me-auto"></div>
-          <div class="me-auto linksCategoriasScroll">
-         
+          <div class="linksCategoriasScroll">
+          
             <ul class="navbar-nav nav justify-content-center">
               <li class="nav-item">
                 <a class="nav-link linksCategorias" href="libros.html">LIBROS</a>
@@ -70,10 +69,11 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
               </li>
             </ul>
           </div>
-          <ul class="navbar-nav me-0 mb-2 mb-lg-0">
+          <div class="me-auto d-none d-lg-block"></div>
+          <ul class="navbar-nav me-0 mb-2 mb-lg-0 text-center">
             <li class="nav-item">
            
-              <form class="d-flex formBuscar" role="search">
+              <form class="text-end d-md-flex formBuscar" role="search">
                 <input
                   class="form-control me-2 txtBuscar"
                   type="search"
@@ -105,7 +105,7 @@ navPrimario.outerHTML = `<nav class="navbar navbar-expand-lg sticky-top navPrima
                 ></span
               ></a>
             </li>
-            <li class="navInicioSesion"></li>
+            <li class=" navInicioSesion"></li>
           </ul>
         </div>
       </div>
@@ -115,25 +115,70 @@ navSecundario.outerHTML = "<nav class='navbar navbar-expand navSecundario' style
 
 footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
 <div class="row rowFooter">
-  <div class="col">
+<div class="accordion d-md-none m-0 text-center border-0 mb-5" id="accordionFooter">
+  <div class="accordion-item border-0">
+    <h2 class="accordion-header border-0" id="headingOne">
+      <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <h4>Sobre PopCollector</h4>
+      </button>
+    </h2>
+    <div id="collapseOne"  class="accordion-collapse collapse show border-0" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body border-0">
+      <a class='mb-2' href="certificados.html">Certificado de autenticidad</a>
+      <a class='mb-2' href="sobrenosotros.html">Acerca de nosotros</a>
+      <a class='mb-2' href="avisodeprivacidad.html">Términos y condiciones</a>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item border-0">
+    <h2 class="accordion-header border-0" id="headingTwo">
+      <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      <h4>Soporte al cliente</h4>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse border-0" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body border-0">
+      <a class='mb-2' href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+      <a class='mb-2' href="contacto.html">Ayuda</a>
+      </div>
+    </div>
+  </div>
+ <div class="accordion-item border-0">
+   <h2 class="accordion-header border-0" id="headingTres">
+    <button class="accordion-button collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+    <h4>Contacto</h4>
+    </button>
+   </h2>
+   <div id="collapseTres" class="accordion-collapse collapse border-0" aria-labelledby="headingTres" data-bs-parent="#accordionExample">
+    <div class="accordion-body border-0">
+    <p>
+      <i class="fa-solid fa-phone"></i> 8123651692 <br />
+      <i class="fa-brands fa-whatsapp"></i> 8123651692
+      <a href="mailto:popcollector@gmail.com"><i class="fa-solid fa-envelope"></i> popcollector@gmail.com</a>
+      Av. Chávez Madrueño #123 Col. San Maritano CP. 49000 México
+      <br /><b>Horario de atención:</b> Lunes a Sábado 9am - 5pm
+    </p>
+    </div>
+  </div>
+ </div>
+</div>
+  <div class="col d-md-block d-none">
     <h4>Sobre PopCollector</h4>
-    <a href="sobrepop.html">¿Qué es PopCollector?</a>
     <a href="certificados.html">Certificado de autenticidad</a>
     <a href="sobrenosotros.html">Acerca de nosotros</a>
+    <a href="avisodeprivacidad.html">Términos y condiciones</a>
   </div>
-  <div class="col">
+  <div class="col d-md-block d-none">
     <h4>Soporte al cliente</h4>
     <a href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
     <a href="contacto.html">Ayuda</a>
   </div>
-  <div class="col">
+  <div class="col d-md-block d-none">
     <h4>Contacto</h4>
     <p>
       <i class="fa-solid fa-phone"></i> 8123651692 <br />
       <i class="fa-brands fa-whatsapp"></i> 8123651692
-      <a href="mailto:popcollector@gmail.com"
-        ><i class="fa-solid fa-envelope"></i> popcollector@gmail.com</a
-      >
+      <a href="mailto:popcollector@gmail.com"><i class="fa-solid fa-envelope"></i> popcollector@gmail.com</a>
       Av. Chávez Madrueño #123 Col. San Maritano CP. 49000 México
       <br /><b>Horario de atención:</b> Lunes a Sábado 9am - 5pm
     </p>
@@ -160,17 +205,17 @@ footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
   </div>
   <hr />
   <div class="row">
-    <div class="col fotRedes">
+    <div class="col-5 col-md fotRedes">
       <a id="facebook" href=""><i class="fa-brands fa-facebook"></i></a>
       <a id="instagram" href=""><i class="fa-brands fa-instagram"></i></a>
       <a id="twitter" href=""><i class="fa-brands fa-twitter"></i></a>
       <a id="youtube" href=""><i class="fa-brands fa-youtube"></i></a>
     </div>
-    <div class="col" style="text-align: center">
-      <a href="avisodeprivacidad.html">Términos y condiciones / Aviso de privacidad</a>
-    </div>
-    <div class="col" style="text-align: end">
+    <div class="col d-none d-md-block text-md-center">
       <a href="creadapor.html">E-Commerce desarrollada por...</a>
+    </div>
+    <div class="col">
+      <a class="d-md-none" href="creadapor.html">E-Commerce desarrollada por...</a>
     </div>
   </div>
 </div>
@@ -187,48 +232,55 @@ let contCarrito = document.querySelector('.contCarrito');
 
 
 
-function inicioSesion(user){
+function inicioSesionNav(user){
   let dropstart = '';
   if(user == null || user == ""){
     //Visualiza solo el icono de inicio de sesion y Crear cuenta
-    navInicioSesion.outerHTML = "<li class='nav-item dropdown navInicioSesion dropstart'><a class='nav-link' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i></a><ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'><li><a class='dropdown-item' href='iniciosesion.html'><i class='fa-regular fa-user'></i> Inicio Sesión</a></li><li><a class='dropdown-item' href='crearcuenta.html'><i class='fa-solid fa-clock-rotate-left'></i> Crear Cuenta</a></li>";
+    navInicioSesion.outerHTML =`<li class='nav-item dropdown navInicioSesion dropstart'>
+    <a class='nav-link' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i></a>
+    <ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'>
+    <li><a class='dropdown-item' href='iniciosesion.html'><i class='fa-regular fa-user'></i> Inicio Sesión</a></li>
+    <li><a class='dropdown-item' href='crearcuenta.html'><i class='fa-solid fa-clock-rotate-left'></i> Crear Cuenta</a></li>`;
   }else {
     if(user.length <=11){
       dropstart='dropstart';
     }
     //Agrega el username al icono junto con mi cuenta, mis pedidos y cierre de sesion
     navInicioSesion.outerHTML = `<li class='nav-item dropdown navInicioSesion ${dropstart}'><a class='nav-link' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i> ${user}</a><ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'><li><a class="dropdown-item" href="micuenta.html"><i class="fa-regular fa-user"></i> Mi Cuenta</a>
-    </li><li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</a></li><li><a class="dropdown-item" id='cerrarSesion' href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</a></li>`
+    </li><li><a class="dropdown-item" href="historial.html"><i class="fa-solid fa-clock-rotate-left"></i> Mis Pedidos</a></li><li><a class="dropdown-item" id='cerrarSesion' href="/popCollector.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</a></li>`
     let cerrarSesion =document.getElementById('cerrarSesion');
-    cerrarSesion.addEventListener("click",()=>{    
-      // localUser.username = localUser.username+"";
-      // localStorage.setItem('perfil',JSON.stringify(localUser));
-      // revisarUser(localUser);
+    cerrarSesion.addEventListener("click",(e)=>{
+      if(localUser.sesion){
+        localUser.sesion = localUser.sesion = false;
+        localStorage.setItem('perfil',JSON.stringify(localUser));
+        revisarUser(localUser);
+       
+      }        
     });
   }
 }  
 // Este es el objeto de User
-let objUser = {
- username:"Daniel",
- carrito: 2
-}
+// let objUser = {
+//  username:"",
+//  carrito: 2
+// }
 
 //Agarra los datos del localstorage
     let localUser = JSON.parse(localStorage.getItem('perfil'));
 
 // //Se agrega a la memoria local 
-    localStorage.setItem("perfil",JSON.stringify(objUser));
+  //  localStorage.setItem("perfil",JSON.stringify(objUser));
     
         
    function revisarUser(User){
-  if(User.username!=null){
+  if(User.email!=null&&User.sesion == true){
     //Agrega al icono del carrito la cantidad de pedidos
     contCarrito.innerText = localUser.carrito;  
-    inicioSesion(User.username);
+    inicioSesionNav(User.nombres);
 
   }else{
 
-     inicioSesion("");
+     inicioSesionNav("");
      //Inicializa la cantidad de pedidos en 0 
      contCarrito.textContent = '0';
   }

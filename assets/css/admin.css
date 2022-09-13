@@ -102,6 +102,7 @@ input[type=number] {
 
 .linksCategoriasScroll {
   display: none;
+  margin-left: 190px;
 }
 .linksCategoriasScroll .linksCategorias:hover {
   border-bottom: 3px solid #73C8F3;
@@ -131,7 +132,8 @@ input[type=number] {
 }
 .footerPlantilla h4 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 100;
 }
 .footerPlantilla .rowFooter {
   padding: 30px;
@@ -229,17 +231,54 @@ input[type=number] {
   color: #c4302b;
 }
 
+#accordionFooter {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4 {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p:hover {
+  color: #F0DD3A;
+}
+
 @media (max-width: 992px) {
   .navPrimario img {
     width: 100px;
     position: fixed;
     top: 5px;
   }
-  .nav-link {
+  .linksCategorias {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  .linksCategoriasScroll {
+    margin-left: 0;
   }
 }
 @media (max-width: 492px) {
@@ -248,8 +287,15 @@ input[type=number] {
     position: fixed;
     top: 5px;
   }
+  .formBuscar {
+    margin-top: 30px;
+  }
   .linksCategorias {
+    font-size: small;
     color: white;
+  }
+  .navInicioSesion {
+    margin-right: 0;
   }
 }
 table {

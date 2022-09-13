@@ -64,6 +64,7 @@
 
 .linksCategoriasScroll {
   display: none;
+  margin-left: 190px;
 }
 .linksCategoriasScroll .linksCategorias:hover {
   border-bottom: 3px solid #73C8F3;
@@ -93,7 +94,8 @@
 }
 .footerPlantilla h4 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 100;
 }
 .footerPlantilla .rowFooter {
   padding: 30px;
@@ -191,6 +193,40 @@
   color: #c4302b;
 }
 
+#accordionFooter {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4 {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p:hover {
+  color: #F0DD3A;
+}
+
 @media (max-width: 992px) {
   .navPrimario img {
     width: 100px;
@@ -202,6 +238,9 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  .linksCategoriasScroll {
+    margin-left: 0;
   }
 }
 @media (max-width: 492px) {
@@ -217,7 +256,14 @@
     font-size: small;
     color: white;
   }
+  .navInicioSesion {
+    margin-right: 0;
+  }
 }
+body {
+  background-color: #F6F6F6;
+}
+
 .caruselImgInner {
   max-height: 400px;
   min-height: 400px;
@@ -269,9 +315,12 @@ p {
 .carouselCategorias .carouselInnerCategorias .cardWrapperCategorias .cardCategoria img {
   border-radius: 10px;
   height: 100%;
+  transform: 0.2s;
 }
 .carouselCategorias .carouselInnerCategorias .cardWrapperCategorias .cardCategoria img:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.6s;
+  transform: scale(1.1);
 }
 .carouselCategorias .carouselInnerCategorias .cardWrapperCategorias .cardCategoria .btnCategorias {
   position: absolute;
@@ -326,10 +375,12 @@ p {
   border-radius: 10px;
   max-width: 300px;
   min-width: 300px;
+  transition: 0.2s;
 }
 .carouselUltimo .carouselInnerUltimo .cardWrapperUltimo .cardUltimo:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   transition: 0.6s;
+  transform: scale(1.1);
 }
 .carouselUltimo .carouselInnerUltimo .cardWrapperUltimo .cardUltimo p {
   margin-top: 0.625rem;
@@ -381,6 +432,9 @@ p {
 }
 .carouselUltimo .carouselInnerUltimo .cardWrapperUltimo .cardUltimo .btnUltimo:hover::after {
   left: 0;
+}
+.carouselUltimo .carouselInnerUltimo .cardPrecio {
+  font-weight: bold;
 }
 .carouselUltimo .carousel-control-prev,
 .carouselUltimo .carousel-control-next {

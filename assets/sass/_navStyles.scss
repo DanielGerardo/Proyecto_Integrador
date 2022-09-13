@@ -115,6 +115,7 @@ $fontPoppins: 'Poppins', sans-serif;
 }
 .linksCategoriasScroll{
     display: none;
+    margin-left:190px;
     .linksCategorias{
         &:hover{
             border-bottom: 3px solid #73C8F3; 
@@ -134,7 +135,7 @@ $fontPoppins: 'Poppins', sans-serif;
 .linksCategorias{
     color: white;
     font-family: $fontPoppins;
-        font-weight: 700;
+    font-weight: 700;
     &:hover{
         color: #F0DD3A;
         border-bottom: 3px solid #0078aa;         
@@ -148,7 +149,8 @@ $fontPoppins: 'Poppins', sans-serif;
     color: white;
     h4{      
         font-family: $fontPoppins;
-        font-weight: 700;
+        font-size: 1.25rem;
+        font-weight: 100;
     }
     .rowFooter{
         padding: 30px;
@@ -215,6 +217,43 @@ $fontPoppins: 'Poppins', sans-serif;
 
 }
 
+#accordionFooter{
+    background-color: #0078aa;
+    .accordion-item{
+        background-color: #0078aa;
+        .accordion-header{
+            background-color: #0078aa;
+            .accordion-button{
+                background-color: #0078aa;
+                h4{
+                    color: white;
+                    &:hover{
+                        color: #F0DD3A;
+                    } 
+                } 
+            } 
+        }
+        .accordion-collapse{
+            background-color: #0078aa;
+            .accordion-body{
+                a{
+                    color: white;
+                    &:hover{
+                        color: #F0DD3A;
+                    } 
+                }
+                p{
+                    color: white;
+                    &:hover{
+                        color: #F0DD3A;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+
 @media (max-width: 992px){ 
     .navPrimario{
         img{
@@ -229,7 +268,9 @@ $fontPoppins: 'Poppins', sans-serif;
     align-items: center;
     justify-content: center;  
   }
-  
+  .linksCategoriasScroll{
+    margin-left: 0;    
+    }
 }
 @media (max-width: 492px) {
     .navPrimario{
@@ -245,6 +286,9 @@ $fontPoppins: 'Poppins', sans-serif;
     .linksCategorias{
         font-size: small;
         color: white;       
+    }
+    .navInicioSesion{
+        margin-right: 0;
     }
 }
 
