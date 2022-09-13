@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--* Links *-->
     <!-- fonts -->
-    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
       rel="stylesheet"
     />
     <!-- Bootstrap https://getbootstrap.com/ -->
@@ -53,7 +52,7 @@
       defer
     ></script>
 
-    <title>PopCollector</title>
+    <title>PopCollector/Carrito</title>
   </head>
 
   <body>
@@ -63,13 +62,13 @@
     <!--! Div cuerpo -->
     <div class="container p-3 my-3">
       <!-- ? Titulo página -->
-      <div class="row posicionCenter">
-        <h2>CARRITO (<span>0</span>)</h2>
+      <div class="tituloPagina">
+        <h2>Carrito (<span>0</span>)</h2>
       </div>
       <!-- ? -->
 
       <!--* Btn Vaciar Carrito -->
-      <div class="posicionRight me-5">
+      <div class="posicionRight">
         <span id="vaciarCarrito" type="button" class="btn btnTrashIcon">
           <i class="fa-solid fa-trash-can"></i> Vaciar carrito
         </span>
@@ -78,8 +77,9 @@
 
       <!-- ? Div Carrito -->
       <div id="carrito" class="container">
-        <div class="row border cardItem">
-          <div class="col-sm-3 align-self-center p-3">
+        <!--* Item individual -->
+        <div class="row my-3 border cardItem">
+          <div class="col-sm-3 p-3">
             <!--Imagen-->
             <img
               class="card-text"
@@ -87,11 +87,11 @@
               alt="mdmo"
             />
           </div>
-          <div class="col-sm-3 align-self-center p-3">
+          <div class="col-sm-3 p-3">
             <!--Nombre del producto-->
             <p class="">Nombre del producto</p>
           </div>
-          <div class="col-sm-3 align-self-center p-3">
+          <div class="col-sm-3 p-3">
             <!--Cantidad-->
             <input type="number" name="" id="" value="1" min="1" max="10" />
             <!-- Eliminar -->
@@ -99,12 +99,11 @@
               <button class="btn btnTrashIcon">Eliminar</button>
             </div>
           </div>
-          <div class="col-sm-3 align-self-center p-3">
+          <div class="col-sm-3 p-3">
             <!--Precio unitario-->
             <p>$ <span>1200</span></p>
           </div>
         </div>
-
         <!--*-->
 
         <!--* Item individual -->
@@ -139,7 +138,7 @@
       <!--?-->
 
       <!--# Div precioTotal  -->
-      <div class="row me-5 p-3 ">
+      <div class="row my-3 p-3">
         <p class="precioTotal">
           Total = $
           <span>1200</span>
@@ -151,7 +150,7 @@
       <div class="row">
         <div class="col p-3">
           <!-- Div boton seguir viendo -->
-          <button class="btnAdelante" onclick="btnInicio()">
+          <button class="btnAdelante" onclick="history.back()">
             <span> <i class="fa-solid fa-arrow-left"></i> Seguir viendo </span>
           </button>
         </div>
@@ -163,7 +162,6 @@
         </div>
       </div>
       <!-- * -->
-      <button onclick="Administrador()">Administrador</button>
     </div>
     <!--!-->
 

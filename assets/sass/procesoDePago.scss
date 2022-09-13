@@ -1,71 +1,93 @@
 @use "variablesCarritodeCompras";
 @use "navStyles";
 
-
-//Funciones
-.form-group {
-  @include variablesCarritodeCompras.precios(14px,"",variablesCarritodeCompras.$fontMontserrat);
-  
-}
-.subprecios {
-  @include variablesCarritodeCompras.precios(13px,"right",variablesCarritodeCompras.$fontPoppins);
-  
-}
-.subtitulo {
-  @include variablesCarritodeCompras.precios(18px,"",variablesCarritodeCompras.$fontPoppins);
-  
-}
-
-.divResumen{
-  @include  variablesCarritodeCompras.marcosfloat(1px solid variablesCarritodeCompras.$colorAzul,variablesCarritodeCompras.$colorfondo,variablesCarritodeCompras.$sombra);
-height: fit-content;
-}
-
-
-//?_____________________________________________________________________---
-
-// *Clases
 .formulario {
   background-color: variablesCarritodeCompras.$colorblanco;
+
+  // border-left: 1px solid variablesCarritodeCompras.$colorCeleste;
+  // border-bott: 1px solid variablesCarritodeCompras.$colorCeleste;
   border: 1px solid rgba(197, 195, 195, 0.411);
+  //   box-shadow: variablesCarritodeCompras.$sombra;
   border-top: none;
   border-bottom-left-radius: 13px;
   border-bottom-right-radius: 13px;
+}
+// * ID
+.form-group {
+  font-size: 14px;
+  font-family: variablesCarritodeCompras.$fontMontserrat;
+
 }
 
 
 // !Estilos pestañas
 .tab {
   overflow: hidden;
-  button {
-    font-family: variablesCarritodeCompras.$fontPoppins;
-    background-color: none;
-    border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-  }
 }
 
-.active {
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  font-family: variablesCarritodeCompras.$fontPoppins;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
   background-color: variablesCarritodeCompras.$colorblanco;
   border: 1px solid rgba(197, 195, 195, 0.411);;
   box-shadow: variablesCarritodeCompras.$sombra;
   border-bottom: none;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
+
   span {
     border-bottom: 2px solid variablesCarritodeCompras.$colorBotones;
   }
 }
 
-//? Columnas
-.cuadroCompra{
-  max-height: 20rem;
-  overflow-x: hidden;
-  overflow-y:scroll;
+
+//   
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+.inputbox span {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    transition: 0.5s
+}
+
+.inputbox i {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    transition: 0.5s;
+    color: #3F51B5
+}
+
+
+.inputbox input:focus~span {
+    transform: translateX(-0px) translateY(-15px);
+    font-size: 12px
+}
+
+.inputbox input:valid~span {
+    transform: translateX(-0px) translateY(-15px);
+    font-size: 12px
+}
+
+
+.decoration:hover{
+
+    text-decoration: none;
+    color: #fdcc49; 
 }

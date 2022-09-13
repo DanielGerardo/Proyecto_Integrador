@@ -1,11 +1,12 @@
 // Boton Comprar
 function btncomprarPaso1() {
   window.location.href = "procesoDePago.html";
+  
 }
 
 // Boton Regresar
-function btnInicio() {
-  window.location.href = "popCollector.html";
+function btnRegresar() {
+  window.location.href = "";
 }
 // Boton Volver al carrito
 function btnVolveralCarrito() {
@@ -17,54 +18,45 @@ function btnVolveralCarrito() {
 
 
 function abrirPestana(evt,nombrePestana) {
-  var i, tabcontent, tablinks;//declaracion variables
-  tabcontent = document.getElementsByClassName("tabcontent"); //elemento con clase tab content
-  //ciclo para ocultar div con esa clase
-  for (i = 0; i < tabcontent.length; i++) {//longitud de elementos con esa clase
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  // array de los titulos de los contenidos
   tablinks = document.getElementsByClassName("tablinks");
-  //ciclo para agregar clase de activar y deshabilitar disabled 
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
     tablinks[i].disabled = true;
     
   }
-  // Activar y aparecer clase de la pestaña que se selecciona
  document.getElementById(nombrePestana).style.display = "block";
  document.getElementById(evt).disabled =false;
   document.getElementById(evt).className +=" active";
   
 }
-// Pestaña por defecto
 document.getElementById("tituloPestana2").click();
 
 
-// !Validacion para formularios
+
 // Validacion numeros en input
-function numeroKey(evt) //evt la tecla presionada
+function isNumberKey(evt)
 {
-  //declarar vaiable extraer el codigo de caracter para su validacion
-  var charCode =  evt.which|| evt.keyCode; //
-  //condicion si cumple es que son letras
-  if (charCode != 46 && (charCode < 48 || charCode > 57))
-  return false;//si cumple envia false para prohibir que se escriban en el input
-  return true;//si no cumple envia true para permitir que se escriba en el input
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode != 46 && charCode > 31 
+  && (charCode < 48 || charCode > 57))
+  return false;
+  return true;
 }  
 
 // Validacion letras en input
-function letraKey(evt)
+function isNumericKey(evt)
 {
-  var charCode = evt.which || evt.keyCode;
-  if (charCode != 46 && (charCode < 48 || charCode > 57))
+  var charCode = (evt.which) ? evt.which : evt.keyCode;
+  if (charCode != 46 && charCode > 31 
+  && (charCode < 48 || charCode > 57))
   return true;
   return false;
 } 
-
-function Administrador(){
-  window.location.href = "admin.html";
-}
 
 
 // function submit(){
