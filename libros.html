@@ -41,8 +41,8 @@
     <script src="assets/JS/plantillas.js" defer></script>
     <script src="assets/JS/libros.js" defer></script>
     <script src="assets/JS/filtroProducto.js" defer></script>
-    <script src="assets/JS/carrito.js" defer></script>
-    <script src="assets/JS/abritDetalle.js" defer></script>
+    <!-- <script src="assets/JS/carrito.js" defer></script>
+    <script src="assets/JS/abritDetalle.js" defer></script> -->
     <!--Iconos-->
     <script
       src="https://kit.fontawesome.com/5de74547fa.js"
@@ -51,7 +51,7 @@
     ></script>
     <title>Libros Pop Collector</title>
   </head>
-
+  <input id="varCategoria" value="Libros" hidden></input>
   <body>
     <nav class="navPrimario"></nav>
     <nav class="navSecundario"></nav>
@@ -68,7 +68,8 @@
         <ul class="list-items">
           <h6>Por Categoria</h6>
           <li>
-            <button class="btn-filtro btnCertificate">
+            <!-- <input class="btnCertificate" id="btn-filtro btnCertificate" type="checkbox">Certificado</input> -->
+            <button class="btn-filtro btnCertificate" id="checkCertificate">
               <i class="fa-solid fa-certificate"></i>Certificado
             </button>
           </li>
@@ -76,25 +77,20 @@
             <button class="btn-filtro btnExclusive">
               <i class="fa-solid fa-compact-disc"></i>Exclusivo
             </button>
+            <!-- <input class="btnExclusive"id="btn-filtro btnExclusive" type="checkbox">Exclusivo</input> -->
           </li>
 
           <h6>Precio</h6>
-          <!-- <li>
-            <button class="btn-filtro">
-              <i class="fa-solid fa-left-long"></i>Menor precio
-            </button>
-          </li>
-          <li>
-            <button class="btn-filtro">
-              <i class="fa-solid fa-right-long"></i>Mayor precio
-            </button>
-          </li> -->
-          <!-- <div class="input-group"> -->
             <span>
               <label class="titleInput">Min:</label>
-              <input class="busquedaPrecio" type="number" id="min" placeholder="0"autocomplete="off"/>
+              <input 
+                class="busquedaPrecio" 
+                id="min" 
+                type="number" 
+                placeholder="0" 
+                autocomplete="off"/>
               <label class="titleInput">Max:</label>
-              <input class="busquedaPrecio" type="number"  id="max" placeholder="1220" autocomplete="off"/>
+              <input class="busquedaPrecio" type="number" id="max" placeholder="1220" autocomplete="off"/>
           </span>
           <!-- </div> -->
 

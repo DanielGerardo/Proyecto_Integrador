@@ -1,8 +1,6 @@
 const resultadoBusqueda = document.querySelector(".resultadoBusqueda"); //obtenemos el div del HTML
 const itemsContainer = document.querySelector(".bookContainer"); //obtenemos el div de los elementos
 
-
-
 function addItem(item, clase){
    const itemHTML = 
     `<div class="card cardLibros">

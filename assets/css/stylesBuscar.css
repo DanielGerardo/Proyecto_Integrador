@@ -112,12 +112,6 @@ y lo posicion a la ozquieda */
   transition: all 0.3s ease;
 }
 
-#sidebar .list-items li:hover {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  box-shadow: 0 0px 10px 3px #222;
-}
-
 #sidebar .list-items li:first-child {
   border-top: none;
 }
@@ -136,6 +130,13 @@ y lo posicion a la ozquieda */
   height: 100%;
   width: 100%;
   display: block;
+}
+
+.btn-filtro {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: arial;
 }
 
 /*Margen de los iconos*/
