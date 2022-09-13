@@ -9,7 +9,6 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
   let contFiltro = document.querySelector(".bookContainer");//obtenemos el div de los elementos
   let tituloFiltro = document.querySelector(".tituloFiltro");//obtenemos el div del titulo del filtro
   let varCategoria = document.getElementById("varCategoria").value; //obtenemos el boton del HTML
-
   fetch("/productos.json") //realizamos la peticion a la ruta de nuestro JSON
   .then(response => { 
     return response.json(); //cuando la promesa es resuelta, asignamos la info a la variable response
@@ -19,7 +18,7 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
     productos = JSON.parse(productos); //analiza el JSON, y lo transforma en objeto que se almacena en productos
     var contador = 0; 
     for (let i = 0; i< productos.length; i++) { //recorre todo el arreglo de productos 
-        if(productos[i].categoria.match(varCategoria) && productos[i].certificado.match("true")){ //si su categoria es libro y tiene certificado
+        if(productos[i].categoria.match("Hola") && productos[i].certificado.match("true")){ //si su categoria es libro y tiene certificado
           addItem(productos[i],contFiltro); //llamamos a la función addItem, pasandole la info del producto
             contador= contador+1;  //se incrementa el contador
             // tituloFiltro.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
@@ -27,7 +26,7 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
           }
       }
       if(contador===0){//si no hubiera ningún producto, muestra el sieguiente mensaje:
-          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"Procuto con Certificado"</p>
+          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria} con certificado"</p>
           <p  class="resultados">${0} Resultados</p>
           <div class="mt-5">
             <img
@@ -37,7 +36,7 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
             />
             <br>
             <h3 id ="leyenda">
-            Los libros con Certificado se han agotado. Prueba Buscando en otro producto
+            ${varCategoria} con Certificado se han agotado. Prueba Buscando en otro producto
             </h3>
           </div>`;
         }
@@ -69,7 +68,7 @@ btnExclusive.addEventListener("click", (e) => { //cuando se hace click en el bot
           }
       }
       if(contador===0){//si no hubiera ningún producto, muestra el sieguiente mensaje:
-          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"Producto buscado con Certificado"</p>
+          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria} Exclusivos"</p>
           <p  class="resultados">${0} Resultados</p>
           <div class="mt-5">
             <img
@@ -79,7 +78,7 @@ btnExclusive.addEventListener("click", (e) => { //cuando se hace click en el bot
             />
             <br>
             <h3 id ="leyenda">
-            Los libros con Certificado se han agotado. Prueba Buscando en otro producto
+            ${varCategoria} Exclusivos se han agotado. Prueba Buscando en otro producto
             </h3>
           </div>`;
         }
@@ -109,7 +108,7 @@ btnBusquedaxPrecio.addEventListener("click", (e) => { //cuando se hace click en 
           }
       }
       if(contador===0){//si no hubiera ningún producto, muestra el sieguiente mensaje:
-          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"Libros con Certificado"</p>
+          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria}"</p>
           <p  class="resultados">${0} Resultados</p>
           <div class="mt-5">
             <img
@@ -119,7 +118,7 @@ btnBusquedaxPrecio.addEventListener("click", (e) => { //cuando se hace click en 
             />
             <br>
             <h3 id ="leyenda">
-            Los libros con Certificado se han agotado. Prueba Buscando en otro producto
+            Los Productos en ese rango de precio se han agotado. Prueba Buscando en otro producto
             </h3>
           </div>`;
         }
