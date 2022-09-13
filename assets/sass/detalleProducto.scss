@@ -85,7 +85,8 @@ font-family: variablesCarritodeCompras.$fontMontserrat;
 
 .Articulos{
   font-family: variablesCarritodeCompras.$fontPoppins;
-  font-size: 22px;
+  font-size: 12px;
+  
   color: variablesCarritodeCompras.$colorAzul;
   margin-top: 42px;
   padding-bottom: 5px;
@@ -139,4 +140,5 @@ img{
          @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);                
         }
       }  
+    
 }

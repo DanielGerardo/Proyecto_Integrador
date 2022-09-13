@@ -187,7 +187,7 @@ const listaCarrito = (item) => {
 // * Articulos similares
 function addItem(item){
     const itemHTML = 
-    `<div id="${item.codigo}" class=" col-3 align-self-center card cardLibros">
+    `<div id="${item.codigo}" class=" card cardLibros">
     <img
       src="${item.img}"
       class="card-img-top"
