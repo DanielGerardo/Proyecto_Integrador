@@ -1,13 +1,14 @@
-#enviar{
+.btnEnviar{
     color: rgb(0, 0, 0);
-    width: 8rem;
+    width: 6rem;
     background-color: #F0DD3A;
-    border-radius: 2.5rem;
+    border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    padding-left: 10px;
   }
   
-#enviar:hover {
+.btnEnviar:hover {
     background-color: #0078AA;
     color: white;
     font-family:'Montserrat',sans-serif;
