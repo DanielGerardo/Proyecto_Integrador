@@ -4,4 +4,7 @@ select* from usuarios;
 -- delete from usuarios;
 
 insert into `usuarios` values
-(null, "Daniel", "Campos", "daniel@campos.com", "1234","2022-05-03",1);
+(null, "Daniel", "Campos", "daniel@campos.com", "1234",sysdate());
+
+insert into `usuarios` values
+(null, "Bere", "Ruiz", "bere@campos.com", "1235",sysdate());
