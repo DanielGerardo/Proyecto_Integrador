@@ -9,11 +9,8 @@ const expresiones = {
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/Kathia
 //Solo se verificaran dos campos email y pass
 const campos = {
 	email: false,
@@ -28,10 +25,6 @@ const validariniciarSesion = (e) => {
 
         case "password":
             validarCampo(expresiones.password, e.target, 'password');
-<<<<<<< HEAD
-		    validarPassword2();
-=======
->>>>>>> origin/Kathia
         break;
     }
 }
@@ -103,7 +96,7 @@ formIniciarSesion.addEventListener('submit', (e) => {
         }
 });
 
-<<<<<<< HEAD
+
 //Funcion para verificar si el correo de inicio de sesion es igual al que esta en localStorage si es asi la sesion pa pone como true para agregar el nombre a la barra de navegacion
 function navegacionInicioSesion(){
     //Agarra los datos del localstorage
@@ -114,10 +107,10 @@ function navegacionInicioSesion(){
          localStorage.setItem('perfil',JSON.stringify(localUser));
          
     }
-<<<<<<< HEAD
+
 }
-=======
-}
+
+
 
 //Función por si el usuario olvidó su contraseña
 function olvidarContra (){
@@ -131,7 +124,4 @@ function olvidarContra (){
     }
   
    }
->>>>>>> origin/Kathia
-=======
 
->>>>>>> origin/Berenice
