@@ -1,9 +1,9 @@
 .títuloCon   {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
 .infoCon     {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
 
-.cuerpo     {background-color: white;}
+.cuerpo     {background-color: #f6f6f6;}
 .container-sm    {
-    background-color: #f6f6f6;
+    background-color: white;
     margin-bottom: 50px;
 }
 
@@ -91,6 +91,7 @@
 .boton{
     display: flex;
     margin-left: 230px;
+    margin-bottom: 50px;
 }
 
 .exito{

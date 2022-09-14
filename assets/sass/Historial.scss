@@ -1,0 +1,18 @@
+@use "variablesCarritodeCompras";
+@use "navStyles";
+
+
+table{
+    @include variablesCarritodeCompras.precios(14px,"center",variablesCarritodeCompras.$fontMontserrat);
+    vertical-align: middle;
+    border-color: variablesCarritodeCompras.$colorCeleste
+  }
+
+  .divResumen{
+    @include  variablesCarritodeCompras.marcosfloat("",variablesCarritodeCompras.$colorblanco,"");
+
+  }
+
+.table-yellow{
+    background-color: variablesCarritodeCompras.$colorBotones;
+}
