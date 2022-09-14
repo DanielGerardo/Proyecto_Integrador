@@ -40,6 +40,8 @@
     <!-- JS -->
     <script src="assets/JS/plantillas.js" defer></script>
     <script src="assets/JS/paginaBuscarProducto.js" defer></script>
+    <script src="assets/JS/carrito.js" defer></script>
+    <script src="assets/JS/abritDetalle.js" defer></script>
     <!--Iconos-->
     <script
       src="https://kit.fontawesome.com/5de74547fa.js"
@@ -53,62 +55,12 @@
     <nav class="navPrimario"></nav>
     <nav class="navSecundario"></nav>
 
-    <div class="menu-filtro">
-      <input type="checkbox" id="btn" hidden />
-      <label for="btn" class="menu-btn">
-        <!-- <i class="fas fa-bars"></i> -->
-        <!-- <i class="fa-solid fa-filter-list"></i> -->
-        <i class="fa-solid fa-filter"></i>
-        <i class="fas fa-times"></i>
-      </label>
-      <nav id="sidebar">
-        <div class="title">Filtrar por..</div>
-        <ul class="list-items">
-          <h6 class="">Por Categoria</h6>
-          <li>
-            <a href="#"><i class="fa-solid fa-certificate"></i>Certicado</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-compact-disc"></i>Exclusivo</a>
-          </li>
-
-          <h6>Precio</h6>
-          <li>
-            <a href="#"><i class="fa-solid fa-left-long"></i> Menor precio</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-right-long"></i> Mayor precio</a>
-          </li>
-
-          <h6 class="">Best Cellers</h6>
-          <li>
-            <a href="#"><i class="fa-solid fa-eye"></i>Mostrar</a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-eye-slash"></i>Ocultar</a>
-          </li>
-          <!--RADIO BUTTONS-->
-          <!-- <li>
-              <input type="radio" name="type" id="boring">
-              <label for="boring" class="pl-1 pt-sm-0 pt-1">Boring</label>
-              <input type="radio" name="type" id="boring">
-              <label for="boring" class="pl-1 pt-sm-0 pt-1">Boring</label>
-            </li> -->
-          <!-- Icons -->
-          <div class="redes">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-        </ul>
-      </nav>
-    </div>
-
     <div class="container text-center mb-5">
       <div class="resultadoBusqueda"></div>
     </div>
-    <div class="row row-cols-1 row-cols-md-3 g-5 productoBuscado mb-5">
+    <div
+      class="row row-cols-1 row-cols-md-3 g-5 productoBuscado mb-5 bookContainer"
+    >
       <!--Se dividen 3 tarjetas con el mismo ancho en varias filas, si view fuera g se dividen en 4 sm=1 md=3 g=4-->
       <!--row-->
     </div>

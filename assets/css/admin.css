@@ -138,6 +138,7 @@ body {
   background-color: #0078aa;
   bottom: 0;
   color: white;
+  float: left;
 }
 .footerPlantilla h4 {
   font-family: "Poppins", sans-serif;

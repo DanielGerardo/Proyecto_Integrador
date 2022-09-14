@@ -15,10 +15,10 @@ function addItem(item){
       <p class="card-text">
         ${item.description}
       </p>
-      <button class="btnUltimo"
-        ><span>Agregar al carrito</span></button
+      <button id="${item.codigo}" class="btnUltimo"
+        ><span class="Agregar">Agregar al carrito</span></button
       >
-      <p class="cardPrecio">$${item.precio} MXN</p>
+      <p class="cardPrecio">$<span>${item.precio}</span> MXN</p>
      </div>
     </div>
   `;
