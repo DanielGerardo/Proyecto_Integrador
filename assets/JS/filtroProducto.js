@@ -7,7 +7,6 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
   e.preventDefault(); //evitamos que el navegador se recargue
   cartaVacia();
   let contFiltro = document.querySelector(".bookContainer");//obtenemos el div de los elementos
-  let tituloFiltro = document.querySelector(".tituloFiltro");//obtenemos el div del titulo del filtro
   let varCategoria = document.getElementById("varCategoria").value; //obtenemos el boton del HTML
   fetch("/productos.json") //realizamos la peticion a la ruta de nuestro JSON
   .then(response => { 
