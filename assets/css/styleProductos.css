@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  background-color: #F6F6F6;
+}
+
 .navPrimario {
   background-color: #0078aa;
 }
@@ -65,6 +69,7 @@
 
 .linksCategoriasScroll {
   display: none;
+  margin-left: 190px;
 }
 .linksCategoriasScroll .linksCategorias:hover {
   border-bottom: 3px solid #73C8F3;
@@ -96,7 +101,8 @@
 }
 .footerPlantilla h4 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 100;
 }
 .footerPlantilla .rowFooter {
   padding: 30px;
@@ -194,17 +200,54 @@
   color: #c4302b;
 }
 
+#accordionFooter {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4 {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p:hover {
+  color: #F0DD3A;
+}
+
 @media (max-width: 992px) {
   .navPrimario img {
     width: 100px;
     position: fixed;
     top: 5px;
   }
-  .nav-link {
+  .linksCategorias {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  .linksCategoriasScroll {
+    margin-left: 0;
   }
 }
 @media (max-width: 492px) {
@@ -213,7 +256,11 @@
     position: fixed;
     top: 5px;
   }
+  .formBuscar {
+    margin-top: 30px;
+  }
   .linksCategorias {
+    font-size: small;
     color: white;
   }
 }
@@ -283,6 +330,7 @@ cambia a 0 para que sea invisible y se rota para que no se vea encimado al icono
 
 /*Caracteristicas del slidebar*/
 #sidebar {
+  /* position: fixed; */
   position: relative;
   background: #0078AA;
   /* height: 100%;  */
@@ -358,7 +406,7 @@ y lo posicion a la ozquieda */
 }
 
 /*Margen de los iconos*/
-#sidebar .list-items li i {
+#sidebar .list-items li a i {
   margin-right: 20px;
 }
 

@@ -1,15 +1,15 @@
 .cuerpo         {background-color: #f6f6f6;}
 
-.título         {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; text-decoration:underline; font-weight:600; font-size: 40px;}
+/* Estilos de fuentes para diferentes secciones */
+.título         {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
 .clasificación  {font-family:'Poppins', sans-serif; color:#0078AA; font-weight:400; font-size: 30px;}
 .pregunta       {font-family:'Montserrat',sans-serif; color:#0078AA; font-weight:400; font-size: 24px;}
 .respuesta      {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
-
 .listas         {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px; font-style:italic}
 
-.pedidos {
-    color: white;
-    width: 12.5rem;
-    background-color: #F0DD3A;
-    border-radius: 2.5rem;
-  }
+/* Margen de 20px para responsividad */
+.accordion-item{
+  margin-left: 20px;
+  margin-right: 20px;
+} 
+

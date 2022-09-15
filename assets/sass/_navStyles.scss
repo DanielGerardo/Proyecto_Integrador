@@ -7,6 +7,9 @@ $Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
 $fontMontserrat: 'Montserrat', sans-serif;
 $fontPoppins: 'Poppins', sans-serif;
 
+body{
+    background-color: $colorFondo;
+}
 @mixin botones($ancho,$altura,$color,$hover,$colorBase,$colorHover) {
     display: inline-flex;
     align-items: center;
@@ -115,6 +118,7 @@ $fontPoppins: 'Poppins', sans-serif;
 }
 .linksCategoriasScroll{
     display: none;
+    margin-left:190px;
     .linksCategorias{
         &:hover{
             border-bottom: 3px solid #73C8F3; 
@@ -134,7 +138,7 @@ $fontPoppins: 'Poppins', sans-serif;
 .linksCategorias{
     color: white;
     font-family: $fontPoppins;
-        font-weight: 700;
+    font-weight: 700;
     &:hover{
         color: #F0DD3A;
         border-bottom: 3px solid #0078aa;         
@@ -145,12 +149,12 @@ $fontPoppins: 'Poppins', sans-serif;
 .footerPlantilla{
     background-color: #0078aa;
     bottom: 0;
-    color: white;
-    margin-top: 30px; //separación con el filtro
+    color: white; 
     float: left; //para que respete el espacio del filtro
     h4{      
         font-family: $fontPoppins;
-        font-weight: 700;
+        font-size: 1.25rem;
+        font-weight: 100;
     }
     .rowFooter{
         padding: 30px;
@@ -217,6 +221,43 @@ $fontPoppins: 'Poppins', sans-serif;
 
 }
 
+#accordionFooter{
+    background-color: #0078aa;
+    .accordion-item{
+        background-color: #0078aa;
+        .accordion-header{
+            background-color: #0078aa;
+            .accordion-button{
+                background-color: #0078aa;
+                h4{
+                    color: white;
+                    &:hover{
+                        color: #F0DD3A;
+                    } 
+                } 
+            } 
+        }
+        .accordion-collapse{
+            background-color: #0078aa;
+            .accordion-body{
+                a{
+                    color: white;
+                    &:hover{
+                        color: #F0DD3A;
+                    } 
+                }
+                p{
+                    color: white;
+                    &:hover{
+                        color: #F0DD3A;
+                    } 
+                }
+            }
+        }
+    }
+}
+
+
 @media (max-width: 992px){ 
     .navPrimario{
         img{
@@ -225,13 +266,15 @@ $fontPoppins: 'Poppins', sans-serif;
             top: 5px;     
         }
      }
-.nav-link{
+     .linksCategorias{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;  
   }
-  
+  .linksCategoriasScroll{
+    margin-left: 0;    
+    }
 }
 @media (max-width: 492px) {
     .navPrimario{
@@ -241,8 +284,15 @@ $fontPoppins: 'Poppins', sans-serif;
             top: 5px;     
         }
      }
+     .formBuscar{
+        margin-top: 30px;
+     }
     .linksCategorias{
+        font-size: small;
         color: white;       
+    }
+    .navInicioSesion{
+        margin-right: 0;
     }
 }
 

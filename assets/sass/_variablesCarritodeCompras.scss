@@ -21,8 +21,11 @@ body {
 // Estilo titulo de la página
 h2{
   font-family: $fontPoppins;
+  font-size: 16px;
   width: fit-content;
-  border-bottom: 2.5px solid $colorAzul;
+  font-weight: 700;
+  font-size: 26px;
+ color: $colorAzul;
 }
 
 // Estilo input:number cantidad
@@ -85,30 +88,47 @@ input[type="number"] {
 @mixin posicion($alineacion) {
   text-align: $alineacion;
 }
+
+// Estilo precio final
+@mixin precios ($size, $align,  $fuente){
+  font-family: $fuente;
+  font-size: $size;
+  font-style: bold;
+  text-align: $align;
+}
+
+@mixin marcosfloat ($colorborde,$colorbg,$box-shadow){
+  background-color: $colorbg;
+  border: $colorborde;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+  
+}
 // ?___________________________________________________-
 
 // * Clases
-// Estilo precio final
-.precioTotal {
-  font-family: $fontPoppins;
-  font-size: 1.2rem;
-  text-align: right;
-}
 
 // Estilo card item en donde se coloca los items añadidos al carrito
+
 .cardItem {
+  margin-left: 30px;
+  margin-right: 30px;
   border: #0078aa;
   background-color:$colorblanco;
-  border-radius: 25px;
+  margin-bottom: 0;
+  border-radius: 5px;
 box-shadow: $sombra;
-  width: auto;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   font-family: $fontMontserrat;
   img {
-    max-width: 40%;
+    max-width: 35%;
     height: auto;
   }
+}
+
+.eliminarItem{
+  font-family: $fontMontserrat;
 }
 
 

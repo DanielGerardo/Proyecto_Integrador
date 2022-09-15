@@ -3,6 +3,22 @@ body{
     background-color: #f6f6f6;
 }
 
+/*--------Botón------*/
+.registroUsuario__btn {
+  color: white;
+  width: 12.5rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.registroUsuario__btn:hover {
+  background-color: #0078AA;
+  color: white;
+}/*# sourceMappingURL=styles.css.map*/
+
+/*Contenedor del formulario*/
 .container-sm{
     max-width: 800px;
     width: 98%;
@@ -13,8 +29,20 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
+.registroUsuario__btn {
+  color: white;
+  width: 12.5rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+
+/*------Formulario---------*/
 .form-label {
 	display: block;
 	font-weight: 700;
@@ -22,10 +50,12 @@ body{
 	cursor: pointer;
 }
 
+/*------Íconos---------*/
 .registroUsuario__grupo_input{
   position: relative;
 }
 
+/*Estilos de los inputs de mi formulario*/
 .registroUsuario__input{
   width: 100;
   background-color: #f6f6f6;
@@ -44,6 +74,8 @@ body{
 
 .registroUsuario__input_error {
   font-size: 12px;
+  margin-left: 3px;
+  color: #BB2929;
 	margin-bottom: 0;
   display: none; 
 }
@@ -55,9 +87,9 @@ body{
 .registroUsuario__validacion_estado {
 	position: absolute;
 	right: 10px;
-	bottom: 15px;
+	bottom: 10px;
 	z-index: 100;
-	font-size: 16px;
+	font-size: 20px;
 	opacity: 0;
 }
 
@@ -89,11 +121,8 @@ body{
 /*---------Estilos para validación---------*/
 .registroUsuario__grupo_correcto .registroUsuario__validacion_estado {
 	color: #0078AA;
+  font-size: 20px;
 	opacity: 1;
-}
-
-.registroUsuario__grupo_incorrecto .form-label {
-	color: #BB2929;
 }
 
 .registroUsuario__grupo_incorrecto .registroUsuario__validacion_estado {
@@ -101,27 +130,32 @@ body{
   opacity: 1;
 }
 
+/* color iconos error */
 .registroUsuario__grupo_incorrecto .form-control {
-	border: 3px solid #bb2929;
+	border: 2px solid #bb2929;
+  box-shadow:  0px 0px 5px 2px #bb292960;
 }
 
 /*----------Mediaquerys---------------*/
+@media screen and (max-width: 800px){
+  .registroUsuario {
+    grid-column: 1fr;
+  }
 
+  .registroUsuario__btn{
+    width: 100%;
+  }
+
+  h2{
+    justify-content: center;
+  }
+}
   
 /*--------Otros------*/
-.registroUsuario__btn {
-  color: white;
-  width: 12.5rem;
-  background-color: #F0DD3A;
-  border-radius: 2.5rem;
-}
-/*
-.registroUsuario__btn :hover {
-  background-color: #0078AA;
-}/*# sourceMappingURL=styles.css.map */
 
-h2{
+  h2{
     font-family: 'Poppins', sans-serif;
+    font-size: 40px;
     color: #0078AA;
   }
 

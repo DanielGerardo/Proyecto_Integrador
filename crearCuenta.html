@@ -20,7 +20,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/stylesNav.css" />
-    <link rel="stylesheet" href="assets/css/crearCuenta.css" />
+    <link rel="stylesheet" href="assets/css/stylesCrearCuenta.css" />
     <!--JS-->
     <script src="assets/js/crearCuenta.js" defer></script>
     <script src="assets/JS/plantillas.js" defer></script>
@@ -29,7 +29,7 @@
       src="https://kit.fontawesome.com/ed54527f6b.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/Formularios/assets/css/crearCuenta.css" />
+    <link rel="stylesheet" href="/assets/css/crearCuenta.css" />
     <title>Crea tu cuenta</title>
   </head>
   <body>
@@ -38,32 +38,34 @@
     <nav class="navSecundario"></nav>
 
     <!--Contenedor con sombrita-->
-    <div class="container-sm ronded shadow">
+    <div class="container-sm ronded shadow my-5 d-md-block">
       <!--Título centrado-->
       <div class="d-flex justify-content-center pt-3 mb-2">
-        <h2>Crea tu cuenta</h2>
+        <h2>CREA TU CUENTA</h2>
       </div>
 
       <!--Formulario-->
-      <form action="" class="row" id="registroUsuario">
+      <form action="" class="row form_contact" id="registroUsuario">
         <!--Nombre(s)-->
         <div
           class="registroUsuario__grupo registroUsuario__grupo mb-4"
           id="grupo__nombres"
         >
-          <label for="nombres" class="form-label"> Nombre(s) </label>
+          <label for="nombres" class="control-label"> Nombre(s) </label>
           <div class="registroUsuario__grupo_input">
             <input
               type="text"
               class="form-control"
               name="nombres"
               id="nombresinput"
-              placeholder="Brenda Yosari"
               autocomplete="off"
+              onkeypress="return letraKey(event)"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
+            <i class=""></i>
           </div>
           <p class="registroUsuario__input_error">Caracteres no válidos</p>
         </div>
@@ -78,9 +80,12 @@
               name="apellidos"
               id="apellidosinput"
               placeholder="Bernal Rodriguez"
+              autocomplete="off"
+              onkeypress="return letraKey(event)"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="registroUsuario__input_error">Caracteres no válidos</p>
@@ -91,20 +96,19 @@
           <label for="email" class="form-label"> Correo electrónico </label>
           <div class="registroUsuario__grupo_input">
             <input
-              type="text"
+              type="email"
               class="form-control"
               name="email"
               id="email"
               placeholder="Correo@correo.com"
+              autocomplete="off"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
-          <p class="registroUsuario__input_error">
-            El correo solo puede contener letras, número, puntos, guiones y
-            guión bajo.
-          </p>
+          <p class="registroUsuario__input_error">Ingrese correo válido</p>
         </div>
 
         <!--Password-->
@@ -116,13 +120,16 @@
               class="form-control"
               name="password"
               id="password"
+              maxlength="12"
+              minlength="4"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="registroUsuario__input_error">
-            La contraseña tiene que ser de 4 a 12 dígitos
+            La contraseña tiene que ser de 4 a 12 caracteres
           </p>
         </div>
 
@@ -137,9 +144,12 @@
               class="form-control"
               name="password2"
               id="password2"
+              maxlength="12"
+              minlength="4"
+              required
             />
             <i
-              class="registroUsuario__validacion_estado fa-solid fa-circle-xmark"
+              class="registroUsuario__validacion_estado fa-solid fa-circle-exclamation"
             ></i>
           </div>
           <p class="registroUsuario__input_error">
@@ -153,15 +163,15 @@
           id="registroUsuario__mensaje"
         >
           <p>
-            <i class="fa-solid fa-circle-exclamation"></i><b>Error:</b> Rellena
+            <i class="fa-solid fa-circle-exclamation"></i><b> Error:</b> Rellena
             los campos correctamente
           </p>
         </div>
 
-        <!--Botón a la orilla-->
+        <!--Botón-->
         <div class="registroUsuario__grupo registroUsuario__grupo-btn my-4">
           <button class="registroUsuario__btn btn" type="submit">
-            Crear cuenta
+            <span>Crear cuenta</span>
           </button>
           <p
             class="registroUsuario__mensaje_exito"

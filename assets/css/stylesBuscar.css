@@ -249,37 +249,10 @@ h6 {
   transition: all 0.3s ease;
 }
 
-/****************MEDIA DEL FILTRO********************/
-@media (max-width: 1220px) {
-  .menu-filtro {
-    width: 0px; /*ancho del margen*/
-    height: 30px;
-    float: left;
-    position: relative;
-    margin-bottom: auto;
-    z-index: 100;
-  }
-  /* Icono de filtro*/
-  .menu-filtro .menu-btn {
-    position: absolute;
-    left: 5px;
-    opacity: 1;
-  }
-  /*Caracteristicas del slidebar*/
-  #sidebar {
-    position: relative;
-    height: 480px; /*alto del menú*/
-    width: 270px; /*Ancho del menú*/
-    left: -270px; /*Lo que permite el desplazamiento del filtro */
-  }
-  /*Caracteristicas del titulo del filtro*/
-  #sidebar .title {
-    font-size: 18px;
-  }
-  h6 {
-    font-size: 18px;
-  }
-} /*mediaQuery*/
+body {
+  background-color: #F6F6F6;
+}
+
 .navPrimario {
   background-color: #0078aa;
 }
@@ -346,6 +319,7 @@ h6 {
 
 .linksCategoriasScroll {
   display: none;
+  margin-left: 190px;
 }
 .linksCategoriasScroll .linksCategorias:hover {
   border-bottom: 3px solid #73C8F3;
@@ -377,7 +351,8 @@ h6 {
 }
 .footerPlantilla h4 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 100;
 }
 .footerPlantilla .rowFooter {
   padding: 30px;
@@ -475,17 +450,54 @@ h6 {
   color: #c4302b;
 }
 
+#accordionFooter {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4 {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p:hover {
+  color: #F0DD3A;
+}
+
 @media (max-width: 992px) {
   .navPrimario img {
     width: 100px;
     position: fixed;
     top: 5px;
   }
-  .nav-link {
+  .linksCategorias {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+  .linksCategoriasScroll {
+    margin-left: 0;
   }
 }
 @media (max-width: 492px) {
@@ -494,8 +506,15 @@ h6 {
     position: fixed;
     top: 5px;
   }
+  .formBuscar {
+    margin-top: 30px;
+  }
   .linksCategorias {
+    font-size: small;
     color: white;
+  }
+  .navInicioSesion {
+    margin-right: 0;
   }
 }
 .tituloDeBusqueda {
@@ -504,33 +523,34 @@ h6 {
   font-weight: 700;
 }
 
-.productoBuscado .col {
+.productoBuscado {
   display: flex;
   justify-content: center;
 }
-.productoBuscado .col .cardUltimo {
-  margin: 0 3em;
+.productoBuscado .cardUltimo {
+  margin: 0 1em;
   border: none;
   border-radius: 10px;
   max-width: 300px;
   min-width: 300px;
+  margin-top: 50px;
 }
-.productoBuscado .col .cardUltimo:hover {
+.productoBuscado .cardUltimo:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   transition: 0.6s;
 }
-.productoBuscado .col .cardUltimo p {
+.productoBuscado .cardUltimo p {
   margin-top: 0.625rem;
 }
-.productoBuscado .col .cardUltimo .cardPrecio {
+.productoBuscado .cardUltimo .cardPrecio {
   font-weight: bold;
 }
-.productoBuscado .col .cardUltimo img {
+.productoBuscado .cardUltimo img {
   max-width: 100%;
   min-height: 222px;
   max-height: 222px;
 }
-.productoBuscado .col .cardUltimo .btnUltimo {
+.productoBuscado .cardUltimo .btnUltimo {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -548,12 +568,12 @@ h6 {
   position: relative;
   overflow: hidden;
 }
-.productoBuscado .col .cardUltimo .btnUltimo span {
+.productoBuscado .cardUltimo .btnUltimo span {
   position: relative;
   z-index: 2;
   transition: 0.3s ease all;
 }
-.productoBuscado .col .cardUltimo .btnUltimo::after {
+.productoBuscado .cardUltimo .btnUltimo::after {
   content: "";
   width: 240px;
   height: 2.1875rem;
@@ -565,11 +585,11 @@ h6 {
   border-right: 1.09375rem solid transparent;
   transition: 0.5s ease-in-out all;
 }
-.productoBuscado .col .cardUltimo .btnUltimo:hover {
+.productoBuscado .cardUltimo .btnUltimo:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   color: white;
   transition: 0.5s;
 }
-.productoBuscado .col .cardUltimo .btnUltimo:hover::after {
+.productoBuscado .cardUltimo .btnUltimo:hover::after {
   left: 0;
 }/*# sourceMappingURL=stylesBuscar.css.map */

@@ -3,6 +3,22 @@ body{
     background-color: #f6f6f6;
 }
 
+/*--------Botón------*/
+.iniciarSesion__btn {
+  color: white;
+  width: 12.5rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.iniciarSesion__btn:hover {
+  background-color: #0078AA;
+  color: white;
+}/*# sourceMappingURL=styles.css.map*/
+
+/*Contenedor del formulario*/
 .container-sm{
     max-width: 800px;
     width: 98%;
@@ -13,8 +29,11 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
+
+/*------Formulario---------*/
 .form-label {
 	display: block;
 	font-weight: 700;
@@ -22,10 +41,11 @@ body{
 	cursor: pointer;
 }
 
+/*------Íconos---------*/
 .iniciarSesion__grupo_input{
   position: relative;
 }
-
+/*Estilos de los inputs de mi formulario*/
 .iniciarSesion__input{
   width: 100;
   background-color: #f6f6f6;
@@ -51,66 +71,57 @@ body{
 .iniciarSesion__input_error_activo {
 	display: block;
 }
-
+/*íconos de error y confirmación*/
 .iniciarSesion__validacion_estado {
 	position: absolute;
 	right: 10px;
-	bottom: 15px;
+	bottom: 13px;
 	z-index: 100;
 	font-size: 16px;
 	opacity: 0;
 }
 
-
+/* 
 .iniciarSesion__mensaje p {
   margin: 0;
-}
+} */
 
-.iniciarSesion__mensaje_exito {
-	font-size: 13px;
-	color: #0078AA;
-	display: none;
-}
-
-.iniciarSesion__mensaje_exito_activo {
-	display: block;
-}
 /*---------Estilos para validación---------*/
+/*Recuadro de validación azul*/
 .iniciarSesion__grupo_correcto .iniciarSesion__validacion_estado {
 	color: #0078AA;
 	opacity: 1;
 }
+/*
 
-.iniciarSesion__grupo_incorrecto .form-label {
-	color: #BB2929;
-}
-
+/*Recuado de validación en rojo cuando sea erróneo*/
 .iniciarSesion__grupo_incorrecto .iniciarSesion__validacion_estado {
 	color: #BB2929;
   opacity: 1;
 }
-
+/*tamaño y color del borde*/
 .iniciarSesion__grupo_incorrecto .form-control {
-	border: 3px solid #bb2929;
+  border: 2px solid #bb2929;
+  box-shadow:  0px 0px 5px 2px #bb292960;
 }
 
 /*----------Mediaquerys---------------*/
+@media screen and (max-width: 800px){
+  .iniciarSesion {
+    grid-column: 1fr;
+  }
+
+  h2{
+    justify-content: center;
+  }
+}
 
   
-/*--------Otros------*/
-.iniciarSesion__btn {
-  color: white;
-  width: 12.5rem;
-  background-color: #F0DD3A;
-  border-radius: 2.5rem;
-}
-/*
-.iniciarSesion_btn :hover {
-  background-color: #0078AA;
-}/*# sourceMappingURL=styles.css.map */
 
+/*Estilo del título*/
 h2{
     font-family: 'Poppins', sans-serif;
+    font-size: 40px;
     color: #0078AA;
   }
 
@@ -118,7 +129,7 @@ a{
     color: #0078AA;
 }
 
-/*---------Navbar-----------------*/
+/*---------Navbar (Daniel)-----------------*/
 .navPrimario {
     background-color: #0078aa;
   }
