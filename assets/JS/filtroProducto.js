@@ -107,7 +107,8 @@ btnBusquedaxPrecio.addEventListener("click", (e) => { //cuando se hace click en 
             contador= contador+1;  //se incrementa el contador
           }
       }
-      if(contador===0){//si no hubiera ningún producto, muestra el sieguiente mensaje:
+      if(contador===0){
+        cartaVacia();//si no hubiera ningún producto, muestra el sieguiente mensaje:
           resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria}"</p>
           <p  class="resultados">${0} Resultados</p>
           <div class="mt-5">

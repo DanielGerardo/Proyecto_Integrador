@@ -76,7 +76,7 @@ formIniciarSesion.addEventListener('submit', (e) => {
     // Se comenta para que pueda actualizar la barra de navegacion
     // e.preventDefault();
     navegacionInicioSesion();
-    
+    window.location.href = "popCollector.html";
     if(campos.email && campos.password){
         
         document.getElementById('iniciarSesion__mensaje_exito').classList.add('iniciarSesion__mensaje_exito_activo');
@@ -105,9 +105,9 @@ function navegacionInicioSesion(){
     if(localUser.email == email){
          localUser.sesion = localUser.sesion = true;
          localStorage.setItem('perfil',JSON.stringify(localUser));
-         
-    }
 
+    }
+    
 }
 
 
