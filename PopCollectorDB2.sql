@@ -106,7 +106,7 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `PopCollectorDB`.`Products_has_Compras`
+-- Table `PopCollectorDB`.`Products_has_Compras`products
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `PopCollectorDB`.`Products_has_Compras` (
   `Products_idProducts` INT NOT NULL,
