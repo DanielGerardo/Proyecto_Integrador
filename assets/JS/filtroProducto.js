@@ -25,7 +25,7 @@ btnCertificate.addEventListener("click", (e) => { //cuando se hace click en el b
           }
       }
       if(contador===0){//si no hubiera ningún producto, muestra el sieguiente mensaje:
-          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria} con certificado"</p>
+          contFiltro.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria} con certificado"</p>
           <p class="resultados">${0} Resultados</p>
           <div class="mt-5">
             <img
@@ -67,7 +67,7 @@ btnExclusive.addEventListener("click", (e) => { //cuando se hace click en el bot
           }
       }
       if(contador===0){//si no hubiera ningún producto, muestra el sieguiente mensaje:
-          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria} Exclusivos"</p>
+        contFiltro.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria} Exclusivos"</p>
           <p  class="resultados">${0} Resultados</p>
           <div class="mt-5">
             <img
@@ -107,7 +107,7 @@ btnBusquedaxPrecio.addEventListener("click", (e) => { //cuando se hace click en 
           }
       }
       if(contador===0){//si no hubiera ningún producto, muestra el sieguiente mensaje:
-          resultadoBusqueda.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria}"</p>
+          contFiltro.innerHTML = `<p class="tituloDeBusqueda">"${varCategoria}"</p>
           <p  class="resultados">${0} Resultados</p>
           <div class="mt-5">
             <img
