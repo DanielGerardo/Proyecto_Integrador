@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import com.avispas.popcollector.Models.ProductosModel;
 import com.avispas.popcollector.Services.ProductosService;
 
@@ -37,11 +36,10 @@ public class ProductosController {
         return this.productosServices.putProductos(id, producto);
     }
 
-    // @GetMapping("/query")
-    // public Optional<ProductosModel> getCodigo(@RequestParam("codigo") Long
-    // codigo) {
-    // return this.productosServices.getCodigo(codigo);
-    // }
+    @GetMapping("/query")
+    public Optional<ProductosModel> getCodigo(@RequestParam("codigo") Long codigo) {
+        return this.productosServices.getCodigo(codigo);
+    }
 
     @DeleteMapping(path = "/{id}")
     public String deleteProductos(@PathVariable("id") Long id) {
