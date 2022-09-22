@@ -14,23 +14,3 @@
     font-family:'Montserrat',sans-serif;
   }
 
-
-#pedidos{
-    color: rgb(0, 0, 0);
-    background-color:#F0DD3A;
-    width: 8rem;
-    border-radius: 2.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 30;
-    position: relative;
-    float: center;
-    left: 100px;
-  }
-  
-#pedidos:hover {
-    background-color: #0078AA;
-    color: white;
-    font-family:'Montserrat',sans-serif;
-}
-
-

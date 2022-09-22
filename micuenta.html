@@ -57,60 +57,74 @@
     <nav class="navPrimario"></nav>
     <nav class="navSecundario"></nav>
 
-    <section class="vh-80" style="background-color: #f6f6f6;">
-      <div class="container py-5 h-80">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col col-lg-8 mb-4 mb-lg-0">
-            <div class="card-sm shadow cardPer mb-3" style="border-radius: .5rem;">
+    <!--Sección con una altura de 80-->
+    <section class="vh-80">
+      
+    <!--Contenedor con padding de 4 en top y bottom-->
+      <div class="container py-4">
+
+      <!-- Contenedor row con característica centrada-->
+        <div class="row d-flex justify-content-center align-items-center">
+
+
+          <div class="col col-lg-10 mb-4 mb-lg-0">
+
+        <!-- Tarjeta con sombra y estilo de bordes redondeados -->
+          <div class="card-sm shadow">
+    
+      <!-- Div seccionado (g-0=elimina el margen negativo)-->
               <div class="row g-0">
-                <div class="col-md-4 gradient-custom text-center text-white"
-                  style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                  <img src="/assets/img/usuario.jpg"
-                    alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
-                  <h5 class="nom">Dulce Princesa</h5>
-                  <p class="infoCuen">Coleccionista estrella</p>
-                  <a class="btn" href="#">
-                  <i class="far fa-edit mb-1"></i></a>
+
+       <!-- Div de imagen de usuario y nombre-->
+                <div class="card-info col-md-4 gradient-custom text-center">
+
+                  <div img>
+                    <img src="/Proyecto_Integrador/assets/img/usuario.jpg"
+                         alt="Avatar" 
+                         class="img-fluid my-3">
+                  </div>
+                  
+                  <div info>
+                    <h5 class="nom">Dulce Princesa</h5>
+
+                      <div>
+                        <a class="btn" href="#">
+                        <i class="far fa-edit my-1"></i></a></div> 
+                      </div>
+
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body p-4">
-                    <h6 class="subs">Información</h6>
-                    <hr class="mt-0 mb-4">
+                
+      <!--Relleno del div de información personal-->
+                  <div class="col-md-8 ">
+
+                  <div class="card-body p-3 ">
+                    <h6 class="subs text-center">DETALLES DE USUARIO</h6>
+                    <hr class="mt-0 mb-3">
+        
                     <div class="row pt-1">
                       <div class="col-6 mb-3">
                         <h6 class="subs">Email</h6>
                         <a class="infoCuen" href="dulce@princesa.com">dulce@princesa.com</a>
                       </div>
+                      
                       <div class="col-6 mb-3">
                         <h6 class="subs">Teléfono</h6>
                         <p class="infoCuen">123 456 789</p>
                       </div>
-                    </div>
-                    <h6 class="subs" >Descripción</h6>
-                    <hr class="mt-0 mb-4">
-                    <div class="row pt-1">
+
                       <div class="col-6 mb-3">
-                        <h6 class="subs">Sobre mí</h6>
-                        <p class="infoCuen">Coleccionista de objetos artículos mediavales desde 2004</p>
-                      </div>
-                      <div class="col-6 mb-3">
-                        <h6 class="subs">Intereses</h6>
-                        <ul class="infoCuen">
-                          <li>Objetos de la edad media</li>
-                          <li>Libros historicos</li>
-                        </ul>
+                        <h6 class="subs">Dirección de envio</h6>
+                        <p class="infoCuen">Dulce reino 666</p>
                       </div>
 
+                      <div class = col-6 mb-3>
+                        <button class="form-control-sm btnhis" type="submit">
+                          <span>Historial de pedidos</span>
+                        </button>
+                      </div>      
 
                     </div>
-                    <!-- <div class="d-flex justify-content-start">
-                      <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
-                      <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
-                      <a href="#!"><i class="fab fa-instagram fa-lg"></i></a> -->
 
-                      <button class="his" type="submit" id="pedidos">
-                        Historial
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -118,7 +132,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -Se llama desde Styles- -->
