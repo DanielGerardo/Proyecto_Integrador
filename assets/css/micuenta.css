@@ -70,3 +70,12 @@
     .btnhis:hover::after {
       left: 0;
     }
+
+    .ref{
+      margin-bottom: 30px;
+    }
+
+    .ref:hover {
+      color: white;
+      transition: 0.02s;
+    }
