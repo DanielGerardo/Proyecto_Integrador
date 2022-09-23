@@ -237,7 +237,7 @@ function inicioSesionNav(user){
   if(user == null || user == ""){
     //Visualiza solo el icono de inicio de sesion y Crear cuenta
     navInicioSesion.outerHTML =`<li class='nav-item dropdown navInicioSesion dropstart'>
-    <a class='nav-link' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername'><i class='fa-regular fa-user'></i></a>
+    <a class='nav-link' data-bs-toggle='dropdown' aria-expanded='false' id='navUsername' ><i class='fa-regular fa-user'></i></a>
     <ul class='dropdown-menu dropdown-menu-start dropdown-menu-lg-start'>
     <li><a class='dropdown-item' href='iniciosesion.html'><i class='fa-regular fa-user'></i> Inicio Sesión</a></li>
     <li><a class='dropdown-item' href='crearcuenta.html'><i class='fa-solid fa-clock-rotate-left'></i> Crear Cuenta</a></li>`;
