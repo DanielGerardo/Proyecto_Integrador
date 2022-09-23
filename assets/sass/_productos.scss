@@ -4,15 +4,7 @@
 
 $Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
 
-<<<<<<< HEAD
-.bookContainer{   
-  .card{            
-=======
-.bookContainer{  
-   // margin-left: auto;
-
   .card{  
->>>>>>> origin/Lucy
       margin: 0 1em;            
       border: none;
       border-radius: 10px;
@@ -41,7 +33,7 @@ $Shadow: 0 4px 4px rgba(0, 0, 0,0.3);
          @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);                
         }
       }  
-}
+
 
 @media (max-width: 1220px) {
    .bookContainer{
