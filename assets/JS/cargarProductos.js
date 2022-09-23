@@ -1,5 +1,6 @@
 const resultadoBusqueda = document.querySelector(".resultadoBusqueda"); //obtenemos el div del HTML
 const itemsContainer = document.querySelector(".bookContainer"); //obtenemos el div de los elementos
+const urlProducto = "http://localhost:8080/producto/"
 
 function addItem(item, clase){
    const itemHTML = 
@@ -23,8 +24,12 @@ function addItem(item, clase){
     clase.innerHTML += itemHTML;
 }
 function buscarLibro(){
-  let varCategoria = document.getElementById("varCategoria").value; //obtenemos la categoria en la que estamos
-    fetch("/productos.json")
+  let idCategoria = document.getElementById("varCategoria").value; //obtenemos la categoria en la que estamos
+  let categoria = document.getElementById("categoria").value; //obtenemos la categoria en la que estamos
+  console.log(idCategoria)
+    fetch(urlProducto+"getAll",{
+      method : "get"
+    })
     .then(response => {
        return response.json();
     })
@@ -33,7 +38,7 @@ function buscarLibro(){
        productos = JSON.parse(productos);
        var contador=0;
         for (let i = 0; i< productos.length; i++) {
-            if(productos[i].categoria.match(varCategoria) && varCategoria !== null){
+            if(productos[i].categorias_idCategorias == idCategoria && idCategoria !== null){
                 addItem(productos[i],itemsContainer);
                 contador= contador + 1;         
             }
@@ -48,7 +53,7 @@ function buscarLibro(){
               />
               <br>
               <h3 id ="leyenda">
-              ${varCategoria} se han agotado. Prueba Buscando en otro producto
+              ${categoria} se han agotado. Prueba Buscando en otro producto
               </h3>
           </div>`;
                 }
