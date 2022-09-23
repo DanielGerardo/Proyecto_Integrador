@@ -26,6 +26,7 @@ function addItem(item, clase){
 function buscarLibro(){
   let idCategoria = document.getElementById("varCategoria").value; //obtenemos la categoria en la que estamos
   let categoria = document.getElementById("categoria").value; //obtenemos la categoria en la que estamos
+  
   console.log(idCategoria)
     fetch(urlProducto+"getAll",{
       method : "get"
