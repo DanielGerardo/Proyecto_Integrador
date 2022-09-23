@@ -96,7 +96,6 @@ body {
   background-color: #0078aa;
   bottom: 0;
   color: white;
-  margin-top: 30px;
   float: left;
 }
 .footerPlantilla h4 {
@@ -263,6 +262,9 @@ body {
     font-size: small;
     color: white;
   }
+  .navInicioSesion {
+    margin-right: 0;
+  }
 }
 /* Caracteristicas de posicionamiento del filtro*/
 .menu-filtro {
@@ -330,7 +332,6 @@ cambia a 0 para que sea invisible y se rota para que no se vea encimado al icono
 
 /*Caracteristicas del slidebar*/
 #sidebar {
-  /* position: fixed; */
   position: relative;
   background: #0078AA;
   /* height: 100%;  */
@@ -406,7 +407,7 @@ y lo posicion a la ozquieda */
 }
 
 /*Margen de los iconos*/
-#sidebar .list-items li a i {
+#sidebar .list-items li i {
   margin-right: 20px;
 }
 

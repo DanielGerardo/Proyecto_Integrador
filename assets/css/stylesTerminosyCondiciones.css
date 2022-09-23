@@ -5,15 +5,15 @@ body{
 .h1titulo
 {
   text-align: center;
-  color: #000;
+  color: #0078AA;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
 
-h2
+h3
 {
   text-align: center;
-  color: #F2DF3A;
+  color: #000;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
@@ -21,4 +21,8 @@ h2
 .avisoPrivacidad{
   text-align: justify;
   font-family: "Montserrat", sans-serif;
+}
+
+a{
+  color:#000
 }

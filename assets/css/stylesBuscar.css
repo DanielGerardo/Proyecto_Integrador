@@ -1,4 +1,271 @@
 @charset "UTF-8";
+body {
+  background-color: #F6F6F6;
+}
+
+.navPrimario {
+  background-color: #0078aa;
+}
+.navPrimario img {
+  width: 150px;
+  position: fixed;
+  top: 5px;
+}
+
+.formBuscar .btnBuscar {
+  color: white;
+}
+.formBuscar .txtBuscar {
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.formBuscar:hover .btnBuscar {
+  color: #F0DD3A;
+}
+
+.nav-link {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.nav-link:hover {
+  color: #F0DD3A;
+}
+
+.contCarrito {
+  position: absolute;
+  border-radius: 15px;
+  color: black;
+  display: inline-block;
+  word-break: break-word;
+  line-height: 1;
+  background-color: #FAA077;
+  z-index: 10 !important;
+  white-space: nowrap !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 17px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.navInicioSesion {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-right: 20px;
+}
+
+.dropdown-item {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.dropdown-item:hover {
+  background-color: #F0DD3A;
+}
+
+.linksCategoriasScroll {
+  display: none;
+  margin-left: 190px;
+}
+.linksCategoriasScroll .linksCategorias:hover {
+  border-bottom: 3px solid #73C8F3;
+}
+
+.navLinksCTG {
+  display: none;
+}
+.navLinksCTG .linksCategorias:hover {
+  border-bottom: 3px solid #73C8F3;
+}
+
+.linksCategorias {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.linksCategorias:hover {
+  color: #F0DD3A;
+  border-bottom: 3px solid #0078aa;
+}
+
+.footerPlantilla {
+  background-color: #0078aa;
+  bottom: 0;
+  color: white;
+  float: left;
+}
+.footerPlantilla h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+.footerPlantilla .rowFooter {
+  padding: 30px;
+}
+.footerPlantilla form {
+  display: block;
+  color: white;
+}
+.footerPlantilla form #txtCorreo {
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  border-radius: 35px;
+  width: 100%;
+}
+.footerPlantilla form #txtCorreo:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+.footerPlantilla form div .btnEnviar {
+  left: 75%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 80px;
+  height: 1.9375rem;
+  background-color: #F0DD3A;
+  border-radius: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transform: 0.3s ease all;
+  position: relative;
+  overflow: hidden;
+}
+.footerPlantilla form div .btnEnviar span {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease all;
+}
+.footerPlantilla form div .btnEnviar::after {
+  content: "";
+  width: 120px;
+  height: 1.9375rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(-150% - 1.9375rem);
+  border-bottom: 1.9375rem solid #73C8F3;
+  border-right: 0.96875rem solid transparent;
+  transition: 0.5s ease-in-out all;
+}
+.footerPlantilla form div .btnEnviar:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.5s;
+}
+.footerPlantilla form div .btnEnviar:hover::after {
+  left: 0;
+}
+.footerPlantilla a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.footerPlantilla a:hover {
+  color: #F0DD3A;
+}
+.footerPlantilla .fotRedes #facebook {
+  display: inline;
+}
+.footerPlantilla .fotRedes #facebook:hover {
+  color: #3b5998;
+}
+.footerPlantilla .fotRedes #instagram {
+  display: inline;
+}
+.footerPlantilla .fotRedes #instagram:hover {
+  color: #3b1863;
+}
+.footerPlantilla .fotRedes #twitter {
+  display: inline;
+}
+.footerPlantilla .fotRedes #twitter:hover {
+  color: #00acee;
+}
+.footerPlantilla .fotRedes #youtube {
+  display: inline;
+}
+.footerPlantilla .fotRedes #youtube:hover {
+  color: #c4302b;
+}
+
+#accordionFooter {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4 {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-header .accordion-button h4:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse {
+  background-color: #0078aa;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body a:hover {
+  color: #F0DD3A;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p {
+  color: white;
+}
+#accordionFooter .accordion-item .accordion-collapse .accordion-body p:hover {
+  color: #F0DD3A;
+}
+
+@media (max-width: 992px) {
+  .navPrimario img {
+    width: 100px;
+    position: fixed;
+    top: 5px;
+  }
+  .linksCategorias {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .linksCategoriasScroll {
+    margin-left: 0;
+  }
+}
+@media (max-width: 492px) {
+  .navPrimario img {
+    width: 50px;
+    position: fixed;
+    top: 5px;
+  }
+  .formBuscar {
+    margin-top: 30px;
+  }
+  .linksCategorias {
+    font-size: small;
+    color: white;
+  }
+  .navInicioSesion {
+    margin-right: 0;
+  }
+}
 /* Caracteristicas de posicionamiento del filtro*/
 .menu-filtro {
   /* height: 100%; */
@@ -249,137 +516,70 @@ h6 {
   transition: all 0.3s ease;
 }
 
-body {
-  background-color: #F6F6F6;
-}
-
-.navPrimario {
-  background-color: #0078aa;
-}
-.navPrimario img {
-  width: 150px;
-  position: fixed;
-  top: 5px;
-}
-
-.formBuscar .btnBuscar {
-  color: white;
-}
-.formBuscar .txtBuscar {
-  display: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-}
-.formBuscar:hover .btnBuscar {
-  color: #F0DD3A;
-}
-
-.nav-link {
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
-.nav-link:hover {
-  color: #F0DD3A;
-}
-
-.contCarrito {
-  position: absolute;
-  border-radius: 15px;
-  color: black;
-  display: inline-block;
-  word-break: break-word;
-  line-height: 1;
-  background-color: #FAA077;
-  z-index: 10 !important;
-  white-space: nowrap !important;
-  font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  min-width: 17px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
-}
-
-.navInicioSesion {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  margin-right: 20px;
-}
-
-.dropdown-item {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-}
-.dropdown-item:hover {
-  background-color: #F0DD3A;
-}
-
-.linksCategoriasScroll {
-  display: none;
-  margin-left: 190px;
-}
-.linksCategoriasScroll .linksCategorias:hover {
-  border-bottom: 3px solid #73C8F3;
-}
-
-.navLinksCTG {
-  display: none;
-}
-.navLinksCTG .linksCategorias:hover {
-  border-bottom: 3px solid #73C8F3;
-}
-
-.linksCategorias {
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-}
-.linksCategorias:hover {
-  color: #F0DD3A;
-  border-bottom: 3px solid #0078aa;
-}
-
-.footerPlantilla {
-  background-color: #0078aa;
-  bottom: 0;
-  color: white;
-  margin-top: 30px;
-  float: left;
-}
-.footerPlantilla h4 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 100;
-}
-.footerPlantilla .rowFooter {
-  padding: 30px;
-}
-.footerPlantilla form {
-  display: block;
-  color: white;
-}
-.footerPlantilla form #txtCorreo {
-  font-family: "Montserrat", sans-serif;
-  padding: 5px;
-  margin: 5px;
+/****************MEDIA DEL FILTRO********************/
+@media (max-width: 1220px) {
+  .menu-filtro {
+    width: 0px; /*ancho del margen*/
+    height: 30px;
+    float: left;
+    position: relative;
+    margin-bottom: auto;
+    z-index: 100;
+  }
+  /* Icono de filtro*/
+  .menu-filtro .menu-btn {
+    position: absolute;
+    left: 5px;
+    opacity: 1;
+  }
+  /*Caracteristicas del slidebar*/
+  #sidebar {
+    position: relative;
+    height: 480px; /*alto del menú*/
+    width: 270px; /*Ancho del menú*/
+    left: -270px; /*Lo que permite el desplazamiento del filtro */
+  }
+  /*Caracteristicas del titulo del filtro*/
+  #sidebar .title {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 18px;
+  }
+} /*mediaQuery*/
+.bookContainer .card {
+  margin: 0 1em;
   border: none;
-  border-radius: 35px;
-  width: 100%;
-}
-.footerPlantilla form #txtCorreo:hover {
+  border-radius: 10px;
+  max-width: 300px;
+  min-width: 300px;
+  margin-bottom: 50px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
 }
-.footerPlantilla form div .btnEnviar {
-  left: 75%;
+.bookContainer .card:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
+.bookContainer .card p {
+  margin-top: 0.625rem;
+}
+.bookContainer .card .cardPrecio {
+  font-weight: bold;
+}
+.bookContainer .card img {
+  max-width: 100%;
+  min-height: 222px;
+  max-height: 222px;
+}
+.bookContainer .card .btnLibros {
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: black;
-  width: 80px;
-  height: 1.9375rem;
+  width: 160px;
+  height: 2.1875rem;
   background-color: #F0DD3A;
   border-radius: 2.5rem;
   font-family: "Montserrat", sans-serif;
@@ -390,131 +590,54 @@ body {
   position: relative;
   overflow: hidden;
 }
-.footerPlantilla form div .btnEnviar span {
+.bookContainer .card .btnLibros span {
   position: relative;
   z-index: 2;
   transition: 0.3s ease all;
 }
-.footerPlantilla form div .btnEnviar::after {
+.bookContainer .card .btnLibros::after {
   content: "";
-  width: 120px;
-  height: 1.9375rem;
+  width: 240px;
+  height: 2.1875rem;
   position: absolute;
   z-index: 1;
   top: 0;
-  left: calc(-150% - 1.9375rem);
-  border-bottom: 1.9375rem solid #73C8F3;
-  border-right: 0.96875rem solid transparent;
+  left: calc(-150% - 2.1875rem);
+  border-bottom: 2.1875rem solid #00acee;
+  border-right: 1.09375rem solid transparent;
   transition: 0.5s ease-in-out all;
 }
-.footerPlantilla form div .btnEnviar:hover {
+.bookContainer .card .btnLibros:hover {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   color: white;
   transition: 0.5s;
 }
-.footerPlantilla form div .btnEnviar:hover::after {
+.bookContainer .card .btnLibros:hover::after {
   left: 0;
 }
-.footerPlantilla a {
-  text-decoration: none;
-  color: white;
-  display: block;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-}
-.footerPlantilla a:hover {
-  color: #F0DD3A;
-}
-.footerPlantilla .fotRedes #facebook {
-  display: inline;
-}
-.footerPlantilla .fotRedes #facebook:hover {
-  color: #3b5998;
-}
-.footerPlantilla .fotRedes #instagram {
-  display: inline;
-}
-.footerPlantilla .fotRedes #instagram:hover {
-  color: #3b1863;
-}
-.footerPlantilla .fotRedes #twitter {
-  display: inline;
-}
-.footerPlantilla .fotRedes #twitter:hover {
-  color: #00acee;
-}
-.footerPlantilla .fotRedes #youtube {
-  display: inline;
-}
-.footerPlantilla .fotRedes #youtube:hover {
-  color: #c4302b;
-}
 
-#accordionFooter {
-  background-color: #0078aa;
-}
-#accordionFooter .accordion-item {
-  background-color: #0078aa;
-}
-#accordionFooter .accordion-item .accordion-header {
-  background-color: #0078aa;
-}
-#accordionFooter .accordion-item .accordion-header .accordion-button {
-  background-color: #0078aa;
-}
-#accordionFooter .accordion-item .accordion-header .accordion-button h4 {
-  color: white;
-}
-#accordionFooter .accordion-item .accordion-header .accordion-button h4:hover {
-  color: #F0DD3A;
-}
-#accordionFooter .accordion-item .accordion-collapse {
-  background-color: #0078aa;
-}
-#accordionFooter .accordion-item .accordion-collapse .accordion-body a {
-  color: white;
-}
-#accordionFooter .accordion-item .accordion-collapse .accordion-body a:hover {
-  color: #F0DD3A;
-}
-#accordionFooter .accordion-item .accordion-collapse .accordion-body p {
-  color: white;
-}
-#accordionFooter .accordion-item .accordion-collapse .accordion-body p:hover {
-  color: #F0DD3A;
-}
-
-@media (max-width: 992px) {
-  .navPrimario img {
-    width: 100px;
-    position: fixed;
-    top: 5px;
-  }
-  .linksCategorias {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .linksCategoriasScroll {
-    margin-left: 0;
+@media (max-width: 1220px) {
+  .bookContainer {
+    margin-left: 120px;
+    margin-right: 0px;
   }
 }
-@media (max-width: 492px) {
-  .navPrimario img {
-    width: 50px;
-    position: fixed;
-    top: 5px;
+@media (max-width: 920px) {
+  .bookContainer {
+    margin-left: 120px;
+    margin-right: 0px;
   }
-  .formBuscar {
-    margin-top: 30px;
+}
+@media (max-width: 500px) {
+  .bookContainer {
+    margin-left: 100px;
+    margin-right: 0px;
   }
-  .linksCategorias {
-    font-size: small;
-    color: white;
-  }
-  .navInicioSesion {
-    margin-right: 0;
+}
+@media (max-width: 480px) {
+  .bookContainer {
+    margin-left: 50px;
+    margin-right: 0px;
   }
 }
 .tituloDeBusqueda {

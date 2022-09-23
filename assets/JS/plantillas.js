@@ -126,7 +126,7 @@ footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
       <div class="accordion-body border-0">
       <a class='mb-2' href="certificados.html">Certificado de autenticidad</a>
       <a class='mb-2' href="sobrenosotros.html">Acerca de nosotros</a>
-      <a class='mb-2' href="avisodeprivacidad.html">Términos y condiciones</a>
+      <a class='mb-2' href="terminosYCondiciones.html">Términos y condiciones</a>
       </div>
     </div>
   </div>
