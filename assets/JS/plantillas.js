@@ -124,7 +124,7 @@ footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
     </h2>
     <div id="collapseOne"  class="accordion-collapse collapse show border-0" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body border-0">
-      <a class='mb-2' href="certificados.html">Certificado de autenticidad</a>
+      <a class='mb-2' href="Certificados.html">Certificado de autenticidad</a>
       <a class='mb-2' href="sobrenosotros.html">Acerca de nosotros</a>
       <a class='mb-2' href="avisodeprivacidad.html">Términos y condiciones</a>
       </div>
@@ -268,6 +268,7 @@ function inicioSesionNav(user){
 //Agarra los datos del localstorage
     let localUser = JSON.parse(localStorage.getItem('perfil'));
   
+    // numero carrito
     let cantcarrito = JSON.parse(localStorage.getItem('cantCarrito'));
     console.log(cantcarrito);
 // //Se agrega a la memoria local 
@@ -277,7 +278,7 @@ function inicioSesionNav(user){
    function revisarUser(User){
   if(User.email!=null&&User.sesion == true){
     //Agrega al icono del carrito la cantidad de pedidos
-    contCarrito.innerText = localUser.carrito;  
+    contCarrito.innerText = cantcarrito;  
     inicioSesionNav(User.nombres);
 
   }else{
