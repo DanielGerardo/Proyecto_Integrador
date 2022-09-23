@@ -30,9 +30,14 @@ if(Object.entries(carrito).length !== 0){
     carritoVacio[i].style.display = "none";
   }
 
+
+ 
+   
+    
    
   
   Object.values(carrito).forEach(producto => {
+
         const itemsHTML = `<div class="row my-3 border align-middle cardItem">
         <div class="col-sm-3 p-3 align-self-center">
           <!--Imagen-->
@@ -44,14 +49,14 @@ if(Object.entries(carrito).length !== 0){
         </div>
         <div class="col-sm-3 p-3 align-self-center">
           <!--Nombre del producto-->
-          <p class="">${producto.title}</p>
+          <p class="">${producto.name}</p>
         </div>
         <div class="col-sm-3 p-3 align-self-center">
           <!--Cantidad-->
-          <input type="number" name="" id="" value="${producto.cantidad}" min="1" max="10" />
+          <input type="number" name="" id="" value="${producto.cantidad}" min="1" max="${producto.cantOriginal}" />
           <!-- Eliminar -->
           <div class="my-1">
-            <button id="${producto.id}" class="btn btnTrashIcon" onclick="eliminarItem(${producto.id})" >Eliminar</button>
+            <button id="${producto.codigo}" class="btn btnTrashIcon" onclick="eliminarItem(${producto.codigo})" >Eliminar</button>
           </div>
         </div>
         <div class="col-sm-3 p-3 align-self-center">

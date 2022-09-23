@@ -203,7 +203,7 @@ function llenarResumen() {
 
   Object.values(carrito).forEach((producto) => {
     const renglon = `<div class="row posicionCenter justify-content-center border">
-    <p class="col-5" >${producto.title}</p>
+    <p class="col-5" >${producto.name}</p>
     <p class="col-3">x <span>${producto.cantidad}</span></p>
     <p class="col-3">$ <span>${producto.precio}</span></p>
   </div>`;

@@ -1,9 +1,9 @@
-
 codigo = localStorage.getItem("codigo");
 // import* as codigo from './abritDetalle';
 const contenedor = document.getElementById("divDetalle");
 const vinculos = document.getElementById("vinculos");
-
+const URL_MAIN = "http://localhost:8080/api/producto/codigo/";
+let carrito = JSON.parse(localStorage.getItem("carrito"));
 // Cambiar imagen div
 function cambiarImg(imgSmall) {
   var fullImg = document.getElementById("img-box");
@@ -12,28 +12,30 @@ function cambiarImg(imgSmall) {
 
 // Llenar plantilla detalle  con el codigo localizado en localstorage
 function detalle(codigo) {
-  fetch("/productos.json")
+  fetch(URL_MAIN + codigo, {
+    method: "get",
+  })
     .then((response) => {
       return response.json();
     })
     .then((json) => {
       productos = JSON.stringify(json);
-      productos = JSON.parse(productos);
-      for (let i = 0; i < productos.length; i++) {
-        if (productos[i].codigo == codigo) {
-          let item = productos[i];
-          if (item.categoria !== "CD") {
-            linkCat = item.categoria.toLowerCase();
-          } else {
-            linkCat = item.categoria;
-          }
-          console.log(linkCat);
-          const vinculosItem = `    <div class="col">
+      item = JSON.parse(productos);
+      // for (let i = 0; i < productos.length; i++) {
+      //   if (productos[i].codigo == codigo) {
+      //     let item = productos[i];
+      //     if (item.categoria !== "CD") {
+      //   linkCat = item.categoria.toLowerCase();
+      // } else {
+      linkCat = item.categoria;
+      // }
+      console.log(linkCat);
+      const vinculosItem = `    <div class="col">
           <a href="popCollector.html">Menú Principal</a> >
           <a href="${linkCat}.html" id="${item.categoria}" ">${item.categoria}</a> > 
           <a href="" onclick="window.location.reload()">${item.name}</a>
         </div>`;
-          const detalleItem = `        <div class="row ">
+      const detalleItem = `        <div class="row ">
           <!-- Imagenes -->
           <div class="col-lg-6 col-md-6  ">
             <div class="row ">
@@ -86,15 +88,15 @@ function detalle(codigo) {
 
               <p class="pb-2 cantidad">
                 <label for="cantidad"> Cantidad: </label>
-                <input type="number" value="1" min="1" max="${item.cantidad}" />
+                <input id="inputCant" type="number" value="1" min="1" max="${item.cantidad}" />
                 <span class="codigo"> ( <span>${item.cantidad}</span> en existencia )</span>
               </p>
             </div>
             <!-- Boton agregar carrito -->
             <div class="row p-3 posicionCenter">
               <div class="col">
-                <button id="${item.codigo}" class="btn btnAdelante onclick="addCarrito(e)">
-                  <span class ="Agregar" >Agregar al carrito</span>
+                <button id="${item.codigo}" class="btn btnAdelante onclick="addCarrito(${item.codigo}) >
+                  <span id="${item.codigo}" class ="Agregar" >Agregar al carrito</span>
                 </button>
               </div>
             </div>
@@ -109,12 +111,11 @@ function detalle(codigo) {
             <!--  -->
           </div>
         </div>`;
-          // console.log(detalleItem);
-          // agregar div dentro del cuerpo html
-          contenedor.innerHTML = detalleItem;
-          vinculos.innerHTML = vinculosItem;
-        }
-      }
+      // console.log(detalleItem);
+      // agregar div dentro del cuerpo html
+      contenedor.innerHTML = detalleItem;
+      vinculos.innerHTML = vinculosItem;
+      // }
     });
 }
 
@@ -127,120 +128,182 @@ let cardContainer = document.querySelector(".bookContainer");
 
 //Al div se le agrega evento click en el cual ejecuta la funcion addCarrito
 cardDetalle.addEventListener("click", (e) => {
-  addCarrito(e);
-});
-cardContainer.addEventListener("click", (e) => {
-  addCarrito2(e);
-});
-
-// Se define variable carrito del local storage para poder utilizarla en diferentes pestañas y que no se vacie
-// carrito={};
-let carrito = JSON.parse(localStorage.getItem("carrito"));
-
-// Funcion add Carrito en el cual indica que al dar click en el boton de añadir carrito inicie otra funcion
-const addCarrito = (e) => {
   if (e.target.classList.contains("Agregar")) {
-    // console.log(e.target.classList);
-    parent =
-      e.target.parentElement.parentElement.parentElement.parentElement
-        .parentElement;
-    listaCarrito(parent);
-    // console.log(parent);
+  addCarrito((e.target.parentElement).id);
   }
+});
 
-  e.stopPropagation();
-};
-const addCarrito2 = (e) => {
 
-  if (e.target.classList.contains("Agregar")) {
-    // console.log(e.target.classList);
-    // console.log(e.target.parentElement);
-    listaCarrito2(e.target.parentElement.parentElement.parentElement);
-   
+//!ADDCARRITO()
+// funcion añadir carrito
+function addCarrito(codigo) {
+  //variable carrito localstorage
+
+  fetch(URL_MAIN + codigo, {
+    //fetch getcodito de api
+    method: "get",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      producto = JSON.stringify(json);
+      producto = JSON.parse(producto); //se convierte en objeto
+      // console.log(producto);
+
+      // Se guarda el producto al que deimos click en añadir producto en una variable temporal
+      let productotemp = {
+        name: producto.name,
+        precio: producto.precio,
+        codigo: producto.codigo,
+        cantidad: Number(document.getElementById("inputCant").value), //se agrega cantidad seleccionada en el input de detalle
+        img: producto.img, //solo se agrega la primera imagen
+      };
+    
+      
+//   Object.values(carrito).forEach((producto) => {
+//     contador += parseInt(producto.cantidad);
+//     // console.log(contador);
+//     localStorage.setItem("cantCarrito", JSON.stringify(contador));
+//   });
+      if (Object.entries(carrito).length!=0) {
+        var objetotemp;
+        Object.values(carrito).forEach((objeto) => {
+          //contamos los items del carrito
+          if (objeto.codigo == productotemp.codigo) {
+            objetotemp=objeto;
+          }          
+        });
+        if(objetotemp!=null){
+          agregar(objetotemp,productotemp);
+          iconoCarrito();
+          
+        }else{
+          agregar2(productotemp);
+          iconoCarrito();
+        }
+      } else {
+        console.log("vacio");
+        carrito[productotemp.codigo]=productotemp;
+        console.log(carrito);//añade producto carrito
+        localStorage.setItem("carrito", JSON.stringify(carrito));//guarda local
+      iconoCarrito();
+      }
+      // console.log(productotemp);
+
+ 
+
+    });
+}
+
+function agregar(objeto,productotemp){
+  console.log(objeto.codigo);
+  if (objeto.codigo == productotemp.codigo) {
+  //   existe=true;
+      console.log("si hay");
+       if ((objeto.cantidad + productotemp.cantidad) > producto.cantidad) {
+      //verifica que no se agregan mas productos de los existentes en inventario
+            alert("No se puede añadir mas de este producto");
+       } else {
+        objeto.cantidad = (Number(objeto.cantidad))+ (Number(productotemp.cantidad)); //se suma la cantidad si este no sobrepasa el existente
+        console.log(objeto.cantidad);
+        console.log(carrito);//añade producto carrito
+        localStorage.setItem("carrito", JSON.stringify(carrito));//guarda local
+        }
   }
+}
 
-  e.stopPropagation();
-};
+function agregar2(productotemp){
+        console.log("no hay");
+        carrito[productotemp.codigo]=productotemp;
+        console.log(carrito);//añade producto carrito
+        localStorage.setItem("carrito", JSON.stringify(carrito));//guarda local
+}
 
-// // funcion para crear un objeto con el contenido de las cards
-const listaCarrito = (item) => {
-  // console.log(item.querySelector("input").value);
-  let contador = 0;
-  //   // Se definen el contenido con la card
-  const producto = {
-    title: item.querySelector("h4").textContent,
-    precio: item.querySelector("#precio").textContent,
-    id: item.querySelector("button").id,
-    cantidad: item.querySelector("input").value,
-    img: item.querySelector("#img1").src,
-  };
-
-  //   // Si el id es repetido se suma la variable cantidad
-  if (carrito.hasOwnProperty(producto.id)) {
-    cant = parseInt(producto.cantidad);
-    producto.cantidad = parseInt(carrito[producto.id].cantidad) + cant;
-    // console.log(producto.cantidad);
-  }
-  //   // Se añade producto al objeto carrito
-  carrito[producto.id] = { ...producto };
-  //   // Limpiar carrito
-  //   // carrito= {};
-  console.log(carrito);
+function iconoCarrito(){
   localStorage.setItem("carrito", JSON.stringify(carrito));
-
-  Object.values(carrito).forEach((producto) => {
-    contador += parseInt(producto.cantidad);
-    // console.log(contador);
-    localStorage.setItem("cantCarrito", JSON.stringify(contador));
+  let contador=0;
+  Object.values(carrito).forEach(producto => {
+    contador += producto.cantidad ;
   });
-
-  // Se actualiza la variable del icono en el local storage
-  let cantcarrito = JSON.parse(localStorage.getItem("cantCarrito"));
-  contCarrito.innerText = cantcarrito;
-};
-
-const listaCarrito2 = (item) => {
-  // console.log(item.querySelector('img').src);
-let contador = 0;
-  // Se definen el contenido con la card
-  const producto = {
-    title: item.querySelector("h5").textContent,
-    precio: item.querySelector("#precio").textContent,
-    id: item.querySelector("button").id,
-    cantidad: 1,
-    img: item.querySelector("img").src,
-  };
-
-  // Si el id es repetido se suma la variable cantidad
-  if (carrito.hasOwnProperty(producto.id)) {
-    producto.cantidad = carrito[producto.id].cantidad + 1;
-  }
-  // Se añade producto al objeto carrito
-  carrito[producto.id] = { ...producto };
-  // Limpiar carrito
-  // carrito= {};
-  // console.log(carrito);
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-  
-  Object.values(carrito).forEach((producto) => {
-    contador += producto.cantidad;
-    // console.log(contador);
-    localStorage.setItem("cantCarrito", JSON.stringify(contador));
-  });
-  
-  // Se actualiza la variable del icono en el local storage
+  localStorage.setItem("cantCarrito",contador);
   let cantcarrito = JSON.parse(localStorage.getItem('cantCarrito'));
   contCarrito.innerText = cantcarrito; 
-  
+}
+// // // funcion para crear un objeto con el contenido de las cards
+// const listaCarrito = (item) => {
+//   // console.log(item.querySelector("input").value);
+//   let contador = 0;
+//   //   // Se definen el contenido con la card
+//   const producto = {
+//     title: item.querySelector("h4").textContent,
+//     precio: item.querySelector("#precio").textContent,
+//     id: item.querySelector("button").id,
+//     cantidad: item.querySelector("input").value,
+//     img: item.querySelector("#img1").src,
+//   };
 
-};
+//   //   // Si el id es repetido se suma la variable cantidad
+//   if (carrito.hasOwnProperty(producto.id)) {
+//     cant = parseInt(producto.cantidad);
+//     producto.cantidad = parseInt(carrito[producto.id].cantidad) + cant;
+//     // console.log(producto.cantidad);
+//   }
+//   //   // Se añade producto al objeto carrito
+//   carrito[producto.id] = { ...producto };
+//   //   // Limpiar carrito
+//   //   // carrito= {};
+//   console.log(carrito);
+//   localStorage.setItem("carrito", JSON.stringify(carrito));
 
+//   Object.values(carrito).forEach((producto) => {
+//     contador += parseInt(producto.cantidad);
+//     // console.log(contador);
+//     localStorage.setItem("cantCarrito", JSON.stringify(contador));
+//   });
 
+//   // Se actualiza la variable del icono en el local storage
+//   let cantcarrito = JSON.parse(localStorage.getItem("cantCarrito"));
+//   contCarrito.innerText = cantcarrito;
+// };
+
+// const listaCarrito2 = (item) => {
+//   // console.log(item.querySelector('img').src);
+//   let contador = 0;
+//   // Se definen el contenido con la card
+//   const producto = {
+//     title: item.querySelector("h5").textContent,
+//     precio: item.querySelector("#precio").textContent,
+//     id: item.querySelector("button").id,
+//     cantidad: 1,
+//     img: item.querySelector("img").src,
+//   };
+
+//   // Si el id es repetido se suma la variable cantidad
+//   if (carrito.hasOwnProperty(producto.id)) {
+//     producto.cantidad = carrito[producto.id].cantidad + 1;
+//   }
+//   // Se añade producto al objeto carrito
+//   carrito[producto.id] = { ...producto };
+//   // Limpiar carrito
+//   // carrito= {};
+//   // console.log(carrito);
+//   localStorage.setItem("carrito", JSON.stringify(carrito));
+
+//   Object.values(carrito).forEach((producto) => {
+//     contador += producto.cantidad;
+//     // console.log(contador);
+//     localStorage.setItem("cantCarrito", JSON.stringify(contador));
+//   });
+
+//   // Se actualiza la variable del icono en el local storage
+//   let cantcarrito = JSON.parse(localStorage.getItem("cantCarrito"));
+//   contCarrito.innerText = cantcarrito;
+// };
 
 // * Articulos similares
-function addItem(item){
-    const itemHTML = 
-    `<div id="${item.codigo}" class="  card cardLibros">
+function addItem(item) {
+  const itemHTML = `<div id="${item.codigo}" class="  card cardLibros">
     <img
       src="${item.img}"
       class="card-img-top"
@@ -257,34 +320,31 @@ function addItem(item){
       <p class="cardPrecio">$<span id="precio">${item.precio}</span>MXN</p>
      </div>
     </div>`;
-    const itemsContainer = document.querySelector(".bookContainer");
-    itemsContainer.innerHTML += itemHTML;
+  const itemsContainer = document.querySelector(".bookContainer");
+  itemsContainer.innerHTML += itemHTML;
 }
 
-function addLibro(){
-    var contador=0;
-    fetch("/productos.json")
-    .then(response => {
-       return response.json();
+function addLibro() {
+  var contador = 0;
+  fetch("/productos.json")
+    .then((response) => {
+      return response.json();
     })
-    .then(json =>{
-       productos = JSON.stringify(json);
-       productos = JSON.parse(productos);
-       for (let i = 0; i < productos.length; i++) {
+    .then((json) => {
+      productos = JSON.stringify(json);
+      productos = JSON.parse(productos);
+      for (let i = 0; i < productos.length; i++) {
         if (productos[i].codigo == codigo) {
           var item = productos[i];
           var libro = item.categoria;
         }
       }
-    for (let i = 0; i< productos.length&&contador!=3; i++) {
-            if(productos[i].categoria.match(libro) && productos[i] !== item){
-                addItem(productos[i]);
-                contador= contador + 1;         
-            }
+      for (let i = 0; i < productos.length && contador != 3; i++) {
+        if (productos[i].categoria.match(libro) && productos[i] !== item) {
+          addItem(productos[i]);
+          contador = contador + 1;
         }
-            });
-   
-        }
+      }
+    });
+}
 addLibro();
-
-
