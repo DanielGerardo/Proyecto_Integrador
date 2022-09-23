@@ -5,18 +5,92 @@
 .subs           {font-family:'Montserrat',sans-serif; color:#0078AA; font-weight:400; font-size: 20px; font-weight: bold;}
 .infoCuen       {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 16px;}
 
+.card-sm {
+  border-radius: .6rem;
+}
+
+.img-fluid {
+  border-radius: 50%;
+  width: 150px;
+}
+  
+.nom{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
 .gradient-custom {
-    /* fallback for old browsers */
     background: #f6f6f6;
     
-    /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right bottom, #0078AA, #73C8F3);
     
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right bottom, #0078AA, #73C8F3)
+    background: linear-gradient(to right bottom, #0078AA, #F0DD3A)
     }
 
-/* .footerPlantilla{
-  clear:left; 
-  margin-top: 50px; 
-} */
+    .btnhis {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      width: 195px;
+      height: 1.90rem;
+      background-color: #F0DD3A;
+      border-radius: 2.5rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transform: 0.3s ease all;
+      position: relative;
+      overflow: hidden;
+    }
+    .btnhis span {
+      position: relative;
+      z-index: 2;
+      transition: 0.3s ease all;
+    }
+    .btnhis::after {
+      content: "";
+      width: 250px;
+      height: 1.945rem;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: calc(-150% - 1.9375rem);
+      border-bottom: 1.945rem solid #73C8F3;
+      border-right: 0.96875rem solid transparent;
+      transition: 0.5s ease-in-out all;
+    }
+    .btnhis:hover {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+      color: white;
+      transition: 0.5s;
+    }
+    .btnhis:hover::after {
+      left: 0;
+    }
+
+    #update {
+      margin-left: 110px;
+      width: 50%;
+    }
+
+    .modal{
+      color:#002230;
+    }
+
+    i.fa-edit { 
+      color:#F0DD3A;
+
+    } 
+
+    .ref {
+      margin-bottom: 20px;
+      color:#f6f6f6;
+      box-shadow:none
+    }
+
+    i.fa-edit:hover { 
+      color:#73C8F3;
+    }

@@ -1,30 +1,40 @@
 .títuloCon   {font-family:'Poppins', sans-serif; text-align:center; color:#0078AA; font-weight:600; font-size: 40px;}
 .infoCon     {font-family:'Montserrat',sans-serif; color:#002230; font-weight:400; font-size: 18px;}
 
-.cuerpo     {background-color: #f6f6f6;}
-.container-sm    {
-    background-color: white;
+.cuerpo      {background-color: white;}
+
+.container-sm{
+    background-color: #f6f6f6;
     margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.contactoGrupo{
+    width: 100%;
 }
 
 #check {
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 40px;
 }
+
 
 .imgServicio{
     border-radius: 2.5rem;
-    margin: 0px -50px;
-
     min-width: 80%;
     max-width: 80%;
     min-height: 90%;
     max-height: 90%;
+    display: block;
+    margin: 0px auto;
 }
 
-.contacto{
-    gap:50px;
-}
+@media only screen and (max-width: 950px) {
+    .imgServicio {
+      width: 100%;
+    }
+  }
+
 
 .labelContacto {
 	display: block;
@@ -37,7 +47,7 @@
 }
 
 .grupoInput{
-    width: 70%;
+    width: 100%;
     background-color:white;
     border: 1px solid #0078AA;
     border-radius: 10px;
@@ -64,8 +74,8 @@
 
 .validacionContacto{
     position: relative;
-    width: 80%;
-    right: -555px;
+    width: 100%;
+    right: -95%;
     bottom: 37px;
     z-index: 100;
     font-size: 20px;
@@ -111,7 +121,7 @@
 /* estilos de validación */
 
 .contactoGrupo-fine .validacionContacto {
-    color: #1ed12d;
+    color: #0078AA;
     opacity: 1;
 }
 
@@ -128,4 +138,48 @@
     border: 2px solid #bb2929;
     opacity: 1;
 }
+
+.btnCon {
+    left: 20%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 195px;
+    height: 1.90rem;
+    background-color: #F0DD3A;
+    border-radius: 2.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transform: 0.3s ease all;
+    position: absolute;
+    overflow: hidden;
+  }
+  .btnCon span {
+    position: absolute;
+    z-index: 2;
+    transition: 0.3s ease all;
+  }
+  .btnCon::after {
+    content: "";
+    width: 250px;
+    height: 1.945rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-150% - 1.9375rem);
+    border-bottom: 1.945rem solid #73C8F3;
+    border-right: 0.96875rem solid transparent;
+    transition: 0.5s ease-in-out all;
+  }
+  .btnCon:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: 0.5s;
+  }
+  .btnCon:hover::after {
+    left: 0;
+  }
 
