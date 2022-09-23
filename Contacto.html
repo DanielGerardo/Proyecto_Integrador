@@ -61,7 +61,7 @@
       <br/>
 
   <!-- Contenedor con sombra -->
-}<div class="container-sm shadow">
+<div class="container-sm shadow">
       <br/>
   <!--Título centrado y con estilo de .títuloCon-->
       <div class="d-flex justify-content-center títuloCon">
@@ -70,7 +70,7 @@
 
   <!-- Divs de estructura -->
       <div class="row">
-        <div class="col-6">
+        <div class="col-md-8">
 
   <!--Formulario de contacto-->
           <form action="" class="contacto infoCon" id="contacto">
@@ -172,9 +172,11 @@
           <div class="enviar infoCon">
             <div class="row">
         <!-- Botón enviar -->
-        <div class="boton">
-          <button type="submit" class="btnEnviar">Enviar</button>
-        </div>
+        <div class = "col-6 mb-3">
+          <button class="form-control-sm btnCon" type="submit">
+            <span>Enviar</span>
+          </button>
+        </div> 
               
         <!-- Div de nota de éxito-->
               <div class="exito infoCon">
@@ -190,10 +192,7 @@
           </form><!--Forulario de contacto-->
         </div><!--Div class col para el formulario-->
 
-        <!--Div vacío en medio-->
-        <div class="col-2"></div>
-
-        <div class="col-4 d-none d-md-block">
+        <div class="col-md-4 d-none d-md-block">
         <!-- Imagen -->
           <img
             class="imgServicio"
@@ -201,6 +200,7 @@
             alt="Imagen de servicio"
           />
         </div><!--Div class col para la imagen-->
+        
       </div><!--Div class row-->
     </div><!--Contenedor con sombra del formulario-->
 

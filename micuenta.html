@@ -49,7 +49,9 @@
 
     <!-- JS -->
     <script src="assets/JS/plantillas.js" defer></script>
-    <title>Mi cuenta POPcollector</title>
+    <script src="assets/JS/micuentaBD.js" defer></script>
+
+    <title>PopCollector</title>
   </head>
   
   <body class="cuerpo">
@@ -79,7 +81,7 @@
                 <div class="card-info col-md-4 gradient-custom text-center">
 
                   <div img>
-                    <img src="/Proyecto_Integrador/assets/img/usuario.jpg"
+                    <img src="/assets/img/usuario.jpg"
                          alt="Avatar" 
                          class="img-fluid my-3">
                   </div>
@@ -88,11 +90,81 @@
                     <h5 class="nom">Dulce Princesa</h5>
 
                       <div class="ref">
-                        <a class="btn" href="#">
-                        <i class="far fa-edit my-1"></i></a></div> 
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+                          <i class="far fa-edit"></i></a>
+                      </button>
                       </div>
-
+                    </div>
                 </div>
+                
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="col-md-10 justify-content-center align-self-center">
+
+                            <h2 class="subs text-center p-3">EDITAR DETALLES DEL USUARIO</h2>
+
+                            <form>
+                              <div class="form-group p-3 infoCuen">
+                                <label for="nombre">Nombre</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  name="nombreUser"
+                                  id="nombreUser"
+                                  placeholder="David"
+                                />
+                              </div>
+
+                              <div class="form-group p-3 infoCuen">
+                                <label for="apellido">Apellido</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  name="apellidoUser"
+                                  id="apellidoUser"
+                                  placeholder="Bowie"
+                                />
+                              </div>
+
+                              <div class="form-group p-3 infoCuen">
+                                <label for="email">Email</label>
+                                <input
+                                  type="email"
+                                  class="form-control"
+                                  name="email"
+                                  id="email"
+                                  placeholder="ejemplo@mail.com"
+                                />
+                              </div>
+                              
+                              <div class="form-group p-3 infoCuen">
+                                <label for="contra" class="form-label"> Nueva contraseña </label>
+                                <input
+                                  type="contraseña"
+                                  step="any"
+                                  class="form-control"
+                                  name="contra"
+                                  id="contra"
+                                  placeholder="**********"
+                                />
+                              </div>
+                  
+                              <div class = "col-10 mb-3">
+                                <button class="form-control-sm btnhis" type="submit" id="update">
+                                  <span>Guardar</span>
+                                </button>
+                              </div> 
+                              
+                            </form>
+                          </div>
+                          <div class="col-md-6 d-none d-md-block" id="login-image"></div>
+                        </div>
+                      </div>
+                      </div>
+                  
+                
                 
       <!--Relleno del div de información personal-->
                   <div class="col-md-8 ">
@@ -117,7 +189,7 @@
                         <p class="infoCuen">Dulce reino 666</p>
                       </div>
 
-                      <div class = col-6 mb-3>
+                      <div class = "col-6 mb-3">
                         <button class="form-control-sm btnhis" type="submit">
                           <span>Historial de pedidos</span>
                         </button>

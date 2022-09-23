@@ -17,19 +17,6 @@ $fontPoppins: 'Poppins', sans-serif;
 .respuesta         {color:$colorPrimarioVariacion; font-family: $fontMontserrat; font-weight: 500; font-size: 18px;}
 .listas            {color:$colorPrimarioVariacion; font-family: $fontMontserrat; font-weight: 500; font-size: 18px; font-style:italic}
 
-
-//imagen de ayuda chida :D 
-.help{
-    max-height: 450px;
-    min-height: 450px;
-    img{
-        position: relative;
-        overflow: hidden;
-        max-height: 500px;
-        min-height: 500px;
-    }
-}
-
 /* Margen de 20px para responsividad */
 .accordion-item{
     margin-left: 20px;

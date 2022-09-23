@@ -11,7 +11,7 @@
 
 .img-fluid {
   border-radius: 50%;
-  width: 200px;
+  width: 150px;
 }
   
 .nom{
@@ -42,11 +42,11 @@
       border: none;
       cursor: pointer;
       transform: 0.3s ease all;
-      position: absolute;
+      position: relative;
       overflow: hidden;
     }
     .btnhis span {
-      position: absolute;
+      position: relative;
       z-index: 2;
       transition: 0.3s ease all;
     }
@@ -71,11 +71,26 @@
       left: 0;
     }
 
-    .ref{
-      margin-bottom: 30px;
+    #update {
+      margin-left: 110px;
+      width: 50%;
     }
 
-    .ref:hover {
-      color: white;
-      transition: 0.02s;
+    .modal{
+      color:#002230;
+    }
+
+    i.fa-edit { 
+      color:#F0DD3A;
+
+    } 
+
+    .ref {
+      margin-bottom: 20px;
+      color:#f6f6f6;
+      box-shadow:none
+    }
+
+    i.fa-edit:hover { 
+      color:#73C8F3;
     }
