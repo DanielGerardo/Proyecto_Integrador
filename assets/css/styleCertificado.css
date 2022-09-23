@@ -1,0 +1,37 @@
+body {
+  background-color: #F6F6F6;
+}
+body .bannerCertificado {
+  max-width: 110px;
+}
+body .bannerCinta {
+  top: -4px;
+  max-width: 99.98%;
+}
+body .h1titulo {
+  color: #0078AA;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  margin-top: 22px;
+  text-align: center;
+}
+body .container {
+  background-color: #FFFFFF;
+}
+body .container .o {
+  padding: 10px;
+  margin-bottom: 50px;
+}
+body .container .o p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 22px;
+  text-align: justify;
+}
+body .container .o h2 {
+  font-family: "Poppins", sans-serif;
+  color: #0078AA;
+  text-align: center;
+}/*# sourceMappingURL=styleCertificado.css.map */

@@ -1,0 +1,43 @@
+$fontPoppins: 'Poppins', sans-serif;
+$fontMontserrat: 'Montserrat',sans-serif;
+
+
+body{
+    background-color: #F6F6F6;
+    .bannerCertificado{
+        max-width:110px;
+    }
+    .bannerCinta{
+        // position:relative;
+        top:-4px;
+        max-width:99.98%;
+    }
+    .h1titulo {
+        color: #0078AA;
+        font-family: $fontPoppins;
+        font-weight: 600;
+        font-size: 45px;
+        margin-top: 22px;
+        text-align: center;
+    }
+    .container{
+        background-color: #FFFFFF;
+        .o{
+            padding: 10px;
+            margin-bottom: 50px;
+            p{
+                font-family: $fontMontserrat;
+                font-weight: 600;
+                font-size: 18px;
+                margin-top: 22px;
+                text-align: justify;
+            }
+            h2{
+                font-family: $fontPoppins;
+                color: #0078AA;
+                text-align: center;
+            }
+        }//o
+    }//container
+}//Body
+
