@@ -30,8 +30,7 @@ public class ProductosService {
                 return "El valor del codigo es incorrecto";
             } else if (producto.getName() == null || producto.getName().isEmpty()) {
                 return "El campo nombre esta vacío";
-            } else if (producto.getDescription() == null ||
-                    producto.getDescription().isEmpty()) {
+            } else if (producto.getDescription() == null || producto.getDescription().isEmpty()) {
                 return "El campo descripción esta vacío";
             } else if (producto.getImg() == null || producto.getImg().isEmpty()) {
                 return "Agrega una imagen";
@@ -40,22 +39,8 @@ public class ProductosService {
             } else if (producto.getCantidad() == null) {
                 return "El campo Cantidad esta vacío";
             } else {
-
-                Optional<ProductosModel> objProducto = productosRepo.findById(id);
-                ProductosModel produModel = objProducto.get();
-                produModel.setName(producto.getName());
-                produModel.setDescription(producto.getDescription());
-                produModel.setImg(producto.getImg());
-                produModel.setImg2(producto.getImg2());
-                produModel.setImg3(producto.getImg3());
-                produModel.setCodigo(producto.getCodigo());
-                produModel.setPrecio(producto.getPrecio());
-                produModel.setCantidad(producto.getCantidad());
-                produModel.setCertificado(producto.getCertificado());
-                produModel.setExclusivo(producto.getExclusivo());
-                produModel.setCategorias_idCategorias(producto.getCategorias_idCategorias());
-
-                productosRepo.save(produModel);
+                producto.setIdProducts(id);
+                productosRepo.save(producto);
                 return "Cambios guardados";
             }
         } else {
