@@ -212,10 +212,12 @@ footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
       <a id="youtube" href=""><i class="fa-brands fa-youtube"></i></a>
     </div>
     <div class="col d-none d-md-block text-md-center">
-      <a href="creadapor.html">E-Commerce desarrollada por...</a>
+      <a href="http://127.0.0.1:5501/index.html
+      ">E-Commerce desarrollada por...</a>
     </div>
     <div class="col">
-      <a class="d-md-none" href="creadapor.html">E-Commerce desarrollada por...</a>
+      <a class="d-md-none" href="http://127.0.0.1:5501/index.html
+      ">E-Commerce desarrollada por...</a>
     </div>
   </div>
 </div>
