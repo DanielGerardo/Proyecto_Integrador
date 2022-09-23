@@ -1,0 +1,53 @@
+$fontPoppins: 'Poppins', sans-serif;
+$fontMontserrat: 'Montserrat',sans-serif;
+
+
+.bannerSobreNosotros{
+    max-width:99.9%;
+}
+
+.bannerCinta{
+    position:relative;
+    top:-4px;
+    max-width:99.9%;
+}
+.h1titulo {
+    color: #0078AA;
+    font-family: $fontPoppins;
+    font-weight: 600;
+    font-size: 45px;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.sobreNosotros{
+    
+    .imgSobreNosotros{
+        max-width:90%;
+        max-height:90%;
+    }
+    p{
+        font-family: $fontMontserrat;
+        font-size: 20px;
+        text-align:justify;
+        font-weight:500;
+        margin-left: 10px;
+    }
+
+}//divSobreNosotros
+
+.sobreNosotrosWhite{
+    background-color: white;
+    // display:block;
+    .imgVisionMision{
+        max-width:90%;
+        max-height:90%;
+    }
+    p{
+        font-family: $fontMontserrat;
+        font-size: 20px;
+        text-align:justify;
+        font-weight:500;
+        margin-left: 10px;
+    }
+}//divsobreNosotrosWhite
