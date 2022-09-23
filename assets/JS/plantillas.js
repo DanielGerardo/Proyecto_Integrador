@@ -126,7 +126,7 @@ footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
       <div class="accordion-body border-0">
       <a class='mb-2' href="Certificados.html">Certificado de autenticidad</a>
       <a class='mb-2' href="sobrenosotros.html">Acerca de nosotros</a>
-      <a class='mb-2' href="avisodeprivacidad.html">Términos y condiciones</a>
+      <a class='mb-2' href="terminosYCondiciones.html">Términos y condiciones</a>
       </div>
     </div>
   </div>
@@ -164,9 +164,9 @@ footerPlantilla.outerHTML = `<div class="container-fluid footerPlantilla">
 </div>
   <div class="col d-md-block d-none">
     <h4>Sobre PopCollector</h4>
-    <a href="certificados.html">Certificado de autenticidad</a>
+    <a href="Certificados.html">Certificado de autenticidad</a>
     <a href="sobrenosotros.html">Acerca de nosotros</a>
-    <a href="avisodeprivacidad.html">Términos y condiciones</a>
+    <a href="terminosYCondiciones.html">Términos y condiciones</a>
   </div>
   <div class="col d-md-block d-none">
     <h4>Soporte al cliente</h4>

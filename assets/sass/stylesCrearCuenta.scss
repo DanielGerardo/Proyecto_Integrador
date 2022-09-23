@@ -1,143 +1,143 @@
 @use "navStyles";
 
 body{
-    margin: 1;
-    background-color: #f6f6f6;
+  margin: 1;
+  background-color: #f6f6f6;
 }
 
 /*--------Botón------*/
 .registroUsuario__btn {
-    @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);
+  @include navStyles.botones(160px,2.1875rem,#F0DD3A,#00acee,black,white);
 }/*# sourceMappingURL=styles.css.map*/
 
 /*Contenedor del formulario*/
 .container-sm{
-    max-width: 800px;
-    width: 98%;
-    margin: auto;
-    padding: 40px;
-    background: #FCFDFF;
-    border: 1px solid rgba(0, 120, 170, 0.3);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 16px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+  max-width: 800px;
+  width: 98%;
+  margin: auto;
+  padding: 40px;
+  background: #FCFDFF;
+  border: 1px solid rgba(0, 120, 170, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
 
 
 /*------Formulario---------*/
 .form-label {
-	display: block;
-	font-weight: 700;
-	padding: 10px;
-	cursor: pointer;
+display: block;
+font-weight: 700;
+padding: 10px;
+cursor: pointer;
 }
 
 /*------Íconos---------*/
 .registroUsuario__grupo_input{
-  position: relative;
+position: relative;
 }
 
 /*Estilos de los inputs de mi formulario*/
 .registroUsuario__input{
-  width: 100;
-  background-color: #f6f6f6;
-  border: 3px solid transparent;
-  border-radius: 3px;
-  height: 45px;
-  line-height: 45px;
-  transition: .3s ease all;
+width: 100;
+background-color: #f6f6f6;
+border: 3px solid transparent;
+border-radius: 3px;
+height: 45px;
+line-height: 45px;
+transition: .3s ease all;
 }
 
 .registroUsuario__input:focus {
-  border: 3px solid #0078AA;
-  outline: none;
-  box-shadow: 3px 8px 30px rgba(163,163,163, 0.4);
+border: 3px solid #0078AA;
+outline: none;
+box-shadow: 3px 8px 30px rgba(163,163,163, 0.4);
 }
 
 .registroUsuario__input_error {
-  font-size: 12px;
-	margin-bottom: 0;
-  display: none; 
+font-size: 12px;
+margin-bottom: 0;
+display: none; 
 }
 
 .registroUsuario__input_error_activo {
-	display: block;
+display: block;
 }
 
 .registroUsuario__validacion_estado {
-	position: absolute;
-	right: 10px;
-	bottom: 15px;
-	z-index: 100;
-	font-size: 16px;
-	opacity: 0;
+position: absolute;
+right: 10px;
+bottom: 15px;
+z-index: 100;
+font-size: 16px;
+opacity: 0;
 }
 
 .registroUsuario__mensaje {
-	grid-column: span 2;
+grid-column: span 2;
 }
 .registroUsuario__mensaje{
-  height: 45px;
-	line-height: 45px;
-	background: #F66060;
-	padding: 0px 15px;
-	border-radius: 3px;
-	display: none;
+height: 45px;
+line-height: 45px;
+background: #F66060;
+padding: 0px 15px;
+border-radius: 3px;
+display: none;
 }
 
 .registroUsuario__mensaje p {
-  margin: 0;
+margin: 0;
 }
 
 .registroUsuario__mensaje_exito {
-	font-size: 13px;
-	color: #0078AA;
-	display: none;
+font-size: 13px;
+color: #0078AA;
+display: none;
 }
 
 .registroUsuario__mensaje_exito_activo {
-	display: block;
+display: block;
 }
 /*---------Estilos para validación---------*/
 .registroUsuario__grupo_correcto .registroUsuario__validacion_estado {
-	color: #0078AA;
-	opacity: 1;
+color: #0078AA;
+opacity: 1;
 }
 
 .registroUsuario__grupo_incorrecto .registroUsuario__validacion_estado {
-	color: #BB2929;
-  opacity: 1;
+color: #BB2929;
+opacity: 1;
 }
 
 .registroUsuario__grupo_incorrecto .form-control {
-	border: 2px solid #bb2929;
-  box-shadow:  0px 0px 5px 2px #bb292960;
+border: 2px solid #bb2929;
+box-shadow:  0px 0px 5px 2px #bb292960;
 }
 
 /*----------Mediaquerys---------------*/
 @media screen and (max-width: 800px){
-  .registroUsuario {
-    grid-column: 1fr;
-  }
-
-  .registroUsuario__btn{
-    width: 100%;
-  }
-
-  h2{
-    justify-content: center;
-  }
+.registroUsuario {
+  grid-column: 1fr;
 }
-  
+
+.registroUsuario__btn{
+  width: 100%;
+}
+
+h2{
+  justify-content: center;
+}
+}
+
 /*--------Otros------*/
 
-  h2{
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
-    color: #0078AA;
-  }
+h2{
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  color: #0078AA;
+}
 
 a{
-    color: #0078AA;
+  color: #0078AA;
 }
